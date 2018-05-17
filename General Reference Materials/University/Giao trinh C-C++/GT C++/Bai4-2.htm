@@ -1,0 +1,326 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai4_2.htm -->
+<HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 4</TITLE>
+<META content=en-au http-equiv=Content-Language>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE fprolloverstyle>A:hover {
+	COLOR: #ff0000
+}
+</STYLE>
+<LINK 
+href="Dien dan tin hoc - IT Forum VN - Tutorial Room - Lp trình - C++ can bn - Bài 4-3_files/mycss.css" 
+rel=stylesheet type=text/css></HEAD>
+<BODY bgColor=#fffff0 leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<TABLE border=1 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff size=2>[</FONT><FONT size=2><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn Đàn Tin 
+      Học</A></FONT><FONT color=#0000ff size=2>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 4.2</B></P>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P><FONT size=5><B>Quá tải các toán tử</B></FONT></P></TD></TR>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<P>C++ cho phép sử dụng các toán tử chuẩn của ngôn ngữ giữa các lớp giống như 
+với các kiểu dữ liệu cơ bản. Ví dụ: 
+<BLOCKQUOTE>
+  <P><TT>int a, b, c;<BR>a = b + c;</TT></P></BLOCKQUOTE>là hoàn toàn hợp lệ vì 
+các biến ở đây đều có kiểu là các kiểu dữ liệu cơ bản. Tuy nhiên, việc chúng ta 
+có thể thực hiện thao tác sau đây có vẻ không hiển nhiên lắm (thực tế là nó 
+không hợp lệ): 
+<BLOCKQUOTE>
+  <P><TT><FONT color=red>struct { char product [50]; float price; } a, b, 
+  c;<BR>a = b + c;</FONT></TT></P></BLOCKQUOTE>Phép gán một lớp (hay một cấu trúc) 
+với một đối tượng cùng kiểu là được phép (copy constructor mặc định). Nhưng phép 
+cộng sẽ gây ra lỗi vì nó được dùng với các kiểu dữ liệu không cơ bản. 
+<P>Nhưng cần phải cám ơn khả năng quá tải toán tử của C++, chúng ta có thể làm 
+cho các đối tượng kiểu như trên có thể chấp nhận các toán tử đó mà không làm 
+thay đổi ý nghĩa của nó đối với các kiểu dữ liệu cơ bản. Dưới đây là danh sách 
+tất cả các toán tử có thể được quá tải: 
+<BLOCKQUOTE><TT><PRE>+    -    *    /    =    &lt;    &gt;    +=   -=   *=   /=   &lt;&lt;   &gt;&gt;
+&lt;&lt;=  &gt;&gt;=  ==   !=   &lt;=   &gt;=   ++   --   %    &amp;    ^    !    |
+~    &amp;=   ^=   |=   &amp;&amp;   ||   %=   []   ()   new  delete</PRE></TT></BLOCKQUOTE>Để 
+làm quá tải một toán tử chúng ta chỉ cần viết một hàm thành viên của lớp có tên 
+<TT><B>operator</B></TT> theo sau là toán tử chúng ta muốn làm quá tải. Mẫu như 
+sau: 
+<BLOCKQUOTE>
+  <P><TT><I>type</I> <B>operator</B> <I>sign</I> 
+  <B>(</B><I>parameters</I><B>);</B></TT></P></BLOCKQUOTE>Dưới đây là ví dụ về 
+việc quá tải toán tử <TT><B>+</B></TT>. Chúng ta chuẩn bị tính tổng hai vector 
+hai chiều <B><TT>a(3,1)</TT></B> và <TT><B>b(1,2)</B></TT>. Phép cộng giữa hai 
+vector hai chiều chỉ đơn giản là cộng hai toạ độ x để lấy toạ độ kết quả x , 
+cộng hai toạ độ y để lấy toạ độ kết quả y. Trong trường hợp này kết quả sẽ là 
+<TT><B>(3+1,1+2) = (4,3)</B></TT>.<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// vectors: ví dụ về quá tải toán tử</I>
+#include &lt;iostream.h&gt;
+
+class CVector {
+  public:
+    int x,y;
+    CVector () {};
+    CVector (int,int);
+    CVector operator + (CVector);
+};
+
+CVector::CVector (int a, int b) {
+  x = a;
+  y = b;
+}
+
+CVector CVector::operator+ (CVector param) {
+  CVector temp;
+  temp.x = x + param.x;
+  temp.y = y + param.y;
+  return (temp);
+}
+
+int main () {
+  CVector a (3,1);
+  CVector b (1,2);
+  CVector c;
+  c = a + b;
+  cout &lt;&lt; c.x &lt;&lt; "," &lt;&lt; c.y;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+width="50%"><TT><B>4,3</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Nếu bạn thấy quá nhiều <TT><B>CVector</B></TT> hãy để ý rằng một số trong 
+chúng tham chiếu đến tên lớp <TT><B>CVector</B></TT> còn số còn lại là tên các 
+hàm (constructor và destructor). Đừng lẫn lộn 
+<BLOCKQUOTE><TT><PRE>CVector (int, int);            <FONT color=green><I>// Hàm có tên Vector (constructor)</I></FONT>
+CVector operator+ (CVector);   <FONT color=green><I>// Hàm operator+  <U>trả về</U> kiểu CVector</I></FONT></PRE></TT></BLOCKQUOTE>Hàm 
+<TT><B>operator+</B></TT> của lớp <TT><B>CVector</B></TT> được dùng để quá tải 
+toán tử số học +. Hàm này có thể được gọi bằng một trong các cách: 
+<BLOCKQUOTE>
+  <P><TT>c = a + b;<BR>c = a.operator+ (b);</TT></P></BLOCKQUOTE>
+<TABLE cellPadding=5>
+  <TBODY>
+  <TR>
+    <TD bgColor=#bfbfff>Hãy chú ý rằng chúng ta đã thêm vào constructor rỗng 
+      (không có tham số) và chúng ta định nghĩa nó với một khối lệnh cũng rỗng 
+      nốt: 
+      <BLOCKQUOTE><TT>CVector () { };</TT> </BLOCKQUOTE>
+      <P>điều này là cần thiết vì còn có một constructor khác,</P>
+      <BLOCKQUOTE><TT>CVector (int, int);</TT> </BLOCKQUOTE>và vì vậy các 
+      <I>constructors mặc định </I>không tồn tại trong <TT>CVector</TT> nếu 
+      chúng ta không khai nó một cách rõ ràng. Khai báo sau đây sẽ là không hợp 
+      lệ: 
+      <BLOCKQUOTE>
+        <P><TT>CVector c;</TT></P></BLOCKQUOTE>
+      <P>Dù thế nào chăng nữa, tôi cần phải cảnh báo rằng một khối lệnh rỗng 
+      không nên để tạo một constructor vì nó không thoả mãn chức năng tối thiểu 
+      mà một constructor nên có, đó là việc khởi tạo tất cả các biến trong lớp. 
+      Trong trường hợp của chúng ta constructor này đã để các biến 
+      <TT><B>x</B></TT> và <TT><B>y</B></TT> là không xác định. Vì vậy một khai 
+      báo thích hợp hơn sẽ là một cái gì đó giống như thế này: 
+      <BLOCKQUOTE>
+        <P><TT>CVector () { x=0; y=0; };</TT></P></BLOCKQUOTE>để cho đơn giản tôi 
+      đã không viết vào trong ví dụ trên.</TD></TR></TBODY></TABLE>
+<P>Cùng với việc tạo một constructor rỗng và một copy constructor, C++ còn mặc 
+định định nghĩa <B>toán tử gán</B> <B>(<TT>=</TT>)</B> giữa hai lớp có cùng một 
+kiểu. Nó copy toàn bộ nội dung của các thành viên không tĩnh (non-static) của 
+đối tượng bên phải phép gán cho đối tượng bên trái. Tất nhiên bạn có thể định 
+nghĩa lại nó để thực hiện chức năng khác mà bạn muốn, ví dụ như chỉ copy một số 
+thành viên nào đó của lớp.
+<P>Việc quá tải các toán tử không bắt buộc hoạt động của nó phải liên quan đến ý 
+nghĩa thông thường của nó mặc dù điều này là nên làm. Ví dụ có vẻ không logic 
+lắm nếu sử dụng toán tử + để trừ hai lớp hay toán tử <TT><B>==</B></TT> để điền 
+số 0 vào một lớp mặc dù điều đó là hoàn toàn hợp lệ.
+<P>Mặc dù khai báo mẫu của hàm <TT><B>operator+</B></TT> là khá hiển nhiên vì nó 
+lấy phần bên phải của toán tử làm tham số cho hàm <TT>operator+</TT>, các toán 
+tử khác không phải cái nào cũng rõ ràng như thế.&nbsp; Ở đây chúng ta có một 
+bảng tổng kết về việc các hàm <B>operator</B> phải được khai báo như thế nào 
+(thay thế <TT>@</TT> bằng các toán tử tương ứng): 
+<BLOCKQUOTE>
+  <TABLE border=1>
+    <TBODY>
+    <TR>
+      <TD align=middle bgColor=silver>Biểu thức</TD>
+      <TD align=middle bgColor=silver>Toán tử (<TT>@</TT>)</TD>
+      <TD align=middle bgColor=silver><B>Hàm thành viên</B></TD>
+      <TD align=middle bgColor=silver><B>Hàm toàn cục</B></TD></TR>
+    <TR>
+      <TD align=middle width="20%"><TT>@a</TT></TD>
+      <TD align=middle width="20%"><TT>+ - * &amp; ! ~ ++ --</TT></TD>
+      <TD align=middle width="30%"><TT>A::operator@()</TT></TD>
+      <TD align=middle width="30%"><TT>operator@(A)</TT></TD></TR>
+    <TR>
+      <TD align=middle width="20%"><TT>a@</TT></TD>
+      <TD align=middle width="20%"><TT>++ --</TT></TD>
+      <TD align=middle width="30%"><TT>A::operator@(int)</TT></TD>
+      <TD align=middle width="30%"><TT>operator@(A, int)</TT></TD></TR>
+    <TR>
+      <TD align=middle width="20%"><TT>a@b</TT></TD>
+      <TD align=middle width="20%"><TT>+ - * / % ^ &amp; | &lt; &gt; == != 
+        &lt;= &gt;= &lt;&lt; &gt;&gt; &amp;&amp; || ,</TT></TD>
+      <TD align=middle width="30%"><TT>A::operator@(B)</TT></TD>
+      <TD align=middle width="30%"><TT>operator@(A, B)</TT></TD></TR>
+    <TR>
+      <TD align=middle width="20%"><TT>a@b</TT></TD>
+      <TD align=middle width="20%"><TT>= += -= *= /= %= ^= &amp;= |= &lt;&lt;= 
+        &gt;&gt;= [ ]</TT></TD>
+      <TD align=middle width="30%"><TT>A::operator@(B)</TT></TD>
+      <TD align=middle width="30%"><TT>-</TT></TD></TR>
+    <TR>
+      <TD align=middle width="20%"><TT>a(b, c...)</TT></TD>
+      <TD align=middle width="20%"><TT>()</TT></TD>
+      <TD align=middle width="30%"><TT>A::operator()(B, C...)</TT></TD>
+      <TD align=middle width="30%"><TT>-</TT></TD></TR>
+    <TR>
+      <TD align=middle width="20%"><TT>a-&gt;b</TT></TD>
+      <TD align=middle width="20%"><TT>-&gt;</TT></TD>
+      <TD align=middle width="30%"><TT>A::operator-&gt;()</TT></TD>
+      <TD align=middle width="30%"><TT>-</TT></TD></TR></TBODY></TABLE>* trong đó 
+  <TT><B>a</B></TT> là một đối tượng của lớp <TT><B>A</B></TT>, 
+  <TT><B>b</B></TT> là một đối tượng của lớp <TT><B>B</B></TT> và 
+  <TT><B>c</B></TT> là một đối tượng của lớp <TT><B>C</B></TT>. </BLOCKQUOTE>Như 
+bạn có thể thấy trong bảng này, có hai cách để quá tải các toán tử của lớp: như 
+là một hàm thành viên và như là một hàm toàn cục. Khác nhau giữa chúng không rõ 
+ràng tuy nhiên tôi cần phải nhắc lại rằng các hàm không phải là thành viên của 
+một lớp không thể truy xuất đến các thành viên là <TT>private</TT> hoặc 
+<TT>protected</TT> của lớp trừ phi hàm toàn cục đó là <I>bạn</I> của lớp (thuật 
+ngữ này sẽ được đề cập đến ở bài sau). 
+<H2>Từ khoá <TT>this</TT></H2>Từ khoá <TT><B>this</B></TT> ở bên trong một lớp 
+đại diện cho đối tượng của lớp đó đang được thực hiện trong bộ nhớ. Nó là một 
+con trỏ luôn có giá trị là địa chỉ của đối tượng. 
+<P>Nó có thể được dùng để kiểm tra xem tham số được truyền cho một hàm thành 
+viên có phải chính bản thân đối tượng hay không. Ví dụ:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// this</I>
+#include &lt;iostream.h&gt;
+
+class CDummy {
+  public:
+    int isitme (CDummy&amp; param);
+};
+
+int CDummy::isitme (CDummy&amp; param)
+{
+  if (&amp;param == this) return 1;
+  else return 0;
+}
+
+int main () {
+  CDummy a;
+  CDummy* b = &amp;a;
+  if ( b-&gt;isitme(a) )
+    cout &lt;&lt; "yes, &amp;a is b";
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>yes, &amp;a is 
+    b</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Nó cũng thường được dùng trong hàm thành viên <TT><B>operator=</B></TT> mà 
+trả về địa chỉ đối tượng (tránh việc sử dụng đối tượng tạm thời). Tiếp theo ví 
+dụ về vector ở đầu bài chúng ta có thể viết một hàm <TT><B>operator=</B></TT> 
+như sau: 
+<BLOCKQUOTE><TT><PRE>CVector&amp; CVector::operator= (const CVector&amp; param)
+{
+  x=param.x;
+  y=param.y;
+  return *this;
+}</PRE></TT></BLOCKQUOTE>Trong thực tế đây chính là đoạn mã được mặc định tạo ra 
+nếu chúng ta không viết hàm thành viên <B><TT>operator=</TT></B>. 
+<H2>Các thành viên tĩnh</H2>Một lớp có thể chứa các thành viên tĩnh, cả dữ liệu 
+và các hàm. 
+<P>Các dữ liệu tĩnh còn được gọi là "biến của lớp" vì nội dung của chúng không 
+phụ thuộc vào một đối tượng nào. Chỉ có một giá trị duy nhất cho tất cả các đối 
+tượng trong cùng một lớp. 
+<P>Ví dụ, nó có thể được trong trường hợp bạn muốn có một biến chứa số đối tượng 
+thuộc lớp đã được khai báo:
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// static members in classes</I>
+#include &lt;iostream.h&gt;
+
+class CDummy {
+  public:
+    static int n;
+    CDummy () { n++; };
+    ~CDummy () { n--; };
+};
+
+int CDummy::n=0;
+
+int main () {
+  CDummy a;
+  CDummy b[5];
+  CDummy * c = new CDummy;
+  cout &lt;&lt; a.n &lt;&lt; endl;
+  delete c;
+  cout &lt;&lt; CDummy::n &lt;&lt; endl;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>7<BR>6</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Trong thực tế, các thành viên tĩnh có cùng thuộc tính với các biến toàn cục. 
+Vì vậy, để tránh việc chúng bị khai báo nhiều lần, theo chuẩn ANSI-C++ chúng ta 
+chỉ được viết phần khai báo mẫu trong phần khai báo của lớp. Để có thể khởi tạo 
+một thành viên tĩnh chúng ta phải viết một định nghĩa ở bên ngoài lớp, giống như 
+ở trong ví dụ trước. 
+<P>Vì nó là một biến duy nhất cho tất cả các đối tượng thuộc lớp, nó có thể được 
+tham chiếu đến như là thành viên của bất kì đối tượng nào thuộc lớp hay thậm chí 
+chính bản thân tên lớp (tất nhiên điều này chỉ hợp lệ với các thành viên 
+<B>tĩnh</B>): 
+<BLOCKQUOTE>
+  <P><TT>cout &lt;&lt; a.n;<BR>cout &lt;&lt; CDummy::n;</TT></P></BLOCKQUOTE>Hai 
+lời gọi trong ví dụ trên đều tham chiếu đến cùng một biến: biến tĩnh 
+<TT><B>n</B></TT> trong lớp <TT><B>CDummy</B></TT>. 
+<P>Một lần nữa, tôi phải nhắc lại rằng nó là một biến toàn cục (nghĩa là bạn có 
+thể truy xuất nó từ bất kì đâu). Sự khác biệt duy nhất là bạn phải dùng nó với 
+tên lớp. 
+<P>Chúng ta cũng có thể tạo ra các hàm tĩnh giống như các biến tĩnh. Chúng cũng 
+có ý nghĩa như đối với các biến tĩnh: đó là các hàm toàn cục có thể được gọi như 
+thể là các đối tượng của một lớp. Chúng chỉ có thể truy xuất đến phần dữ liệu 
+tĩnh cũng như không được phép sử dụng từ khoá <B><TT>this</TT></B> vì nó tạo 
+tham chiếu đến một con trỏ đối tượng. Các hàm này thực tế không phải là thành 
+viên của bất kì đối tượng nào mà thực chất là của lớp.</P>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><IMG align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26><A 
+      href="/bai4-1.htm">Bài 
+      trước:<BR><B>4-1. Các lớp</B></A></TD>
+    <TD align=middle width="10%"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></TD>
+    <TD align=left width="45%"><A 
+      href="bai4-3.htm"><IMG 
+      align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26>Bài sau:<BR><B>4-3. </B><B>Quan hệ giữa các lớp. Bạn bè. Thừa 
+      kế</B></A></TD></TR></TBODY></TABLE>
+<P>&nbsp;</P></BODY></HTML>

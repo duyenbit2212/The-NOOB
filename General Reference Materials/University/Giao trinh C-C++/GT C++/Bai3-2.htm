@@ -1,0 +1,307 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai3_2.htm -->
+<!-- saved from url=(0022)http://internet.e-mail --><HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 3</TITLE>
+<META content=en-us http-equiv=Content-Language>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE type=text/css>BODY {
+	FONT-FAMILY: Times New Roman, Times
+}
+</STYLE>
+</HEAD>
+<BODY>
+<SCRIPT laguage="JavaScript">function open() {return false;}</SCRIPT>
+
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      homepage</A><FONT color=#0000ff>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 3.2</B></P><!--/captut-->
+<H2 style="BORDER-BOTTOM-STYLE: solid">Xâu kí tự</H2>
+<P>Trong tất cả các chương trình chúng ta đã thấy cho đến giờ, chúng ta chỉ sử 
+dụng các biến kiểu số, chỉ dùng để biểu diễn các số. Nhưng bên cạnh các biến 
+kiểu số còn có các xâu kí tự, chúng cho phép chúng ta biểu diễn các chuỗi kí tự 
+như là các từ, câu, đoạn văn bản... Cho đến giờ chúng ta mới chỉ dùng chúng dưới 
+dạng hằng chứ chứa quan tâm đến các biến có thể chứa chúng.</P>
+<P>Trong C++ không có kiểu dữ liệu <I>cơ bản</I> để lưu các xâu kí tự. Để có thể 
+thỏa mãn nhu cầu này, người ta sử dụng mảng có kiểu <B><TT>char</TT></B>. Hãy 
+nhớ rằng kiểu dữ liệu này (<TT><B>char</B></TT>) chỉ có thể lưu trữ một kí tự 
+đơn, bởi vậy nó được dùng để tạo ra xâu của các kí tự đơn. 
+<P>Ví dụ, mảng sau (hay là xâu kí tự): 
+<BLOCKQUOTE>
+  <P><TT><B>char jenny [20];</B></TT></P></BLOCKQUOTE>có thể lưu một xâu kí tự với 
+độ dài cực đại là 20 kí tự. Bạn có thể tưởng tượng nó như sau: 
+<BLOCKQUOTE>
+  <P><IMG height=48 
+  src="imgstri1.gif" 
+  width=505></P></BLOCKQUOTE>Kích thước cực đại này không cần phải luôn luôn dùng 
+đến. Ví dụ, <TT><B>jenny</B></TT> có thể lưu xâu <TT>"Hello" hay "Merry 
+christmas"</TT>. Vì các mảng kí tự có thể lưu các xâu kí tự ngắn hơn độ dài của 
+nó, trong C++ đã có một quy ước để kết thúc một nội dung của một xâu kí tự bằng 
+một kí tự null, có thể được viết là <TT>'\0'</TT>. 
+<P>Chúng ta có thể biểu diễn <TT><B>jenny</B></TT> (một mảng có 20 phần tử kiểu 
+<TT><B>char</B></TT>) khi lưu trữ xâu kí tự <TT>"Hello"</TT> và <TT>"Merry 
+Christmas"</TT> theo cách sau: 
+<BLOCKQUOTE>
+  <P><IMG height=87 
+  src="imgstri2.gif" 
+  width=505></P></BLOCKQUOTE>Chú ý rằng sau nội dung của xâu, một kí tự null 
+(<TT><B>'\0'</B></TT>) được dùng để báo hiệu kết thúc xâu. Những ô màu xám biểu 
+diễn những giá trị không xác định. 
+<H2>Khởi tạo các xâu kí tự.</H2>
+<P>Vì những xâu kí tự là những mảng bình thường nên chúng cũng như các mảng 
+khác. Ví dụ, nếu chúng ta muốn khởi tạo một xâu kí tự với những giá trị xác định 
+chúng ta có thể làm điều đó tương tự như với các mảng khác: 
+<BLOCKQUOTE>
+  <P><TT>char mystring[] = { 'H', 'e', 'l', 'l', 'o', '\0' 
+};</TT></P></BLOCKQUOTE>
+<P>Tuy nhiên, chúng ta có thể khởi tạo giá trị cho một xâu kí tự bằng cách khác: 
+sử dụng các <I><U>hằng xâu kí tự</U></I>. 
+<P>Trong các biểu thức chúng ta đã sử dụng trong các ví dụ trong các chương 
+trước các hằng xâu kí tự để xuất hiện vài lần. Chúng được biểu diễn trong cặp 
+ngoặc kép (<TT>"</TT>), ví dụ:</P>
+<BLOCKQUOTE><TT>"the result is: "</TT> </BLOCKQUOTE>là một hằng xâu kí tự chúng 
+ta sử dụng ở một số chỗ. 
+<P>Không giống như dấu nháy đơn (<TT>'</TT>) cho phép biểu diễn hằng kí tự, cặp 
+ngoặc kép (<TT>"</TT>) là hằng biểu diễn một chuỗi kí tự liên tiếp, và ở cuối 
+chuỗi một kí tự null (<TT>'\0'</TT>) luôn được tự động thêm vào. 
+<P>Vì vậy chúng ta có thể khởi tạo xâu <TT><B>mystring</B></TT> theo một trong 
+hai cách sau đây: 
+<BLOCKQUOTE>
+  <P><TT>char mystring [] = { 'H', 'e', 'l', 'l', 'o', '\0' };</TT><BR><TT>char 
+  mystring [] = "Hello";</TT></P></BLOCKQUOTE>Trong cả hai trường hợp mảng (hay 
+xâu kí tự) <TT><B>mystring</B></TT> được khai báo với kích thước 6 kí tự: 5 kí 
+tự biểu diễn <TT><B>Hello</B></TT> cộng với một kí tự null. 
+<P>Trước khi tiếp tục, tôi cần phải nhắc nhở bạn rằng việc gán nhiều hằng như 
+việc sử dụng dấu ngoặc kép (<TT>"</TT>) chỉ hợp lệ khi <I><U>khởi tạo</U></I> 
+mảng, tức là lúc khai báo mảng. Các biểu thức trong chương trình như: 
+<BLOCKQUOTE>
+  <P><TT><FONT color=red>mystring = "Hello";<BR>mystring[] = 
+  "Hello";</FONT></TT></P></BLOCKQUOTE>là không hợp lệ, cả câu lệnh dưới đây cũng 
+vậy: 
+<BLOCKQUOTE>
+  <P><TT><FONT color=red>mystring = { 'H', 'e', 'l', 'l', 'o', '\0' 
+  };</FONT></TT></P></BLOCKQUOTE>Vậy hãy nhớ: <U>Chúng ta chỉ có thể "gán" nhiều 
+hằng cho một mảng vào lúc khởi tạo nó</U>. Nguyên nhân là một thao tác gán 
+(<TT>=</TT>) không thể nhận vế trái là cả một mảng mà chỉ có thể nhận một trong 
+những phần tử của nó. Vào thời điểm khởi tạo mảng là một trường hợp đặc biệt, vì 
+nó không thực sự là một lệnh gán mặc dù nó sử dụng dấu bằng 
+(<TT><B>=</B></TT>).&nbsp; 
+<H2>Gán giá trị cho xâu kí tự</H2>Vì vế trái của một lệnh gán chỉ có thể là một 
+phần tử của mảng chứ không thể là cả mảng, chúng ta có thể gán một xâu kí tự cho 
+một mảng kiểu <TT><B>char</B></TT> sử dụng một phương pháp như sau: 
+<BLOCKQUOTE>
+  <P><TT><B>mystring[0] = 'H';<BR>mystring[1] = 'e';<BR>mystring[2] = 
+  'l';<BR>mystring[3] = 'l';<BR>mystring[4] = 'o';<BR>mystring[5] = 
+  '\0';</B></TT></P></BLOCKQUOTE>Nhưng rõ ràng đây không phải là một phương pháp 
+thực tế. Để gán giá trị cho một xâu kí tự, chúng ta có thể sử dụng loạt hàm kiểu 
+<TT><B>strcpy</B></TT> (<B>str</B>ing <B>c</B>o<B>py</B>), hàm này được định 
+nghĩa trong <TT>string.h</TT> và có thể được gọi như sau: 
+<BLOCKQUOTE>
+  <P><TT><B>strcpy (</B><I>string1</I><B>, 
+</B><I>string2</I><B>);</B></TT></P></BLOCKQUOTE>Lệnh này copy nội dung của 
+<TT><I>string2</I></TT> sang <TT><I>string1</I></TT>. <TT><I>string2</I></TT> có 
+thể là một mảng, con trỏ hay một <U>hằng xâu kí tự</U>, bởi vậy lệnh sau đây là 
+một cách đúng để gán xâu hằng <TT><B>"Hello"</B></TT> cho 
+<TT><B>mystring</B></TT>: 
+<BLOCKQUOTE>
+  <P><TT>strcpy (mystring, "Hello");</TT></P></BLOCKQUOTE>
+<P>Ví dụ:</P>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// setting value to string</I>
+#include &lt;iostream.h&gt;
+#include &lt;string.h&gt;
+
+int main ()
+{
+  char szMyName [20];
+  strcpy (szMyName,"J. Soulie");
+  cout &lt;&lt; szMyName;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><B><TT>J. 
+  Soulie</TT></B></TD></TR></TBODY></TABLE></CENTER>
+<P>Để ý rằng chúng ta phải include file <B><TT>&lt;string.h&gt;</TT></B> để có 
+thể sử dụng hàm <TT><B>strcpy</B></TT>. 
+<P>Mặc dù chúng ta luôn có thể viết một hàm đơn giản như hàm 
+<TT><B>setstring</B></TT> dưới đây để thực hiện một thao tác giống như 
+<TT><B>strcpy</B></TT>:</P>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// setting value to string</I>
+#include &lt;iostream.h&gt;
+
+void setstring (char szOut [], char szIn [])
+{
+  int n=0;
+  do {
+    szOut[n] = szIn[n];
+    n++;
+  } while (szIn[n] != 0);
+}
+
+int main ()
+{
+  char szMyName [20];
+  setstring (szMyName,"J. Soulie");
+  cout &lt;&lt; szMyName;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><B><TT>J. 
+  Soulie</TT></B></TD></TR></TBODY></TABLE></CENTER>
+<P>Một phương thức thường dùng khác để gán giá trị cho một mảng là sử dụng trực 
+tiếp dòng nhập dữ liệu (<TT><B>cin</B></TT>). Trong trường hợp này giá trị của 
+xâu kí tự được gán bởi người dùng trong quá trình chương trình thực hiện. 
+<P>Khi <TT><B>cin</B></TT> được sử dụng với các xâu kí tự nó thường được dùng 
+với phương thức <TT><B>getline</B></TT> của nó, phương thức này có thể được gọi 
+như sau: 
+<BLOCKQUOTE>
+  <P><TT><B>cin.getline ( char </B><I>buffer</I><B>[], int </B><I>length</I><B>, 
+  char</B><I> delimiter</I><B> = ' \n');</B></TT></P></BLOCKQUOTE>trong đó 
+<TT><B><I>buffer</I></B></TT> (bộ đệm) là địa chỉ nơi sẽ lưu trữ dữ liệu vào 
+(như là một mảng chẳng hạn), <TT><B><I>length</I></B></TT> là độ dài cực đại của 
+bộ đệm (kích thước của mảng) và <TT><B><I>delimiter</I></B></TT> là kí tự được 
+dùng để kết thúc việc nhập, mặc định - nếu chúng ta không dùng tham số này - sẽ 
+là kí tự xuống dòng (<TT><B>'\n'</B></TT>). 
+<P>Ví dụ sau đây lặp lại tất cả những gì bạn gõ trên bàn phím. Nó rất đơn giản 
+nhưng là một ví dụ cho thấy bạn có thể sử dụng <TT><B>cin.getline</B></TT> với 
+các xâu kí tự như thế nào:
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// cin with strings</I>
+#include &lt;iostream.h&gt;
+
+int main ()
+{
+  char mybuffer [100];
+  cout &lt;&lt; "What's your name? ";
+  cin.getline (mybuffer,100);
+  cout &lt;&lt; "Hello " &lt;&lt; mybuffer &lt;&lt; ".\n";
+  cout &lt;&lt; "Which is your favourite team? ";
+  cin.getline (mybuffer,100);
+  cout &lt;&lt; "I like " &lt;&lt; mybuffer &lt;&lt; " too.\n";
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>What's your name? 
+      </B>Juan<BR><B>Hello Juan.<BR>Which is your favourite team? </B>Inter 
+      Milan<BR><B>I like Inter Milan too.</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Chú ý trong cả hai lời gọi <TT><B>cin.getline</B></TT> chúng ta sử dụng cùng 
+một biến xâu (<TT><B>mybuffer</B></TT>). Những gì chương trình làm trong lời gọi 
+thứ hai đơn giản là thay thế nội dung của <TT><B>buffer</B></TT> trong lời gọi 
+cũ bằng nội dung mới.</P>
+<P>Nếu bạn còn nhớ phần nói về giao tiếp với, bạn sẽ nhớ rằng chúng ta đã sử 
+dụng toán tử <B><TT>&gt;&gt;</TT></B> để nhận dữ liệu trực tiếp từ đầu vào 
+chuẩn. Phương thức này có thể được dùng với các xâu kí tự thay cho 
+<B><TT>cin.getline</TT></B>. Ví dụ, trong chươn trình của chúng ta, khi chúng ta 
+muốn nhận dữ liệu từ người dùng chúng ta có thể viết: 
+<BLOCKQUOTE>
+  <P><TT>cin &gt;&gt; mybuffer;</TT></P></BLOCKQUOTE>lệnh này sẽ làm việc như nó 
+có những hạn chế sau mà <TT><B>cin.getline</B></TT> không có: 
+<UL>
+  <LI>Nó chỉ có thể nhận những từ đơn (không nhận được cả câu) vì phương thức 
+  này sử dụng kí tự trống(bao gồm cả dấu cách, dấu tab và dấu xuống dòng) làm 
+  dấu hiệu kết thúc.. 
+  <LI>Nó không cho phép chỉ định kích thước cho bộ đệm. Chương trình của bạn có 
+  thể chạy không ổn định nếu dữ liệu vào lớn hơn kích cỡ của mảng chứa nó. 
+</LI></UL>Vì những nguyên nhân trên, khi muốn nhập vào các xâu kí tự bạn nên sử 
+dụng <TT><B>cin.getline</B></TT> thay vì <TT><B>cin &gt;&gt;</B></TT>. 
+<H2>Chuyển đổi xâu kí tự sang các kiểu khác.</H2>Vì một xâu kí tự có thể biểu 
+diễn nhiều kiểu dữ liệu khác như dạng số nên việc chuyển đổi nội dung như vậy 
+sang dạng số là rất hữu ích. Ví dụ, một xâu có thể mang giá trị 
+<TT><B>"1977"</B></TT>nhưng đó là một chuỗi gồm 5 kí tự (kể cả kí tự null) và 
+không dễ gì chuyển thành một số nguyên. Vì vậy thư viện <TT><B>cstdlib</B></TT> 
+(<TT><B>stdlib.h</B></TT>) đã cung cấp 3 macro/hàm hữu ích sau: 
+<UL>
+  <LI><B>atoi:</B> chuyển xâu thành kiểu <TT><B>int</B></TT>. 
+  <LI><B>atol:</B> chuyển xâu thành kiểu <TT><B>long</B></TT>. 
+  <LI><B>atof:</B> chuyển xâu thành kiểu <TT><B>float</B></TT>. </LI></UL>Tất cả 
+các hàm này nhận một tham số và trả về giá trị số (<TT>int</TT>, <TT>long</TT> 
+hoặc <TT>float</TT>). Các hàm này khi kết hợp với phương thức 
+<TT><B>getline</B></TT> của <TT><B>cin</B></TT> là một cách đáng tin cậy hơn 
+phương thức <TT><B>cin&gt;&gt;</B></TT> cổ điển khi yêu cầu người sử dụng nhập 
+vào một số:
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// cin and ato* functions</I>
+#include &lt;iostream.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main ()
+{
+  char mybuffer [100];
+  float price;
+  int quantity;
+  cout &lt;&lt; "Enter price: ";
+  cin.getline (mybuffer,100);
+  price = atof (mybuffer);
+  cout &lt;&lt; "Enter quantity: ";
+  cin.getline (mybuffer,100);
+  quantity = atoi (mybuffer);
+  cout &lt;&lt; "Total price: " &lt;&lt; price*quantity;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>Enter price: 
+      </B>2.75<BR><B>Enter quantity: </B>21<BR><B>Total price: 
+  57.75</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<H2>Các hàm để thao tác trên chuỗi</H2>Thư viện <B>cstring</B> 
+(<TT>string.h</TT>) không chỉ có hàm <TT><B>strcpy</B></TT> mà còn có nhiều hàm 
+khác để thao tác trên chuỗi. Dưới đây là giới thiệu lướt qua của các hàm thông 
+dụng nhất: 
+<DL>
+  <DT><B>strcat:</B>&nbsp;&nbsp; <FONT color=#0000ff><TT><B>char* strcat (char* 
+  </B><I>dest</I><B>, const char* </B><I>src</I><B>);</B></TT></FONT> 
+  <DD>Gắn thêm chuỗi <I>src</I> vào phía cuối của <I>dest</I>. Trả về 
+  <I>dest</I>. 
+  <DT><B>strcmp:</B>&nbsp;&nbsp; <FONT color=#0000ff><TT><B>int strcmp (const 
+  char* </B><I>string1</I><B>, const char* 
+  </B><I>string2</I><B>);</B></TT></FONT> 
+  <DD>So sánh hai xâu <I>string1</I> và <I>string2</I>. Trả về <TT>0</TT> nếu 
+  hai xâu là bằng nhau. 
+  <DT><B>strcpy:</B>&nbsp;&nbsp; <FONT color=#0000ff><TT><B>char* strcpy (char* 
+  </B><I>dest</I><B>, const char* </B><I>src</I><B>);</B></TT></FONT> 
+  <DD>Copy nội dung của <I>src</I> cho <I>dest</I>. Trả về <I>dest</I>. 
+  <DT><B>strlen:</B>&nbsp;&nbsp; <FONT color=#0000ff><TT><B>size_t strlen (const 
+  char* </B><I>string</I><B>);</B></TT></FONT> 
+  <DD>Trả về độ dài của <I>string</I>. </DD></DL>
+<P style="BORDER-BOTTOM-STYLE: solid">Chú ý: <TT><B>char*</B></TT> hoàn toàn 
+tương đương với <TT><B>char[]</B></TT>
+<CENTER>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><A 
+      href="bai3-1.htm"><IMG 
+      align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR><B>3-1. Mảng</B></A></TD>
+    <TD align=middle width="10%">
+      <P align=center><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></P></TD>
+    <TD align=left width="45%"><A 
+      href="bai3-3.htm"><IMG 
+      align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26>Bài sau:<BR><B>3-3. Con 
+trỏ</B></A></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

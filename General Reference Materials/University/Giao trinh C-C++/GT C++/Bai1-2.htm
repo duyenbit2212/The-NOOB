@@ -1,0 +1,741 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai1_2.htm -->
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:v = 
+"urn:schemas-microsoft-com:vml" xmlns:o = 
+"urn:schemas-microsoft-com:office:office"><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 1</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="MSHTML 5.00.3315.2870" name=GENERATOR><LINK 
+href="bai1_2_files/filelist.xml" rel=File-List><LINK 
+href="mycss.css" 
+rel=stylesheet type=text/css><!--[if !mso]>
+<STYLE>v\:* {
+	BEHAVIOR: url(#default#VML)
+}
+o\:* {
+	BEHAVIOR: url(#default#VML)
+}
+.shape {
+	BEHAVIOR: url(#default#VML)
+}
+</STYLE>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--></HEAD>
+<BODY lang=EN-US leftMargin=0 link=#0000ff style="tab-interval: 36.0pt" 
+topMargin=0 vLink=#0000ff>
+<SCRIPT 
+src="404.htm" 
+laguage="JavaScript"></SCRIPT>
+
+<DIV class=Section1>
+<DIV 
+style="BORDER-BOTTOM: windowtext 3pt solid; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm">
+<TABLE border=1 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      homepage</A><FONT color=#0000ff>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P 
+style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; mso-border-bottom-alt: solid windowtext 3.0pt; mso-padding-alt: 0cm 0cm 0cm 0cm"><FONT 
+face="Times New Roman">Bài 1.2<BR><B><SPAN style="FONT-SIZE: 24pt">Các biến, 
+kiểu và hằng số</SPAN></B></FONT></P></DIV>
+<H2><FONT face="Times New Roman">Identifiers</FONT></H2>
+<P><FONT face="Times New Roman">Một tên (indentifiers) hợp lệ là một chuỗi gồm 
+các chữ cái, chữ số hoặc kí tự gạch dưới. Chiều dài của một tên là không giới 
+hạn.</FONT></P>
+<P><FONT face="Times New Roman">Kí tự trống, các kí tự đánh dấu đều không thể có 
+mặt trong một tên. Chỉ có chữ cái, chữ số và kí tự gạch dưới là được cho phép. 
+Thêm vào đó, một tên biến luôn phải bắt đầu bằng một chữ cái. Chúng cũng có thể 
+bắt đầu bằng kí tự gạch dưới ( _ ) nhưng kí tự này thường được dành cho các liên 
+kết bên ngoài (external link). Không bao giờ chúng bắt đầu bằng một chữ 
+số.</FONT></P>
+<P><FONT face="Times New Roman">Một luật nữa mà bạn phải quan tâm đến khi tạo ra 
+các tên của riêng mình là chúng không được trùng với bất kì từ khoá nào của ngôn 
+ngữ hay của trình dịch, ví dụ các tên sau đây luôn luôn được coi là từ khoá theo 
+chuẩn ANSI-C++ và do vậy chúng không thể được dùng để đặt tên</FONT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><B><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">asm, car, bool, break, 
+marry, catch, to char, class, const, const_cast, continue, default, delete, do, 
+double, dynamic_cast, else, enum, explicit, extern, false, float, for, friend, 
+goto, if, inline, int, long, mutable, namespace, new, operator, private, 
+protected, public, to register, reinterpret_cast, return, short, signed, sizeof, 
+static, static_cast, struct, switch, template, this, throw, true, try, typedef, 
+typeid, typename, union, unsigned, using, virtual, void, volatile, 
+wchar_t</FONT></SPAN></B></TT> </P>
+<P class=MsoNormal><FONT face="Times New Roman">Thêm vào đó, một số biểu diễn 
+khác của các toán tử (operator) cũng không được dùng làm tên vì chúng là những 
+từ được dành riêng trong một số trường hợp.</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><B><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">and, and_eq, bitand, bitor, 
+compl, not, not_eq, or, or_eq, xor, xor_eq</FONT></SPAN></B></TT> </P>
+<P class=MsoNormal><FONT face="Times New Roman">Trình dịch của bạn có thể thêm 
+một từ dành riêng đặc trưng khác. Ví dụ, rất nhiều trình dịch 16 bit (như các 
+trình dịch cho DOS) còn có thể các từ khoá <B>far</B>, <B>huge</B> và 
+<B>near</B>.</FONT> </P>
+<P><FONT face="Times New Roman"><B>Chú ý</B>: Ngôn ngữ C++ là "case sensitive" 
+có nghĩa là phân biệt chữ hoa chữ thường. Do vậy biến <B>RESULT</B> khác với 
+<B>result</B> cũng như <B>Result</B>.</FONT></P>
+<H2><FONT face="Times New Roman">Các kiểu dữ liệu</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Khi lập trình, chúng ta lưu trữ 
+các biến trong bộ nhớ của máy tính nhưng máy tính phải biết chúng ta muốn lưu 
+trữ gì trong chúng vì các kiểu dữ liệu khác nhau sẽ cần lượng bộ nhớ khác 
+nhau.</FONT> </P>
+<P><FONT face="Times New Roman">Bộ nhớ của máy tính chúng ta được tổ chức thành 
+các byte. Một byte là lượng bộ nhớ nhỏ nhất mà chúng ta có thể quản lí. Một byte 
+có thể dùng để lưu trữ một loại dữ liệu nhỏ như là kiểu số nguyên từ 0 đến 255 
+hay một kí tự. Nhưng máy tính có thể xử lý các kiểu dữ liệu phức tạp hơn bằng 
+cách gộp nhiều byte lại với nhau, như số nguyên dài hay số thập phân. Tiếp theo 
+bạn sẽ có một danh sách các kiểu dữ liệu cơ bản trong C++ cũng như miền giá trị 
+mà chúng có thể biểu diễn</FONT></P>
+<DIV align=center>
+<TABLE border=1 cellPadding=0 cellSpacing=1 
+style="WIDTH: 453pt; mso-cellspacing: .7pt" width=604>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 35.25pt" 
+    width=47>
+      <P class=MsoNormal><FONT face="Times New Roman">Tên </FONT></P></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.75pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">Số byte</FONT></P></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 209.25pt" 
+    width=279>
+      <P class=MsoNormal><FONT face="Times New Roman">Mô tả</FONT></P></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 150.75pt" 
+    width=201>
+      <P class=MsoNormal><FONT face="Times New Roman">Miền giá 
+  trị</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 35.25pt" 
+    width=47>
+      <P class=MsoNormal><B><FONT face="Times New Roman">char</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.75pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">1</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 209.25pt" 
+    width=279>
+      <P class=MsoNormal><FONT face="Times New Roman">Kí tự hay kiểu số nguyên 
+      8-bit</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 150.75pt" 
+    width=201>
+      <P class=MsoNormal><FONT face="Times New Roman"><B>có dấu:</B> -128 to 
+      127<BR><B>không dấu:</B> 0 to 255</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 35.25pt" 
+    width=47>
+      <P class=MsoNormal><B><FONT face="Times New Roman">short</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.75pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">2</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 209.25pt" 
+    width=279>
+      <P class=MsoNormal><FONT face="Times New Roman">kiểu số nguyên 
+      16-bit</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 150.75pt" 
+    width=201>
+      <P class=MsoNormal><FONT face="Times New Roman"><B>có dấu:</B> -32763 to 
+      32762<BR><B>không dấu:</B> 0 to 65535</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 35.25pt" 
+    width=47>
+      <P class=MsoNormal><B><FONT face="Times New Roman">long</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.75pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">4</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 209.25pt" 
+    width=279>
+      <P class=MsoNormal><FONT face="Times New Roman">kiểu số nguyên 
+      32-bit</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 150.75pt" 
+    width=201>
+      <P class=MsoNormal><FONT face="Times New Roman"><B>có dấu:</B>-2147483648 
+      to 2147483647<BR><B>không dấu:</B> 0 to 4294967295</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 35.25pt" 
+    width=47>
+      <P class=MsoNormal><B><FONT face="Times New Roman">int</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.75pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">*</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 209.25pt" 
+    width=279>
+      <P class=MsoNormal><FONT face="Times New Roman">Số nguyên. Độ dài của nó 
+      phụ thuộc vào hệ thống, như trong MS-DOS nó là 16-bit, trên Windows 
+      9x/2000/NT là 32 bit...</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 150.75pt" 
+    width=201>
+      <P class=MsoNormal><FONT face="Times New Roman">Xem <B>short</B>, 
+      <B>long</B></FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 35.25pt" 
+    width=47>
+      <P class=MsoNormal><B><FONT face="Times New Roman">float</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.75pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">4</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 209.25pt" 
+    width=279>
+      <P class=MsoNormal><FONT face="Times New Roman">Dạng dấu phẩy 
+      động</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 150.75pt" 
+    width=201>
+      <P class=MsoNormal><FONT face="Times New Roman">3.4e + / - 38 (7 
+      digits)</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 35.25pt" 
+    width=47>
+      <P class=MsoNormal><B><FONT 
+face="Times New Roman">double</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.75pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">8</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 209.25pt" 
+    width=279>
+      <P class=MsoNormal><FONT face="Times New Roman">Dạng dấu phẩy động với độ 
+      chính xác gấp đôi</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 150.75pt" 
+    width=201>
+      <P class=MsoNormal><FONT face="Times New Roman">1.7e + / - 308 (15 
+      digits)</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 35.25pt" 
+    width=47>
+      <P class=MsoNormal><B><FONT face="Times New Roman">long 
+      double</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.75pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">10</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 209.25pt" 
+    width=279>
+      <P class=MsoNormal><FONT face="Times New Roman">Dạng dấu phẩy động với độ 
+      chính xác hơn nữa</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 150.75pt" 
+    width=201>
+      <P class=MsoNormal><FONT face="Times New Roman">1.2e + / - 4932 (19 
+      digits)</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 35.25pt" 
+    width=47>
+      <P class=MsoNormal><B><FONT face="Times New Roman">bool</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.75pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">1</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 209.25pt" 
+    width=279>
+      <P class=MsoNormal><FONT face="Times New Roman">Giá trị logic. Nó mới được 
+      thêm vào chuẩn ANSI-C++. Bởi vậy không phải tất cả các trình dịch đều hỗ 
+      trợ nó.</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 150.75pt" 
+    width=201>
+      <P class=MsoNormal><FONT face="Times New Roman"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt">true</SPAN></B></TT> hoặc <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">false</SPAN></B></TT></FONT></P></TD></TR></TBODY></TABLE></DIV>
+<P><FONT face="Times New Roman">Ngoài các kiểu dữ liệu cơ bản nói trên còn tồn 
+tại các con trỏ và các tham số không kiểu (void) mà chúng ta sẽ xem xét 
+sau.</FONT></P>
+<H2><FONT face="Times New Roman">Khai báo một biến</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Để có thể sử dụng một biến trong 
+C++, đầu tiên chúng ta phải khai báo nó, ghi rõ nó là kiểu dữ liệu nào. Chúng ta 
+chỉ cần viết tên kiểu (như <B>int</B>, <B>short</B>, <B>float</B>...) tiếp theo 
+sau đó là một tên biến hợp lệ. Ví dụ</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Courier New"><TT><SPAN style="FONT-SIZE: 10pt">int a;</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>float 
+mynumber;</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Dòng đầu tiên khai báo một biến 
+kiểu <B>int</B> với tên là <B>a. </B>Dòng thứ hai khai báo một biến kiểu 
+<B>float</B> với tên <B>mynumber</B>. Sau khi được khai báo, các biến trên có 
+thể được dùng trong phạm vi của chúng trong chương trình.</FONT> </P>
+<P><FONT face="Times New Roman">Nếu bạn muốn khai báo một vài biến có cùng một 
+kiểu và bạn muốn tiết kiệm công sức viết bạn có thể khai báo chúng trên một 
+dòng, ngăn cách các tên bằng dấu phẩy. Ví dụ</FONT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Courier New">int a, b, c;</FONT></SPAN></TT> 
+</P>
+<P class=MsoNormal><FONT face="Times New Roman">khai báo ba biến kiểu <B>int</B> 
+(<B>a</B>,<B>b</B> và <B>c</B>) và hoàn toàn tương đương với :</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Courier New"><TT><SPAN style="FONT-SIZE: 10pt">int a;</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>int 
+b;</TT><BR><TT>int c;</TT></SPAN></FONT></P>
+<P><FONT face="Times New Roman">Các kiểu số nguyên (<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">char</SPAN></B></TT>, 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">short</SPAN></B></TT>, 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">long</SPAN></B></TT> and 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int</SPAN></B></TT>) có thể 
+là số có dấu hay không dấu tuỳ theo miền giá trị mà chúng ta cần biểu diễn. Vì 
+vậy khi xác định một kiểu số nguyên chúng ta đặt từ khoá <B>s</B><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">igned</SPAN></B></TT><B> 
+</B>hoặc <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">unsigned</SPAN></B></TT>&nbsp; 
+trước tên kiểu dữ liệu. Ví dụ: </FONT>&nbsp;</P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Courier New">unsigned short 
+NumberOfSons;</FONT></SPAN></TT><FONT face="Courier New"><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>signed int 
+MyAccountBalance;</TT></SPAN></FONT></P>
+<P><FONT face="Times New Roman">Nếu ta không chỉ rõ <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">signed</SPAN></B></TT> or 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">unsigned</SPAN></B></TT> nó 
+sẽ được coi là có dấu, vì vậy trong khai báo thứ hai chúng ta có thể viết 
+:</FONT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Courier New">int 
+MyAccountBalance</FONT></SPAN></TT> </P>
+<P><FONT face="Times New Roman">cũng hoàn toàn tương đương với dòng khai báo ở 
+trên. Trong thực tế, rất ít khi người ta dùng đến từ khoá <B>signed</B>. Ngoại 
+lệ duy nhất của luật này kiểu <B>char</B>. Trong chuẩn ANSI-C++ nó là kiểu dữ 
+liệu khác với <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">signed char</SPAN></B></TT> 
+và <TT><B><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">unsigned 
+char</SPAN></B></TT>.</FONT> </P>
+<P><FONT face="Times New Roman">Để có thể thấy rõ hơn việc khai báo trong chương 
+trình, chúng ta sẽ xem xét một đoạn mã C++ ví dụ như sau: </FONT></P>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="WIDTH: 100%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I><FONT face="Courier New">// operating with variables</FONT></I></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]> <![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]> <![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">  </FONT></SPAN><FONT face="Courier New"><I>// declaring variables:</I></FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">  </FONT></SPAN><FONT face="Courier New">int a, b;</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">  </FONT></SPAN><FONT face="Courier New">int result;</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]> <![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">  </SPAN><I>// process:</I></FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">  </FONT></SPAN><FONT face="Courier New">a = 5;</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">  </FONT></SPAN><FONT face="Courier New">b = 2;</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">  </FONT></SPAN><FONT face="Courier New">a = a + 1;</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">  </FONT></SPAN><FONT face="Courier New">result = a - b;</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]> <![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">  </SPAN><I>// print out the result:</I></FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">  </FONT></SPAN><FONT face="Courier New">cout &lt;&lt; result;</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]> <![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">  </SPAN><I>// terminate the program:</I></FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">  </FONT></SPAN><FONT face="Courier New">return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Courier New">4</FONT></SPAN></B></TT></P></TD></TR></TBODY></TABLE>
+<P><FONT face="Times New Roman">Đừng lo lắng nếu như việc khai báo có vẻ hơi lạ 
+lùng với bạn. Bạn sẽ thấy phần chi tiết còn lại trong phần tiếp theo</FONT> </P>
+<H2><FONT face="Times New Roman">Khởi tạo các biến</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Khi khai báo một biến, giá trị 
+của nó mặc nhiên là không xác định. Nhưng có thể bạn sẽ muốn nó mang một giá trị 
+xác định khi được khai báo. Để làm điều đó, bạn chỉ cần viết dấu bằng và giá trị 
+bạn muốn biến đó sẽ mang:</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman"><TT><I><SPAN style="FONT-SIZE: 10pt">type 
+identifier</SPAN></I><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt"> 
+<B>=</B> <I>initial_value</I> ;</SPAN></TT></FONT> </P>
+<P class=MsoNormal><FONT face="Times New Roman">Ví dụ, nếu chúng ta muốn khai 
+báo một biến <B>int</B> là <B>a</B> chứa giá trị <B>0</B> ngay từ khi khởi tạo, 
+chúng ta sẽ viết :</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">int a = 
+0;</FONT></SPAN></TT> </P>
+<P><FONT face="Times New Roman">Bổ xung vào cách khởi tạo kiểu C này, C++ còn có 
+thêm một cách mới để khởi tạo biến bằng cách bọc một cặp ngoặc đơn sau giá trị 
+khởi tạo. Ví dụ :</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">int a 
+(0);</FONT></SPAN></TT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Cả hai cách đều hợp lệ trong 
+C++.</FONT> </P>
+<H2><FONT face="Times New Roman">Phạm vi hoạt động của các biến</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman"><!--[if gte vml 1]><v:shapetype 
+id=_x0000_t75 coordsize = "21600,21600" o:preferrelative = "t" filled = "f" 
+stroked = "f" path = "m@4@5l@4@11@9@11@9@5xe" o:spt = "75"><v:stroke joinstyle = 
+"miter"></v:stroke><v:formulas><v:f eqn = 
+"if lineDrawn pixelLineWidth 0 "></v:f><v:f eqn = "sum @0 1 0 "></v:f><v:f eqn = 
+"sum 0 0 @1 "></v:f><v:f eqn = "prod @2 1 2 "></v:f><v:f eqn = 
+"prod @3 21600 pixelWidth "></v:f><v:f eqn = 
+"prod @3 21600 pixelHeight "></v:f><v:f eqn = "sum @0 0 1 "></v:f><v:f eqn = 
+"prod @6 1 2 "></v:f><v:f eqn = "prod @7 21600 pixelWidth "></v:f><v:f eqn = 
+"sum @8 21600 0 "></v:f><v:f eqn = "prod @7 21600 pixelHeight "></v:f><v:f eqn = 
+"sum @10 21600 0 "></v:f></v:formulas><v:path o:extrusionok = "f" 
+gradientshapeok = "t" o:connecttype = "rect"></v:path><o:lock v:ext="edit" 
+aspectratio = "t"></o:lock></v:shapetype><v:shape id=_x0000_s1026 
+style="FLOAT: left; HEIGHT: 33.75pt; MARGIN-LEFT: 0px; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 53.25pt; Z-INDEX: 1; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+type = "#_x0000_t75" coordsize = "21600,21600" alt = "" o:allowoverlap = 
+"f"><v:imagedata src = "icoc-cpp.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:1;left:0px;top:0px;width:71px;height:45px'><img width=71
+height=45 src=icoc-cpp.gif align=left v:shapes="_x0000_s1026"></span><![endif]>Tất 
+cả các biến mà chúng ta sẽ sử dụng đều phải được khai báo trước. Một điểm khác 
+biết giữa Cvà C++ là trong C++ chúng ta có thể khai báo biến ở bất kì nơi nào 
+trong chương trình, thậm chí là ngay ở giữa các lệnh thực hiện chứ không chỉ là 
+ở đầu khối lệnh như ở trong C.</FONT> </P>
+<P><FONT face="Times New Roman">Mặc dù vậy chúng ta vẫn nên theo cách của ngôn 
+ngữ C khi khai báo các biến bởi vì nó sẽ rất hữu dụng khi cần sửa chữa một 
+chương trình có tất cả các phần khai báo được gộp lại với nhau. Bởi vậy, cách 
+thông dụng nhất để khai báo biến là đặt nó trong phần bắt đầu của mỗi hàm (biến 
+cục bộ) hay trực tiếp trong thân chương trình, ngoài tất cả các hàm (biến toàn 
+cục).</FONT></P>
+<TABLE border=0 cellPadding=0 style="mso-cellspacing: 1.5pt">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT 
+      face="Times New Roman"><!--[if gte vml 1]><v:shape id=_x0000_s1027 
+      style="FLOAT: left; HEIGHT: 217.5pt; MARGIN-LEFT: 0px; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 312.75pt; Z-INDEX: 2; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+      type = "#_x0000_t75" coordsize = "21600,21600" alt = "" o:allowoverlap = 
+      "f"><v:imagedata src = "imgvars1.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:2;left:0px;top:0px;width:417px;height:290px'><img width=417
+height=290 src=imgvars1.gif align=left v:shapes="_x0000_s1027"></span><![endif]><B>Global 
+      variables </B>(biến toàn cục) có thể được sử dụng ở bất kì đâu trong 
+      chương trình, ngay sau khi nó được khai báo.</FONT> </P>
+      <P><FONT face="Times New Roman">Tầm hoạt động của <B>local variables 
+      </B>(biến cục bộ) bị giới hạn trong phần mã mà nó được khai báo. Nếu chúng 
+      được khai báo ở đầu một hàm (như hàm <B>main</B>), tầm hoạt động sẽ là 
+      toàn bộ hàm <B>main</B>. Điều đó có nghĩa là trong ví dụ trên, các biến 
+      được khai báo trong hàm main() chỉ có thể được dùng trong hàm đó, không 
+      được dùng ở bất kì đâu khác. </FONT>&nbsp;</P>
+      <P><FONT face="Times New Roman">Thêm vào các biến toàn cục và cục bộ, còn 
+      có các biến ngoài (external). Các biến này không những được dùng trong một 
+      file mã nguồn mà còn trong tất cả các file được liên kết trong chương 
+      trình.</FONT> </P>
+      <P><FONT face="Times New Roman">Trong C++ tầm hoạt động của một biến chính 
+      là khối lệnh mà nó được khai báo (một khối lệnh là một tập hợp các lệnh 
+      được gộp lại trong một bằng các ngoặc nhọn <B>{ }</B> ). Nếu nó được khai 
+      báo trong một hàm tầm hoạt động sẽ là hàm đó, còn nếu được khai báo trong 
+      vòng lặp thì tầm hoạt động sẽ chỉ là vòng lặp 
+  đó....</FONT></P></TD></TR></TBODY></TABLE>
+<H2><FONT face="Times New Roman">Các hằng số</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Một hằng số là bất kì một biểu 
+thức nào mang một giá trị cố định, như:</FONT> </P>
+<P><B><FONT face="Times New Roman">Các số nguyên</FONT></B></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">1776</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>707</TT><BR><TT>-273</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">chúng là các hằng mang giá trị 
+số. Chú ý rằng khi biểu diễn một hằng kiểu số chúng ta không cần viết dấu ngoặc 
+kép hay bất kì dấu hiệu nào khác. </FONT></P>
+<P><FONT face="Times New Roman">Thêm&nbsp; vào những số ở hệ cơ số 10 ( cái mà 
+tất cả chúng ta đều đã biết) C++ còn cho phép sử dụng các hằng số cơ số 8 và 16. 
+Để biểu diễn một số hệ cơ số 8 chúng ta đặt trước nó kí tự 0, để biễu diễn số ở 
+hệ cơ số 16 chúng ta đặt trước nó hai kí tự 0x. Ví dụ:</FONT></P><PRE style="MARGIN: 0cm 36pt 0pt"><FONT face="Times New Roman">75<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </SPAN><I><SPAN style="COLOR: green">// Cơ số 10</SPAN></I></FONT></PRE><PRE style="MARGIN: 0cm 36pt 0pt"><FONT face="Times New Roman">0113<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </SPAN><I><SPAN style="COLOR: green">// cơ số 8</SPAN></I></FONT></PRE><PRE style="MARGIN: 0cm 36pt 0pt"><FONT face="Times New Roman">0x4b<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </SPAN><I><SPAN style="COLOR: green">// cơ số 16</SPAN></I></FONT></PRE>
+<P><FONT face="Times New Roman"><B>Các số thập phân (dạng dấu phẩy 
+động)</B><BR>Chúng biểu diễn các số với phần thập phân và/hoặc số mũ. Chúng có 
+thể bao gồm phần thập phân, kí tự <B>e </B>(biểu diễn 10 mũ...).</FONT> </P><PRE style="MARGIN: 0cm 36pt 0pt"><FONT face="Times New Roman">3.14159<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;  </SPAN><I><SPAN style="COLOR: green">// 3.14159</SPAN></I></FONT></PRE><PRE style="MARGIN: 0cm 36pt 0pt"><FONT face="Times New Roman">6.02e23<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;  </SPAN><I><SPAN style="COLOR: green">// 6.02 x 10</SPAN><SUP><SPAN style="COLOR: green; FONT-SIZE: 7.5pt">23</SPAN></SUP></I></FONT></PRE><PRE style="MARGIN: 0cm 36pt 0pt"><FONT face="Times New Roman">1.6e-19<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;  </SPAN><I><SPAN style="COLOR: green">// 1.6 x 10</SPAN><SUP><SPAN style="COLOR: green; FONT-SIZE: 7.5pt">-19</SPAN></SUP></I></FONT></PRE><PRE style="MARGIN: 0cm 36pt 0pt"><FONT face="Times New Roman">3.0<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </SPAN><I><SPAN style="COLOR: green">// 3.0</SPAN></I></FONT></PRE>
+<P><FONT face="Times New Roman"><B>Kí tự và xâu kí tự</B><BR>Trong C++ còn tồn 
+tại các hằng không phải kiểu số như:</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">'z'</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>'p'</TT><BR><TT>"Hello 
+world"</TT><BR><TT>"How do you do?"</TT></SPAN> </FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Hai biểu thức đầu tiên biểu diễn 
+các kí tự đơn, các kí tự được đặt trong dấu nháy đơn (<TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">'</SPAN></TT>), hai biểu 
+thức tiếp theo biểu thức các xâu kí tự được đặt trong dấu nháy kép (<TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">"</SPAN></TT>).</FONT> </P>
+<P><FONT face="Times New Roman">Khi viết các kí tự đơn hay các xâu kí tự cần 
+phải đặ chúng trong các dấu nháy để phân biệt với các tên biến hay các từ khoá. 
+Chú ý: </FONT>&nbsp;</P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">x</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>'x'</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman"><B>x</B> trỏ đến biến <B>x 
+</B>&nbsp;trong khi '<B>x</B>' là kí tự hằng '<B>x</B>'.</FONT> </P>
+<P><FONT face="Times New Roman">Các kí tự đơn và các xâu kí tự có một tính chất 
+riêng biệt là các mã điều khiển. Chúng là những kí tự đặc biệt mà không thể được 
+viết ở bất kì đâu khác trong chương trình như là mã xuống dòng (<TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">\n</SPAN></TT>) hay 
+<I>tab</I> (<TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">\t</SPAN></TT>). Tất cả đều 
+bắt đầu bằng dấu xổ ngược&nbsp; (<TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">\</SPAN></TT>). Sau đây là 
+danh sách các mã điều khiển đó:</FONT></P>
+<TABLE border=1 cellPadding=0 
+  style="MARGIN-LEFT: 36pt; mso-cellspacing: 1.5pt"><TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 37.5pt" 
+    width=50>
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">\n</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 187.5pt" 
+    width=250>
+      <P class=MsoNormal><FONT face="Times New Roman">xuống dòng</T> 
+    </FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 37.5pt" 
+    width=50>
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">\r</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">lùi về đầu dòng</T> 
+      </FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 37.5pt" 
+    width=50>
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">\t</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">kí tự tab</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 37.5pt" 
+    width=50>
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">\v</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">căn thẳng theo chiều 
+      dọc</T> </FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 37.5pt" 
+    width=50>
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">\b</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">backspace</T> 
+    </FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 37.5pt" 
+    width=50>
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">\f</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">sang 
+trang</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 37.5pt" 
+    width=50>
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">\a</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Kêu bíp</T> 
+  </FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 37.5pt" 
+    width=50>
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">\'</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">dấu nháy đơn</T> 
+      </FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 37.5pt" 
+    width=50>
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">\"</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">dấu nháy kép</T> 
+      </FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 37.5pt" 
+    width=50>
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">\</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">dấu hỏi</T> 
+  </FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 37.5pt" 
+    width=50>
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">\\</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">kí tự xổ ngược</T> 
+      </FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal><FONT face="Times New Roman">Ví dụ:</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">'\n'</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>'\t'</TT><BR><TT>"Left 
+\t Right"</TT><BR><TT>"one\ntwo\nthree"</TT></SPAN> </FONT></P>
+<P><FONT face="Times New Roman">Thêm vào đó, để biểu diễn một mã ASCII bạn cần 
+sử dụng kí tự xổ ngược (<TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">\</SPAN></TT>) tiếp theo đó 
+là mã ASCII viết trong hệ cơ số 8 hay cơ số 16. Trong trường hợp đầu mã ASCII 
+được viết ngay sau dấu sổ ngược, trong trường hợp thứ hai, để sử dụng số trong 
+hệ cơ số 16 bạn cần viết kí tự <B>x </B>trước số đó (ví dụ <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">\x20</SPAN></B></TT> hay 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">\x4A</SPAN></B></TT>).</FONT></P>
+<P><FONT face="Times New Roman">Các hằng chuỗi kí tự có thể được viết trên nhiều 
+dòng nếu mỗi dòng được kết thúc bằng một dấu sổ ngược (<TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">\</SPAN></TT>):</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">"string expressed in 
+\</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>two 
+lines"</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Bạn có thể nối một vài hằng xâu 
+kí tự ngăn cách bằng một hay vài dấu trống, kí tự tab, xuống dòng hay bất kì kí 
+tự trống nào khác.</FONT> </P><PRE style="MARGIN: 0cm 36pt 0pt"><FONT face="Times New Roman">"we form" "a unique" "string" "of characters"</FONT></PRE>
+<H2><FONT face="Times New Roman">Định nghĩa các hằng (<TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">#define</SPAN></I></TT>)</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Bạn có thể định nghĩa các hằng 
+với tên mà bạn muốn để có thể sử dụng thường xuyên mà không mất tài nguyên cho 
+các biến bằng cách sử dụng chỉ thị <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">#define</SPAN></B></TT>. Đây 
+là dạng của nó:</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman"><TT><B><SPAN style="FONT-SIZE: 10pt">#define 
+</SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">identifier 
+value</SPAN></I></TT></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Ví dụ:</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">#define PI 
+3.14159265</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>#define 
+NEWLINE '\n'</TT><BR><TT>#define WIDTH 100</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">chúng định nghĩa ba hằng số mới. 
+Sau khi khai báo bạn có thể sử dụng chúng như bất kì các hằng số nào khác, ví 
+dụ</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">circle = 2 * PI * 
+r;</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>cout 
+&lt;&lt; NEWLINE;</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Trong thực tế việc duy nhất mà 
+trình dịch làm khi nó tìm thấy một chỉ thị <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">#define</SPAN></B></TT> là 
+thay thế các tên hằng tại bất kì chỗ nào chúng xuất hiện (như trong ví dụ trước, 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">PI</SPAN></B></TT>, 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">NEWLINE</SPAN></B></TT> hay 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">WIDTH</SPAN></B></TT>) bằng 
+giá trị mà chúng được định nghĩa. Vì vậy các hằng số <TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">#define </SPAN></TT>được coi 
+là các <I>hằng số macro</I> </FONT></P>
+<P><FONT face="Times New Roman">Chỉ thị <TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">#define </SPAN></TT>không 
+phải là một lệnh thực thi, nó là chỉ thị tiền xử lý (preprocessor), đó là lý do 
+trình dịch coi cả dòng là một chỉ thị và dòng đó không cần kết thúc bằng dấu 
+chấm phẩy. Nếu bạn thêm dấu chấm phẩy vào cuối dòng, nó sẽ được coi là một phần 
+của giá trị định nghĩa hằng.</FONT> </P>
+<H2><FONT face="Times New Roman">Khai báo các hằng (const)</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Với tiền tố <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">const</SPAN></B></TT> bạn có 
+thể khai báo các hằng với một kiểu xác định như là bạn làm với một 
+biến</FONT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">const int width = 
+100;</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>const to 
+char tab = '\t';</TT><BR><TT>const zip = 12440;</TT></SPAN> </FONT></P>
+<DIV 
+style="BORDER-BOTTOM: windowtext 3pt solid; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm">
+<P 
+style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; mso-border-bottom-alt: solid windowtext 3.0pt; mso-padding-alt: 0cm 0cm 0cm 0cm"><FONT 
+face="Times New Roman">Trong trường hợp kiểu không được chỉ rõ (như trong ví dụ 
+cuối) trình dịch sẽ coi nó là kiểu <B>int</B>.</FONT></P></DIV>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 
+style="WIDTH: 100%; mso-padding-alt: 0cm 0cm 0cm 0cm; mso-cellspacing: 1.5pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; WIDTH: 45%" 
+    width="45%">
+      <P align=right class=MsoNormal style="TEXT-ALIGN: right"><FONT 
+      face="Times New Roman"><!--[if gte vml 1]><v:shape id=_x0000_s1028 
+      style="FLOAT: right; HEIGHT: 19.5pt; MARGIN-LEFT: -20.25pt; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 19.5pt; Z-INDEX: 3; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+      type = "#_x0000_t75" href = "bai1_1.htm" coordsize = "21600,21600" alt = 
+      "" o:button = "t" o:allowoverlap = "f"><v:imagedata src = 
+      "butnback.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:3;left:-27px;top:0px;width:26px;height:26px'><a
+href="bai1_1.htm"><img border=0 width=26 height=26 src=butnback.gif
+align=right v:shapes="_x0000_s1028"></a></span><![endif]><A 
+      href="bai1-1.htm">Bài 
+      trước:<BR><B>1-1. Cấu trúc một chương trình C++.</B></A></FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; WIDTH: 10%" 
+    width="10%">
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><FONT 
+      face="Times New Roman"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 id=_x0000_i1025 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; WIDTH: 45%" 
+    width="45%">
+      <P class=MsoNormal><FONT face="Times New Roman"><A 
+      href="bai1-3.htm"><!--[if gte vml 1]><v:shape 
+      id=_x0000_s1029 
+      style="FLOAT: left; HEIGHT: 19.5pt; MARGIN-LEFT: 0px; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 19.5pt; Z-INDEX: 4; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+      type = "#_x0000_t75" coordsize = "21600,21600" alt = "" o:allowoverlap = 
+      "f"><v:imagedata src = "butnnext.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:4;left:0px;top:0px;width:26px;height:26px'><img width=26
+height=26 src=butnnext.gif align=left v:shapes="_x0000_s1029"></span><![endif]>Bài 
+      tiếp theo:<BR><B>1-3. Các toán 
+tử.</B></A></FONT></P></TD></TR></TBODY></TABLE></DIV></DIV></BODY></HTML>

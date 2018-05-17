@@ -1,0 +1,437 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai4_3.htm -->
+<HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 4</TITLE>
+<META content=en-au http-equiv=Content-Language>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE fprolloverstyle>A:hover {
+	COLOR: #ff0000
+}
+</STYLE>
+<LINK 
+href="Dien dan tin hoc - IT Forum VN - Tutorial Room - Lp trình - C++ can bn - Bài 4-2_files/mycss.css" 
+rel=stylesheet type=text/css></HEAD>
+<BODY bgColor=#fffff0 leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<TABLE border=1 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff size=2>[</FONT><FONT size=2><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn Đàn Tin 
+      Học</A></FONT><FONT color=#0000ff size=2>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 4.3</B></P>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P><B><FONT size=5>Quan hệ giữa các lớp</FONT></B></P></TD></TR>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<H2>Các hàm bạn bè (từ khoá <TT>friend</TT>)</H2>Trong bài trước chúng ta đã 
+được biết rằng có ba mức bảo vệ khác nhau đối với các thành viên trong một lớp: 
+<B>public</B>, <B>protected</B> và <B>private</B>. Đối với các thành viên 
+<I>protected</I> và <I>private</I>, chúng không thể được truy xuất ở bên ngoài 
+lớp mà chúng được khai báo. Tuy nhiên cái gì cũng có ngoại lệ, bằng cách sử dụng 
+từ khoá <TT><I>friend</I></TT> trong một lớp chúng ta có thể cho phép một hàm 
+bên ngoài truy xuất vào các thành viên <TT><B>protected</B></TT> và 
+<TT><B>private</B></TT> trong một lớp.
+<P>Để có thể cho phép một hàm bên ngoài truy xuất vào các thành viên 
+<TT><B>private</B></TT> và <TT><B>protected</B></TT> của một lớp chúng ta phải 
+khai báo mẫu hàm đó với từ khoá <TT><B>friend</B></TT> bên trong phần khai báo 
+của lớp. Trong ví dụ sau chúng ta khai báo hàm bạn bè <TT><B>duplicate</B></TT>:
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// friend functions</I>
+#include &lt;iostream.h&gt;
+
+class CRectangle {
+    int width, height;
+  public:
+    void set_values (int, int);
+    int area (void) {return (width * height);}
+    friend CRectangle duplicate (CRectangle);
+};
+
+void CRectangle::set_values (int a, int b) {
+  width = a;
+  height = b;
+}
+
+CRectangle duplicate (CRectangle rectparam)
+{
+  CRectangle rectres;
+  rectres.width = rectparam.width*2;
+  rectres.height = rectparam.height*2;
+  return (rectres);
+}
+
+int main () {
+  CRectangle rect, rectb;
+  rect.set_values (2,3);
+  rectb = duplicate (rect);
+  cout &lt;&lt; rectb.area();
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+width="50%"><TT><B>24</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Ở bên trong hàm <B><TT>duplicate</TT></B>, chúng ta có thể truy xuất vào các 
+thành viên <TT><B>width</B></TT> và <TT><B>height</B></TT> của các đối tượng 
+khác nhau thuộc lớp <TT><B>CRectangle</B></TT>. Hãy chú ý rằng 
+<TT><B>duplicate()</B></TT> không phải là thành viên của lớp 
+<TT><B>CRectangle</B></TT>.&nbsp;
+<P>Nói chung việc sử dụng các hàm bạn bè không nằm trong phương thức lập trình 
+hướng đối tượng, vì vậy tốt hơn là hãy sử dụng các thành viên của lớp bất cứ khi 
+nào có thể. Như ở trong ví dụ trước, chúng ta hoàn toàn có thể tích hợp 
+<TT><B>duplicate()</B></TT> vào bên trong lớp.
+<H2>Các lớp bạn bè (<TT>friend</TT>)</H2>Ngoài việc có thể khai báo các hàm bạn 
+bè, chúng ta cũng có thể định nghĩa một lớp là bạn của một lớp khác. Việc này sẽ 
+cho phép lớp thứ hai có thể truy xuất vào các thành viên 
+<TT><B>protected</B></TT> and <TT><B>private</B></TT> của lớp thứ nhất:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// friend class</I>
+#include &lt;iostream.h&gt;
+
+class CSquare;
+
+class CRectangle {
+    int width, height;
+  public:
+    int area (void)
+      {return (width * height);}
+    void convert (CSquare a);
+};
+
+class CSquare {
+  private:
+    int side;
+  public:
+    void set_side (int a)
+      {side=a;}
+    friend class CRectangle;
+};
+
+void CRectangle::convert (CSquare a) {
+  width = a.side;
+  height = a.side;
+}
+  
+int main () {
+  CSquare sqr;
+  CRectangle rect;
+  sqr.set_side(4);
+  rect.convert(sqr);
+  cout &lt;&lt; rect.area();
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+width="50%"><TT><B>16</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Trong ví dụ này chúng ta đã khai báo <TT><B>CRectangle</B></TT> là bạn của 
+<TT><B>CSquare</B></TT> nên <TT><B>CRectangle</B></TT> có thể truy xuất vào các 
+thành viên <TT><B>protected</B></TT> and <TT><B>private</B></TT> của 
+<TT><B>CSquare</B></TT>, cụ thể hơn là <TT><B>CSquare::side,</B></TT> biến định 
+nghĩa kích thước của hình vuông.
+<P>Bạn có thể thấy một điều mới lạ trong chương trình, đó là phần khai báo mẫu 
+rỗng của lớp <TT><B>CSquare</B></TT>, điều này là cần thiết vì bên trong phần 
+khai báo của <TT><B>CRectangle</B></TT> chúng ta tham chiếu đến 
+<TT><B>CSquare</B></TT> (như là một tham số trong <TT><B>convert()</B></TT>). 
+Phần định nghĩa đầy đủ của <TT><B>CSquare</B></TT> được viết ở sau.
+<P>Chú ý rằng tình bạn giữa hai lớp có thể không như nhau nếu chúng ta không chỉ 
+định. Trong ví dụ này <TT><B>CRectangle</B></TT> được coi là bạn của 
+<B><TT>CSquare</TT></B> nhưng đối với <TT><B>CRectangle</B></TT> thì không. Bởi 
+vậy <TT><B>CRectangle</B></TT> có thể truy xuất vào các thành viên 
+<TT><B>protected</B></TT> và <TT><B>private</B></TT> của <TT><B>CSquare</B></TT> 
+nhưng điều ngược lại là không đúng. Tuy nhiên chẳng có gì cấm đoán chúng ta khai 
+báo <TT><B>CSquare</B></TT> là bạn của <TT><B>CRectangle</B></TT>.</P>
+<H2>Sự thừa kế giữa các lớp</H2>Một trong những tính năng quan trọng của lớp là 
+sự thừa kế. Nó cho phép chúng ta tạo một đối tượng xuất pháp từ một đối tượng 
+khác.&nbsp;Ví dụ, giả sử chúng ta muốn khai báo một loạt các lớp mô tả các đa 
+giác như là <B><TT>CRectangle</TT></B> hay <TT><B>CTriangle</B></TT>. Cả hai đều 
+có những đặc tính chung, ví dụ như là chiều cao và đáy. 
+<P>Điều này có thể được biểu diễn bằng lớp <TT><B>CPolygon</B></TT> mà từ đó 
+chúng ta có thể thừa kế hai lớp, đó là <TT><B>CRectangle</B></TT> và 
+<TT><B>CTriangle</B></TT>.</P>
+<BLOCKQUOTE><IMG height=144 
+  src="imgclas1.gif" 
+  width=269> </BLOCKQUOTE>Lớp <TT><B>CPolygon</B></TT> sẽ chứa các thành viên 
+chung đối với mọi đa giác. Trong trường hợp của chúng ta: chiều rộng và chiều 
+cao.&nbsp;
+<P>Các lớp xuất phát từ các lớp khác được thừa hưởng tất cả các thành viên nhìn 
+thấy được của lớp. Điều này có nghĩa là một lớp cơ sở có thành viên 
+<TT><B>A</B></TT> và chúng ta tạo thêm một lớp xuất phát từ nó với một thành 
+viên mới là <TT><B>B</B></TT>, lớp được thừa kế sẽ có cả <TT><B>A</B></TT> và 
+<TT><B>B</B></TT>.
+<P>Để có thể thừa kế một lớp từ một lớp khác, chúng ta sử dụng toán tử 
+<TT><B>:</B></TT> (dấu hai chấm ) trong phần khai báo của lớp con: 
+<BLOCKQUOTE>
+  <P><TT><B>class </B><I>derived_class_name</I><B>: public</B> 
+  <I>base_class_name</I><B>;</B></TT> </P></BLOCKQUOTE>trong đó 
+<TT><I>derived_class_name</I></TT> là tên của lớp con (lớp được thừa kế) và 
+<TT><I>base_class_name</I></TT> là tên của lớp cơ 
+sở.&nbsp;<TT><B>public</B></TT> có thể được thay thế bởi 
+<TT><B>protected</B></TT> hoặc <TT><B>private</B></TT>, nó xác định quyền truy 
+xuất đối với các thành viên được thừa kế như chúng ta sẽ thấy ở ví dụ này:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// derived classes</I>
+#include &lt;iostream.h&gt;
+
+class CPolygon {
+  protected:
+    int width, height;
+  public:
+    void set_values (int a, int b)
+      { width=a; height=b;}
+  };
+
+class CRectangle: public CPolygon {
+  public:
+    int area (void)
+      { return (width * height); }
+  };
+
+class CTriangle: public CPolygon {
+  public:
+    int area (void)
+      { return (width * height / 2); }
+  };
+  
+int main () {
+  CRectangle rect;
+  CTriangle trgl;
+  rect.set_values (4,5);
+  trgl.set_values (4,5);
+  cout &lt;&lt; rect.area() &lt;&lt; endl;
+  cout &lt;&lt; trgl.area() &lt;&lt; endl;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>20<BR>10</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Như bạn có thể thấy, các đối tượng của lớp <TT><B>CRectangle</B></TT> và 
+<TT><B>CTriangle</B></TT> chứa tất cả các thành viên của 
+<TT><B>CPolygon</B></TT>, đó là <TT><B>width</B></TT>, <TT><B>height</B></TT> và 
+<TT><B>set_values()</B></TT>.
+<P>Từ khoá <TT><B>protected</B></TT> tương tự với <TT><B>private</B></TT>, sự 
+khác biệt duy nhất chỉ xảy ra khi thừa kế các lớp. Khi chúng ta thừa kế một lớp, 
+các thành viên <TT><B>protected</B></TT> của lớp cơ sở có thể được dùng bởi các 
+thành viên khác của lớp được thừa kế còn các thành viên <TT><B>private</B></TT> 
+thì không. Vì chúng ta muốn rằng <TT><B>width</B></TT> và <TT><B>height</B></TT> 
+có thể được tính toán bởi các thành viên của các lớp được thừa kế 
+<TT><B>CRectangle</B></TT> và <TT><B>CTriangle</B></TT> chứ không chỉ bởi các 
+thành viên của <B><TT>CPolygon</TT></B>, chúng ta đã sử dụng từ khoá 
+<TT><B>protected</B></TT> thay vì <TT><B>private</B></TT>.
+<P>Chúng ta có thể tổng kết lại các kiểu truy xuất khác nhau tuỳ theo ai truy 
+xuất chúng: 
+<BLOCKQUOTE>
+  <TABLE border=1>
+    <TBODY>
+    <TR>
+      <TD align=middle bgColor=silver><B>Truy xuất</B></TD>
+      <TD align=middle bgColor=silver><TT>public</TT></TD>
+      <TD align=middle bgColor=silver><TT>protected</TT></TD>
+      <TD align=middle bgColor=silver><TT>private</TT></TD></TR>
+    <TR>
+      <TD bgColor=silver>Các thành viên trong cùng lớp</TD>
+      <TD align=middle>có</TD>
+      <TD align=middle>có</TD>
+      <TD align=middle>có</TD></TR>
+    <TR>
+      <TD bgColor=silver>Các thành viên của các lớp thừa kế</TD>
+      <TD align=middle>có</TD>
+      <TD align=middle>có</TD>
+      <TD align=middle><FONT color=red>không</FONT></TD></TR>
+    <TR>
+      <TD bgColor=silver>Không phải là thành viên</TD>
+      <TD align=middle>có</TD>
+      <TD align=middle><FONT color=red>không</FONT></TD>
+      <TD align=middle><FONT 
+color=red>không</FONT></TD></TR></TBODY></TABLE></BLOCKQUOTE>trong đó "không 
+phải là thành viên" đại diện cho bất kì sự tham chiếu nào từ bên ngoài lớp, ví 
+dụ như là từ <TT><B>main()</B></TT>, từ một lớp khác hay từ bất kì hàm nào.
+<P>Trong ví dụ của chúng ta, các thành viên được thừa kế bởi 
+<TT><B>CRectangle</B></TT> và <TT><B>CTriangle</B></TT> cũng tuân theo các quyền 
+truy xuất như đối với lớp cơ sở <TT><B>CPolygon</B></TT>: 
+<BLOCKQUOTE><PRE><TT>CPolygon::width</TT>           <FONT color=green><I>// protected access</I></FONT>
+<TT>CRectangle::width</TT>         <FONT color=green><I>// protected access</I></FONT>
+
+<TT>CPolygon::set_values()</TT>    <FONT color=green><I>// public access</I></FONT>
+<TT>CRectangle::set_values()</TT>  <FONT color=green><I>// public access</I></FONT></PRE></BLOCKQUOTE>Có 
+điều này vì chúng ta đã thừa kế một lớp từ một lớp khác với quyền truy xuất 
+<TT><B>public</B></TT>, hãy nhớ: 
+<BLOCKQUOTE>
+  <P><TT>class CRectangle: <B>public</B> CPolygon;</TT> </P></BLOCKQUOTE>từ khoá 
+<TT><B>public</B></TT> đại diện cho mức độ bảo về <U>tối thiểu</U> mà các thành 
+viên được thừa kế của lớp cơ sở (<TT><B>CPolygon</B></TT>) phải có được trong 
+lớp mới (<TT><B>CRectangle</B></TT>). Mức độ này đối với các thành viên được 
+thừa kế có thể được thay đổi nếu thay vì dùng <TT><B>public</B></TT> chúng ta sử 
+dụng <TT><B>protected</B></TT> hay <TT><B>private</B></TT>, ví dụ, giả sử rằng 
+<TT><B>daughter</B></TT> là một lớp được thừa kế từ <B><TT>mother</TT></B>, 
+chúng định nghĩa như thế này: 
+<BLOCKQUOTE>
+  <P><TT>class daughter: protected mother;</TT> </P></BLOCKQUOTE>điều này sẽ thiết 
+lập <TT><B>protected</B></TT> là mức độ truy xuất tối thiểu cho các thành viên 
+của <TT><B>daughter</B></TT> được thừa kế từ lớp cơ sở. Có nghĩa là tất cả các 
+thành viên <TT><B>public</B></TT> trong <TT><B>mother</B></TT> sẽ trở thành 
+<TT><B>protected</B></TT> trong <B><TT>daughter</TT></B>. Tất nhiên, điều này 
+không cản trở <TT><B>daughter</B></TT> có thể có các thành viên 
+<TT><B>public</B></TT> của riêng nó. Mức độ tối thiểu này chỉ áp dụng cho các 
+thành viên được thừa kế từ <TT><B>mother</B></TT>.
+<P>Nếu không có mức truy xuất nào được chỉ định, <TT><B>private</B></TT> được 
+dùng với các lớp được tạo ra với từ khoá <TT><B>class</B></TT> còn 
+<TT><B>public</B></TT> được dùng với các cấu trúc.
+<H2>Những gì được thừa kế từ lớp cơ sở?</H2>Về nguyên tắc tất cả các thành viên 
+của lớp đều được thừa kế trừ: 
+<UL>
+  <LI><B>Constructor và destructor</B> 
+  <LI><B>Thành viên <TT>operator=()</TT></B> 
+  <LI><B>Bạn bè</B> </LI></UL>Mặc dù constructor và destructor của lớp cơ sở không 
+được thừa kế, constructor mặc định (constructor không có tham số) và destructor 
+của lớp cơ sở luôn luôn được gọi khi một đối tượng của lớp được thừa kế được tạo 
+lập hay phá huỷ.
+<P>Nếu lớp cơ sở không có constructor mặc định hay bạn muốn một constructor đã 
+quá tải được gọi khi một đối tượng mới của lớp được thừa kế được tạo lập, bạn có 
+thể chỉ định nó ở mỗi định nghĩa của constructor trong lớp được thừa kế: 
+<BLOCKQUOTE>
+  <P><TT>derived_class_name (parameters) : base_class_name (parameters) {}</TT> 
+  </P></BLOCKQUOTE>Ví dụ:
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// constructors and derivated classes</I>
+#include &lt;iostream.h&gt;
+
+class mother {
+  public:
+    mother ()
+      { cout &lt;&lt; "mother: no parameters\n"; }
+    mother (int a)
+      { cout &lt;&lt; "mother: int parameter\n"; }
+};
+
+class daughter : public mother {
+  public:
+    daughter (int a)
+      { cout &lt;&lt; "daughter: int parameter\n\n"; }
+};
+
+class son : public mother {
+  public:
+    son (int a) : mother (a)
+      { cout &lt;&lt; "son: int parameter\n\n"; }
+};
+
+int main () {
+  daughter cynthia (1);
+  son daniel(1);
+  
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>mother: no 
+      parameters<BR>daughter: int parameter<BR>&nbsp;<BR>mother: int 
+      parameter<BR>son: int parameter<BR></B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Hãy quan sát sự khác biệt giữa việc constructor của <TT><B>mother</B></TT> 
+được gọi khi khi một đối tượng <TT><B>daughter</B></TT> mới được tạo lập và khi 
+một đối tượng <TT><B>son</B></TT> được tạo lập. Sở dĩ có sự khác biệt này là do 
+phần khai báo constructor của <TT><B>daughter</B></TT> và <TT><B>son</B></TT>: 
+<BLOCKQUOTE><TT><PRE>daughter (int a)          <I>// không có gì được chỉ định: gọi constructor mặc định</I>
+son (int a) : mother (a)  <I>// constructor được chỉ định: gọi cái này</I></PRE></TT></BLOCKQUOTE>
+<H2>Đa thừa kế</H2>
+<P>Trong C++ chúng ta có thể tạo lập một lớp thừa kế các trường và các phương 
+thức từ nhiều hơn một lớp. Điều này có thể thực hiện bằng cách tách các lớp cơ 
+sở khác nhau bằng dấu phẩy trong phần khai báo của lớp được thừa kế. Ví dụ, nếu 
+chúng ta có một lớp dùng để in ra màn hình (<TT><B>COutput</B></TT>) và chúng ta 
+muốn các lớp của chúng ta <TT><B>CRectangle</B></TT> và 
+<TT><B>CTriangle</B></TT> cũng thừa kế các thành viên của nó cùng với các thành 
+viên của <B><TT>CPolygon</TT></B>, chúng ta có thể viết:</P>
+<BLOCKQUOTE>
+  <P><TT>class CRectangle: public CPolygon, public COutput {<BR>class CTriangle: 
+  public CPolygon, public COutput {</TT> </P></BLOCKQUOTE>Đây là ví dụ đầy đủ:
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// đa thừa kế</I>
+#include &lt;iostream.h&gt;
+
+class CPolygon {
+  protected:
+    int width, height;
+  public:
+    void set_values (int a, int b)
+      { width=a; height=b;}
+  };
+
+class COutput {
+  public:
+    void output (int i);
+  };
+
+void COutput::output (int i) {
+  cout &lt;&lt; i &lt;&lt; endl;
+  }
+
+class CRectangle: public CPolygon, public COutput {
+  public:
+    int area (void)
+      { return (width * height); }
+  };
+
+class CTriangle: public CPolygon, public COutput {
+  public:
+    int area (void)
+      { return (width * height / 2); }
+  };
+  
+int main () {
+  CRectangle rect;
+  CTriangle trgl;
+  rect.set_values (4,5);
+  trgl.set_values (4,5);
+  rect.output (rect.area());
+  trgl.output (trgl.area());
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>20<BR>10</B></TT></TD></TR></TBODY></TABLE></CENTER>&nbsp; 
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><A 
+      href="bai4-2.htm"><IMG 
+      align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR><B>4-2. </B><B>Quá tải các toán tử</B></A></TD>
+    <TD align=middle width="10%"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></TD>
+    <TD align=left width="45%"><A 
+      href="bai4-4.htm"><IMG 
+      align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26>Bài sau:<BR><B>4-4. Các thành viên ảo. Đa 
+  hình</B></A></TD></TR></TBODY></TABLE></BODY></HTML>

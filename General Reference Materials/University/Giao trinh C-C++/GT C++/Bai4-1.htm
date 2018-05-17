@@ -1,0 +1,446 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai4_1.htm -->
+<HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 4</TITLE>
+<META content=en-us http-equiv=Content-Language>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE fprolloverstyle>A:hover {
+	COLOR: #ff0000
+}
+</STYLE>
+<LINK 
+href="Dien dan tin hoc - IT Forum VN - Tutorial Room - Lp trình - C++ can bn - Bài 4-4_files/mycss.css" 
+rel=stylesheet type=text/css></HEAD>
+<BODY bgColor=#fffff0 leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<TABLE border=1 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff size=2>[</FONT><FONT size=2><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn Đàn Tin 
+      Học</A></FONT><FONT color=#0000ff size=2>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 4.1</B></P>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P><FONT size=5><B>Các lớp</B></FONT></P></TD></TR>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<P>Lớp là một phương thức logic để tổ chức dữ liệu và các hàm trong cùng một cấu 
+trúc. Chúng được khai báo sử dụng từ khoá <TT><B>class</B></TT>, từ này có chức 
+năng tương tự với từ khoá của C <B><TT>struct</TT></B> nhưng có khả năng gộp 
+thêm các hàm thành viên. 
+<P>Dạng thức của nó như sau:</P>
+<BLOCKQUOTE><TT><PRE><B>class </B><I>class_name</I> <B>{</B>
+  <I>permission_label_1</I>:
+    <I>member1</I><B>;</B>
+  <I>permission_label_2</I>:
+    <I>member2</I><B>;
+  ...
+  }</B> <I>object_name</I><B>;</B>
+</PRE></TT></BLOCKQUOTE>trong đó <TT><B><I>class_name</I></B></TT> là tên của 
+lớp ( kiểu người dùng tự định nghĩa) và trường mặc định 
+<TT><B><I>object_name</I></B></TT> là một hay một vài tên đối tượng hợp lệ. Phần 
+thân của khai báo chứa các <B>thành viên</B> của lớp, đó có thể là dữ liệu hay 
+các hàm và có thể là các <I><B>nhãn cho phép ( </B></I><I><B><TT>permission 
+labels)</TT></B></I> là một trong những từ khoá sau đây: 
+<TT><B>private:</B></TT>, <TT><B>public:</B></TT> hoặc 
+<TT><B>protected:</B></TT>.&nbsp; 
+<UL>
+  <LI>Các thành viên <TT><B>private</B></TT> của một lớp chỉ có thể được truy 
+  xuất từ các thành viên khác của lớp hoặc từ các lớp "<I>bạn bè</I>".&nbsp; 
+  <LI>Các thành viên <B><TT>protected</TT></B>&nbsp; có thể được truy xuất từ 
+  các thành viên trong cùng một lớp và các lớp bạn bè, thêm vào đó là từ các 
+  thành viên của các lớp thừa kế 
+  <LI>Cuối cùng, các thành viên <B><TT>public</TT></B> có thể được truy xuất từ 
+  bất kì chỗ nào mà lớp nhìn thấy. </LI></UL>Nếu chúng ta khai báo các thành viên 
+của một lớp trước khi thêm vào các nhãn cho phép thì các thành viên đó được coi 
+là <B><TT>private</TT></B>. 
+<P>Ví dụ: 
+<BLOCKQUOTE><TT><PRE>class CRectangle {
+    int x, y;
+  public:
+    void set_values (int,int);
+    int area (void);
+  } rect;
+</PRE></TT></BLOCKQUOTE>Khai báo lớp <TT><B>CRectangle</B></TT> và một đối tượng 
+có tên <TT><B>rect</B></TT> có kiểu là lớp <B><TT>CRectangle</TT></B>. Lớp này 
+chứa bốn thành viên: hai viến có kiểu <TT><B>int</B></TT> (<TT><B>x</B></TT> và 
+<TT><B>y</B></TT>) trong phần <TT><B>private</B></TT> (vì private là sự cho phép 
+mặc định) và hai hàm trong phần <B><TT>public</TT></B>: 
+<TT><B>set_values()</B></TT> và <TT><B>area()</B></TT>, ở đây chúng ta chỉ mới 
+khai báo mẫu. 
+<P>Hãy chú ý sự khác biệt giữa tên lớp và tên đối đối tượng: Trong ví dụ trước, 
+<TT><B>CRectangle</B></TT> là tên lớp còn <TT><B>rect</B></TT> là tên một đối 
+tượng có kiểu <TT><B>CRectangle</B></TT>.&nbsp; 
+<P>Trong các phần tiếp theo của chương trình chúng ta có thể truy xuất đến các 
+thành viên public của đối tượng <TT><B>rect</B></TT> như là đối với các hàm hay 
+các biến thông thường bằng cách đặt tên của <B>đối tượng</B> rồi sau đó là một 
+dấu chấm và tên thành viên của lớp (như chúng ta đã làm với các cấu trúc của C). 
+Ví dụ: 
+<BLOCKQUOTE>
+  <P><TT>rect.set_value (3,4);<BR>myarea = rect.area();</TT></P></BLOCKQUOTE>nhưng 
+chúng ta không có khả năng truy xuất đến <TT><B>x</B></TT> hay <TT><B>y</B></TT> 
+vì chúng là các thành viên <U>private</U> của lớp và chúng chỉ có thể được truy 
+xuất từ các thành viên của cùng một lớp. Bối rối? Đây là ví dụ đầy đủ về lớp 
+<TT><B>CRectangle</B></TT>:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// classes example</I>
+#include &lt;iostream.h&gt;
+
+class CRectangle {
+    int x, y;
+  public:
+    void set_values (int,int);
+    int area (void) {return (x*y);}
+};
+
+void CRectangle::set_values (int a, int b) {
+  x = a;
+  y = b;
+}
+
+int main () {
+  CRectangle rect;
+  rect.set_values (3,4);
+  cout &lt;&lt; "area: " &lt;&lt; rect.area();
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>area: 
+  12</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Một điều mới trong đoạn mã này là toán tử phạm vi <TT><B>::</B></TT> được 
+dùng trong khai báo <TT><B>set_values()</B></TT>. Nó được sử dụng để khai báo ở 
+bên ngoài các thành viên của một lớp. Chú ý rằng chúng ta đã định nghĩa đầy đủ 
+hàm <TT><B>area()</B></TT> ngay bên trong lớp trong khi hàm 
+<B><TT>set_values()</TT></B> mới chỉ được khai báo mẫu còn định nghĩa của nó nằm 
+ở ngoài lớp. Trong phần khai báo ở ngoài này chúng ta bắt buộc phải dùng toán tử 
+<TT><B>::</B></TT>.</P>
+<P>Sự khác biệt duy nhất giữa việc khai báo đầy đủ một hàm bên trong lớp và việc 
+chỉ khai báo mẫu là trong trường hợp thứ nhất hàm sẽ được tự động coi là 
+<I>inline</I> bởi trình dịch, còn trong trường hợp thứ hai nó sẽ là một hàm 
+thành viên bình thường. 
+<P>Lý do khiến chúng ta khai báo <TT><B>x</B></TT> và <TT><B>y</B></TT> là các 
+thành viên <TT><B>private</B></TT> vì chúng ta đã định nghĩa một hàm để thâótc 
+với chúng (<TT><B>set_values()</B></TT>) và không có lý do gì để truy nhập trực 
+tiếp đến các biến này. Có lẽ trong ví dụ rất đơn giản này bạn không thấy được 
+một tiện ích lớn khi bảo vệ hai biến này nhưng trong các dự án lớn hơn nó có thể 
+là rất quan trọng khi đảm bảo được rằng các giá trị đó không bị thay đổi một 
+cách không mong muốn.&nbsp; 
+<P>Một ích lợi nữa của lớp là chúng ta có thể khai báo một vài đối tượng khác 
+nhau từ nó. Ví dụ, tiếp sau đây là ví dụ trước về lớp 
+<TT><B>CRectangle</B></TT>, tôi chỉ thêm phần khai báo thêm đối tượng 
+<B><TT>rectb</TT></B>.<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// class example</I>
+#include &lt;iostream.h&gt;
+
+class CRectangle {
+    int x, y;
+  public:
+    void set_values (int,int);
+    int area (void) {return (x*y);}
+};
+
+void CRectangle::set_values (int a, int b) {
+  x = a;
+  y = b;
+}
+
+int main () {
+  CRectangle rect, rectb;
+  rect.set_values (3,4);
+  rectb.set_values (5,6);
+  cout &lt;&lt; "rect area: " &lt;&lt; rect.area() &lt;&lt; endl;
+  cout &lt;&lt; "rectb area: " &lt;&lt; rectb.area() &lt;&lt; endl;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>rect area: 12<BR>rectb 
+      area: 30</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Chú ý rằng lời gọi đến <TT><B>rect.area()</B></TT> không cho cùng kết quả với 
+<B><TT>rectb.area()</TT></B> vì mỗi đối tượng của lớp <TT><B>CRectangle</B></TT> 
+có các biến và các hàm của riêng nó&nbsp; 
+<P>Trên đây là những khái niệm cơ bản về đối tượng và lập trình hướng đối tượng. 
+Trong đối tượng các dữ liệu và các hàm là các thuộc tính thay vì trước đây đối 
+tượng là các tham số của hàm trong lập trình cấu trúc. Trong bài này các phần 
+tiếp sau chúng ta sẽ nói đến những lợi ích của phương thức này. 
+<H2>Constructors và destructors</H2>Nói chung các đối tượng cần phải khởi tạo 
+các biến hoặc cấp phát bộ nhớ động trong quá trình tạo ra chúng để có thể hoạt 
+động tốt và tránh được việc trả về các giá trị không mong muốn. Ví dụ, điều gì 
+sẽ xảy ra nếu chúng ta gọi hàm <TT><B>area()</B></TT> trước khi gọi hàm 
+<TT><B>set_values</B></TT>?Có lẽ kết quả sẽ là một giá trị không xác định vì các 
+thành viên <TT><B>x</B></TT> và <TT><B>y</B></TT> chưa được gán một giá trị cụ 
+thể nào. 
+<P>Để tránh điều này, một lớp cần có một hàm đặc biệt: một <I>constructor</I>, 
+hàm này có thể được khai báo bằng cách đặt tên trùng với tên của lớp. Nó sẽ được 
+gọi tự động khi một khai báo một đối tượng mới hoặc cấp phát một đối tượng có 
+kiểu là lớp đó. Chúng ta thêm một <I>constructor </I>vào lớp 
+<B><TT>CRectangle</TT></B>:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// classes example</I>
+#include &lt;iostream.h&gt;
+
+class CRectangle {
+    int width, height;
+  public:
+    CRectangle (int,int);
+    int area (void) {return (width*height);}
+};
+
+CRectangle::CRectangle (int a, int b) {
+  width = a;
+  height = b;
+}
+
+int main () {
+  CRectangle rect (3,4);
+  CRectangle rectb (5,6);
+  cout &lt;&lt; "rect area: " &lt;&lt; rect.area() &lt;&lt; endl;
+  cout &lt;&lt; "rectb area: " &lt;&lt; rectb.area() &lt;&lt; endl;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>rect area: 12<BR>rectb 
+      area: 30</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Như bạn có thể thấy, kết quả của ví dụ này giống với ví dụ trước. Trong 
+trường hợp này chúng ta chỉ thay thế hàm&nbsp; <B><TT>set_values</TT></B> bằng 
+một hàm <I>constructor</I>. Hãy chú ý cách mà các tham số được truyền cho 
+constructor khi một đối tượng được tạo ra: 
+<BLOCKQUOTE>
+  <P><TT>CRectangle rect (3,4);<BR>CRectangle rectb 
+(5,6);</TT></P></BLOCKQUOTE>Bạn có thể thấy rằng constructor không có giá 
+trị&nbsp; trả về, ngay cả kiểu <TT><B>void</B></TT> cũng không. Điều này luôn 
+luôn phải như vậy.&nbsp; 
+<P><B>Destructor</B> làm các chức năng ngược lại. Nó sẽ được tự động gọi khi một 
+đối tượng được giải phóng khỏi bộ nhớ hay phạm vi tồn tại của nó đã kết thúc (ví 
+dụ như nếu nó được định nghĩa là một đối tượng cục bộ bên trong một hàm và khi 
+hàm đó kết thúc thì phạm vi tồn tại của nó cũng hết) hoặc nó là một đối tượng 
+đối tượng được cấp phát động và sẽ giải phóng bởi toán tử 
+<TT><B>delete</B></TT>. 
+<P>Destructor phải có cùng tên với tên lớp với dấu (<TT><B>~</B></TT>) ở đằng 
+trước và nó không được trả về giá trị nào. 
+<P>Destructor đặc biệt phù hợp khi mà một đối tượng cấp phát bộ nhớ động trong 
+quá trình tồn tại của nó và trong thời điểm bị huỷ bỏ chúng ta muốn giải phóng 
+bộ nhớ mà nó sử dụng.</P>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// example on constructors and destructors</I>
+#include &lt;iostream.h&gt;
+
+class CRectangle {
+    int *width, *height;
+  public:
+    CRectangle (int,int);
+    ~CRectangle ();
+    int area (void) {return (*width * *height);}
+};
+
+CRectangle::CRectangle (int a, int b) {
+  width = new int;
+  height = new int;
+  *width = a;
+  *height = b;
+}
+
+CRectangle::~CRectangle () {
+  delete width;
+  delete height;
+}
+
+int main () {
+  CRectangle rect (3,4), rectb (5,6);
+  cout &lt;&lt; "rect area: " &lt;&lt; rect.area() &lt;&lt; endl;
+  cout &lt;&lt; "rectb area: " &lt;&lt; rectb.area() &lt;&lt; endl;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>rect area: 12<BR>rectb 
+      area: 30</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<H2>Quá tải các Constructors</H2>
+<P>Như bất kì hàm nào khác, một constructor có thể được quá tải bởi một vài hàm 
+có cùng tên nhưng khác kiểu hay khác số tham số. Nhớ rằng ở một thời điểm trình 
+dịch chỉ thực hiện một hàm phù hợp (xem phần <A 
+href="bai2-3.htm">2.3, 
+Hàm-II</A>). Do vậy chỉ một hàm constructor phù hợp được gọi vào thời điểm một 
+đối tượng lớp được khai báo. 
+<P>Trong thực tế, khi khai báo một lớp mà chúng ta không chỉ định một hàm 
+constructor nào thì trình dịch sẽ tự động tạo ra hai constructor quá tải 
+("<I>constructor mặc định</I>" và "<I>copy constructor</I>"). Ví dụ, đối với 
+lớp: 
+<BLOCKQUOTE><TT><PRE>class CExample {
+  public:
+    int a,b,c;
+    void multiply (int n, int m) { a=n; b=m; c=a*b; };
+  };
+</PRE></TT></BLOCKQUOTE>trình dịch sẽ tự động cho rằng lớp có hai constructor 
+sau: 
+<UL>
+  <LI><B>Constructor rỗng</B><BR>Đây là một constructor không có tham số. Nó 
+  chẳng làm gì cả. 
+  <BLOCKQUOTE><TT>CExample::CExample () { };</TT> </BLOCKQUOTE>
+  <LI><B>Copy constructor</B><BR>Đây là một constructor có một tham số cùng kiểu 
+  với lớp. Nó thực hiện một việc là gán tất cả các biến thành viên không tĩnh 
+  (nonstatic) của lớp giá trị của biến tương ứng của đối tượng tham số. 
+  <BLOCKQUOTE><TT><PRE>CExample::CExample (const CExample&amp; rv) {
+  a=rv.a;  b=rv.b;  c=rv.c;
+  }</PRE></TT></BLOCKQUOTE></LI></UL>
+<P>Cần phải nhấn mạnh rằng các constructor mặc định này chỉ tồn tại nếu không có 
+constructor được khai báo.</P>
+<P>Tất nhiên là bạn có thể quá tải constructor của nó để cung cấp các 
+constructor khác nhau cho các mục đích khác nhau:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// overloading class constructors</I>
+#include &lt;iostream.h&gt;
+
+class CRectangle {
+    int width, height;
+  public:
+    CRectangle ();
+    CRectangle (int,int);
+    int area (void) {return (width*height);}
+};
+
+CRectangle::CRectangle () {
+  width = 5;
+  height = 5;
+}
+
+CRectangle::CRectangle (int a, int b) {
+  width = a;
+  height = b;
+}
+
+int main () {
+  CRectangle rect (3,4);
+  CRectangle rectb;
+  cout &lt;&lt; "rect area: " &lt;&lt; rect.area() &lt;&lt; endl;
+  cout &lt;&lt; "rectb area: " &lt;&lt; rectb.area() &lt;&lt; endl;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>rect area: 12<BR>rectb 
+      area: 25</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Trong trường hợp này <TT><B>rectb</B></TT> được khai báo không dùng tham số, 
+vì vậy nó được khởi tạo với <I>constructor</I> không có tham số, <I>constructor 
+</I>này đặt <TT><B>width</B></TT> và <TT><B>height</B></TT> bằng 
+<TT><B>5</B></TT>.
+<P>Chú ý rằng nếu chúng ta khai báo một đối tượng mới và không muốn truyền tham 
+số cho nó thì không cần phải cặp ngoặc đơn <TT><B>()</B></TT>: 
+<BLOCKQUOTE><TT><PRE>CRectangle rectb;   <I>// đúng</I>
+<FONT color=red>CRectangle rectb(); <I>// sai!</I></FONT></PRE></TT></BLOCKQUOTE>
+<H2>Con trỏ tới lớp</H2>Tạo con trỏ trỏ tới các lớp là hoàn toàn hợp lệ, để có 
+thể làm việc này chúng ta hiểu rằng một khi đã được khai báo, lớp trở thành một 
+kiểu dữ liệu hợp lệ, vì vậy chúng ta có dùng tên lớp là kiểu cho con trỏ. Ví dụ: 
+
+<BLOCKQUOTE>
+  <P><TT>CRectangle * prect;</TT> </P></BLOCKQUOTE>là một con trỏ trỏ tới một đối 
+tượng của lớp <TT><B>CRectangle</B></TT>.
+<P>Tương tự với cấu trúc, để tham chiếu trực tiếp tới một thành viên của một đối 
+tượng được trỏ bởi một con trỏ bạn nên dùng toán tử <TT><B>-&gt;</B></TT>. Đây 
+là một ví dụ:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// pointer to classes example</I>
+#include &lt;iostream.h&gt;
+
+class CRectangle {
+    int width, height;
+  public:
+    void set_values (int, int);
+    int area (void) {return (width * height);}
+};
+
+void CRectangle::set_values (int a, int b) {
+  width = a;
+  height = b;
+}
+
+int main () {
+  CRectangle a, *b, *c;
+  CRectangle * d = new CRectangle[2];
+  b= new CRectangle;
+  c= &amp;a;
+  a.set_values (1,2);
+  b-&gt;set_values (3,4);
+  d-&gt;set_values (5,6);
+  d[1].set_values (7,8);
+  cout &lt;&lt; "a area: " &lt;&lt; a.area() &lt;&lt; endl;
+  cout &lt;&lt; "*b area: " &lt;&lt; b-&gt;area() &lt;&lt; endl;
+  cout &lt;&lt; "*c area: " &lt;&lt; c-&gt;area() &lt;&lt; endl;
+  cout &lt;&lt; "d[0] area: " &lt;&lt; d[0].area() &lt;&lt; endl;
+  cout &lt;&lt; "d[1] area: " &lt;&lt; d[1].area() &lt;&lt; endl;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>a area: 2<BR>*b area: 
+      12<BR>*c area: 2<BR>d[0] area: 30<BR>d[1] area: 
+56</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Dưới đây là là bảng tóm tắt về các chức năng của các toán tử lớp (<TT><B>*, 
+&amp;, ., -&gt;, [ ]</B></TT>) và các con trỏ lớp xuất hiện trong ví dụ trên: 
+<BLOCKQUOTE><PRE><TT><B>*x</B></TT>     <I>có thể được đọc là:</I>  trỏ bởi <TT><B>x</B></TT>
+<TT><B>&amp;x</B></TT>     <I>có thể được đọc là</I><I>:</I>  địa chỉ của <TT><B>x</B></TT>
+<TT><B>x.y</B></TT>    <I>có thể được đọc là</I><I>:</I>  thành viên <TT><B>y</B></TT> của đối tượng <B><TT>x</TT></B>
+<TT><B>(*x).y</B></TT> <I>có thể được đọc là</I><I>:</I>  thàn viên <TT><B>y</B></TT> của đối tượng được trỏ bởi <TT><B>x</B></TT>
+<TT><B>x-&gt;y</B></TT>   <I>có thể được đọc là</I><I>:</I>  thành viên <TT><B>y</B></TT> của đối tượng được trỏ bởi <TT><B>x</B></TT>(tương đương với dòng trên)
+<TT><B>x[0]</B></TT>   <I>có thể được đọc là</I><I>:</I>  đối tượng đầu tiên được trỏ bởi <TT><B>x</B></TT>
+<TT><B>x[1]</B></TT>   <I>có thể được đọc là</I><I>:</I>  đối tượng thứ hai được trỏ bởi <B><TT>x</TT></B>
+<TT><B>x[n]</B></TT>   <I>có thể được đọc là</I><I>:</I>  đối tượng thứ (n+1)được trỏ bởi <B><TT>x</TT></B></PRE></BLOCKQUOTE>Hãy 
+chắc chắn rằng bạn hiểu tất cả các điều này trước khi đi tiếp. Nếu có nghi ngờ 
+gì, hãy đọc lại các bài "<A 
+href="bai3-3.htm">3.3, 
+Con trỏ</A>" and "<A 
+href="bai3-5.htm">3.5, 
+Các cấu trúc</A>".
+<H2>Các lớp được định nghĩa bằng từ khoá <TT>struct</TT></H2>Ngôn ngữ C++ đã mở 
+rộng từ khoá <TT><B>struct</B></TT> của C làm cho nó cũng có các chức năng như 
+từ khoá <TT><B>class</B></TT> ngoại trừ một điều là các thành viên của nó mặc 
+định là <TT><B>public</B></TT> thay vì <TT><B>private</B></TT>.
+<P>Tuy nhiên, mặc dù cả <TT><B>class</B></TT> và <TT><B>struct</B></TT> gần như 
+là tương đương trong C++, <TT><B>struct</B></TT> thường chỉ dùng các cấu trúc dữ 
+liệu còn <TT><B>class</B></TT> thì dùng cho các lớp có cả các thủ tục và hàm 
+thành viên.</P>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><IMG align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26><A 
+      href="bai3-6.htm">Bài 
+      trước:<BR><B>3-6. </B><B>Các</B><B> kiểu dữ liệu tự định nghĩa</B></A></TD>
+    <TD align=middle width="10%"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></TD>
+    <TD align=left width="45%"><A 
+      href="bai4-2.htm"><IMG 
+      align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26>Bài sau:<BR><B>4-2. Quá tải toán 
+tử</B></A></TD></TR></TBODY></TABLE></BODY></HTML>

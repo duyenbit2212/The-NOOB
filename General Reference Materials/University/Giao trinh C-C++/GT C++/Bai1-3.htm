@@ -1,0 +1,1213 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai1_3.htm -->
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:v = 
+"urn:schemas-microsoft-com:vml" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word"><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài1</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="MSHTML 5.00.3315.2870" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator><LINK 
+href="./BAI1_3_files/filelist.xml" rel=File-List><LINK 
+href="./BAI1_3_files/editdata.mso" rel=Edit-Time-Data><!--[if !mso]>
+<STYLE>v\:* {
+	BEHAVIOR: url(#default#VML)
+}
+o\:* {
+	BEHAVIOR: url(#default#VML)
+}
+w\:* {
+	BEHAVIOR: url(#default#VML)
+}
+.shape {
+	BEHAVIOR: url(#default#VML)
+}
+</STYLE>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Thang</o:Author>
+  <o:LastAuthor>Thang</o:LastAuthor>
+  <o:Revision>13</o:Revision>
+  <o:TotalTime>7</o:TotalTime>
+  <o:Created>2001-03-20T12:33:00Z</o:Created>
+  <o:LastSaved>2001-03-21T08:43:00Z</o:LastSaved>
+  <o:Pages>6</o:Pages>
+  <o:Words>1305</o:Words>
+  <o:Characters>7441</o:Characters>
+  <o:Company>DHBK</o:Company>
+  <o:Lines>62</o:Lines>
+  <o:Paragraphs>14</o:Paragraphs>
+  <o:CharactersWithSpaces>9138</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<STYLE>P.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+P {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN-LEFT: 0in; MARGIN-RIGHT: 0in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto
+}
+TT {
+	mso-fareast-font-family: "Courier New"; mso-ascii-font-family: "Courier New"; mso-hansi-font-family: "Courier New"; mso-bidi-font-family: "Courier New"
+}
+DIV.Section1 {
+	page: Section1
+}
+</STYLE>
+<!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]--><LINK 
+href="Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài2_files/mycss.css" 
+rel=stylesheet type=text/css><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--></HEAD>
+<BODY lang=EN-US leftMargin=0 link=#0000ff style="tab-interval: .5in" 
+topMargin=0 vLink=#0000ff>
+<SCRIPT 
+src="Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài2_files/404.htm" 
+laguage="JavaScript"></SCRIPT>
+
+<DIV class=Section1>
+<TABLE border=1 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      homepage</A><FONT color=#0000ff>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B><FONT face="Times New Roman">Bài 1.3</FONT></B> </P>
+<DIV 
+style="BORDER-BOTTOM: windowtext 3pt solid; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in">
+<H1 
+style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in; mso-border-bottom-alt: solid windowtext 3.0pt; mso-padding-alt: 0in 0in 0in 0in"><FONT 
+face="Times New Roman">Các toán tử</FONT></H1></DIV>
+<P><FONT face="Times New Roman">Qua bài trước chúng ta đã biết đến sự tồn tại 
+của các biến và các hằng. Trong C++, để thao tác với chúng ta sử dụng các toán 
+tử, đó là các từ khoá và các dấu không có trong bảng chữ cái nhưng lại có trên 
+hầu hết các bàn phím trên thế giới. Hiểu biết về chúng là rất quan trọng vì đây 
+là một trong những thành phần cơ bản của ngôn ngữ C++.&nbsp;</FONT></P>
+<P class=MsoNormal><B><FONT face="Times New Roman">Toán tử gán (</FONT></B><FONT 
+face="Times New Roman"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">=</SPAN></B></TT><B>).</B> 
+</FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Toán 
+tử gán dùng để gán một giá trị nào đó cho một biến</FONT> </P>
+<P style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 0.5in"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">a = 5;</FONT></SPAN></TT> 
+</P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">gán 
+giá trị nguyên 5 cho biến <B>a</B>. Vế trái bắt buộc phải là một biến còn vế 
+phải có thể là bất kì hằng, biến hay kết quả của một biểu thức.</FONT></P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><FONT 
+face="Times New Roman">Cần phải nhấn mạnh rằng toán tử gán luôn được thực hiện 
+từ trái sang phải và không bao giờ đảo ngược</FONT> </P>
+<P style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 1in"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">a = 
+b;</FONT></SPAN></TT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman">gán giá trị của biến <B>a</B> bằng giá trị đang chứa 
+trong biến <B>b</B>. Chú ý rằng chúng ta chỉ gán <B><I>giá trị</I></B><I> 
+</I>của <B>b</B> cho a và sự thay đổi của <B>b</B> sau đó sẽ không ảnh hưởng đến 
+giá trị của <B>a</B>.</FONT> </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><FONT 
+face="Times New Roman">Một thuộc tính của toán tử gán trong C++ góp phần giúp nó 
+vượt lên các ngôn ngữ lập trình khác là việc cho phép vế phải có thể chứa các 
+phép gán khác. Ví dụ:</FONT> </P>
+<P style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 1in"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">a = 2 + (b = 
+5);</FONT></SPAN></TT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman">tương đương với</FONT> </P>
+<P style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 1in"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">b = 5;</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>a = 2 + 
+b;</TT></SPAN></FONT></P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><FONT 
+face="Times New Roman">Vì vậy biểu thức sau cũng hợp lệ trong C++</FONT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 1in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">a = b = c = 
+5;</FONT></SPAN></TT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman">gán giá trị 5 cho cả ba biến <B>a</B>, <B>b</B> và 
+<B>c</B> </FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman"><B>Các toán tử số học 
+(</B><TT><B><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt"> +, -, *, 
+/, % </SPAN></B></TT><B>)</B></FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Năm 
+toán tử số học được hỗ trợ bởi ngôn ngữ là:</FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></P>
+<TABLE border=0 cellPadding=0 
+style="MARGIN-LEFT: 1in; mso-padding-alt: 0in 0in 0in 0in; mso-cellspacing: 1.5pt">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">+</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">cộng</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">-</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">trừ</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">*</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">nhân</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">/</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">chia</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">%</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">lấy phần dư (trong phép 
+      chia)</FONT></P></TD></TR></TBODY></TABLE>
+<P style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Thứ tự thực hiện các 
+toán tử này cũng giống như chúng được thực hiện trong toán học. Điều duy nhất có 
+vẻ hơi lạ đối với bạn là phép lấy phần dư, ký hiệu bằng dấu phần trăm (%). Đây 
+chính là phép toán lấy phần dư trong phép chia hai số nguyên với nhau. Ví dụ, 
+nếu <TT><B><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a = 11 % 
+3;</SPAN></B></TT>, biến <B>a</B> sẽ mang giá trị 2 vì 11 = 3*3 +2.</FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman"><B>Các toán tử gán phức hợp 
+(</B><TT><B><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">+=, -=, 
+*=, /=, %=, &gt;&gt;=, &lt;&lt;=, &amp;=, ^=, 
+|=</SPAN></B></TT><B>)</B></FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Một 
+đặc tính của ngôn ngữ C++ làm cho nó nổi tiếng là một ngôn ngữ súc tích chính là 
+các toán tử gán phức hợp cho phép chỉnh sửa giá trị của một biến với một trong 
+những toán tử cơ bản sau:</FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT 
+face="Times New Roman">&nbsp;</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><B><FONT 
+face="Times New Roman"><SPAN style="FONT-SIZE: 10pt">value += 
+increase;</SPAN></FONT></B></TT> <FONT face="Times New Roman">tương đương với 
+<TT><B><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">value = value + 
+increase;</SPAN></B></TT><BR><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a -= 5;</SPAN></B></TT> 
+tương đương với <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a = a - 
+5;</SPAN></B></TT><BR><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a /= b;</SPAN></B></TT> 
+tương đương với <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a = a / 
+b;</SPAN></B></TT><BR><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">price *= units + 
+1;</SPAN></B></TT> tương đương với <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">price = price * (units + 
+1);</SPAN></B></TT> </FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">và 
+tương tự cho tất cả các toán tử khác.</FONT></P>
+<P class=MsoNormal><B><FONT face="Times New Roman">Tăng và giảm.</FONT></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Một 
+ví dụ khác của việc tiết kiệm khi viết mã lệnh là toán tử tăng (++) và giảm 
+(--). Chúng tăng hoặc giảm giá trị chứa trong một biến đi 1. Chúng tương đương 
+với <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">+=1</SPAN></B></TT> hoặc 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">-=1</SPAN></B></TT>. Vì vậy, 
+các dòng sau là tương đương:</FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT 
+face="Times New Roman">&nbsp;</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><FONT 
+face="Times New Roman"><SPAN 
+style="FONT-SIZE: 10pt">a++;</SPAN></FONT></TT><FONT 
+face="Times New Roman"><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>a+=1;</TT><BR><TT>a=a+1;</TT></SPAN> 
+</FONT></P>
+<P style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Một tính chất của 
+toán tử này là nó có thể là <I>tiền tố</I> hoặc <I>hậu tố</I>, có nghĩa là có 
+thể viết trước tên biến (<B>++a</B>) hoặc sau (<B>a++</B>) và mặc dù trong hai 
+biểu thức rất đơn giản đó nó có cùng ý nghĩa nhưng trong các thao tác khác khi 
+mà kết quả của việc tăng hay giảm được sử dụng trong một biểu thức thì chúng có 
+thể có một khác biệt quan trọng về ý nghĩa: Trong trường hợp toán tử được sử 
+dụng như là một tiền tố (<B>++a</B>) giá trị được tăng trước khi biểu thức được 
+tính và giá trị đã tăng được sử dụng trong biểu thức; trong trường hợp ngược lại 
+(<B>a++</B>) giá trị trong biến a được tăng sau khi đã tính toán. Hãy chú ý sự 
+khác biệt :</FONT> </P>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="MARGIN-LEFT: 1in; WIDTH: 50%; mso-padding-alt: 0in 0in 0in 0in; mso-cellspacing: 3.7pt" 
+width="50%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 50%" 
+    width="50%">
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><B><U><FONT 
+      face="Times New Roman">Ví dụ 1</FONT></U></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 50%" 
+    width="50%">
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><B><U><FONT 
+      face="Times New Roman">Ví dụ 2</FONT></U></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 50%" 
+    width="50%">
+      <P class=MsoNormal><FONT face="Courier New"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt">B=3;</SPAN></B></TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR><TT>A=++B;</TT></SPAN></B><SPAN 
+      style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT><I>// 
+      A is 4, B is 4</I></TT></SPAN></FONT></P></TD>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 50%" 
+    width="50%">
+      <P class=MsoNormal><FONT face="Courier New"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt">B=3;</SPAN></B></TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR><TT>A=B++;</TT></SPAN></B><SPAN 
+      style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT><I>// 
+      A is 3, B is 4</I></TT></SPAN></FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal><B><FONT 
+face="Times New Roman"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></B></P>
+<P class=MsoNormal><B><FONT face="Times New Roman">Các toán tử quan hệ ( 
+</FONT></B><FONT face="Times New Roman"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">==, !=, &gt;, &lt;, &gt;=, 
+&lt;=</SPAN></B></TT><B> )</B></FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Để có 
+thể so sánh hai biểu thức với nhau chúng ta có thể sử dụng các toán tử quan hệ. 
+Theo chuẩn ANSI-C++ thì giá trị của thao tác quan hệ chỉ có thể là giá trị logic 
+- chúng chỉ có thể có giá trị <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">true</SPAN></B></TT> hoặc 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">false</SPAN></B></TT>, tuỳ 
+theo biểu thức kết quả là đúng hay sai.</FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">&nbsp;</FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Sau 
+đây là các toán tử quan hệ bạn có thể sử dụng trong C++</FONT></P>
+<TABLE border=0 cellPadding=0 
+style="MARGIN-LEFT: 1in; mso-padding-alt: 0in 0in 0in 0in; mso-cellspacing: 1.5pt">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">==</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Bằng</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">!=</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Khác</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">&gt;</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Lớn hơn</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">&lt;</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Nhỏ hơn</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">&gt; =</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Lớn hơn hoặc 
+      bằng</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">&lt; =</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Nhỏ hơn hoặc 
+      bằng</FONT></P></TD></TR></TBODY></TABLE>
+<P style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Ví 
+dụ:&nbsp;</FONT></P>
+<TABLE border=0 cellPadding=0 
+style="MARGIN-LEFT: 0.5in; mso-padding-alt: 0in 0in 0in 0in; mso-cellspacing: 1.5pt">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">(7 == 5)</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">sẽ trả giá trị 
+      <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">false</SPAN></B></TT></FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt"><SPAN 
+style="DISPLAY: none; mso-hide: all"><FONT face="Times New Roman"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></SPAN></P>
+<TABLE border=0 cellPadding=0 
+style="MARGIN-LEFT: 0.5in; mso-padding-alt: 0in 0in 0in 0in; mso-cellspacing: 1.5pt">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">(6 &gt;= 6)</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">sẽ trả giá trị 
+      <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">true</SPAN></B></TT></FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt"><FONT 
+face="Times New Roman">tất nhiên thay vì sử dụng các số, chúng ta có thể sử dụng 
+bất cứ biểu thức nào. Cho <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a=2</SPAN></B></TT>, 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">b=3</SPAN></B></TT> và 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">c=6</SPAN></B></TT></FONT></P>
+<TABLE border=0 cellPadding=0 
+style="MARGIN-LEFT: 0.5in; mso-padding-alt: 0in 0in 0in 0in; mso-cellspacing: 1.5pt">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">(a*b &gt;= c)</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">sẽ trả giá trị 
+      <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">true</SPAN></B></TT>.</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">(b+4 &lt; a*c)</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">sẽ trả giá trị 
+      <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">false</SPAN></B></TT></FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Cần 
+chú ý rằng = (một dấu bằng) lf hoàn toàn khác với == (hai dấu bằng). Dấu đầu 
+tiên là một toán tử gán ( gán giá trị của biểu thức bên phải cho biến ở bên 
+trái) và dấu còn lại (==) là một toán tử quan hệ nhằm so sánh xem hai biểu thức 
+có bằng nhau hay không.</FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">&nbsp;</FONT></P>
+<TABLE border=0 cellPadding=0 
+style="MARGIN-LEFT: -0.4pt; WIDTH: 95%; mso-padding-alt: 0in 0in 0in 0in; mso-cellspacing: 1.5pt" 
+width="95%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #bfffbf; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT 
+      face="Times New Roman"><!--[if gte vml 1]><v:shapetype id=_x0000_t75 
+      coordsize = "21600,21600" o:preferrelative = "t" filled = "f" stroked = 
+      "f" path = "m@4@5l@4@11@9@11@9@5xe" o:spt = "75"><v:stroke joinstyle = 
+      "miter"></v:stroke><v:formulas><v:f eqn = 
+      "if lineDrawn pixelLineWidth 0 "></v:f><v:f eqn = "sum @0 1 0 "></v:f><v:f 
+      eqn = "sum 0 0 @1 "></v:f><v:f eqn = "prod @2 1 2 "></v:f><v:f eqn = 
+      "prod @3 21600 pixelWidth "></v:f><v:f eqn = 
+      "prod @3 21600 pixelHeight "></v:f><v:f eqn = "sum @0 0 1 "></v:f><v:f eqn 
+      = "prod @6 1 2 "></v:f><v:f eqn = "prod @7 21600 pixelWidth "></v:f><v:f 
+      eqn = "sum @8 21600 0 "></v:f><v:f eqn = 
+      "prod @7 21600 pixelHeight "></v:f><v:f eqn = 
+      "sum @10 21600 0 "></v:f></v:formulas><v:path o:extrusionok = "f" 
+      gradientshapeok = "t" o:connecttype = "rect"></v:path><o:lock v:ext="edit" 
+      aspectratio = "t"></o:lock></v:shapetype><v:shape id=_x0000_s1026 
+      style="FLOAT: left; HEIGHT: 33.75pt; MARGIN-LEFT: 0px; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 27pt; Z-INDEX: 1; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+      type = "#_x0000_t75" coordsize = "21600,21600" alt = "" o:allowoverlap = 
+      "f"><v:imagedata src = "icoansi.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:1;left:0px;top:0px;width:36px;height:45px'><img width=36
+height=45 src=icoansi.gif align=left v:shapes="_x0000_s1026"></span><![endif]>Trong 
+      nhiều trình dịch có trước chuẩn ANSI-C++ cũng như trong ngôn ngữ C, các 
+      toán tử quan hệ không trả về giá trị logic <B>true</B> hoặc <B>false</B> 
+      mà trả về giá trị <B>int</B> với <B>0</B> tương ứng với <B>false</B> còn 
+      giá trị khác 0 (thường là 1) thì tương ứng với 
+  <B>true</B>.</FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal><FONT face="Times New Roman">&nbsp;</FONT> </P>
+<P class=MsoNormal><B><FONT face="Times New Roman">Các toán tử logic ( 
+</FONT></B><FONT face="Times New Roman"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">!, &amp;&amp;, 
+||</SPAN></B></TT><B> ).</B></FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Toán 
+tử <B>!</B> tương đương với toán tử logic NOT, nó chỉ có một đối số ở phía bên 
+phải và việc duy nhất mà nó làm là đổi ngược giá trị của đối số từ <B>true</B> 
+sang <B>false</B> hoặc ngược lại. Ví dụ:</FONT></P>
+<TABLE border=0 cellPadding=0 
+style="MARGIN-LEFT: 1in; mso-padding-alt: 0in 0in 0in 0in; mso-cellspacing: 1.5pt">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">!(5 == 5)</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">trả về <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">false</SPAN></B></TT> 
+      vì biểu thức bên phải <TT><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">(5 == 5)</SPAN></TT> 
+      có giá trị<TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">true</SPAN></B></TT>.</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">!(6 &lt;= 4)</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">trả về <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">true</SPAN></B></TT> 
+      vì <TT><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">(6 &lt;= 
+      4)</SPAN></TT>có giá trị <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">false</SPAN></B></TT>.</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">!true</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">trả về <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">false</SPAN></B></TT>.</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">!false</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">trả về <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">true</SPAN></B></TT>.</FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Toán 
+tử logic <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">&amp;&amp;</SPAN></B></TT> 
+và <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">||</SPAN></B></TT> được sử 
+dụng khi tính toán hai biểu thức để lấy ra một kết quả duy nhất. Chúng tương ứng 
+với các toán tử logic <I>AND</I> và <I>OR</I>. Kết quả của chúng phụ thuộc vào 
+mối quan hệ của hai đối số:</FONT></P>
+<TABLE border=1 cellPadding=0 
+  style="MARGIN-LEFT: 1in; mso-cellspacing: 1.5pt"><TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><FONT 
+      face="Times New Roman">Đối số thứ nhất<BR><B>a</B></FONT></P></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><FONT 
+      face="Times New Roman">Đối số thứ hai<BR><B>b</B></FONT></P></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><FONT 
+      face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">Kết 
+      quả</SPAN></TT><SPAN 
+      style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT><B>a 
+      &amp;&amp; b</B></TT></SPAN></FONT></P></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><FONT 
+      face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">Kết 
+      quả</SPAN></TT><SPAN 
+      style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT><B>a 
+      || b</B></TT></SPAN></FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">true</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">true</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT face="Times New Roman">true</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT 
+  face="Times New Roman">true</FONT></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">true</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">false</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT face="Times New Roman">false</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT 
+  face="Times New Roman">true</FONT></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">false</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">true</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT face="Times New Roman">false</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT 
+  face="Times New Roman">true</FONT></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">false</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">false</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT face="Times New Roman">false</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT 
+  face="Times New Roman">false</FONT></B></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Ví 
+dụ:</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><B><SPAN style="FONT-SIZE: 10pt">( (5 == 5) 
+&amp;&amp; (3 &gt; 6) )</SPAN></B></TT> trả về <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">false</SPAN></B></TT> 
+<TT><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">( <I>true</I> 
+&amp;&amp; <I>false</I> )</SPAN></TT>.<BR><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">( (5 == 5) || (3 &gt; 
+6))</SPAN></B></TT> trả về <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">true</SPAN></B></TT> 
+<TT><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">( <I>true</I> || 
+<I>false</I> )</SPAN></TT>.</FONT> </P>
+<P class=MsoNormal><FONT face="Times New Roman"><B>Toán tử điều kiện ( 
+</B><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">?</SPAN></B></TT><B> 
+).</B></FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Toán 
+tử điều kiện tính toán một biểu thức và trả về một giá trị khác tuỳ thuộc vào 
+biểu thức đó là đúng hay sai. Cấu trúc của nó như sau:</FONT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><I><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">condition <B>?</B> result1 
+<B>:</B> result2</FONT></SPAN></I></TT> </P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Nếu 
+<TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I></TT> là 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">true</SPAN></B></TT> thì giá 
+trị trả về sẽ là <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">result1</SPAN></I></TT>, nếu 
+không giá trị trả về là <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">result2</SPAN></I></TT>.</FONT></P>
+<TABLE border=0 cellPadding=0 
+  style="MARGIN-LEFT: 1in; mso-cellspacing: 1.5pt"><TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">7==5 ? 4 : 3</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">trả về <B>3</B> vì 
+      <B>7</B> không bằng <B>5</B>.</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">7==5+2 ? 4 : 3</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">trả về <B>4</B> vì 
+      <B>7</B> bằng <B>5+2</B>.</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">5&gt;3 ? a : b</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">trả về <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a</SPAN></B></TT>, vì 
+      <B>5</B> lớn hơn <B>3</B>.</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">a&gt;b ? a : b</FONT></SPAN></B></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">trả về giá trị lớn hơn, 
+      <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a</SPAN></B></TT> hoặc 
+      <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">b</SPAN></B></TT>.</FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal><B><FONT 
+face="Times New Roman"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></B></P>
+<P class=MsoNormal><B><FONT face="Times New Roman">Các toán tử thao tác bit ( 
+</FONT></B><FONT face="Times New Roman"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">&amp;, |, ^, ~, &lt;&lt;, 
+&gt;&gt;</SPAN></B></TT><B> ).</B></FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Các 
+toán tử thao tác bit thay đổi các bit biểu diễn một biến, có nghĩa là thay đổi 
+biểu diễn nhị phân của chúng</FONT></P>
+<TABLE border=1 cellPadding=0 
+  style="MARGIN-LEFT: 1in; mso-cellspacing: 1.5pt"><TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">toán tử</FONT></P></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">asm</FONT></P></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Mô tả</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">&amp;</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT face="Times New Roman">AND</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Logical 
+  AND</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">|</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT face="Times New Roman">OR</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Logical 
+OR</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">^</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT face="Times New Roman">XOR</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Logical exclusive 
+      OR</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">~</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT face="Times New Roman">NOT</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Đảo ngược 
+  bit</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">&lt;&lt;</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT face="Times New Roman">SHL</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Dịch bit sang 
+      trái</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">&gt;&gt;</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><B><FONT face="Times New Roman">SHR</FONT></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal><FONT face="Times New Roman">Dịch bit sang 
+      phải</FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal><B><FONT 
+face="Times New Roman"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></B></P>
+<P class=MsoNormal><B><FONT face="Times New Roman">Các toán tử chuyển đổi 
+kiểu</FONT></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Các 
+toán tử chuyển đổi kiểu cho phép bạn chuyển đổi dữ liệu từ kiểu này sang kiểu 
+khác. Có vài cách để làm việc này trong C++, cách cơ bản nhất được thừa kế từ 
+ngôn ngữ C là đặt trước biểu thức cần chuyển đổi tên kiểu dữ liệu được bọc trong 
+cặp ngoặc đơn <B>()</B>, ví dụ:</FONT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">int i;</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>float f = 
+3.14;</TT><BR><TT>i = (int) f;</TT></SPAN> </FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Đoạn 
+mã trên chuyển số thập phân 3.14 sang một số nguyên (3). Ở đây, toán tử chuyển 
+đổi kiểu là (int). Một cách khác để làm điều này trong C++ là sử dụng các 
+constructors (ở một số sách thuật ngữ này được dịch là <B>cấu tử </B>nhưng tôi 
+thấy nó có vẻ không xuôi tai lắm) thay vì dùng các toán tử : đặt trước biểu thức 
+cần chuyển đổi kiểu&nbsp;tên kiểu mới và bao bọc <B>biểu thức</B> giữa một cặp 
+ngoặc đơn.</FONT> </P>
+<P style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 0.5in"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">i = int ( f 
+);</FONT></SPAN></TT> </P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Cả 
+hai cách chuyển đổi kiểu đều hợp lệ trong C++. Thêm vào đó ANSI-C++ còn có những 
+toán tử chuyển đổi kiểu mới đặc trưng cho lập trình hướng đối tượng.</FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></P>
+<P class=MsoNormal><B><FONT face="Times New Roman">sizeof()</FONT></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Toán 
+tử này có một tham số, đó có thể là một kiểu dữ liệu hay là một biến và trả về 
+kích cỡ bằng byte của kiểu hay đối tượng đó.</FONT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 1in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">a = sizeof 
+(char);</FONT></SPAN></TT> </P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT 
+face="Times New Roman"><B>a</B> sẽ mang giá trị 1 vì kiểu <B>char</B> luôn có 
+kích cỡ 1 byte trên mọi hệ thống. Giá trị trả về của <B>sizeof</B> là một hằng 
+số vì vậy nó luôn luôn được tính trước khi chương trình thực 
+hiện.&nbsp;</FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></P>
+<P class=MsoNormal><B><FONT face="Times New Roman">Các toán tử 
+khác</FONT></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in"><FONT face="Times New Roman">Trong 
+C++ còn có một số các toán tử khác, như các toán tử liên quan đến con trỏ hay 
+lập trình hướng đối tượng. Chúng sẽ được nói đến cụ thể trong các phần tương 
+ứng.</FONT></P>
+<H2><FONT face="Times New Roman">Thứ tự ưu tiên của các toán tử</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Khi viết các biểu thức phức tạp 
+với nhiều toán hạng các bạn có thể tự hỏi toán hạng nào được tính trước, toán 
+hạng nào được tính sau. Ví dụ như trong biểu thức sau:</FONT> </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">a = 5 + 7 % 
+2</FONT></SPAN></TT></P>
+<P class=MsoNormal><FONT face="Times New Roman">có thể có hai cách hiểu 
+sau:</FONT> </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">a = 5 + (7 % 
+2)</SPAN></TT> với kết quả là <B>6</B>, hoặc<BR><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a = (5 + 7) % 2</SPAN></TT> 
+với kết quả là <B>0</B></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Câu trả lời đúng là biểu thức 
+đầu tiên. Vì nguyên nhân nói trên, ngôn ngữ C++ đã thiết lập một thứ tự ưu tiên 
+giữa các toán tử, không chỉ riêng các toán tử số học mà tất cả các toán tử có 
+thể xuất hiện trong C++. Thứ tự ưu tiên của chúng được liệt kê trong bảng sau 
+theo thứ tự từ cao xuống thấp.&nbsp;</FONT> </P>
+<P class=MsoNormal><FONT face="Times New Roman"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></P>
+<TABLE border=1 cellPadding=0 
+style="MARGIN-LEFT: 0.5in; WIDTH: 318pt; mso-cellspacing: 1.5pt" width=424>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><B><FONT face="Times New Roman">Thứ 
+tự</FONT></B></P></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><B><FONT face="Times New Roman">Toán 
+    tử</FONT></B></P></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><B><FONT face="Times New Roman">Mô tả</FONT></B></P></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><B><FONT 
+      face="Times New Roman">Associativity</FONT></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">1</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">::</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">scope</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Trái</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">2</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">() [ ] -&gt; . sizeof</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">&nbsp;</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Trái</FONT></P></TD></TR>
+  <TR>
+    <TD rowSpan=6 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">3</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">++ --</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">tăng/giảm</FONT></P></TD>
+    <TD rowSpan=6 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Phải</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">~</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Đảo ngược 
+  bit</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">!</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">NOT</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">&amp; *</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Toán tử con 
+    trỏ</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">(<I>type</I>)</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Chuyển đổi 
+    kiểu</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">+ -</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Dương hoặc 
+  âm</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">4</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">* / %</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Toán tử số 
+    học</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Trái</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">5</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">+ -</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Toán tử số 
+    học</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Trái</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">6</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">&lt;&lt; &gt;&gt;</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Dịch bit</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Trái</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">7</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">&lt; &lt;= &gt; &gt;=</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Toán tử quan 
+    hệ</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Trái</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">8</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">== !=</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Toán tử quan 
+    hệ</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Trái</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">9</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">&amp; ^ |</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Toán tử thao tác 
+      bit</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Trái</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">10</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">&amp;&amp; ||</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Toán tử 
+logic</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Trái</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">11</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">?:</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Toán tử điều 
+      kiện</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Phải</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">12</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><FONT face="Times New Roman"><TT><SPAN 
+      style="FONT-SIZE: 10pt">= += -= *= /= %=</SPAN></TT><SPAN 
+      style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>&gt;&gt;= 
+      &lt;&lt;= &amp;= ^= |=</TT></SPAN></FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Toán tử gán</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT face="Times New Roman">Phải</FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 36.45pt" 
+    width=49>
+      <P class=MsoNormal><FONT face="Times New Roman">13</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 111.15pt" 
+    width=148>
+      <P class=MsoNormal><TT><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Times New Roman">,</FONT></SPAN></TT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 95.4pt" 
+    width=127>
+      <P class=MsoNormal><FONT face="Times New Roman">Dấu phẩy</FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt; WIDTH: 67.5pt" 
+    width=90>
+      <P class=MsoNormal><FONT 
+  face="Times New Roman">Trái</FONT></P></TD></TR></TBODY></TABLE>
+<P><FONT face="Times New Roman"><I>Associativity </I>định nghĩa trong trường hợp 
+có một vài toán tử có cùng thứ tự ưu tiên thì cái nào sẽ được tính trước, toán 
+tử ở phía xa nhất bên phải hay là xa nhất bên trái.</FONT></P>
+<P style="BORDER-BOTTOM-STYLE: solid"><FONT face="Times New Roman">Nếu bạn muốn 
+viết một biểu thức phức tạp mà lại không chắc lắm về thứ tự ưu tiên của các toán 
+tử thì nên sử dụng các ngoặc đơn. Các bạn nên&nbsp; thực hiện điều này vì nó sẽ 
+giúp chương trình dễ đọc hơn.</FONT></P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 
+style="WIDTH: 100%; mso-padding-alt: 0in 0in 0in 0in; mso-cellspacing: 1.5pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in; WIDTH: 45%" 
+    width="45%">
+      <P align=right class=MsoNormal style="TEXT-ALIGN: right"><FONT 
+      face="Times New Roman"><!--[if gte vml 1]><v:shape id=_x0000_s1029 
+      style="FLOAT: right; HEIGHT: 19.5pt; MARGIN-LEFT: -20.25pt; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 19.5pt; Z-INDEX: 2; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+      type = "#_x0000_t75" href = "bai1_2.htm" coordsize = "21600,21600" alt = 
+      "" o:button = "t" o:allowoverlap = "f"><v:imagedata src = 
+      "butnback.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:2;left:-27px;top:0px;width:26px;height:26px'><a
+href="bai1_2.htm"><img border=0 width=26 height=26 src=butnback.gif
+align=right v:shapes="_x0000_s1029"></a></span><![endif]><A 
+      href="bai1-2.htm">Bài 
+      trước<BR><B>1-2. Các biến, kiểu và hằng.</B></A></FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in; WIDTH: 10%" 
+    width="10%">
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><A 
+      href="index.htm"><FONT 
+      face="Times New Roman"><IMG border=0 height=26 id=_x0000_i1025 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</FONT></A></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in; WIDTH: 45%" 
+    width="45%">
+      <P class=MsoNormal><FONT 
+      face="Times New Roman"><!--[if gte vml 1]><v:shape id=_x0000_s1030 
+      style="FLOAT: left; HEIGHT: 19.5pt; MARGIN-LEFT: 0px; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 19.5pt; Z-INDEX: 3; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+      type = "#_x0000_t75" coordsize = "21600,21600" alt = "" o:allowoverlap = 
+      "f"><v:imagedata src = "butnnext.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:3;left:0px;top:0px;width:26px;height:26px'><img width=26
+height=26 src=butnnext.gif align=left v:shapes="_x0000_s1030"></span><![endif]><A 
+      href="bai1-4.htm">Bài 
+      sau<BR><B>1-4. Giao tiếp với 
+console.</B></A></FONT></P></TD></TR></TBODY></TABLE></DIV></DIV></BODY></HTML>

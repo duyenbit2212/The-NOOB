@@ -1,0 +1,534 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff36\stshfdbch0\stshfloch0\stshfhich0\stshfbi0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+{\f36\fswiss\fcharset0\fprq2{\*\panose 020b7200000000000000}VNtimes new roman{\*\falt Courier};}{\f37\fnil\fcharset0\fprq2{\*\panose 00000000000000000000}VNI-Times;}
+{\f38\fswiss\fcharset0\fprq2{\*\panose 020b7200000000000000}VNottawa{\*\falt Courier New};}{\f86\froman\fcharset238\fprq2 Times New Roman CE;}{\f87\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f89\froman\fcharset161\fprq2 Times New Roman Greek;}
+{\f90\froman\fcharset162\fprq2 Times New Roman Tur;}{\f91\froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\f92\froman\fcharset178\fprq2 Times New Roman (Arabic);}{\f93\froman\fcharset186\fprq2 Times New Roman Baltic;}
+{\f94\froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\f456\fnil\fcharset238\fprq2 VNI-Times CE;}{\f460\fnil\fcharset162\fprq2 VNI-Times Tur;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;
+\red192\green192\blue192;}{\stylesheet{\ql \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \snext0 Normal;}{\*\cs10 \additive \ssemihidden Default Paragraph Font;}{\*
+\ts11\tsrowd\trftsWidthB3\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\tscellwidthfts0\tsvertalt\tsbrdrt\tsbrdrl\tsbrdrb\tsbrdrr\tsbrdrdgl\tsbrdrdgr\tsbrdrh\tsbrdrv 
+\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang1024\langfe1024\cgrid\langnp1024\langfenp1024 \snext11 \ssemihidden Normal Table;}{\s15\ql \fi-360\li720\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin720\itap0 
+\f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext15 Liet ke;}{\s16\ql \fi-274\li1714\ri-288\sb80\widctlpar\faauto\adjustright\rin-288\lin1714\itap0 \f37\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 
+\sbasedon0 \snext16 Paragraph;}{\s17\ql \li0\ri0\widctlpar\tqc\tx4320\tqr\tx8640\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext17 header;}{\s18\ql \li0\ri0\widctlpar
+\tqc\tx4320\tqr\tx8640\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext18 footer;}{\s19\qc \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 
+\f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext19 Body Text;}}{\*\latentstyles\lsdstimax156\lsdlockeddef0}{\*\listtable{\list\listtemplateid-1\listsimple{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0
+\levelstartat0\levelspace0\levelindent0{\leveltext\'01*;}{\levelnumbers;}}{\listname ;}\listid-2}{\list\listtemplateid67698703\listsimple{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelold\levelspace0\levelindent360
+{\leveltext\'02\'00.;}{\levelnumbers\'01;}\fi-360\li360\lin360 }{\listname ;}\listid1684555951}}{\*\listoverridetable{\listoverride\listid-2\listoverridecount1{\lfolevel\listoverrideformat{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0
+\levelstartat1\levelold\levelspace0\levelindent144{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fs18\fbias0 \fi-144\li504\lin504 }}\ls1}{\listoverride\listid1684555951\listoverridecount0\ls2}{\listoverride\listid1684555951\listoverridecount1{\lfolevel
+\listoverrideformat{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelold\levelspace0\levelindent360{\leveltext\'02\'00.;}{\levelnumbers\'01;}\fi-360\li360\lin360 }}\ls3}}{\*\rsidtbl \rsid5836393\rsid7430155}
+{\*\generator Microsoft Word 11.0.5604;}{\info{\title \'d1E\'c0 THI KE\'c1T THU\'d9C MO\'c2N HO\'cfC C\'c4NG NGH\'c3\'db PH\'c1\'d6N M\'c3\'d6M}{\author Phan Huy Kh\'e1nh}{\operator Toi la Tien !!!}{\creatim\yr1996\mo6\dy24\hr21\min10}
+{\revtim\yr2008\mo6\dy4\hr8\min55}{\printim\yr1997\mo7\dy18\hr14\min5}{\version17}{\edmins158}{\nofpages7}{\nofwords717}{\nofchars4088}{\*\company  }{\nofcharsws4796}{\vern24689}}\margl1526\margr1526\margt1166\margb994 
+\widowctrl\ftnbj\aenddoc\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\lytprtmet\hyphcaps0\formshade\horzdoc\dghspace120\dgvspace120\dghorigin1701\dgvorigin1984\dghshow0\dgvshow3
+\jcompress\viewkind1\viewscale88\viewzk2\pgbrdrhead\pgbrdrfoot\nolnhtadjtbl\rsidroot5836393 \fet0{\*\ftnsep \pard\plain \ql \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 
+\chftnsep 
+\par }}{\*\ftnsepc \pard\plain \ql \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 \chftnsepc 
+\par }}{\*\aftnsep \pard\plain \ql \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 \chftnsep 
+\par }}{\*\aftnsepc \pard\plain \ql \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 \chftnsepc 
+\par }}\sectd \linex0\headery576\footery576\endnhere\sectdefaultcl\sftnbj {\header \pard\plain \s17\ql \li-180\ri-172\widctlpar\brdrb\brdrs\brdrw15\brsp60 \tqr\tx9360\faauto\adjustright\rin-172\lin-180\itap0 
+\f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\b\fs20\insrsid5836393 KHOA C\'c4NG NGH\'c3\'db TH\'c4NG TIN}{\fs20\insrsid5836393 \tab TR\'c6\'c5\'ccNG \'c2A\'dbI HO\'dcC KY\'ce THU\'c1\'dbT - \'c2A\'dbI HO\'dcC \'c2A\'cc N\'c0\'d4NG
+\par }}{\footer \pard\plain \s18\ql \li0\ri0\widctlpar\brdrt\brdrs\brdrw30\brsp60 \tqr\tx9180\faauto\adjustright\rin0\lin0\rtlgutter\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 Phan Huy Kha\'efnh\tab }{\field{\*\fldinst {
+\insrsid5836393  DATE }}{\fldrslt {\lang1024\langfe1024\noproof\insrsid7430155 6/4/2008}}}{\insrsid5836393 
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang {\pntxta )}}
+{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}\pard\plain \s16\ql \fi1800\li0\ri0\sb360\widctlpar\brdrb\brdrs\brdrw10\brsp20 \faauto\adjustright\rin0\lin0\itap0 
+\f37\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\f36\lang1024\langfe1024\noproof\insrsid7430155\charrsid7430155 
+{\shp{\*\shpinst\shpleft-195\shptop-71\shpright1318\shpbottom719\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz2\shplid1026{\sp{\sn shapeType}{\sv 2}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn lTxid}{\sv 65536}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn adjustValue}{\sv 9706}}{\sp{\sn fillBackColor}{\sv 0}}{\sp{\sn fFilled}{\sv 1}}
+{\sp{\sn shadowColor}{\sv 0}}{\sp{\sn shadowOffsetX}{\sv 47625}}{\sp{\sn shadowOffsetY}{\sv 31750}}{\sp{\sn fShadow}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain 
+\qc \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\b\insrsid5836393 90 PHU\'cfT}{\b\fs24\insrsid5836393 
+\par \'c2\'c3\'d6 }{\b\fs26\insrsid5836393 A}{\insrsid5836393 
+\par }}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8194\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\b\insrsid5836393 90 PHU\'cfT}{
+\b\fs24\insrsid5836393 
+\par \'c2\'c3\'d6 }{\b\fs26\insrsid5836393 A}{\insrsid5836393 
+\par }}\dpx-195\dpy-71\dpxsize1513\dpysize790\dpfillfgcr0\dpfillfgcg0\dpfillfgcb0\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat1\dplinew15\dplinecor0\dplinecog0\dplinecob0}}}}{\f36\fs36\insrsid5836393\charrsid7430155 \'c2\'c3\'d6 THI K\'c3\'daT THU\'cf
+C M\'c4N HO\'dcC C\'c4NG NGH\'c3\'db PH\'c1\'d6N M\'c3\'d6M}{\i\f36\fs36\insrsid5836393\charrsid7430155 
+\par }\pard \s16\ql \fi-360\li360\ri0\sb360\widctlpar\faauto\adjustright\rin0\lin360\itap0 {\i\f36\fs36\insrsid5836393\charrsid7430155 I.\tab \'c2\'e0\'fbc ta\'ed (Specification)
+\par }\pard \s16\qj \fi360\li0\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin0\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 Cho ma tr\'e1\'fbn vu\'e4ng A c\'e1\'fap NxN g\'e4\'f6m ca\'efc s\'e4\'fa th\'e6\'fbc. Vi\'e3\'fat \'e2\'e0\'fbc ta\'ed th\'e3\'f8
+ hi\'e3\'fbn m\'e4\'f9i ph\'e1\'f6n t\'e6\'ed tr\'e3n \'e2\'e6\'e5\'ecng che\'efo phu\'fb cu\'eda ma tr\'e1\'fbn A ch\'eanh la\'ec t\'each cu\'eda t\'e1\'fat ca\'ed ca\'efc ph\'e1\'f6n t\'e6\'ed tr\'e3n ha\'ecng va\'ec tr\'e3n c\'e4\'fct \'e2i qua ph\'e1
+\'f6n t\'e6\'ed \'e2o\'ef nh\'e6ng kh\'e4ng t\'eanh nh\'e1n ph\'e1\'f6n t\'e6\'ed \'e2o\'ef.
+\par }\pard \s16\ql \fi-360\li360\ri0\sb160\widctlpar\faauto\adjustright\rin0\lin360\itap0 {\i\f36\fs36\insrsid5836393\charrsid7430155 II.\tab Ng\'e4n ng\'e6\'ee \'e2\'e0\'fbc ta\'ed RAISE (RSL)
+\par }\pard\plain \ql \fi360\li0\ri0\sb80\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs36\insrsid5836393\charrsid7430155 Ha\'eey \'e2\'ebnh ngh\'e9a b\'e0\'f2ng RSL ki\'e3\'f8u Complex bi\'e3\'f8
+u di\'e3\'f9n ca\'efc s\'e4\'fa ph\'e6\'efc x + yi ra  da\'fbng RSL (x, y), g\'e4\'f6m ca\'efc s\'e4\'fa ph\'e6\'efc :
+\par {\pntext\pard\plain\s15 \f3\fs18\insrsid5836393\charrsid7430155 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard\plain \s15\ql \fi-144\li504\ri0\sb120\widctlpar{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pnf3\pnfs18\pnstart1\pnindent144\pnhang {\pntxtb \'b7}}
+\faauto\ls1\adjustright\rin0\lin504\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs36\insrsid5836393\charrsid7430155 zero bi\'e3\'f8u di\'e3\'f9n s\'e4\'fa ph\'e6\'efc 0 + 0i,
+\par {\pntext\pard\plain\s15 \f3\fs18\insrsid5836393\charrsid7430155 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \s15\ql \fi-144\li504\ri0\sb120\widctlpar{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pnf3\pnfs18\pnstart1\pnindent144\pnhang {\pntxtb \'b7}}
+\faauto\ls1\adjustright\rin0\lin504\itap0 {\fs36\insrsid5836393\charrsid7430155 phe\'efp c\'e4\'fcng Add va\'ec phe\'efp nh\'e1n Mult \'e2\'e3\'f8 c\'e4\'fcng va\'ec nh\'e1n hai s\'e4\'fa ph\'e6\'efc.
+\par }\pard \s15\ql \fi-360\li720\ri0\sb120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin720\itap0 {\fs36\insrsid5836393\charrsid7430155 
+\par 
+\par }\pard\plain \s18\ql \li0\ri0\widctlpar\brdrt\brdrs\brdrw30\brsp60 \tqr\tx9180{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\rtlgutter\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {
+\fs36\insrsid5836393\charrsid7430155 Phan Huy Kha\'efnh\tab }{\field\flddirty{\*\fldinst {\fs36\insrsid5836393\charrsid7430155  DATE }}{\fldrslt {\fs36\lang1024\langfe1024\noproof\insrsid7430155\charrsid7430155 6/4/2008}}}{
+\fs36\insrsid5836393\charrsid7430155 
+\par }\pard\plain \ql \li0\ri0\sb60\widctlpar\brdrb\brdrdash\brdrw10\brsp20 {\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs36\insrsid5836393\charrsid7430155 
+\par }\pard \ql \li0\ri0\sb60\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\fs36\insrsid5836393\charrsid7430155 
+\par }\pard\plain \s17\ql \li-180\ri-172\widctlpar\brdrb\brdrs\brdrw15\brsp60 \tqr\tx9360{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin-172\lin-180\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {
+\b\fs36\insrsid5836393\charrsid7430155 KHOA C\'c4NG NGH\'c3\'db TH\'c4NG TIN}{\fs36\insrsid5836393\charrsid7430155 \tab TR\'c6\'c5\'ccNG \'c2A\'dbI HO\'dcC KY\'ce THU\'c1\'dbT - \'c2A\'dbI HO\'dcC \'c2A\'cc N\'c0\'d4NG
+\par }\pard\plain \s16\ql \fi1800\li0\ri0\sb600\widctlpar\brdrb\brdrs\brdrw10\brsp20 {\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f37\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {
+\f36\lang1024\langfe1024\noproof\insrsid7430155\charrsid7430155 {\shp{\*\shpinst\shpleft-92\shptop186\shpright1421\shpbottom976\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz3\shplid1027
+{\sp{\sn shapeType}{\sv 2}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn lTxid}{\sv 131072}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}
+{\sp{\sn adjustValue}{\sv 9706}}{\sp{\sn fillBackColor}{\sv 0}}{\sp{\sn fFilled}{\sv 1}}{\sp{\sn shadowColor}{\sv 0}}{\sp{\sn shadowOffsetX}{\sv 47625}}{\sp{\sn shadowOffsetY}{\sv 31750}}
+{\sp{\sn fShadow}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 
+\f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\b\insrsid5836393 90 PHU\'cfT}{\b\fs24\insrsid5836393 
+\par \'c2\'c3\'d6 }{\b\fs26\insrsid5836393 A}{\insrsid5836393 
+\par }}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8195\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {
+\b\insrsid5836393 90 PHU\'cfT}{\b\fs24\insrsid5836393 
+\par \'c2\'c3\'d6 }{\b\fs26\insrsid5836393 A}{\insrsid5836393 
+\par }}\dpx-92\dpy186\dpxsize1513\dpysize790\dpfillfgcr0\dpfillfgcg0\dpfillfgcb0\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat1\dplinew15\dplinecor0\dplinecog0\dplinecob0}}}}{\f36\fs36\insrsid5836393\charrsid7430155 \'c2\'c3\'d6 THI K\'c3\'daT THU\'cfC M
+\'c4N HO\'dcC C\'c4NG NGH\'c3\'db PH\'c1\'d6N M\'c3\'d6M}{\i\f36\fs36\insrsid5836393\charrsid7430155 
+\par }\pard \s16\ql \fi-360\li360\ri0\sb120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin360\itap0 {\i\f36\fs36\insrsid5836393\charrsid7430155 I.\tab \'c2\'e0\'fbc ta\'ed (Specification)
+\par }\pard \s16\qj \fi360\li0\ri0\sb120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 Cho ma tr\'e1\'fbn vu\'e4ng A c\'e1\'fap NxN g\'e4\'f6m ca\'efc s\'e4\'fa nguy\'e3n. Vi
+\'e3\'fat \'e2\'e0\'fbc ta\'ed th\'e3\'f8 hi\'e3\'fbn m\'e4\'f9i ph\'e1\'f6n t\'e6\'ed tr\'e3n \'e2\'e6\'e5\'ecng che\'efo ch\'eanh cu\'eda ma tr\'e1\'fbn A th\'e7 t\'e4\'f8ng t\'e1\'fat ca\'ed ca\'efc ph\'e1\'f6n t\'e6\'ed tr\'e3n ha\'ecng \'e2u\'efng b
+\'e0\'f2ng t\'e4\'f8ng t\'e1\'fat ca\'ed ca\'efc ph\'e1\'f6n t\'e6\'ed tr\'e3n c\'e4\'fct \'e2i qua ph\'e1\'f6n t\'e6\'ed \'e2o\'ef.
+\par }\pard \s16\ql \fi-360\li360\ri0\sb160\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin360\itap0 {\i\f36\fs36\insrsid5836393\charrsid7430155 II.\tab L\'e1\'fbp tr\'e7nh c\'e1\'fau tru\'efc (Structured programming)
+\par }\trowd \irow0\irowband0\lastrow \ts11\trgaph108\trrh5597\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\trftsWidth1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth9389\clshdrawnil \cellx9281\pard\plain \ql \li0\ri0\widctlpar\intbl
+\tx4230{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\lang1024\langfe1024\noproof\insrsid7430155\charrsid7430155 
+{\shp{\*\shpinst\shpleft4215\shptop504\shpright5461\shpbottom520\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz23\shplid1028{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 1}}{\sp{\sn fFlipV}{\sv 1}}
+{\sp{\sn rotation}{\sv 5898240}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}
+{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8215\dpline\dpptx1246\dppty0\dpptx0\dppty16\dpaendsol\dpaendw1\dpaendl1\dpx4215\dpy504\dpxsize1246\dpysize16
+\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}{\shp{\*\shpinst\shpleft5505\shptop330\shpright5506\shpbottom702\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz24\shplid1029
+{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}
+{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8216
+\dpline\dpptx0\dppty0\dpptx1\dppty372\dpastartsol\dpastartw1\dpastartl1\dpx5505\dpy330\dpxsize1\dpysize372\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}
+{\shp{\*\shpinst\shpleft4209\shptop514\shpright4209\shpbottom3504\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz22\shplid1030{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 1}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn rotation}{\sv 11796480}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fLine}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8214\dpline\dpptx0\dppty0\dpptx0\dppty2990
+\dpx4209\dpy514\dpxsize0\dpysize2990\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}{\shp{\*\shpinst\shpleft4202\shptop3507\shpright6364\shpbottom3507\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz21\shplid1031
+{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 1}}{\sp{\sn fFlipV}{\sv 1}}{\sp{\sn shapePath}{\sv 4}}{\sp{\sn fFillOK}{\sv 0}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}
+{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8213\dpline\dpptx0\dppty0\dpptx2162\dppty0\dpx4202\dpy3507\dpxsize2162\dpysize0\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}
+{\shp{\*\shpinst\shpleft6413\shptop2986\shpright6415\shpbottom3530\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz20\shplid1032{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}
+{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8212\dpline\dpptx0\dppty0\dpptx2\dppty544\dpastartsol\dpastartw1\dpastartl1\dpx6413\dpy2986\dpxsize2\dpysize544
+\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}{\shp{\*\shpinst\shpleft4527\shptop3336\shpright5510\shpbottom3336\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz17\shplid1033
+{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 1}}{\sp{\sn fFlipV}{\sv 1}}{\sp{\sn shapePath}{\sv 4}}{\sp{\sn fFillOK}{\sv 0}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn lidRegroup}{\sv 1}}
+{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8209\dpline\dpptx0\dppty0\dpptx983\dppty0\dpx4527\dpy3336\dpxsize983\dpysize0\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}
+{\shp{\*\shpinst\shpleft8246\shptop1088\shpright8698\shpbottom3844\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz12\shplid1034{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn lTxid}{\sv 196608}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1034}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 Sai
+\par }\pard \qc \li0\ri0\sb600\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 Sai
+\par Sai
+\par }}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8204\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {
+\insrsid5836393 Sai
+\par }\pard \qc \li0\ri0\sb600\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 Sai
+\par Sai
+\par }}\dpx8246\dpy1088\dpxsize452\dpysize2756\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow}}}
+{\shp{\*\shpinst\shpleft6115\shptop2985\shpright6433\shpbottom2986\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz10\shplid1035{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn rotation}{\sv -5898240}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fLine}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8202
+\dpline\dpptx0\dppty0\dpptx318\dppty1\dpx6115\dpy2985\dpxsize318\dpysize1\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}
+{\shp{\*\shpinst\shpleft6799\shptop407\shpright7536\shpbottom3072\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz7\shplid1036{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn lTxid}{\sv 262144}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1036}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \qc \li0\ri0\widctlpar\tx1800{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 \'c2u\'efng
+\par }\pard \qc \li0\ri0\sb600\widctlpar\tx1800{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 \'c2u\'efng
+\par \'c2u\'efng
+\par }}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8199\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar\tx1800{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 
+\f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 \'c2u\'efng
+\par }\pard \qc \li0\ri0\sb600\widctlpar\tx1800{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 \'c2u\'efng
+\par \'c2u\'efng
+\par }}\dpx6799\dpy407\dpxsize737\dpysize2665\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow}}}
+{\shp{\*\shpinst\shpleft4540\shptop1224\shpright5528\shpbottom1240\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz19\shplid1037{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 1}}{\sp{\sn fFlipV}{\sv 1}}
+{\sp{\sn rotation}{\sv 5898240}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}
+{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8211\dpline\dpptx988\dppty0\dpptx0\dppty16\dpaendsol\dpaendw1\dpaendl1\dpx4540\dpy1224\dpxsize988\dpysize16
+\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}{\shp{\*\shpinst\shpleft4535\shptop1235\shpright4535\shpbottom3333\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz14\shplid1038
+{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 1}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 11796480}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fLine}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8206
+\dpline\dpptx0\dppty0\dpptx0\dppty2098\dpx4535\dpy1235\dpxsize0\dpysize2098\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}
+{\shp{\*\shpinst\shpleft5485\shptop1811\shpright5486\shpbottom2027\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz8\shplid1039{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}
+{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8200\dpline\dpptx0\dppty0\dpptx1\dppty216\dpastartsol\dpastartw1\dpastartl1
+\dpx5485\dpy1811\dpxsize1\dpysize216\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}{\shpgrp{\*\shpinst\shpleft4898\shptop1430\shpright6069\shpbottom1805\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz18\shplid1040
+{\sp{\sn groupLeft}{\sv 1814}}{\sp{\sn groupTop}{\sv 7862}}{\sp{\sn groupRight}{\sv 3015}}{\sp{\sn groupBottom}{\sv 8237}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn posrelh}{\sv 2}}
+{\sp{\sn posrelv}{\sv 2}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1041{\sp{\sn relLeft}{\sv 1814}}{\sp{\sn relTop}{\sv 7862}}{\sp{\sn relRight}{\sv 3015}}
+{\sp{\sn relBottom}{\sv 8237}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 0}}{\sp{\sn rotation}{\sv 0}}{\sp{\sn geoRight}{\sv 20000}}{\sp{\sn geoBottom}{\sv 20000}}{\sp{\sn pVerticies}{\sv 8;7;(3333,0)
+;(16656,0);(19989,10046);(16656,19954);(3333,19954);(0,10046);(3333,0)}}{\sp{\sn pSegmentInfo}{\sv 2;6;16384;44032;6;44032;24577;32768}}{\sp{\sn fFillOK}{\sv 1}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineColor}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn lineDashing}{\sv 0}}{\sp{\sn lineStartArrowhead}{\sv 0}}{\sp{\sn lineEndArrowhead}{\sv 0}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn lineEndCapStyle}{\sv 2}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}
+{\shp{\*\shpinst\shplid1042{\sp{\sn relLeft}{\sv 1963}}{\sp{\sn relTop}{\sv 7862}}{\sp{\sn relRight}{\sv 2865}}{\sp{\sn relBottom}{\sv 8203}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 327680}}
+{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1042}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \s19\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs20\insrsid5836393 C1
+\par }}}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8210\dpgroup\dpcount3\dpx4898\dpy1430\dpxsize1171\dpysize375\dppolygon\dppolycount6\dpptx195\dppty0\dpptx975\dppty0\dpptx1170\dppty188\dpptx975\dppty374\dpptx195\dppty374\dpptx0\dppty188
+\dpx0\dpy0\dpxsize1171\dpysize375\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \s19\qc \li0\ri0\widctlpar{\*\pn 
+\pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs20\insrsid5836393 C1
+\par }}\dpx145\dpy0\dpxsize880\dpysize341\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0}}}
+{\shp{\*\shpinst\shpleft5504\shptop1081\shpright5505\shpbottom1435\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz11\shplid1043{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 1}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}
+{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8203\dpline\dpptx1\dppty0\dpptx0\dppty354\dpastartsol\dpastartw1\dpastartl1
+\dpx5504\dpy1081\dpxsize1\dpysize354\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}{\shp{\*\shpinst\shpleft5522\shptop3144\shpright5523\shpbottom3375\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz15\shplid1044
+{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}
+{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8207
+\dpline\dpptx0\dppty0\dpptx1\dppty231\dpastartsol\dpastartw1\dpastartl1\dpx5522\dpy3144\dpxsize1\dpysize231\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}
+{\shpgrp{\*\shpinst\shpleft4915\shptop2784\shpright6086\shpbottom3159\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz13\shplid1045
+{\sp{\sn groupLeft}{\sv 1814}}{\sp{\sn groupTop}{\sv 7862}}{\sp{\sn groupRight}{\sv 3015}}{\sp{\sn groupBottom}{\sv 8237}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn posrelh}{\sv 2}}
+{\sp{\sn posrelv}{\sv 2}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1046{\sp{\sn relLeft}{\sv 1814}}{\sp{\sn relTop}{\sv 7862}}{\sp{\sn relRight}{\sv 3015}}
+{\sp{\sn relBottom}{\sv 8237}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 0}}{\sp{\sn rotation}{\sv 0}}{\sp{\sn geoRight}{\sv 20000}}{\sp{\sn geoBottom}{\sv 20000}}{\sp{\sn pVerticies}{\sv 8;7;(3333,0)
+;(16656,0);(19989,10046);(16656,19954);(3333,19954);(0,10046);(3333,0)}}{\sp{\sn pSegmentInfo}{\sv 2;6;16384;44032;6;44032;24577;32768}}{\sp{\sn fFillOK}{\sv 1}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineColor}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn lineDashing}{\sv 0}}{\sp{\sn lineStartArrowhead}{\sv 0}}{\sp{\sn lineEndArrowhead}{\sv 0}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn lineEndCapStyle}{\sv 2}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}
+{\shp{\*\shpinst\shplid1047{\sp{\sn relLeft}{\sv 1963}}{\sp{\sn relTop}{\sv 7862}}{\sp{\sn relRight}{\sv 2865}}{\sp{\sn relBottom}{\sv 8203}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 393216}}
+{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1047}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \s19\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs20\insrsid5836393 C2
+\par }}}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8205\dpgroup\dpcount3\dpx4915\dpy2784\dpxsize1171\dpysize375\dppolygon\dppolycount6\dpptx195\dppty0\dpptx975\dppty0\dpptx1170\dppty188\dpptx975\dppty374\dpptx195\dppty374\dpptx0\dppty188
+\dpx0\dpy0\dpxsize1171\dpysize375\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \s19\qc \li0\ri0\widctlpar{\*\pn 
+\pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs20\insrsid5836393 C2
+\par }}\dpx145\dpy0\dpxsize880\dpysize341\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0}}}
+{\shp{\*\shpinst\shpleft5522\shptop2405\shpright5523\shpbottom2777\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz16\shplid1048{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}
+{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8208\dpline\dpptx0\dppty0\dpptx1\dppty372\dpastartsol\dpastartw1\dpastartl1
+\dpx5522\dpy2405\dpxsize1\dpysize372\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}{\shp{\*\shpinst\shpleft5008\shptop2012\shpright6075\shpbottom2391\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz9\shplid1049
+{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn lTxid}{\sv 458752}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}
+{\sp{\sn hspNext}{\sv 1049}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain 
+\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 S2
+\par }}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8201\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {
+\insrsid5836393 S2
+\par }}\dpx5008\dpy2012\dpxsize1067\dpysize379\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}
+{\shp{\*\shpinst\shpleft4989\shptop685\shpright6056\shpbottom1064\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz6\shplid1050{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn lTxid}{\sv 524288}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1050}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 S1
+\par }}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8198\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {
+\insrsid5836393 S1
+\par }}\dpx4989\dpy685\dpxsize1067\dpysize379\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}
+{\shp{\*\shpinst\shpleft5818\shptop3699\shpright6270\shpbottom4040\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz5\shplid1051{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn lTxid}{\sv 589824}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1051}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \ql \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid7430155 }}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8197\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \ql \li0\ri0\widctlpar{\*\pn 
+\pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid7430155 }}\dpx5818\dpy3699\dpxsize452\dpysize341
+\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow}}}
+{\shpgrp{\*\shpinst\shpleft929\shptop154\shpright3675\shpbottom5483\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz4\shplid1052
+{\sp{\sn groupLeft}{\sv 2369}}{\sp{\sn groupTop}{\sv 7932}}{\sp{\sn groupRight}{\sv 5115}}{\sp{\sn groupBottom}{\sv 13261}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn posrelh}{\sv 2}}{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1053{\sp{\sn relLeft}{\sv 3973}}{\sp{\sn relTop}{\sv 9511}}{\sp{\sn relRight}{\sv 5040}}
+{\sp{\sn relBottom}{\sv 9890}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 655360}}{\sp{\sn dxTextLeft}{\sv 12700}}
+{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1053}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 
+\f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 Max = a
+\par }}}}{\shpgrp{\*\shpinst\shplid1054{\sp{\sn groupLeft}{\sv 1948}}{\sp{\sn groupTop}{\sv 5998}}{\sp{\sn groupRight}{\sv 2865}}{\sp{\sn groupBottom}{\sv 6400}}{\sp{\sn relLeft}{\sv 2983}}
+{\sp{\sn relTop}{\sv 7932}}{\sp{\sn relRight}{\sv 3900}}{\sp{\sn relBottom}{\sv 8334}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1055{\sp{\sn relLeft}{\sv 1963}}{\sp{\sn relTop}{\sv 6028}}{\sp{\sn relRight}{\sv 2865}}
+{\sp{\sn relBottom}{\sv 6400}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 3}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shp{\*\shpinst\shplid1056{\sp{\sn relLeft}{\sv 1948}}{\sp{\sn relTop}{\sv 5998}}
+{\sp{\sn relRight}{\sv 2850}}{\sp{\sn relBottom}{\sv 6338}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 720896}}
+{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1056}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 B\'e0\'f5t \'e2\'e1\'f6u
+\par }}}}}}{\shpgrp{\*\shpinst\shplid1057{\sp{\sn groupLeft}{\sv 1814}}{\sp{\sn groupTop}{\sv 7862}}{\sp{\sn groupRight}{\sv 3015}}{\sp{\sn groupBottom}{\sv 8237}}{\sp{\sn relLeft}{\sv 2399}}
+{\sp{\sn relTop}{\sv 9061}}{\sp{\sn relRight}{\sv 4410}}{\sp{\sn relBottom}{\sv 9436}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1058{\sp{\sn relLeft}{\sv 1814}}{\sp{\sn relTop}{\sv 7862}}{\sp{\sn relRight}{\sv 3015}}
+{\sp{\sn relBottom}{\sv 8237}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 0}}{\sp{\sn rotation}{\sv 0}}{\sp{\sn geoRight}{\sv 20000}}{\sp{\sn geoBottom}{\sv 20000}}{\sp{\sn pVerticies}{\sv 8;7;(3333,0)
+;(16656,0);(19989,10046);(16656,19954);(3333,19954);(0,10046);(3333,0)}}{\sp{\sn pSegmentInfo}{\sv 2;6;16384;44032;6;44032;24577;32768}}{\sp{\sn fFillOK}{\sv 1}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineColor}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn lineDashing}{\sv 0}}{\sp{\sn lineStartArrowhead}{\sv 0}}{\sp{\sn lineEndArrowhead}{\sv 0}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn lineEndCapStyle}{\sv 2}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}
+{\shp{\*\shpinst\shplid1059{\sp{\sn relLeft}{\sv 1963}}{\sp{\sn relTop}{\sv 7862}}{\sp{\sn relRight}{\sv 2865}}{\sp{\sn relBottom}{\sv 8203}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 786432}}
+{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1059}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \s19\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs20\insrsid5836393 (a>b) }{\fs20\insrsid5836393 {\field{\*\fldinst SYMBOL 217 \\f "Symbol" \\s 10}{\fldrslt\f3\fs20}}}{\fs20\insrsid5836393  (a>c)
+\par }}}}}}{\shp{\*\shpinst\shplid1060{\sp{\sn relLeft}{\sv 4378}}{\sp{\sn relTop}{\sv 8845}}{\sp{\sn relRight}{\sv 5115}}{\sp{\sn relBottom}{\sv 11510}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 851968}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}
+{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1060}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain 
+\qc \li0\ri0\widctlpar\tx1800{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 \'c2u\'efng
+\par }\pard \qc \li0\ri0\sb840\widctlpar\tx1800{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 \'c2u\'efng
+\par }\pard \qc \li0\ri0\sb720\widctlpar\tx1800{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 \'c2u\'efng
+\par }}}}{\shp{\*\shpinst\shplid1061{\sp{\sn relLeft}{\sv 3433}}{\sp{\sn relTop}{\sv 8867}}{\sp{\sn relRight}{\sv 3434}}{\sp{\sn relBottom}{\sv 9083}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shpgrp{\*\shpinst\shplid1062{\sp{\sn groupLeft}{\sv 1393}}{\sp{\sn groupTop}{\sv 725}}
+{\sp{\sn groupRight}{\sv 3121}}{\sp{\sn groupBottom}{\sv 1087}}{\sp{\sn relLeft}{\sv 2563}}{\sp{\sn relTop}{\sv 8506}}{\sp{\sn relRight}{\sv 4291}}{\sp{\sn relBottom}{\sv 8868}}
+{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1063
+{\sp{\sn relLeft}{\sv 1393}}{\sp{\sn relTop}{\sv 771}}{\sp{\sn relRight}{\sv 3121}}{\sp{\sn relBottom}{\sv 1087}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 0}}{\sp{\sn rotation}{\sv 0}}{\sp{\sn geoRight}{\sv 20000}}
+{\sp{\sn geoBottom}{\sv 20000}}{\sp{\sn pVerticies}{\sv 8;5;(2833,0);(0,19945);(17118,19945);(19990,0);(2833,0)}}{\sp{\sn pSegmentInfo}{\sv 2;6;16384;44032;4;44032;24577;32768}}{\sp{\sn fFillOK}{\sv 1}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineColor}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineDashing}{\sv 0}}{\sp{\sn lineStartArrowhead}{\sv 0}}{\sp{\sn lineEndArrowhead}{\sv 0}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}
+{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn lineEndCapStyle}{\sv 2}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}
+{\shp{\*\shpinst\shplid1064{\sp{\sn relLeft}{\sv 1469}}{\sp{\sn relTop}{\sv 725}}{\sp{\sn relRight}{\sv 3060}}{\sp{\sn relBottom}{\sv 1065}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 917504}}
+{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1064}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 \'c2o\'fcc a, b, c
+\par }}}}}}{\shp{\*\shpinst\shplid1065{\sp{\sn relLeft}{\sv 3988}}{\sp{\sn relTop}{\sv 10621}}{\sp{\sn relRight}{\sv 5055}}{\sp{\sn relBottom}{\sv 11000}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 983040}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}
+{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1065}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain 
+\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 Max = b
+\par }}}}{\shpgrp{\*\shpinst\shplid1066{\sp{\sn groupLeft}{\sv 5608}}{\sp{\sn groupTop}{\sv 7365}}{\sp{\sn groupRight}{\sv 5766}}{\sp{\sn groupBottom}{\sv 7779}}{\sp{\sn relLeft}{\sv 4393}}
+{\sp{\sn relTop}{\sv 9254}}{\sp{\sn relRight}{\sv 4536}}{\sp{\sn relBottom}{\sv 9509}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1067{\sp{\sn relLeft}{\sv 5608}}{\sp{\sn relTop}{\sv 7365}}{\sp{\sn relRight}{\sv 5766}}
+{\sp{\sn relBottom}{\sv 7365}}{\sp{\sn fRelFlipH}{\sv 1}}{\sp{\sn fRelFlipV}{\sv 1}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn shapePath}{\sv 4}}{\sp{\sn fFillOK}{\sv 0}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shp{\*\shpinst\shplid1068{\sp{\sn relLeft}{\sv 5758}}{\sp{\sn relTop}{\sv 7383}}{\sp{\sn relRight}{\sv 5759}}{\sp{\sn relBottom}{\sv 7779}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}}}{\shpgrp{\*\shpinst\shplid1069{\sp{\sn groupLeft}{\sv 5608}}{\sp{\sn groupTop}{\sv 7365}}
+{\sp{\sn groupRight}{\sv 5766}}{\sp{\sn groupBottom}{\sv 7779}}{\sp{\sn relLeft}{\sv 3425}}{\sp{\sn relTop}{\sv 9877}}{\sp{\sn relRight}{\sv 4529}}{\sp{\sn relBottom}{\sv 10005}}
+{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 5898240}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1070
+{\sp{\sn relLeft}{\sv 5608}}{\sp{\sn relTop}{\sv 7365}}{\sp{\sn relRight}{\sv 5766}}{\sp{\sn relBottom}{\sv 7365}}{\sp{\sn fRelFlipH}{\sv 1}}{\sp{\sn fRelFlipV}{\sv 1}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn shapePath}{\sv 4}}{\sp{\sn fFillOK}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shp{\*\shpinst\shplid1071{\sp{\sn relLeft}{\sv 5758}}{\sp{\sn relTop}{\sv 7383}}
+{\sp{\sn relRight}{\sv 5759}}{\sp{\sn relBottom}{\sv 7779}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}
+{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}}}
+{\shp{\*\shpinst\shplid1072{\sp{\sn relLeft}{\sv 3388}}{\sp{\sn relTop}{\sv 9437}}{\sp{\sn relRight}{\sv 3389}}{\sp{\sn relBottom}{\sv 10163}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}
+{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shp{\*\shpinst\shplid1073{\sp{\sn relLeft}{\sv 3433}}{\sp{\sn relTop}{\sv 8354}}{\sp{\sn relRight}{\sv 3434}}{\sp{\sn relBottom}{\sv 8556}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shp{\*\shpinst\shplid1074{\sp{\sn relLeft}{\sv 3343}}{\sp{\sn relTop}{\sv 12689}}
+{\sp{\sn relRight}{\sv 3344}}{\sp{\sn relBottom}{\sv 12891}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}
+{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}
+{\shpgrp{\*\shpinst\shplid1075{\sp{\sn groupLeft}{\sv 1663}}{\sp{\sn groupTop}{\sv 10226}}{\sp{\sn groupRight}{\sv 3016}}{\sp{\sn groupBottom}{\sv 10611}}{\sp{\sn relLeft}{\sv 2683}}
+{\sp{\sn relTop}{\sv 12310}}{\sp{\sn relRight}{\sv 4036}}{\sp{\sn relBottom}{\sv 12695}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1076{\sp{\sn relLeft}{\sv 1663}}{\sp{\sn relTop}{\sv 10280}}{\sp{\sn relRight}{\sv 3016}}
+{\sp{\sn relBottom}{\sv 10596}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 0}}{\sp{\sn rotation}{\sv 0}}{\sp{\sn geoRight}{\sv 20000}}{\sp{\sn geoBottom}{\sv 20000}}{\sp{\sn pVerticies}{\sv 8;5;(2833,0)
+;(0,19945);(17118,19945);(19990,0);(2833,0)}}{\sp{\sn pSegmentInfo}{\sv 2;6;16384;44032;4;44032;24577;32768}}{\sp{\sn fFillOK}{\sv 1}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineColor}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineDashing}{\sv 0}}
+{\sp{\sn lineStartArrowhead}{\sv 0}}{\sp{\sn lineEndArrowhead}{\sv 0}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}
+{\sp{\sn lineEndCapStyle}{\sv 2}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}
+{\shp{\*\shpinst\shplid1077{\sp{\sn relLeft}{\sv 1814}}{\sp{\sn relTop}{\sv 10226}}{\sp{\sn relRight}{\sv 2865}}{\sp{\sn relBottom}{\sv 10611}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 1048576}}
+{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1077}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 In Max
+\par }}}}}}{\shpgrp{\*\shpinst\shplid1078{\sp{\sn groupLeft}{\sv 8278}}{\sp{\sn groupTop}{\sv 10820}}{\sp{\sn groupRight}{\sv 9300}}{\sp{\sn groupBottom}{\sv 11222}}{\sp{\sn relLeft}{\sv 2818}}
+{\sp{\sn relTop}{\sv 12859}}{\sp{\sn relRight}{\sv 3840}}{\sp{\sn relBottom}{\sv 13261}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1079{\sp{\sn relLeft}{\sv 8308}}{\sp{\sn relTop}{\sv 10820}}{\sp{\sn relRight}{\sv 9300}}
+{\sp{\sn relBottom}{\sv 11160}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 1114112}}{\sp{\sn dxTextLeft}{\sv 12700}}
+{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1079}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 
+\f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 K\'e3\'fat thu\'efc
+\par }}}}{\shp{\*\shpinst\shplid1080{\sp{\sn relLeft}{\sv 8278}}{\sp{\sn relTop}{\sv 10850}}{\sp{\sn relRight}{\sv 9300}}{\sp{\sn relBottom}{\sv 11222}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 3}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}}}{\shp{\*\shpinst\shplid1081{\sp{\sn relLeft}{\sv 2833}}{\sp{\sn relTop}{\sv 9362}}
+{\sp{\sn relRight}{\sv 3285}}{\sp{\sn relBottom}{\sv 12118}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 1179648}}
+{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1081}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 Sai
+\par }\pard \qc \li0\ri0\sb840\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 Sai
+\par }\pard \qc \li0\ri0\sb720\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 Sai
+\par }}}}{\shpgrp{\*\shpinst\shplid1082{\sp{\sn groupLeft}{\sv 1814}}{\sp{\sn groupTop}{\sv 7862}}{\sp{\sn groupRight}{\sv 3015}}{\sp{\sn groupBottom}{\sv 8237}}{\sp{\sn relLeft}{\sv 2369}}
+{\sp{\sn relTop}{\sv 10171}}{\sp{\sn relRight}{\sv 4380}}{\sp{\sn relBottom}{\sv 10546}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1083{\sp{\sn relLeft}{\sv 1814}}{\sp{\sn relTop}{\sv 7862}}{\sp{\sn relRight}{\sv 3015}}
+{\sp{\sn relBottom}{\sv 8237}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 0}}{\sp{\sn rotation}{\sv 0}}{\sp{\sn geoRight}{\sv 20000}}{\sp{\sn geoBottom}{\sv 20000}}{\sp{\sn pVerticies}{\sv 8;7;(3333,0)
+;(16656,0);(19989,10046);(16656,19954);(3333,19954);(0,10046);(3333,0)}}{\sp{\sn pSegmentInfo}{\sv 2;6;16384;44032;6;44032;24577;32768}}{\sp{\sn fFillOK}{\sv 1}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineColor}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}
+{\sp{\sn lineDashing}{\sv 0}}{\sp{\sn lineStartArrowhead}{\sv 0}}{\sp{\sn lineEndArrowhead}{\sv 0}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn lineEndCapStyle}{\sv 2}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}
+{\shp{\*\shpinst\shplid1084{\sp{\sn relLeft}{\sv 1963}}{\sp{\sn relTop}{\sv 7862}}{\sp{\sn relRight}{\sv 2865}}{\sp{\sn relBottom}{\sv 8203}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 1245184}}
+{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1084}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \s19\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs20\insrsid5836393 (b>a) }{\fs20\insrsid5836393 {\field{\*\fldinst SYMBOL 217 \\f "Symbol" \\s 10}{\fldrslt\f3\fs20}}}{\fs20\insrsid5836393  (b>c)
+\par }}}}}}{\shpgrp{\*\shpinst\shplid1085{\sp{\sn groupLeft}{\sv 5608}}{\sp{\sn groupTop}{\sv 7365}}{\sp{\sn groupRight}{\sv 5766}}{\sp{\sn groupBottom}{\sv 7779}}{\sp{\sn relLeft}{\sv 4378}}
+{\sp{\sn relTop}{\sv 10379}}{\sp{\sn relRight}{\sv 4521}}{\sp{\sn relBottom}{\sv 10634}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1086{\sp{\sn relLeft}{\sv 5608}}{\sp{\sn relTop}{\sv 7365}}{\sp{\sn relRight}{\sv 5766}}
+{\sp{\sn relBottom}{\sv 7365}}{\sp{\sn fRelFlipH}{\sv 1}}{\sp{\sn fRelFlipV}{\sv 1}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn shapePath}{\sv 4}}{\sp{\sn fFillOK}{\sv 0}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shp{\*\shpinst\shplid1087{\sp{\sn relLeft}{\sv 5758}}{\sp{\sn relTop}{\sv 7383}}{\sp{\sn relRight}{\sv 5759}}{\sp{\sn relBottom}{\sv 7779}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}}}{\shpgrp{\*\shpinst\shplid1088{\sp{\sn groupLeft}{\sv 5608}}{\sp{\sn groupTop}{\sv 7365}}
+{\sp{\sn groupRight}{\sv 5766}}{\sp{\sn groupBottom}{\sv 7779}}{\sp{\sn relLeft}{\sv 3410}}{\sp{\sn relTop}{\sv 11002}}{\sp{\sn relRight}{\sv 4514}}{\sp{\sn relBottom}{\sv 11130}}
+{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 5898240}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1089
+{\sp{\sn relLeft}{\sv 5608}}{\sp{\sn relTop}{\sv 7365}}{\sp{\sn relRight}{\sv 5766}}{\sp{\sn relBottom}{\sv 7365}}{\sp{\sn fRelFlipH}{\sv 1}}{\sp{\sn fRelFlipV}{\sv 1}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn shapePath}{\sv 4}}{\sp{\sn fFillOK}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shp{\*\shpinst\shplid1090{\sp{\sn relLeft}{\sv 5758}}{\sp{\sn relTop}{\sv 7383}}
+{\sp{\sn relRight}{\sv 5759}}{\sp{\sn relBottom}{\sv 7779}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}
+{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}}}
+{\shp{\*\shpinst\shplid1091{\sp{\sn relLeft}{\sv 3373}}{\sp{\sn relTop}{\sv 10562}}{\sp{\sn relRight}{\sv 3374}}{\sp{\sn relBottom}{\sv 11288}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shpgrp{\*\shpinst\shplid1092{\sp{\sn groupLeft}{\sv 1814}}{\sp{\sn groupTop}{\sv 7862}}
+{\sp{\sn groupRight}{\sv 3015}}{\sp{\sn groupBottom}{\sv 8237}}{\sp{\sn relLeft}{\sv 2369}}{\sp{\sn relTop}{\sv 11266}}{\sp{\sn relRight}{\sv 4380}}{\sp{\sn relBottom}{\sv 11641}}
+{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1093
+{\sp{\sn relLeft}{\sv 1814}}{\sp{\sn relTop}{\sv 7862}}{\sp{\sn relRight}{\sv 3015}}{\sp{\sn relBottom}{\sv 8237}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 0}}{\sp{\sn rotation}{\sv 0}}{\sp{\sn geoRight}{\sv 20000}}
+{\sp{\sn geoBottom}{\sv 20000}}{\sp{\sn pVerticies}{\sv 8;7;(3333,0);(16656,0);(19989,10046);(16656,19954);(3333,19954);(0,10046);(3333,0)}}{\sp{\sn pSegmentInfo}{\sv 2;6;16384;44032;6;44032;24577;32768}}{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineColor}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineDashing}{\sv 0}}{\sp{\sn lineStartArrowhead}{\sv 0}}{\sp{\sn lineEndArrowhead}{\sv 0}}{\sp{\sn lineStartArrowWidth}{\sv 0}}
+{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn lineEndCapStyle}{\sv 2}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn lidRegroup}{\sv 0}}
+{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shp{\*\shpinst\shplid1094{\sp{\sn relLeft}{\sv 1963}}{\sp{\sn relTop}{\sv 7862}}{\sp{\sn relRight}{\sv 2865}}{\sp{\sn relBottom}{\sv 8203}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 1310720}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}
+{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1094}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain 
+\s19\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs20\insrsid5836393 (c>a) }{\fs20\insrsid5836393 {\field{\*\fldinst SYMBOL 217 \\f "Symb
+ol" \\s 10}{\fldrslt\f3\fs20}}}{\fs20\insrsid5836393  (c>b)
+\par }}}}}}{\shp{\*\shpinst\shplid1095{\sp{\sn relLeft}{\sv 3958}}{\sp{\sn relTop}{\sv 11731}}{\sp{\sn relRight}{\sv 5025}}{\sp{\sn relBottom}{\sv 12110}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 1376256}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}
+{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1095}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 1}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain 
+\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 Max = c
+\par }}}}{\shp{\*\shpinst\shplid1096{\sp{\sn relLeft}{\sv 4363}}{\sp{\sn relTop}{\sv 11050}}{\sp{\sn relRight}{\sv 5100}}{\sp{\sn relBottom}{\sv 11465}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 1441792}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}
+{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1096}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain 
+\ql \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid7430155 }}}}
+{\shpgrp{\*\shpinst\shplid1097{\sp{\sn groupLeft}{\sv 5608}}{\sp{\sn groupTop}{\sv 7365}}{\sp{\sn groupRight}{\sv 5766}}{\sp{\sn groupBottom}{\sv 7779}}{\sp{\sn relLeft}{\sv 4378}}
+{\sp{\sn relTop}{\sv 11474}}{\sp{\sn relRight}{\sv 4521}}{\sp{\sn relBottom}{\sv 11729}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1098{\sp{\sn relLeft}{\sv 5608}}{\sp{\sn relTop}{\sv 7365}}{\sp{\sn relRight}{\sv 5766}}
+{\sp{\sn relBottom}{\sv 7365}}{\sp{\sn fRelFlipH}{\sv 1}}{\sp{\sn fRelFlipV}{\sv 1}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn shapePath}{\sv 4}}{\sp{\sn fFillOK}{\sv 0}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shp{\*\shpinst\shplid1099{\sp{\sn relLeft}{\sv 5758}}{\sp{\sn relTop}{\sv 7383}}{\sp{\sn relRight}{\sv 5759}}{\sp{\sn relBottom}{\sv 7779}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}}}{\shpgrp{\*\shpinst\shplid1100{\sp{\sn groupLeft}{\sv 5608}}{\sp{\sn groupTop}{\sv 7365}}
+{\sp{\sn groupRight}{\sv 5766}}{\sp{\sn groupBottom}{\sv 7779}}{\sp{\sn relLeft}{\sv 3410}}{\sp{\sn relTop}{\sv 12097}}{\sp{\sn relRight}{\sv 4514}}{\sp{\sn relBottom}{\sv 12225}}
+{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn rotation}{\sv 5898240}}{\sp{\sn lidRegroup}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shp{\*\shpinst\shplid1101
+{\sp{\sn relLeft}{\sv 5608}}{\sp{\sn relTop}{\sv 7365}}{\sp{\sn relRight}{\sv 5766}}{\sp{\sn relBottom}{\sv 7365}}{\sp{\sn fRelFlipH}{\sv 1}}{\sp{\sn fRelFlipV}{\sv 1}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn shapePath}{\sv 4}}{\sp{\sn fFillOK}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shp{\*\shpinst\shplid1102{\sp{\sn relLeft}{\sv 5758}}{\sp{\sn relTop}{\sv 7383}}
+{\sp{\sn relRight}{\sv 5759}}{\sp{\sn relBottom}{\sv 7779}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}
+{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}}}
+{\shp{\*\shpinst\shplid1103{\sp{\sn relLeft}{\sv 3373}}{\sp{\sn relTop}{\sv 11657}}{\sp{\sn relRight}{\sv 3374}}{\sp{\sn relBottom}{\sv 12383}}{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 20}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn lineEndArrowhead}{\sv 1}}{\sp{\sn lineStartArrowWidth}{\sv 0}}{\sp{\sn lineStartArrowLength}{\sv 0}}{\sp{\sn lineEndArrowWidth}{\sv 0}}
+{\sp{\sn lineEndArrowLength}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}}}{\shp{\*\shpinst\shplid1104{\sp{\sn relLeft}{\sv 2893}}{\sp{\sn relTop}{\sv 11702}}
+{\sp{\sn relRight}{\sv 3345}}{\sp{\sn relBottom}{\sv 12043}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 1507328}}
+{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1104}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \ql \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid7430155 }}}}{\shp{\*\shpinst\shplid1105{\sp{\sn relLeft}{\sv 4303}}{\sp{\sn relTop}{\sv 11110}}
+{\sp{\sn relRight}{\sv 5040}}{\sp{\sn relBottom}{\sv 11525}}{\sp{\sn fRelFlipH}{\sv 0}}{\sp{\sn fRelFlipV}{\sv 0}}{\sp{\sn shapeType}{\sv 1}}{\sp{\sn lTxid}{\sv 1572864}}
+{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn hspNext}{\sv 1105}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \ql \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid7430155 }}}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8196\dpgroup\dpcount28\dpx929\dpy154\dpxsize2746\dpysize5329\dptxbx\dptxlrtb{\dptxbxtext
+\pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 Max = a
+\par }}\dpx1604\dpy1579\dpxsize1067\dpysize379\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpgroup\dpcount3\dpx614\dpy0\dpxsize917\dpysize402\dpellipse
+\dpx15\dpy30\dpxsize902\dpysize372\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar{\*\pn 
+\pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 B\'e0\'f5t \'e2\'e1\'f6u
+\par }}\dpx0\dpy0\dpxsize902\dpysize340\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dpgroup\dpcount3\dpx30\dpy1129\dpxsize2011\dpysize375
+\dppolygon\dppolycount6\dpptx335\dppty0\dpptx1675\dppty0\dpptx2010\dppty188\dpptx1675\dppty374\dpptx335\dppty374\dpptx0\dppty188\dpx0\dpy0\dpxsize2011\dpysize375
+\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \s19\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs20\insrsid5836393 (a>b) }{\fs20\insrsid5836393 {\field{\*\fldinst SYMBOL 217 \\f "Symbol" \\s 10}{\fldrslt\f3\fs20}}}{\fs20\insrsid5836393  (a>c)
+\par }}\dpx249\dpy0\dpxsize1511\dpysize341\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar
+\tx1800{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 \'c2u\'efng
+\par }\pard \qc \li0\ri0\sb840\widctlpar\tx1800{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 \'c2u\'efng
+\par }\pard \qc \li0\ri0\sb720\widctlpar\tx1800{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 \'c2u\'efng
+\par }}\dpx2009\dpy913\dpxsize737\dpysize2665\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpline\dpptx0\dppty0\dpptx1\dppty216\dpastartsol\dpastartw1\dpastartl1\dpx1064\dpy935\dpxsize1\dpysize216
+\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpgroup\dpcount3\dpx194\dpy574\dpxsize1728\dpysize362\dppolygon\dppolycount4\dpptx245\dppty0\dpptx0\dppty315\dpptx1479\dppty315\dpptx1727\dppty0\dpx0\dpy46\dpxsize1728\dpysize316
+\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 \'c2o\'fcc a, b, c
+\par }}\dpx76\dpy0\dpxsize1591\dpysize340\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar{\*\pn 
+\pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 Max = b
+\par }}\dpx1619\dpy2689\dpxsize1067\dpysize379\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpgroup\dpcount3\dpx2024\dpy1322\dpxsize143\dpysize255
+\dpline\dpptx0\dppty0\dpptx143\dppty0\dpx0\dpy0\dpxsize143\dpysize0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpline\dpptx0\dppty0\dpptx1\dppty244\dpastartsol\dpastartw1\dpastartl1\dpx136\dpy11\dpxsize1\dpysize244
+\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dpgroup\dpcount3\dpx1056\dpy1945\dpxsize1104\dpysize128\dpline\dpptx0\dppty0\dpptx0\dppty128\dpx1104\dpy0\dpxsize0\dpysize128\dplinew20\dplinecor0\dplinecog0\dplinecob0
+\dpline\dpptx1056\dppty0\dpptx0\dppty0\dpastartsol\dpastartw1\dpastartl1\dpx0\dpy122\dpxsize1056\dpysize0\dplinew20\dplinecor0\dplinecog0\dplinecob0
+\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dpline\dpptx0\dppty0\dpptx1\dppty726\dpastartsol\dpastartw1\dpastartl1\dpx1019\dpy1505\dpxsize1\dpysize726\dplinew20\dplinecor0\dplinecog0\dplinecob0
+\dpline\dpptx0\dppty0\dpptx1\dppty202\dpastartsol\dpastartw1\dpastartl1\dpx1064\dpy422\dpxsize1\dpysize202\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpline\dpptx0\dppty0\dpptx1\dppty202\dpastartsol\dpastartw1\dpastartl1\dpx974\dpy4757\dpxsize1\dpysize202
+\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpgroup\dpcount3\dpx314\dpy4378\dpxsize1353\dpysize385\dppolygon\dppolycount4\dpptx192\dppty0\dpptx0\dppty315\dpptx1158\dppty315\dpptx1352\dppty0\dpx0\dpy54\dpxsize1353\dpysize316
+\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 In Max
+\par }}\dpx151\dpy0\dpxsize1051\dpysize385\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dpgroup\dpcount3\dpx449\dpy4927\dpxsize1022\dpysize402
+\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 K\'e3\'fat thu\'efc
+\par }}\dpx30\dpy0\dpxsize992\dpysize340\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpellipse\dpx0\dpy30\dpxsize1022\dpysize372
+\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar{\*\pn 
+\pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 Sai
+\par }\pard \qc \li0\ri0\sb840\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 Sai
+\par }\pard \qc \li0\ri0\sb720\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\insrsid5836393 Sai
+\par }}\dpx464\dpy1430\dpxsize452\dpysize2756\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpgroup\dpcount3\dpx0\dpy2239\dpxsize2011\dpysize375\dppolygon\dppolycount6\dpptx335\dppty0
+\dpptx1675\dppty0\dpptx2010\dppty188\dpptx1675\dppty374\dpptx335\dppty374\dpptx0\dppty188\dpx0\dpy0\dpxsize2011\dpysize375
+\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \s19\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs20\insrsid5836393 (b>a) }{\fs20\insrsid5836393 {\field{\*\fldinst SYMBOL 217 \\f "Symbol" \\s 10}{\fldrslt\f3\fs20}}}{\fs20\insrsid5836393  (b>c)
+\par }}\dpx249\dpy0\dpxsize1511\dpysize341\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dpgroup\dpcount3\dpx2009\dpy2447\dpxsize143\dpysize255
+\dpline\dpptx0\dppty0\dpptx143\dppty0\dpx0\dpy0\dpxsize143\dpysize0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpline\dpptx0\dppty0\dpptx1\dppty244\dpastartsol\dpastartw1\dpastartl1\dpx136\dpy11\dpxsize1\dpysize244
+\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dpgroup\dpcount3\dpx1041\dpy3070\dpxsize1104\dpysize128\dpline\dpptx0\dppty0\dpptx0\dppty128\dpx1104\dpy0\dpxsize0\dpysize128\dplinew20\dplinecor0\dplinecog0\dplinecob0
+\dpline\dpptx1056\dppty0\dpptx0\dppty0\dpastartsol\dpastartw1\dpastartl1\dpx0\dpy122\dpxsize1056\dpysize0\dplinew20\dplinecor0\dplinecog0\dplinecob0
+\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dpline\dpptx0\dppty0\dpptx1\dppty726\dpastartsol\dpastartw1\dpastartl1\dpx1004\dpy2630\dpxsize1\dpysize726\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpgroup\dpcount3\dpx0\dpy3334\dpxsize2011\dpysize375
+\dppolygon\dppolycount6\dpptx335\dppty0\dpptx1675\dppty0\dpptx2010\dppty188\dpptx1675\dppty374\dpptx335\dppty374\dpptx0\dppty188\dpx0\dpy0\dpxsize2011\dpysize375
+\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \s19\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\faauto\adjustright\rin0\lin0\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs20\insrsid5836393 (c>a) }{\fs20\insrsid5836393 {\field{\*\fldinst SYMBOL 217 \\f "Symbol" \\s 10}{\fldrslt\f3\fs20}}}{\fs20\insrsid5836393  (c>b)
+\par }}\dpx249\dpy0\dpxsize1511\dpysize341\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\widctlpar{\*\pn 
+\pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid5836393 Max = c
+\par }}\dpx1589\dpy3799\dpxsize1067\dpysize379\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew20\dplinecor0\dplinecog0\dplinecob0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \ql \li0\ri0\widctlpar{\*\pn 
+\pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid7430155 }}\dpx1994\dpy3118\dpxsize737\dpysize415
+\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dpgroup\dpcount3\dpx2009\dpy3542\dpxsize143\dpysize255\dpline\dpptx0\dppty0\dpptx143\dppty0\dpx0\dpy0\dpxsize143\dpysize0
+\dplinew20\dplinecor0\dplinecog0\dplinecob0\dpline\dpptx0\dppty0\dpptx1\dppty244\dpastartsol\dpastartw1\dpastartl1\dpx136\dpy11\dpxsize1\dpysize244\dplinew20\dplinecor0\dplinecog0\dplinecob0
+\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dpgroup\dpcount3\dpx1041\dpy4165\dpxsize1104\dpysize128\dpline\dpptx0\dppty0\dpptx0\dppty128\dpx1104\dpy0\dpxsize0\dpysize128\dplinew20\dplinecor0\dplinecog0\dplinecob0
+\dpline\dpptx1056\dppty0\dpptx0\dppty0\dpastartsol\dpastartw1\dpastartl1\dpx0\dpy122\dpxsize1056\dpysize0\dplinew20\dplinecor0\dplinecog0\dplinecob0
+\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0\dpline\dpptx0\dppty0\dpptx1\dppty726\dpastartsol\dpastartw1\dpastartl1\dpx1004\dpy3725\dpxsize1\dpysize726\dplinew20\dplinecor0\dplinecog0\dplinecob0\dptxbx\dptxlrtb{\dptxbxtext\pard\plain 
+\ql \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid7430155 }}\dpx524\dpy3770\dpxsize452\dpysize341
+\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \ql \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 
+\f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid7430155 }}\dpx1934\dpy3178\dpxsize737\dpysize415\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow
+\dpendgroup\dpx0\dpy0\dpxsize0\dpysize0}}}}{\fs36\insrsid5836393\charrsid7430155 D)\tab E)\cell }\pard \ql \li0\ri0\widctlpar\intbl{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {
+\fs36\insrsid5836393\charrsid7430155 \trowd \irow0\irowband0\lastrow \ts11\trgaph108\trrh5597\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\trftsWidth1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth9389\clshdrawnil \cellx9281\row }\pard 
+\ql \fi360\li0\ri0\sb60\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\fs36\insrsid5836393\charrsid7430155 
+\par 
+\par 
+\par }\pard\plain \s16\qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f37\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\f36\fs36\insrsid5836393\charrsid7430155 \page }{
+\f36\lang1024\langfe1024\noproof\insrsid7430155\charrsid7430155 {\shp{\*\shpinst\shpleft-212\shptop-20\shpright1301\shpbottom821\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz0\shplid1106
+{\sp{\sn shapeType}{\sv 2}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn lTxid}{\sv 1638400}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}
+{\sp{\sn fillBackColor}{\sv 0}}{\sp{\sn fFilled}{\sv 1}}{\sp{\sn shadowColor}{\sv 0}}{\sp{\sn shadowOffsetX}{\sv 47625}}{\sp{\sn shadowOffsetY}{\sv 31750}}{\sp{\sn fShadow}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt 
+\pard\plain \qc \li0\ri0\sb120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\b\insrsid5836393 90 PHU\'cfT}{\b\fs24\insrsid5836393 
+\par }\pard \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\b\fs24\insrsid5836393 \'c2\'c3\'d6 }{\b\fs26\insrsid5836393 A}{\insrsid5836393 
+\par }}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8192\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\sb120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 
+\f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\b\insrsid5836393 90 PHU\'cfT}{\b\fs24\insrsid5836393 
+\par }\pard \qc \li0\ri0\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\b\fs24\insrsid5836393 \'c2\'c3\'d6 }{\b\fs26\insrsid5836393 A}{\insrsid5836393 
+\par }}\dpx-212\dpy-20\dpxsize1513\dpysize841\dpfillfgcr0\dpfillfgcg0\dpfillfgcb0\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat1\dplinew15\dplinecor0\dplinecog0\dplinecob0}}}}{\f36\fs36\insrsid5836393\charrsid7430155 \'c2\'c3\'d6 THI K\'c3\'daT THU\'cf
+C M\'c4N HO\'dcC (THI L\'c1\'d6N 2)
+\par }\pard \s16\qc \li0\ri0\sb80\widctlpar\brdrb\brdrs\brdrw15\brsp100 {\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 C\'c4NG NGH\'c3\'db PH\'c1\'d6N M\'c3\'d6M}{
+\i\f36\fs36\insrsid5836393\charrsid7430155 
+\par }\pard \s16\ql \fi-360\li360\ri0\sb160\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin360\itap0 {\i\f36\fs36\insrsid5836393\charrsid7430155 I.\tab \'c2\'e0\'fbc ta\'ed (Specification)
+\par }\pard \s16\qj \fi360\li0\ri0\sb120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 M\'e4\'fct x\'e1u (chu\'e4\'f9i) la\'ec \'e2\'e4\'fai x\'e6\'efng n\'e3\'fau ca\'efc ky
+\'ef t\'e6\'fb ca\'efch \'e2\'e3\'f6u \'e2\'e1\'f6u x\'e1u va\'ec cu\'e4\'fai x\'e1u la\'ec gi\'e4\'fang nhau. V\'ea du\'fb ca\'efc x\'e1u}{\i\f36\fs36\insrsid5836393\charrsid7430155  a}{\f36\fs36\insrsid5836393\charrsid7430155 , }{
+\i\f36\fs36\insrsid5836393\charrsid7430155 bab}{\f36\fs36\insrsid5836393\charrsid7430155 , }{\i\f36\fs36\insrsid5836393\charrsid7430155 aabbaa}{\f36\fs36\insrsid5836393\charrsid7430155  \'e2\'e3\'f6u la\'ec \'e2\'e4\'fai x\'e6\'efng. Ha\'eey vi\'e3\'fat 
+\'e2\'e0\'fbc ta\'ed th\'e3\'f8 hi\'e3\'fbn ca\'efc x\'e1u \'e2\'e4\'fai x\'e6\'efng.
+\par }\pard \s16\ql \fi-360\li360\ri0\sb160\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin360\itap0 {\i\f36\fs36\insrsid5836393\charrsid7430155 II.\tab Ng\'e4n ng\'e6\'ee \'e2\'e0\'fbc ta\'ed RAISE (RSL)
+\par }\pard\plain \ql \fi360\li0\ri0\sb80\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs36\insrsid5836393\charrsid7430155 Ha\'eey \'e2\'ebnh ngh\'e9a b
+\'e0\'f2ng RSL ki\'e3\'f8u Complex bi\'e3\'f8u di\'e3\'f9n ca\'efc s\'e4\'fa ph\'e6\'efc x + yi ra  da\'fbng RSL (x, y), g\'e4\'f6m ca\'efc s\'e4\'fa ph\'e6\'efc :
+\par {\pntext\pard\plain\s15 \f3\fs18\insrsid5836393\charrsid7430155 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard\plain \s15\ql \fi-144\li504\ri0\sb120\widctlpar{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pnf3\pnfs18\pnstart1\pnindent144\pnhang {\pntxtb \'b7}}
+\faauto\ls1\adjustright\rin0\lin504\itap0 \f36\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs36\insrsid5836393\charrsid7430155 zero bi\'e3\'f8u di\'e3\'f9n s\'e4\'fa ph\'e6\'efc 0 + 0i,
+\par {\pntext\pard\plain\s15 \f3\fs18\insrsid5836393\charrsid7430155 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \s15\ql \fi-144\li504\ri0\sb120\widctlpar{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pnf3\pnfs18\pnstart1\pnindent144\pnhang {\pntxtb \'b7}}
+\faauto\ls1\adjustright\rin0\lin504\itap0 {\fs36\insrsid5836393\charrsid7430155 phe\'efp c\'e4\'fcng Add va\'ec phe\'efp nh\'e1n Mult \'e2\'e3\'f8 c\'e4\'fcng va\'ec nh\'e1n hai s\'e4\'fa ph\'e6\'efc.
+\par }\pard \s15\ql \fi-360\li720\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin720\itap0 {\fs36\insrsid5836393\charrsid7430155 
+\par 
+\par }\pard\plain \s18\ql \li0\ri0\widctlpar\brdrt\brdrs\brdrw30\brsp60 \tqr\tx9180\faauto\adjustright\rin0\lin0\rtlgutter\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs36\insrsid5836393\charrsid7430155 Phan Huy Kha\'efnh\tab }
+{\field\flddirty{\*\fldinst {\fs36\insrsid5836393\charrsid7430155  DATE }}{\fldrslt {\fs36\lang1024\langfe1024\noproof\insrsid7430155\charrsid7430155 6/4/2008}}}{\fs36\insrsid5836393\charrsid7430155 
+\par }\pard\plain \ql \li0\ri0\sb60\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs36\insrsid5836393\charrsid7430155 
+\par 
+\par }\pard\plain \s17\ql \li-180\ri-172\widctlpar\brdrb\brdrs\brdrw15\brsp60 \tqr\tx9360\faauto\adjustright\rin-172\lin-180\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\b\fs36\insrsid5836393\charrsid7430155 KHOA C\'c4NG NGH\'c3\'db TH
+\'c4NG TIN}{\fs36\insrsid5836393\charrsid7430155 \tab TR\'c6\'c5\'ccNG \'c2A\'dbI HO\'dcC KY\'ce THU\'c1\'dbT - \'c2A\'dbI HO\'dcC \'c2A\'cc N\'c0\'d4NG
+\par }\pard\plain \s16\qc \li0\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f37\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\f36\lang1024\langfe1024\noproof\insrsid7430155\charrsid7430155 
+{\shp{\*\shpinst\shpleft-212\shptop101\shpright1301\shpbottom942\shpfhdr0\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt0\shpz1\shplid1107{\sp{\sn shapeType}{\sv 2}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn lTxid}{\sv 1703936}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn fillBackColor}{\sv 0}}{\sp{\sn fFilled}{\sv 1}}{\sp{\sn shadowColor}{\sv 0}}
+{\sp{\sn shadowOffsetX}{\sv 47625}}{\sp{\sn shadowOffsetY}{\sv 31750}}{\sp{\sn fShadow}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 0}}{\shptxt \pard\plain \qc \li0\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin0\itap0 
+\f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\b\insrsid5836393 90 PHU\'cfT}{\b\fs24\insrsid5836393 
+\par }\pard \qc \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 {\b\fs24\insrsid5836393 \'c2\'c3\'d6 }{\b\fs26\insrsid5836393 B}{\insrsid5836393 
+\par }}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8193\dptxbx\dptxlrtb{\dptxbxtext\pard\plain \qc \li0\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\b\insrsid5836393 90 PHU\'cfT}{
+\b\fs24\insrsid5836393 
+\par }\pard \qc \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 {\b\fs24\insrsid5836393 \'c2\'c3\'d6 }{\b\fs26\insrsid5836393 B}{\insrsid5836393 
+\par }}\dpx-212\dpy101\dpxsize1513\dpysize841\dpfillfgcr0\dpfillfgcg0\dpfillfgcb0\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat1\dplinew15\dplinecor0\dplinecog0\dplinecob0}}}}{\f36\fs36\insrsid5836393\charrsid7430155 \'c2\'c3\'d6 THI K\'c3\'daT THU\'cf
+C M\'c4N HO\'dcC (THI L\'c1\'d6N 2)
+\par }\pard \s16\qc \li0\ri0\sb80\widctlpar\brdrb\brdrs\brdrw15\brsp100 \faauto\adjustright\rin0\lin0\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 C\'c4NG NGH\'c3\'db PH\'c1\'d6N M\'c3\'d6M}{\i\f36\fs36\insrsid5836393\charrsid7430155 
+\par }\pard \s16\ql \fi-360\li360\ri0\sb160\widctlpar\faauto\adjustright\rin0\lin360\itap0 {\i\f36\fs36\insrsid5836393\charrsid7430155 I.\tab \'c2\'e0\'fbc ta\'ed \'ed (Specification)
+\par }\pard \s16\qj \fi360\li0\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin0\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 Cho ma tr\'e1\'fbn vu\'e4ng A c\'e1\'fap NxN. Vi\'e3\'fat \'e2\'e0\'fbc ta\'ed th\'e3\'f8 hi\'e3\'fbn m\'e4\'f9i ph\'e1\'f6n t\'e6
+\'ed tr\'e3n \'e2\'e6\'e5\'ecng che\'efo ch\'eanh cu\'eda ma tr\'e1\'fbn A ch\'eanh la\'ec t\'e4\'f8ng cu\'eda t\'e1\'fat ca\'ed ca\'efc ph\'e1\'f6n t\'e6\'ed tr\'e3n m\'e4\'f9i ha\'ecng va\'ec tr\'e3n m\'e4\'f9i c\'e4\'fct \'e2i qua ph\'e1\'f6n t\'e6\'ed
+ \'e2o\'ef nh\'e6ng kh\'e4ng t\'eanh c\'e4\'fcng ph\'e1\'f6n t\'e6\'ed \'e2o\'ef.
+\par }\pard \s16\ql \fi-360\li360\ri0\sb160\widctlpar\faauto\adjustright\rin0\lin360\itap0 {\i\f36\fs36\insrsid5836393\charrsid7430155 II.\tab Ng\'e4n ng\'e6\'ee \'e2\'e0\'fbc ta\'ed RAISE (RSL)
+\par {\pntext\pard\plain\f36\fs36\insrsid5836393\charrsid7430155 \hich\af36\dbch\af0\loch\f36 1.\tab}}\pard\plain \ql \fi-360\li360\ri0\sb60\widctlpar{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec\pnstart1\pnindent360\pnhang {\pntxta .}}
+\faauto\ls2\adjustright\rin0\lin360\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs36\insrsid5836393\charrsid7430155 Vi\'e3\'fat m\'e4\'fct bi\'e3\'f8u th\'e6\'efc RSL th\'e3\'f8 hi\'e3\'fbn r\'e0\'f2ng kh\'e4ng t\'e4\'f6n ta\'fbi m
+\'e4\'fct s\'e4\'fa nguy\'e3n l\'e5\'efn nh\'e1\'fat.
+\par {\pntext\pard\plain\f36\fs36\insrsid5836393\charrsid7430155 \hich\af36\dbch\af0\loch\f36 2.\tab}}\pard \ql \fi-360\li360\ri0\sb60\widctlpar{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec\pnstart1\pnindent360\pnhang {\pntxta .}}
+\faauto\ls3\adjustright\rin0\lin360\itap0 {\fs36\insrsid5836393\charrsid7430155  \'c2i\'e3\'f6n va\'eco ch\'e4\'f9 co\'ecn thi\'e3\'fau (\'e2\'e0\'fbt d\'e1\'fau }{\b\fs36\insrsid5836393\charrsid7430155 ...}{\fs36\insrsid5836393\charrsid7430155 ) trong 
+\'e2\'ebnh ngh\'e9a ha\'ecm d\'e6\'e5\'efi \'e2\'e1y cho phe\'efp ki\'e3\'f8m tra m\'e4\'fct s\'e4\'fa t\'e6\'fb nhi\'e3n \'e2a\'ee cho co\'ef la\'ec ch\'e0\'f4n kh\'e4ng :
+\par }\pard \ql \fi-360\li360\ri0\sb60\widctlpar\faauto\ilvl12\adjustright\rin0\lin360\itap0 {\fs36\insrsid5836393\charrsid7430155 is_even}{\b\fs36\insrsid5836393\charrsid7430155  : Nat }{\b\fs36\insrsid5836393\charrsid7430155 {\field{\*\fldinst SYMBOL
+ 174 \\f "Symbol" \\s 18}{\fldrslt\f3\fs36}}}{\b\fs36\insrsid5836393\charrsid7430155  Bool
+\par }{\fs36\insrsid5836393\charrsid7430155 is_even(n)}{\b\fs36\insrsid5836393\charrsid7430155  }{\b\fs36\insrsid5836393\charrsid7430155 {\field{\*\fldinst SYMBOL 186 \\f "Symbol" \\s 18}{\fldrslt\f3\fs36}}}{\b\fs36\insrsid5836393\charrsid7430155  ...}{
+\fs36\insrsid5836393\charrsid7430155 
+\par }\pard \ql \li0\ri0\sb60\widctlpar\faauto\adjustright\rin0\lin0\itap0 {\fs36\insrsid5836393\charrsid7430155 
+\par 
+\par 
+\par }\pard\plain \s16\qc \li0\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f37\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\f36\fs36\insrsid5836393\charrsid7430155 \page \'c2\'e3\'f6 thi k\'e3\'fat thu\'fbc M\'e4n ho\'fcc
+\par C\'c4NG NGH\'c3\'db PH\'c1\'d6N M\'c3\'d6M
+\par }\pard \s16\qc \li0\ri0\sb80\widctlpar\brdrb\brdrs\brdrw15\brsp100 \faauto\adjustright\rin0\lin0\itap0 {\b\i\f36\fs36\insrsid5836393\charrsid7430155 150 phu\'eft}{\i\f36\fs36\insrsid5836393\charrsid7430155  (kh\'e4ng \'e2\'e6\'e5\'fcc mang ta\'eci li\'e3
+\'fbu va\'eco pho\'ecng thi)
+\par }\pard \s16\ql \fi-360\li360\ri0\sb240\widctlpar\faauto\adjustright\rin0\lin360\itap0 {\i\f36\fs36\insrsid5836393\charrsid7430155 I.\tab Ph\'e6\'e5ng pha\'efp tinh ch\'e3\'fa t\'e6\'ecng b\'e6\'e5\'efc
+\par }\pard \s16\qj \fi360\li0\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin0\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 Trong vi\'e3\'fbc qua\'edn ly\'ef danh ba\'fb \'e2i\'e3\'fbn thoa\'fbi cho kha\'efch ha\'ecng, ng\'e6\'e5\'eci ta c\'e1\'f6n m\'e4
+\'fct thu\'ed tu\'fbc n\'e0\'f5n la\'fbi (correcting) ca\'efc s\'e4\'fa \'e2i\'e3\'fbn thoa\'fbi \'e2\'e6a va\'eco \'e2\'e3\'f8 th\'e4\'fang nh\'e1\'fat ca\'efch l\'e6u tr\'e6\'ee va\'ec in ra.
+\par Gia\'ed s\'e6\'ed s\'e4\'fa \'e2i\'e3\'fbn thoa\'fbi g\'e4\'f6m hai ph\'e1\'f6n, ph\'e1\'f6n ma\'ee vu\'ecng (regional code) va\'ec ph\'e1\'f6n s\'e4\'fa (number). Khi ng\'e6\'e5\'eci s\'e6\'ed du\'fbng nh\'e1\'fbp va\'eco ma\'efy t\'eanh m\'e4\'fct h\'e4
+\'f6 s\'e5 kha\'efch ha\'ecng ta\'fbi mu\'fbc }{\i\f36\fs36\insrsid5836393\charrsid7430155 S\'e4\'fa \'c2i\'e3\'fbn Thoa\'fbi }{\f36\fs36\insrsid5836393\charrsid7430155 co\'ef ch\'e6\'efa m\'e4\'fct s\'e4\'fa na\'eco \'e2o\'ef, v\'ea du\'fb }{
+\i\f36\fs36\insrsid5836393\charrsid7430155 0(51) 892.992}{\f36\fs36\insrsid5836393\charrsid7430155 , ho\'e0\'fbc }{\i\f36\fs36\insrsid5836393\charrsid7430155 051-892-992}{\f36\fs36\insrsid5836393\charrsid7430155 , ho\'e0\'fbc }{
+\i\f36\fs36\insrsid5836393\charrsid7430155 051.892.992}{\f36\fs36\insrsid5836393\charrsid7430155 , v.v..., ma\'efy pha\'edi l\'e6u tr\'e6\'ee }{\i\f36\fs36\insrsid5836393\charrsid7430155 051.892992}{\f36\fs36\insrsid5836393\charrsid7430155  va\'ec
+ in ra da\'fbng }{\i\f36\fs36\insrsid5836393\charrsid7430155 051.892.992}{\f36\fs36\insrsid5836393\charrsid7430155 . (Chu\'ef y\'ef \'e2\'e4\'fai v\'e5\'efi ca\'efc ma\'ee vu\'ecng la\'ec m\'e4\'fct s\'e4\'fa nh\'e6 Ha\'ec n\'e4\'fci 4, Tp HCM 8..., chuy
+\'e3\'f8n s\'e4\'fa 8 cu\'eda ph\'e1\'f6n s\'e4\'fa qua \'e2\'e3\'f8 v\'e1\'f9n co\'ef da\'fbng nn.nnnnnn).
+\par }\pard \s16\qj \fi-360\li720\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin720\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 1.\tab Tr\'e7nh ba\'ecy l\'e5\'eci gia\'edi b\'e0\'f2ng ph\'e6\'e5ng pha\'efp tinh ch\'e3\'fa t\'e6\'ecng b\'e6\'e5\'efc.
+
+\par 2.\tab L\'e1\'fbp tr\'e7nh theo \'e2\'e5n v\'eb Unit cu\'eda ng\'e4n ng\'e6\'ee Pascal.
+\par }\pard \s16\ql \fi-360\li360\ri0\sb160\widctlpar\faauto\adjustright\rin0\lin360\itap0 {\i\f36\fs36\insrsid5836393\charrsid7430155 II.\tab \'c2\'e0\'fbc ta\'ed
+\par }\pard \s16\qj \fi360\li0\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin0\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 Cho ma tr\'e1\'fbn vu\'e4ng A c\'e1\'fap NxN. Vi\'e3\'fat \'e2\'e0\'fbc ta\'ed th\'e3\'f8 hi\'e3\'fbn m\'e4\'f9i ph\'e1\'f6n t\'e6
+\'ed tr\'e3n \'e2\'e6\'e5\'ecng che\'efo ch\'eanh cu\'eda ma tr\'e1\'fbn ch\'eanh la\'ec ph\'e1\'f6n t\'e6\'ed nho\'ed nh\'e1\'fat tr\'e3n m\'e4\'f9i ha\'ecng.
+\par }\pard \s16\ql \fi-360\li360\ri0\sb160\widctlpar\faauto\adjustright\rin0\lin360\itap0 {\i\f36\fs36\insrsid5836393\charrsid7430155 III.\tab Ng\'e4n ng\'e6\'ee \'e2\'e0\'fbc ta\'ed RAISE
+\par }\pard \s16\qj \fi360\li0\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin0\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 Vi\'e3\'fat tr\'e3n RSL m\'e4\'fct \'e2\'e5n th\'e3\'f8 co\'ef t\'e3n EXPONENT \'e2\'e3\'f8 t\'eanh ha\'ecm mu\'ee e}{
+\f36\fs36\super\insrsid5836393\charrsid7430155 x}{\f36\fs36\insrsid5836393\charrsid7430155  ?
+\par }\pard\plain \ql \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs36\insrsid5836393\charrsid7430155 
+\par 
+\par 
+\par 
+\par }\pard \ql \li0\ri0\widctlpar\tqc\tx4140\tqr\tx9090\faauto\adjustright\rin0\lin0\itap0 {\fs36\insrsid5836393\charrsid7430155 \page 
+\par }\pard\plain \s16\qc \li0\ri0\sb360\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f37\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\f36\fs36\insrsid5836393\charrsid7430155 \'d1E\'c0 THI KE\'c1T THU\'d9C MO\'c2N HO\'cfC }{
+\i\f36\fs36\insrsid5836393\charrsid7430155 C\'c4NG NGH\'c3\'db PH\'c1\'d6N M\'c3\'d6M}{\b\f36\fs36\insrsid5836393\charrsid7430155 
+\par }\pard \s16\qc \li0\ri0\sb80\widctlpar\brdrb\brdrs\brdrw15\brsp100 \faauto\adjustright\rin0\lin0\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 150 phu\'f9t (co\'ef th\'e3\'f8 mang ta\'eci li\'e3\'fbu va\'eco pho\'ecng thi)
+\par }\pard \s16\ql \fi-360\li360\ri0\sb240\widctlpar\faauto\adjustright\rin0\lin360\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 I.\tab Ph\'e6\'e5ng pha\'efp tinh ch\'e3\'fa t\'e6\'ecng b\'e6\'e5\'efc
+\par }\pard \s16\qj \fi360\li0\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin0\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 Trong vi\'e3\'fbc qua\'edn ly\'ef danh ba\'fb \'e2i\'e3\'fbn thoa\'fbi cho kha\'efch ha\'ecng, ng\'e6\'e5\'eci ta c\'e1\'f6n m\'e4
+\'fct thu\'ed tu\'fbc n\'e0\'f5n la\'fbi (correcting) ca\'efc s\'e4\'fa \'e2i\'e3\'fbn thoa\'fbi \'e2\'e6a va\'eco \'e2\'e3\'f8 th\'e4\'fang nh\'e1\'fat ca\'efch l\'e6u tr\'e6\'ee va\'ec in ra.
+\par Gia\'ed s\'e6\'ed s\'e4\'fa \'e2i\'e3\'fbn thoa\'fbi g\'e4\'f6m hai ph\'e1\'f6n, ph\'e1\'f6n ma\'ee vu\'ecng (regional code) va\'ec ph\'e1\'f6n s\'e4\'fa (number). Vi\'e3\'fbc n\'e0\'f5n la\'ec la\'ecm sao khi nh\'e1\'fbp va\'eco ma\'efy m\'e4\'fct s\'e4
+\'fa \'e2i\'e3\'fbn thoa\'fbi, v\'ea du\'fb (51) 892.992, ho\'e0\'fbc 51-892-992, ho\'e0\'fbc 51.892.992, v.v..., ma\'efy pha\'edi l\'e6u tr\'e6\'ee 51.892992 va\'ec in ra da\'fbng 51.892.992. \'c2\'e4\'fai v\'e5\'efi ca\'efc ma\'ee vu\'ecng m\'e4\'fct s
+\'e4\'fa (Ha\'ec n\'e4\'fci 4, Tp HCM 8...), chuy\'e3\'f8n s\'e4\'fa 8 cu\'eda ph\'e1\'f6n s\'e4\'fa qua \'e2\'e3\'f8 v\'e1\'f9n co\'ef da\'fbng xx.xxxxxx.
+\par }\pard \s16\qj \fi-540\li540\ri0\sb120\widctlpar\faauto\adjustright\rin0\lin540\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 1.Tr\'e7nh ba\'ecy l\'e5\'eci gia\'edi b\'e0\'f2ng ph\'e6\'e5ng pha\'efp tinh ch\'e3\'fa t\'e6\'ecng b\'e6\'e5\'efc theo ng\'e4
+n ng\'e6\'ee t\'e6\'fb nhi\'e3n.
+\par 2.L\'e1\'fbp tr\'e7nh theo \'e2\'e5n v\'eb Unit cu\'eda ng\'e4n ng\'e6\'ee Pascal (ca\'ecng m\'e5\'ed r\'e4\'fcng ba\'eci toa\'efn ca\'ecng t\'e4\'fat).
+\par }\pard \s16\ql \fi-360\li360\ri0\sb160\widctlpar\faauto\adjustright\rin0\lin360\itap0 {\f36\fs36\insrsid5836393\charrsid7430155 II.\tab Ng\'e4n ng\'e6\'ee \'e2\'e0\'fbc ta\'ed RAISE
+\par }\pard\plain \ql \fi360\li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \f36\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\fs36\insrsid5836393\charrsid7430155 Vi\'e3\'fat tr\'e3n RSL m\'e4\'fct \'e2\'e5n th\'e3\'f8 co\'ef t\'e3n CIRCLE g
+\'e4\'f6m ca\'efc \'e2\'ebnh ngh\'e9a ha\'ecm t\'eanh di\'e3\'fbn t\'each area va\'ec t\'eanh chu vi circumference. Co\'ef th\'e3\'f8 vi\'e3\'fat \'e2\'ebnh ngh\'e9a ha\'ecm theo nh\'e6\'eeng ca\'efch kha\'efc ?
+\par }}

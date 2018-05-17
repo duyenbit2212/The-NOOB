@@ -1,0 +1,207 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai3_6.htm -->
+<HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 3</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE type=text/css>BODY {
+	FONT-FAMILY: Times New Roman, Times
+}
+</STYLE>
+</HEAD>
+<BODY>
+<SCRIPT laguage="JavaScript">function open() {return false;}</SCRIPT>
+
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      Homepage</A><FONT color=#0000ff>]</FONT></P></TD></TR></TBODY></TABLE>
+<P align=left><B>Bài 3.6</B></P>
+<H2 align=left>Các kiểu dữ liệu tự định nghĩa.</H2>
+<CENTER>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff colSpan=2><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE></CENTER><!--/captut-->
+<P>Trong bài trước chúng ta đã xem xét một loại dữ liệu được định nghĩa bởi 
+người dùng (người lập trình): cấu trúc. Nhưng có còn nhiều kiểu dữ liệu tự định 
+nghĩa khác:
+<H2>Tự định nghĩa các kiểu dữ liệu (<TT>typedef</TT>).</H2>C++ cho phép chúng ta 
+định nghĩa các kiểu dữ liệu của riêng mình dựa trên các kiểu dữ liệu đã có. Để 
+có thể làm việc đó chúng ta sẽ sử dụng từ khoá <TT><B>typedef</B></TT>, dạng 
+thức như sau: 
+<BLOCKQUOTE>
+  <P><TT><B>typedef &nbsp; </B><I>existing_type &nbsp; new_type_name</I> ;</TT> 
+  </P></BLOCKQUOTE>trong đó <TT><I>existing_type</I></TT> là một kiểu dữ liệu cơ 
+bản hay bất kì một kiểu dữ liệu đã định nghĩa và <TT><I>new_type_name</I></TT> 
+là tên của kiểu dữ liệu mới. Ví dụ 
+<BLOCKQUOTE>
+  <P><TT>typedef char C;<BR>typedef unsigned int WORD;<BR>typedef char * 
+  string_t;<BR>typedef char field [50];</TT> </P></BLOCKQUOTE>Trong trường hợp này 
+chúng ta đã định nghĩa bốn kiểu dữ liệu mới: <B><TT>C</TT></B>, 
+<TT><B>WORD</B></TT>, <TT><B>string_t</B></TT> và <TT><B>field</B></TT> kiểu 
+<TT><B>char</B></TT>, <TT><B>unsigned int</B></TT>, <TT><B>char*</B></TT> kiểu 
+<TT><B>char[50]</B></TT>, chúng ta hoàn toàn có thể sử dụng chúng như là các 
+kiểu dữ liệu hợp lệ: 
+<BLOCKQUOTE><TT>C achar, anotherchar, *ptchar1;<BR>WORD myword;<BR>string_t 
+  ptchar2;<BR>field name;</TT> </BLOCKQUOTE><TT>typedef</TT> có thể hữu dụng khi 
+bạn muốn định nghĩa một kiểu dữ liệu được dùng lặp đi lặp lại trong chương trình 
+hoặc kiểu dữ liệu bạn muốn dùng có tên quá dài và bạn muốn nó có tên ngắn hơn. 
+<H2>Union</H2>Union cho phép một phần bộ nhớ có thể được truy xuất dưới dạng 
+nhiều kiểu dữ liệu khác nhau mặc dù tất cả chúng đều nằm cùng một vị trí trong 
+bộ nhớ. Phần khai báo và sử dụng nó tương tự với cấu trúc nhưng chức năng thì 
+khác hoàn toàn: 
+<BLOCKQUOTE><TT><PRE><B>union </B><I>model_name </I><B>{</B>
+  <I>type1 element1</I><B>;</B>
+  <I>type2 element2</I><B>;</B>
+  <I>type3 element3</I><B>;
+  .
+  .
+}</B> <I>object_name</I><B>;</B></PRE></TT></BLOCKQUOTE>Tất cả các phần tử của 
+<I>union</I> đều chiếm cùng một chỗ trong bộ nhớ. Kích thước của nó là kích 
+thước của phần tử lớn nhất. Ví dụ: 
+<BLOCKQUOTE><TT><PRE>union mytypes_t {
+  char c;
+  int i;
+  float f;
+  } mytypes;</PRE></TT></BLOCKQUOTE>định nghĩa ba phần tử 
+<BLOCKQUOTE>
+  <P><TT><FONT color=blue>mytypes.c<BR>mytypes.i<BR>mytypes.f 
+</FONT></TT></P></BLOCKQUOTE>mỗi phần tử có một kiểu dữ liệu khác nhau. Nhưng vì 
+tất cả chúng đều nằm cùng một chỗ trong bộ nhớ nên bất kì sự thay đổi nào đối 
+với một phần tử sẽ ảnh hưởng tới tất cả các thành phần còn lại.
+<P>Một trong những công dụng của <I>union</I> là dùng để kết hợp một kiểu dữ 
+liêu cơ bản với một mảng hay các cấu trúc gồm các phần tử nhỏ hơn. Ví dụ: 
+<BLOCKQUOTE><TT><PRE>union mix_t{
+  long l;
+  struct {
+    short hi;
+    short lo;
+    } s;
+  char c[4];
+} mix;
+</PRE></TT></BLOCKQUOTE>định nghĩa ba phần tử cho phép chúng ta truy xuất đến 
+cùng một nhóm 4 byte: <TT><B>mix.l</B></TT>, <TT><B>mix.s</B></TT> và 
+<TT><B>mix.c</B></TT> mà chúng ta có thể sử dụng tuỳ theo việc chúng ta muốn 
+truy xuất đến nhóm 4 byte này như thế nào. Tôi dùng nhiều kiểu dữ liệu khác 
+nhau, mảng và cấu trúc trong union để bạn có thể thấy các cách khác nhau mà 
+chúng ta có thể truy xuất dữ liệu. 
+<BLOCKQUOTE><IMG height=118 
+  src="imgunio1.gif" 
+  width=367> </BLOCKQUOTE>
+<H2>Các unions vô danh</H2><IMG align=left height=45 
+src="icoc-cpp.gif" 
+width=71>Trong C++ chúng ta có thể sử dụng các unions vô danh. Nếu chúng ta đặt 
+một union trong một cấu trúc mà không đề tên (phần đi sau cặp ngoặc nhọn <TT>{ 
+}</TT>)&nbsp; union sẽ trở thành vô danh và chúng ta có thể truy xuất trực tiếp 
+đến các phần tử của nó mà không cần đến tên của union (có cần cũng không được). 
+Ví dụ, hãy xem xét sự khác biệt giữa hai phần khai báo sau đây:
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle width="50%"><B><U>union</U></B></TD>
+    <TD align=middle width="50%"><B><U>union vô danh</U></B></TD></TR>
+  <TR>
+    <TD bgColor=#ffffbf width="50%"><TT><PRE>struct {
+  char title[50];
+  char author[50];
+  union {
+    float dollars;
+    int yens;
+  } price;
+} book;
+</PRE></TT></TD>
+    <TD bgColor=#ffffbf width="50%"><TT><PRE>struct {
+  char title[50];
+  char author[50];
+  union {
+    float dollars;
+    int yens;
+  };
+} book;
+</PRE></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Sự khác biệt duy nhất giữa hai đoạn mã này là trong đoạn mã đầu tiên chúng ta 
+đặt tên cho union (<TT><B>price</B></TT>) còn trong cái thứ hai thì không. Khi 
+truy nhập vào các phần tử <TT><B>dollars</B></TT> và <B><TT>yens</TT></B>, trong 
+trường hợp thứ nhất chúng ta viết: 
+<BLOCKQUOTE>
+  <P><TT>book.price.dollars<BR>book.price.yens</TT> </P></BLOCKQUOTE>còn trong 
+trường hợp thứ hai: 
+<BLOCKQUOTE>
+  <P><TT>book.dollars<BR>book.yens</TT> </P></BLOCKQUOTE>Một lần nữa tôi nhắc lại 
+rằng vì nó là một union, hai trường <TT><B>dollars</B></TT> và 
+<TT><B>yens</B></TT> đều chiếm cùng một chỗ trong bộ nhớ nên chúng không thể giữ 
+hai giá trị khác nhau.
+<H2>Kiểu liệt kê (<TT>enum</TT>)</H2>Kiểu dữ liệu liệt kê dùng để tạo ra các 
+kiểu dữ liệu chứa một cái gì đó hơi đặc biệt một chút, không phải kiểu số hay 
+kiểu kí tự hoặc các hằng <TT><B>true</B></TT> và <TT><B>false</B></TT>. Dạng 
+thức của nó như sau: 
+<BLOCKQUOTE><TT><PRE><B>enum</B> <I>model_name</I> <B>{</B>
+  <I>value1</I><B>,</B>
+  <I>value2</I><B>,</B>
+  <I>value3</I><B>,
+  .
+  .
+}</B><I> object_name</I><B>;</B></PRE></TT></BLOCKQUOTE>Ví dụ, chúng ta có thể 
+tạo ra một kiểu dữ liệu mới có tên <TT><B>color</B></TT> để lưu trữ các màu với 
+phần khai báo như sau: 
+<BLOCKQUOTE>
+  <P><TT>enum colors_t {black, blue, green, cyan, red, purple, yellow, 
+  white};</TT></P></BLOCKQUOTE>Chú ý rằng chúng ta không sử dụng bất kì một kiểu 
+dữ liệu cơ bản nào trong phần khai báo. Chúng ta đã tạo ra một kiểu dữ liệu mới 
+mà không dựa trên bất kì kiểu dữ liệu nào có sẵn: kiểu <TT><B>color_t</B></TT>, 
+những giá trị có thể của kiểu <B><TT>color_t</TT></B> được viết trong cặp ngoặc 
+nhọn <TT>{}</TT>. Ví dụ, sau khi khai báo kiểu liệt kê, biểu thức sau sẽ là hợp 
+lệ: 
+<BLOCKQUOTE><TT>colors_t mycolor;<BR>&nbsp;<BR>mycolor = blue;<BR>if (mycolor 
+  == green) mycolor = red;</TT> </BLOCKQUOTE>Trên thực tế kiểu dữ liệu liệt kê 
+được dịch là một số nguyên và các giá trị của nó là các hằng số nguyên được chỉ 
+định. Nếu điều này không đựoc chỉ định, giá trị nguyên tương đương với phần tử 
+đầu tiên là <TT><B>0</B></TT> và các giá trị tiếp theo cứ thế tăng lên 1, Vì 
+vậy, trong kiểu dữ liệu <TT><B>colors_t</B></TT> mà chúng ta định nghĩa ở trên, 
+<TT><B>white</B></TT> tương đương với <TT><B>0</B></TT>, <TT><B>blue</B></TT> 
+tương đương với <TT><B>1</B></TT>, <TT><B>green</B></TT> tương đương với 2 và cứ 
+tiếp tục như thế.&nbsp; 
+<P>Nếu chúng ta chỉ định một giá trị nguyên cho một giá trị nào đó của kiểu dữ 
+liệu liệt kê (trong ví dụ này là phần tử đầu tiên) các giá trị tiếp theo sẽ là 
+các giá trị nguyên tiếp theo, ví dụ: 
+<BLOCKQUOTE><TT><PRE>enum months_t { january=1, february, march, april,
+                may, june, july, august,
+                september, october, november, december} y2k;</PRE></TT></BLOCKQUOTE>trong 
+trường hợp này, biến <TT><B>y2k</B></TT> có kiểu dữ liệu liệt kê 
+<TT><B>months_t</B></TT> có thể chứa một trong 12 giá trị từ 
+<TT><B>january</B></TT> đến <TT><B>december</B></TT> và tương đương với các giá 
+trị nguyên từ <TT><B>1</B></TT> đến <TT><B>12</B></TT>, không phải 
+<TT><B>0</B></TT> đến <TT><B>11</B></TT> vì chúng ta đã đặt 
+<TT><B>january</B></TT> bằng <TT><B>1</B></TT>.<BR>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0(1).gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><A 
+      href="bai3-5.htm"><IMG 
+      align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR><B>3-5. Cấu trúc</B></A></TD>
+    <TD align=middle width="10%"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></TD>
+    <TD align=left noWrap width="45%"><A 
+      href="bai4-1.htm"><IMG 
+      align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26>Bài sau:<BR><B>4-1. Các lớp. Constructors và Destructors. Con trỏ 
+      tới các lớp</B></A></TD></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,281 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai1_4.htm -->
+<!-- saved from url=(0022)http://internet.e-mail --><HTML 
+xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word"><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 1</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="MSHTML 5.00.3315.2870" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Thang</o:Author>
+  <o:LastAuthor>Thang</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:Created>2001-03-23T11:59:00Z</o:Created>
+  <o:LastSaved>2001-03-23T11:59:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>679</o:Words>
+  <o:Characters>3873</o:Characters>
+  <o:Company>DHBK</o:Company>
+  <o:Lines>32</o:Lines>
+  <o:Paragraphs>7</o:Paragraphs>
+  <o:CharactersWithSpaces>4756</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<STYLE>P.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; mso-fareast-font-family: "Times New Roman"
+}
+PRE {
+	FONT-FAMILY: "Courier New"; FONT-SIZE: 10pt; MARGIN: 0in 0in 0pt; mso-fareast-font-family: "Courier New"
+}
+TT {
+	mso-fareast-font-family: "Courier New"; mso-ascii-font-family: "Courier New"; mso-hansi-font-family: "Courier New"; mso-bidi-font-family: "Courier New"
+}
+DIV.Section1 {
+	page: Section1
+}
+</STYLE>
+<LINK 
+href="mycss.css" 
+rel=stylesheet type=text/css></HEAD>
+<BODY lang=EN-US style="tab-interval: .5in"><!--/captut-->
+<SCRIPT 
+src="Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 3_files/404.htm" 
+laguage="JavaScript"></SCRIPT>
+
+<DIV class=Section1>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      homepage</A><FONT color=#0000ff>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B><FONT face="Times New Roman">Bài 1.4</FONT></B> </P>
+<P><B><SPAN style="FONT-SIZE: 18pt"><FONT face="Times New Roman">Giao tiếp với 
+console.</FONT></SPAN></B></P>
+<P><FONT face="Times New Roman"><I>Console</I> là giao diện cơ bản của máy tính. 
+Bàn phím là thiết bị vào cơ bản còn màn hình là thiết bị ra cơ bản.</FONT></P>
+<P><FONT face="Times New Roman">Trong thư viện <I>iostream</I> của C++, các thao 
+tác vào ra cơ bản của một chương trình được hỗ trợ bởi hai dòng dữ liệu : 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cin</SPAN></B></TT> để nhập 
+dữ liệu và <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cout</SPAN></B></TT> để 
+xuất. Thêm vào đó, còn có <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cerr</SPAN></B></TT> và 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">clog</SPAN></B></TT> là hai 
+dòng dữ liệu dùng để hiển thị các thông báo lỗi trên thiết bị ra chuẩn (thường 
+là màn hình) hoặc ra một file. Thông thường <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cout</SPAN></B></TT> được 
+gán với màn hình còn <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cin</SPAN></B></TT> được gán 
+với bàn phím.</FONT> </P>
+<P><FONT face="Times New Roman">Sử dụng hai dòng dữ liệu này bạn sẽ có thể giao 
+tiếp với người sử dụng vì bạn có thể hiển thị các thông báo lên màn hình cũng 
+như nhận dữ liệu từ bàn phím.</FONT></P>
+<H2><FONT face="Times New Roman">Xuất dữ liệu (<TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cout</SPAN></TT>)</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Dòng <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cout</SPAN></B></TT> được sử 
+dụng với toán tử đã quá tải &lt;&lt; (overloaded - bạn sẽ hiểu rõ hơn về thuật 
+ngữ này trong phần lập trình hướng đối tượng)</FONT> </P><PRE style="MARGIN: 0in 0.5in 0pt"><FONT face="Times New Roman">cout &lt;&lt; "Output sentence"; <I><SPAN style="COLOR: green">// Hiển thị Output sentence lên màn hình</SPAN></I></FONT></PRE><PRE style="MARGIN: 0in 0.5in 0pt"><FONT face="Times New Roman">cout &lt;&lt; 120;<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><I><SPAN style="COLOR: green">// Hiển thị số 120 lên màn hình</SPAN></I></FONT></PRE><PRE style="MARGIN: 0in 0.5in 0pt"><FONT face="Times New Roman">cout &lt;&lt; x;<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><I><SPAN style="COLOR: green">// Hiển thị nội dung biến x lên màn hình</SPAN></I></FONT></PRE>
+<P class=MsoNormal><FONT face="Times New Roman">Toán tử &lt;&lt; được gọi là 
+toán tử chèn vì nó chèn dữ liệu đi sau nó vào dòng dữ liệu đứng trước. Trong ví 
+dụ trên nó chèn chuỗi&nbsp; "<TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">Output 
+sentence</SPAN></TT>", hằng số 120 và biến x vào dòng dữ liệu ra <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cout</SPAN></B></TT>.Chú ý 
+rằng ở dòng đầu tiên chúng ta sử dụng dấu ngoặc kép vì đó là một chuỗi kí tự. 
+Khi chúng ta muốn sử dụng các hằng xâu kí tự ta phải đặt chúng trong cặp dấu 
+ngoặc kép để chúng có thể được phân biệt với các biến. Ví dụ, hai lệnh sau đây 
+là hoàn toàn khác nhau:</FONT> </P><PRE style="MARGIN: 0in 0.5in 0pt"><FONT face="Times New Roman">cout &lt;&lt; "Hello";<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><I><SPAN style="COLOR: green">// Hiển thị Hello lên màn hình</SPAN></I></FONT></PRE><PRE style="MARGIN: 0in 0.5in 0pt"><FONT face="Times New Roman">cout &lt;&lt; Hello;<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><I><SPAN style="COLOR: green">// Hiển thị nội dung của biến Hello lên màn hình</SPAN></I></FONT></PRE>
+<P class=MsoNormal><FONT face="Times New Roman">Toán tử chèn (&lt;&lt;) có thể 
+được sử dụng nhiều lần trong một câu lệnh:</FONT> </P><PRE style="MARGIN: 0in 0.5in 0pt"><FONT face="Times New Roman">cout &lt;&lt; "Hello, " &lt;&lt; "I am " &lt;&lt; "a C++ sentence";</FONT></PRE>
+<P class=MsoNormal><FONT face="Times New Roman">Câu lệnh trên sẽ in thông 
+báo&nbsp; <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">Hello, I am a C++ 
+sentence</SPAN></B></TT> lên màn hình. Sự tiện lợi của việc sử dụng lặp lại toán 
+tử chèn (&lt;&lt;) thể hiện rõ khi chúng ta muốn hiển thị nhiều biến và hằng hơn 
+là chỉ một biến:</FONT> </P><PRE style="MARGIN: 0in 0.5in 0pt"><FONT face="Times New Roman">cout &lt;&lt; "Hello, I am " &lt;&lt; age &lt;&lt; " years old and my email address is " &lt;&lt; email_add;</FONT></PRE>
+<P class=MsoNormal><FONT face="Times New Roman">Cần phải nhấn mạnh rằng 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cout</SPAN></B></TT> không 
+nhảy xuống dòng sau khi xuất dữ liệu, vì vậy hai câu lệnh sau :</FONT> </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">cout &lt;&lt; "This is 
+a sentence.";</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>cout 
+&lt;&lt; "This is another sentence.";</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">sẽ được hiển thị trên màn 
+hình:</FONT> </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">This is a sentence.This is 
+another sentence.</FONT></SPAN></TT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Bởi vậy khi muốn xuống dòng 
+chúng ta phải sử dụng kí tự xuống dòng, trong C++ là <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">\n</SPAN></B></TT>:</FONT> 
+</P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">cout &lt;&lt; "First 
+sentence.\n ";</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>cout 
+&lt;&lt; "Second sentence.\nThird sentence.";</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">sẽ viết ra màn hình như 
+sau:</FONT> </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">First 
+sentence.</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>Second 
+sentence.</TT><BR><TT>Third sentence.</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Thêm vào đó, để xuống dòng bạn 
+có thể sử dụng&nbsp; tham số <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">endl</SPAN></B></TT>. Ví 
+dụ</FONT> </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">cout &lt;&lt; "First 
+sentence." &lt;&lt; endl;</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>cout 
+&lt;&lt; "Second sentence." &lt;&lt; endl;</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">sẽ in ra màn hình:</FONT> </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">First 
+sentence.</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>Second 
+sentence.</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Tham số <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">endl </SPAN></B></TT>có một 
+tác dụng đặc biệt khi nó được dùng với các dòng dữ liệu sử dụng bộ đệm: các bộ 
+đệm sẽ được <I>flushed</I> ( chuyển toàn bộ thông tin từ bộ đệm ra dòng dữ 
+liệu). Tuy nhiên, theo mặc định <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cout</SPAN></B></TT> không 
+sử dụng bộ đệm.</FONT> </P>
+<H2><FONT face="Times New Roman">Nhập dữ liệu (<TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cin</SPAN></TT>).</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Thao tác vào chuẩn trong C++ 
+được thực hiện bằng cách sử dụng toán tử đã quá tải <TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">&gt;&gt;</SPAN></TT> với 
+dòng <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cin</SPAN></B></TT>. Theo 
+sau toán tử này là biến sẽ lưu trữ dữ liệu được đọc vào. Ví dụ:</FONT> </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">int 
+age;</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>cin 
+&gt;&gt; age;</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">khai báo biến <TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">age</SPAN></TT> có kiểu 
+<TT><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int</SPAN></TT> và 
+đợi nhập dữ liệu từ <TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cin</SPAN></TT> (bàn phím) 
+để lưu trữ nó trong biến kiểu nguyên này.</FONT> </P>
+<P><FONT face="Times New Roman"><TT><B><SPAN 
+style="FONT-SIZE: 10pt">cin</SPAN></B></TT> chỉ bắt đầu sử lý dữ liệu nhập từ 
+bàn phím sau khi phím Enter được gõ. Vì vậy dù bạn chỉ nhập một kí tự thì 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cin</SPAN></B></TT> vẫn sẽ 
+kiên nhẫn chờ cho đến khi bạn gõ phím Enter.</FONT> </P>
+<P><FONT face="Times New Roman">&nbsp;</FONT> </P>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="WIDTH: 100%; mso-cellspacing: 3.7pt; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I><FONT face="Courier New">// i/o example</FONT></I></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">int i;</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">cout &lt;&lt; "Please enter an integer value: ";</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">cin &gt;&gt; i;</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">cout &lt;&lt; "The value you entered is " &lt;&lt; i;</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">cout &lt;&lt; " and its double is " &lt;&lt; i*2 &lt;&lt; ".\n";</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><FONT face="Courier New"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt">Please enter an integer value: </SPAN></B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">702</SPAN></TT><SPAN 
+      style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT><B>The 
+      value you entered is 702 and its double is 
+    1404.</B></TT></SPAN></FONT></P></TD></TR></TBODY></TABLE>
+<P><FONT face="Times New Roman">Người sử dụng chương trình có thể là một trong 
+những nguyên nhân gây ra lỗi trong một chương trình đơn giản sử dụng 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cin</SPAN></B></TT> (như 
+chương trình trên). Trong khi bạn muốn nhận một số nguyên thì người sử dụng lại 
+nhập vào tên của họ (là một xâu kí tự). Kết quả là chương trình sẽ chạy sai vì 
+đó không phải là những gì mà chương trình mong đợi từ người dùng. Bởi vậy khi 
+bạn sử dụng dữ liệu nhập vào từ <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cin</SPAN></B></TT> bạn phải 
+tin chắc rằng người dùng sẽ hoàn toàn hợp tác và rằng anh ta sẽ không nhập tên 
+của mình khi chương trình yêu cầu nhập số nguyên. Sau này, khi nghiên cứu việc 
+sử dụng các xâu kí tự chúng ta sẽ xem xét các giải pháp khả thi để giải quyết 
+các lỗi loại này.</FONT></P>
+<P><FONT face="Times New Roman">Bạn có thể dùng <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cin</SPAN></B></TT> để nhập 
+một lúc nhiều dữ liệu từ người dùng:</FONT> </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Times New Roman">cin &gt;&gt; a &gt;&gt; 
+b;</FONT></SPAN></TT></P>
+<P class=MsoNormal><FONT face="Times New Roman">tương đương với</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">cin &gt;&gt; 
+a;</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>cin 
+&gt;&gt; b;</TT></SPAN> </FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Trong cả hai trường hợp người sử 
+dụng phải cung cấp hai dữ liệu, một cho biến&nbsp; <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a</SPAN></B></TT> và một cho 
+biến <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">b</SPAN></B></TT> và được 
+ngăn cách bởi một dấu trống hợp lệ: một dấu cách, dấu tab hay kí tự xuống 
+dòng.</FONT> </P></DIV>
+<DIV class=Section1>
+<DIV 
+style="BORDER-BOTTOM: windowtext 3pt solid; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm">
+<P 
+style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; mso-padding-alt: 0cm 0cm 0cm 0cm; mso-border-bottom-alt: solid windowtext 3.0pt"><FONT 
+face="Times New Roman">Trong trường hợp kiểu không được chỉ rõ (như trong ví dụ 
+cuối) trình dịch sẽ coi nó là kiểu <B>int</B>.</FONT></P></DIV>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 
+style="WIDTH: 100%; mso-cellspacing: 1.5pt; mso-padding-alt: 0cm 0cm 0cm 0cm" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; WIDTH: 45%" 
+    width="45%">
+      <P align=right class=MsoNormal style="TEXT-ALIGN: right"><FONT 
+      face="Times New Roman"><![if !vml]><a href="bai1_1.htm"><img border=0
+  width=26 height=26 src=butnback.gif align=right v:shapes="_x0000_s1028"></a><![endif]><A 
+      href="bai1-3.htm">Bài 
+      trước:<BR><B>1-3. Các toán tử.</B></A></FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; WIDTH: 10%" 
+    width="10%">
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><FONT 
+      face="Times New Roman"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 id=_x0000_i1025 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; WIDTH: 45%" 
+    width="45%">
+      <P class=MsoNormal><FONT face="Times New Roman"><A 
+      href="bai2-1.htm"><![if !vml]><img width=26 height=26 src=butnnext.gif
+  align=left border=0 v:shapes="_x0000_s1029"><![endif]>Bài 
+      tiếp theo:<BR><B>2-1. Các cấu trúc điều 
+  khiển.</B></A></FONT></P></TD></TR></TBODY></TABLE></DIV></DIV></BODY></HTML>

@@ -1,0 +1,397 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai5_1.htm -->
+<HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 5</TITLE>
+<META content=en-au http-equiv=Content-Language>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE fprolloverstyle>A:hover {
+	COLOR: #ff0000
+}
+</STYLE>
+<LINK 
+href="Dien dan tin hoc - IT Forum VN - Tutorial Room - Lp trình - C++ can bn - Bài 5-3_files/mycss.css" 
+rel=stylesheet type=text/css></HEAD>
+<BODY bgColor=#fffff0 leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<TABLE border=1 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff size=2>[</FONT><FONT size=2><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn Đàn Tin 
+      Học</A></FONT><FONT color=#0000ff size=2>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 5.1</B></P>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P><FONT size=5><B>Templates</B></FONT></P></TD></TR>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD bgColor=#bfffbf><IMG align=left height=45 
+      src="icoansi.gif" 
+      width=36> Templates (mẫu) là một tính năng mới được giới thiệu bởi chuẩn 
+      ANSI-C++. Nếu bạn sử dụng một trình biên dịch C++ chưa tương thích với 
+      chuẩn này thì bạn không thể sử dụng mẫu.<BR></TD></TR></TBODY></TABLE>
+<H2>Các mẫu hàm</H2>Các mẫu cho phép tạo các hàm có thể chấp nhận bất kì kiểu dữ 
+liệu nào làm tham số và trả về giá trị mà không phải làm quá tải hàm với tất cả 
+các kiểu dữ liệu có thể. Khai báo mẫu của nó có thể là một trong hai kiểu sau: 
+<BLOCKQUOTE>
+  <P><TT><B>template &lt;class </B><I>indetifier</I><B>&gt;</B> 
+  <I>function_declaration</I>;<BR><B>template &lt;typename 
+  </B><I>indetifier</I><B>&gt;</B> <I>function_declaration</I>; 
+</TT></P></BLOCKQUOTE>sự khác biệt duy nhất giữa hai kiểu khai báo mẫu này là 
+việc sử dụng từ khoá <TT><B>class</B></TT> hay <TT><B>typename</B></TT>, sự khác 
+nhau giữa chúng là không rõ ràng vì cả hai đều có cùng một ý nghĩa và đều cho 
+một kết quả như nhau.
+<P>Ví dụ, để tạo một hàm mẫu trả về giá trị lớn hơn của hai đối tượng chúng ta 
+có thể sử dụng: 
+<BLOCKQUOTE><TT><PRE>template &lt;class GenericType&gt;
+GenericType GetMax (GenericType a, GenericType b) {
+ return (a&gt;b?a:b);
+}</PRE></TT></BLOCKQUOTE>Ở dòng đầu tiên, chúng ta đã tạo một mẫu cho một kiểu 
+dữ liệu tổng quát với tên <TT><B>GenericType</B></TT>. Vì vậy trong hàm sau đó, 
+<TT><B>GenericType</B></TT> trở thành một kiểu dữ liệu hợp lệ và nó được sử dụng 
+như là một kiểu dữ liệu cho hai tham số <B><TT>a</TT></B>, <TT><B>b</B></TT> và 
+giá trị trả về của hàm <TT><B>GetMax</B></TT>.
+<P><TT><B>GenericType</B></TT> thực sự không biểu diễn một kiểu dữ liệu cụ thể 
+nào, chúng ta có thể gọi hàm với bất kì kiểu dữ liệu hợp lệ nào. Kiểu dữ liệu 
+này sẽ đáp ứng như là <I>pattern(mẫu)</I> và sẽ thay thế 
+<TT><B>GenericType</B></TT> bên trong hàm. Cách thức để gọi một lớp mẫu với một 
+kiểu dữ liệu mẫu như sau:&nbsp; 
+<BLOCKQUOTE>
+  <P><TT><I>function</I> <B>&lt;</B><I>pattern</I><B>&gt; 
+  (</B><I>parameters</I><B>);</B></TT> </P></BLOCKQUOTE>Ví dụ, để gọi hàm 
+<TT><B>GetMax</B></TT> và so sánh hai giá trị nguyên kiểu <TT><B>int</B></TT> 
+chúng ta có thể viết: 
+<BLOCKQUOTE>
+  <P><TT>int x,y;<BR>GetMax &lt;int&gt; (x,y);</TT> </P></BLOCKQUOTE>
+<P>Ok, dưới đây là ví dụ đầy đủ:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// mẫu hàm</I>
+#include &lt;iostream.h&gt;
+
+template &lt;class T&gt;
+T GetMax (T a, T b) {
+  T result;
+  result = (a&gt;b)? a : b;
+  return (result);
+}
+
+int main () {
+  int i=5, j=6, k;
+  long l=10, m=5, n;
+  k=GetMax&lt;int&gt;(i,j);
+  n=GetMax&lt;long&gt;(l,m);
+  cout &lt;&lt; k &lt;&lt; endl;
+  cout &lt;&lt; n &lt;&lt; endl;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>6<BR>10</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>(Trong trường hợp này chúng ta gọi kiểu dữ liệu tổng quát là 
+<TT><B>T</B></TT> thay vì <TT><B>GenericType</B></TT> vì nó ngắn hơn, thêm vào 
+đó nó là một trong những tên phổ biến nhất được dùng cho mẫu mặc dù chúng ta có 
+thể sử dụng bất cứ tên hợp lệ nào).
+<P>Ở ví dụ trên chúng ta đã sử dụng cùng một hàm <TT><B>GetMax()</B></TT> với 
+các tham số kiểu <TT><B>int</B></TT> và <TT><B>long</B></TT> chỉ với một phiên 
+bản duy nhất của hàm. Như vậy có thể nói chúng ta đã viết một mẫu hàm và gọi nó 
+bằng hai kiểu khác nhau.
+<P>Như bạn có thể thấy, bên trong mẫu hàm <TT><B>GetMax()</B></TT> kiểu 
+<TT><B>T</B></TT> có thể được dùng để khai báo các đối tượng mới: 
+<BLOCKQUOTE>
+  <P><TT>T result;</TT> </P></BLOCKQUOTE>
+<P>Trong trường hợp cụ thể này kiểu dữ liệu tổng quát <TT><B>T</B></TT> được sử 
+dụng như là tham số chao hàm <B><TT>GetMax</TT></B>, trình biên dịch có thể tự 
+động tìm thấy kiểu dữ liệu nào phải truyền cho nó mà không cần bạn phải chỉ định 
+<TT><B>&lt;int&gt;</B></TT> hay <TT><B>&lt;long&gt;</B></TT>. Bởi vậy chúng ta 
+có thể viết: 
+<BLOCKQUOTE>
+  <P><TT>int i,j;<BR>GetMax (i,j);</TT> </P></BLOCKQUOTE>Cách này được sử dụng phổ 
+biến hơn và cũng cho kết quả như vậy:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// mẫu hàm II</I>
+#include &lt;iostream.h&gt;
+
+template &lt;class T&gt;
+T GetMax (T a, T b) {
+  return (a&gt;b?a:b);
+}
+
+int main () {
+  int i=5, j=6, k;
+  long l=10, m=5, n;
+  k=GetMax(i,j);
+  n=GetMax(l,m);
+  cout &lt;&lt; z &lt;&lt; endl;
+  cout &lt;&lt; n &lt;&lt; endl;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>6<BR>10</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Chú ý trong trường hợp này, bên trong hàm <TT><B>main()</B></TT> chúng ta đã 
+gọi hàm mẫu <TT><B>GetMax()</B></TT> mà không chỉ định rõ kiểu dữ liệu ở giữa 
+hai ngoặc nhọn <TT><B>&lt;&gt;</B></TT>. Trình biên dịch sẽ tự động xác định 
+kiểu dữ liệu nào là cần thiết chô mỗi lời gọi.
+<P>Vì hàm mẫu của chúng ta chỉ dùng một kiểu dữ liệu (<TT><B>class T</B></TT>) 
+và cả hai tham số của nó đều có cùng một kiểu, chúng ta không thể gọi hàm mẫu 
+với tham số là hai đối tượng có kiểu khác nhau: 
+<BLOCKQUOTE>
+  <P><TT><FONT color=red>int i;<BR>long l;<BR>k = GetMax (i,l);</FONT></TT> 
+</P></BLOCKQUOTE>
+<P>Chúng ta cũng có thể khiến cho hàm cho hàm mẫu chấp nhận nhiều hơn một kiểu 
+dữ liệu tổng quát. Ví dụ: 
+<BLOCKQUOTE><TT><PRE>template &lt;class T, class U&gt;
+T GetMin (T a, U b) {
+  return (a&lt;b?a:b);
+}</PRE></TT></BLOCKQUOTE>Trong trường hợp này, hàm mẫu <TT><B>GetMin()</B></TT> 
+chấp nhận hai tham số có kiểu khác nhau và trả về một đối tượng có cùng kiểu với 
+tham số đầu tiên (<TT><B>T</B></TT>). Ví dụ, sau khi khai báo như trên chúng ta 
+có thể gọi hàm như sau: 
+<BLOCKQUOTE><TT><PRE>int i,j;
+long l;
+i = GetMin&lt;int,long&gt; (j,l);</PRE></TT></BLOCKQUOTE>hoặc thậm chí: 
+<BLOCKQUOTE><TT><PRE>i = GetMin (j,l);</PRE></TT></BLOCKQUOTE>
+<H2>Các lớp mẫu</H2>
+<P>Chúng ta cũng có thể viết các lớp mẫu, một lớp mà có các thành viên dựa trên 
+các kiểu dữ liệu tổng quát không cần phải được định nghĩa ở thời điểm tạo lớp. 
+Ví dụ</P>
+<BLOCKQUOTE><TT><PRE>template &lt;class T&gt;
+class pair {
+    T values [2];
+  public:
+    pair (T first, T second)
+    {
+      values[0]=first; values[1]=second;
+    }
+};</PRE></TT></BLOCKQUOTE>Lớp mà chúng ta vừa định nghĩa dùng để lưu trữ hai 
+phần tử có kiểu bất kì. Ví dụ, nếu chúng ta muốn khai báo một đối tượng thuộc 
+lớp này để lưu trữ hai giá trị nguyên kiểu <TT><B>int</B></TT> có giá trị là 
+<TT><B>115</B></TT> and <TT><B>36</B></TT> chúng ta có thể viết: 
+<BLOCKQUOTE>
+  <P><TT>pair&lt;int&gt; myobject (115, 36);</TT></P></BLOCKQUOTE>lớp này cũng có 
+thể được dùng để lưu trữ bất kì kiểu dữ liệu nào khác: 
+<BLOCKQUOTE>
+  <P><TT>pair&lt;float&gt; myfloats (3.0, 2.18);</TT></P></BLOCKQUOTE>Hàm thành 
+viên duy nhất được định nghĩa <I>inline</I> bên trong định nghĩa của lớp, tuy 
+nhiên nếu chúng ta định nghĩa một hàm thành viên bên ngoài lớp chúng ta luôn 
+phải đặt trước dòng định nghĩa tiền tố <TT><B>template &lt;... 
+&gt;</B></TT>.<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// mẫu lớp</I>
+#include &lt;iostream.h&gt;
+
+template &lt;class T&gt;
+class pair {
+    T value1, value2;
+  public:
+    pair (T first, T second)
+      {value1=first; value2=second;}
+    T getmax ();
+};
+
+template &lt;class T&gt;
+T pair&lt;T&gt;::getmax ()
+{
+  T retval;
+  retval = value1&gt;value2? value1 : value2;
+  return retval;
+}
+
+int main () {
+  pair &lt;int&gt; myobject (100, 75);
+  cout &lt;&lt; myobject.getmax();
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+width="50%"><TT><B>100</B></TT></TD></TR></TBODY></TABLE></CENTER>chú ý cách bắt 
+đầu định nghĩa hàm <TT><B>getmax</B></TT> : 
+<BLOCKQUOTE>
+  <P><TT>template &lt;class <B>T</B>&gt;<BR><B>T</B> 
+  pair&lt;<B>T</B>&gt;::getmax ()</TT></P></BLOCKQUOTE>Tất cả các 
+<B><TT>T</TT></B> xuất hiện ở đó đều là cần thiết. Mỗi khi bạn khai báo một hàm 
+thành viên bạn sẽ phải theo một khuôn mẫu tương tự như thế.
+<H2>Chuyên môn hoá mẫu</H2>Việc chuyên môn hoá mẫu cho phép một mẫu tạo ra những 
+bản thực thi đặc biệt khi làm việc với một loại dữ liệu xác định nào đó. Ví dụ, 
+giả sử rằng lớp mẫu <TT><B>pair</B></TT> có một hàm dùng để trả về phần dư trong 
+phép chia giữa hai trường ở trong, nhưng chúng ta chỉ muốn nó làm việc khi kiểu 
+dữ liệu là <TT><B>int</B></TT> còn những kiểu còn lại thì hàm luôn trả về 
+<TT><B>0</B></TT>. Nó có thể được làm theo cách sau:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// Chuyên môn hoá mẫu </I>
+#include &lt;iostream.h&gt;
+
+template &lt;class T&gt;
+class pair {
+    T value1, value2;
+  public:
+    pair (T first, T second)
+      {value1=first; value2=second;}
+    T module () {return 0;}
+};
+
+template &lt;&gt;
+class pair &lt;int&gt; {
+    int value1, value2;
+  public:
+    pair (int first, int second)
+      {value1=first; value2=second;}
+    int module ();
+};
+
+template &lt;&gt;
+int pair&lt;int&gt;::module() {
+  return value1%value2;
+}
+
+int main () {
+  pair &lt;int&gt; myints (100,75);
+  pair &lt;float&gt; myfloats (100.0,75.0);
+  cout &lt;&lt; myints.module() &lt;&lt; '\n';
+  cout &lt;&lt; myfloats.module() &lt;&lt; '\n';
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>25<BR>0</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Như bạn có thể thấy sự chuyên môn hoá được định nghĩa theo cách sau: 
+<BLOCKQUOTE>
+  <P><TT><B>template &lt;&gt; class </B><I>class_name</I><B> 
+  &lt;</B><I>type</I><B>&gt;</B></TT> </P></BLOCKQUOTE>Sự chuyên môn hoá này là 
+một phần của một mẫu, vì vậy chúng ta phải bắt đầu phần khai báo với 
+<TT><B>template &lt;&gt;</B></TT>. Và rõ ràng rằng đó là sự chuyên môn hoá cho 
+một kiểu dữ liệu cụ thể nên chúng ta không thể dùng một kiểu dữ liệu tổng quát, 
+cặp ngoặc nhọn <TT><B>&lt;&gt;</B></TT> cũng phải để trống. Sau phần tên lớp 
+chúng ta phải viết thêm tên kiểu dữ liệu muốn dùng ở giữa cặp ngoặc nhọn 
+<TT><B>&lt;&gt;</B></TT>.
+<P>Khi chúng ta chuyên biệt hoá một kiểu dữ liệu cho một mẫu chúng ta cũng phải 
+định nghĩa tất cả các thành viên tương xứng với sự chuyên môn hoá đó (nếu bạn 
+thấy chưa rõ lắm, hãy xem lại ví dụ trên trong đó chúng ta đã phải viết lại 
+constructor cho chính nó mặc dù cái này hoàn toàn giống như constructor ở trong 
+lớp tổng quát. Nguyên nhân là do không có thành viên nào được "thừa kế" từ lớp 
+tổng quát cho lớp chuyên môn hoá.
+<H2>Các giá trị tham số cho mẫu</H2>
+<P>Bên cạnh các tham số của mẫu là kiểu dữ liệu (được đứng trước bởi từ khoá 
+<TT><B>class</B></TT> hay <B><TT>typename</TT></B>), các hàm mẫu và các lớp mẫu 
+còn có thể có các tham số khác không phải là kiểu mà chúng có thể là các giá trị 
+hằng. Trong ví dụ dưới đây lớp mẫu được dùng để lưu trữ mảng:</P>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// array template</I>
+#include &lt;iostream.h&gt;
+
+template &lt;class T, int N&gt;
+class array {
+    T memblock [N];
+  public:
+    setmember (int x, T value);
+    T getmember (int x);
+};
+
+template &lt;class T, int N&gt;
+array&lt;T,N&gt;::setmember (int x, T value) {
+  memblock[x]=value;
+}
+
+template &lt;class T, int N&gt;
+T array&lt;T,N&gt;::getmember (int x) {
+  return memblock[x];
+}
+
+int main () {
+  array &lt;int,5&gt; myints;
+  array &lt;float,5&gt; myfloats;
+  myints.setmember (0,100);
+  myfloats.setmember (3.0,3.1416);
+  cout &lt;&lt; myints.getmember(0) &lt;&lt; '\n';
+  cout &lt;&lt; myfloats.getmember(3) &lt;&lt; '\n';
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>100<BR>3.1416</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Chúng ta cũng có thể thiết lập các giá trị mặc định cho bất kì tham số mẫu 
+nào giống như với các tham số của hàm bình thường. 
+<P>Ví dụ:</P>
+<BLOCKQUOTE><TT><PRE>template &lt;class T&gt;              // Trường hợp phổ biến nhất: một tham số lớp.
+template &lt;class T, class U&gt;     // Hai tham số lớp.
+template &lt;class T, int N&gt;       // Một lớp và một giá trị nguyên.
+template &lt;class T = char&gt;       // Một tham số lớp với giá trị mặc định.
+template &lt;int Tfunc (int)&gt;      // Tham số là một hàm.</TT></PRE></BLOCKQUOTE>
+<H2>Mẫu và các dự án</H2>Theo quan điểm của trình biên dịch, các mẫu không phải 
+là các hàm hay lớp thông thường. Chúng được dịch theo nhu cầu. Điều đó có nghĩa 
+là mã của một hàm mẫu không được dịch cho đến khi cần dùng đến. Với các trình 
+dịch ở thời điểm thực hiện bài viết, trình dịch sẽ tạo ra từ mẫu một hàm cụ thể 
+cho kiểu dữ liệu được yêu cầu.
+<P>Khi các dự án phát triển lên, nó thường chi mã của một chương trình thành 
+nhiều file khác nhau. Trong những trường hợp đó, nói chúng phần giao tiếp và 
+phần thực hiện là tách biệt. Lấy ví dụ một thư viện hàm nào đó, phần giao tiếp 
+thường gồm tất cả những khai báo mẫu của các hàm có thể được gọi, chúng thường 
+được khai báo trong một "header file"với phần mở rộng <B><TT>.h</TT></B>, và 
+phần thực hiện (phần định nghĩa cả các hàm đó) được đặt trong các file mã C++ 
+riêng.
+<P>Đối với mẫu, chúng ta có một điều bắt buộc khi thực hiện các dự án nhiều 
+file: phần thực hiện (phần định nghĩa) của một lớp mẫu hay hàm mẫu 
+<B><U>phải</U></B> nằm trong cùng một file với phần khai báo. Điều này có nghĩa 
+là chúng ta không thể tách phần giao tiếp thành một file riêng mà phải gộp cả 
+phần giao tiếp và phần thực thi vào bất kì fiel nào sử dụng mẫu.
+<P>Trở lại với trường hợp thư viện hàm, nếu chúng ta muốn tạo một thư viện hàm 
+mẫu, thay vì việc tạo một header file (<TT><B>.h</B></TT>) chúng ta nên tạo một 
+"template file" chứa cả phần giao tiếp và phần thực thi của các hàm mẫu (không 
+có một quy định nào về phần mở rộng của những file này, bạn thích dùng thế nào 
+cũng được hoặc cứ để là <B><TT>.h</TT></B> cho tiện). Một điều cuối cùng nữa là 
+việc một "template file" được dùng nhiều lần trong một dự án sẽ không gây ra lỗi 
+liên kết vì chúng được dịch theo nhu cầu và những trình biên dịch hỗ trợ 
+templates sẽ biết phải làm thế nào để không sinh mã lặp trong các trường hợp đó. 
+</P>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff colSpan=3><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><A 
+      href="bai4-4.htm"><IMG 
+      align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR><B>4-4. </B><B>Các</B><B> thành viên ảo. Đa 
+      hình</B></A></TD>
+    <TD align=middle width="10%"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></TD>
+    <TD align=left width="45%"><A 
+      href="bai5-2.htm"><IMG 
+      align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26>Bài sau:<BR><B>5-2. 
+Namespaces.</B></A></TD></TR></TBODY></TABLE></BODY></HTML>

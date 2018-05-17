@@ -1,0 +1,329 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai4_4.htm -->
+<HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 4</TITLE>
+<META content=en-au http-equiv=Content-Language>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE fprolloverstyle>A:hover {
+	COLOR: #ff0000
+}
+</STYLE>
+<LINK 
+href="Dien dan tin hoc - IT Forum VN - Tutorial Room - Lp trình - C++ can bn - Bài 4_files/mycss.css" 
+rel=stylesheet type=text/css></HEAD>
+<BODY bgColor=#fffff0 leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<TABLE border=1 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff size=2>[</FONT><FONT size=2><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn Đàn Tin 
+      Học</A></FONT><FONT color=#0000ff size=2>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 4.4</B></P>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P><B><FONT size=5>Các thành viên ảo. Đa hình.</FONT></B></P></TD></TR>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<P>
+<CENTER>
+<P></P>
+<TABLE border=1 cellPadding=5 width="90%">
+  <TBODY>
+  <TR>
+    <TD>Để có thể hiểu được phần này bạn cần hiểu rõ về cách sử dụng <B>con 
+      trỏ</B> và <B>thừa kế giữa các lớp</B>. Nếu có vài biểu thức nào có vẻ lạ 
+      lùng với bạn, bạn có thể xem lại các phần sau:<TT> <PRE>  int a::b(c) {};    <FONT color=green><I>// Các lớp (<A href="http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai4_1.htm">Bài 4.1</A>)</I></FONT>
+  a-&gt;b               <FONT color=green><I>// Con trỏ và đối tượng (<A href="http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai4_2.htm">Bài 4.2</A>)</I></FONT>
+  class a: public b; <FONT color=green><I>// Quan hệ giữa các lớp(<A href="bai4-3.htm">Bài 4.3</A>)</I></FONT>
+</PRE></TT></TD></TR></TBODY></TABLE></CENTER>
+<H2>Con trỏ tới lớp cơ sở</H2>Một trong những lợi thế lớn của việc thừa kế các 
+lớp là<U> <B>một con trỏ trỏ tới một lớp được thừa kế là tương thích về kiểu với 
+một con trỏ trỏ tới lớp cơ sở của nó</B></U>. Bài này sẽ đề cập đầy đủ đến việc 
+tận dụng tính năng mạnh mẽ này của C++. Ví dụ, chúng ta sẽ viết lại chương trình 
+của chúng ta về hình chữ nhật và hình tam giác trong chương trước để xem xét 
+tính năng này:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// con trỏ tới lớp cơ sở</I>
+#include &lt;iostream.h&gt;
+
+class CPolygon {
+  protected:
+    int width, height;
+  public:
+    void set_values (int a, int b)
+      { width=a; height=b; }
+  };
+
+class CRectangle: public CPolygon {
+  public:
+    int area (void)
+      { return (width * height); }
+  };
+
+class CTriangle: public CPolygon {
+  public:
+    int area (void)
+      { return (width * height / 2); }
+  };
+
+int main () {
+  CRectangle rect;
+  CTriangle trgl;
+  CPolygon * ppoly1 = &amp;rect;
+  CPolygon * ppoly2 = &amp;trgl;
+  ppoly1-&gt;set_values (4,5);
+  ppoly2-&gt;set_values (4,5);
+  cout &lt;&lt; rect.area() &lt;&lt; endl;
+  cout &lt;&lt; sqre.area() &lt;&lt; endl;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>20<BR>10</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Hàm <TT><B>main</B></TT> tạo hai con trỏ trỏ tới hai đối tượng của lớp 
+<TT><B>CPolygon</B></TT>, đó là <TT><B>*ppoly1</B></TT> và 
+<TT><B>*ppoly2</B></TT>. Chúng được gán cho địa chỉ của <TT><B>rect</B></TT> và 
+<TT><B>trgl</B></TT>, đây là các đối tượng thuộc lớp thừa kế từ 
+<TT><B>CPolygon</B></TT> nên đó là những phép gán hợp lệ.
+<P>Sự hạn chế duy nhất khi sử dụng <TT><B>*ppoly1</B></TT> và 
+<TT><B>*ppoly2</B></TT> thay vì <TT><B>rect</B></TT> và <TT><B>trgl</B></TT> là 
+cả <TT><B>*ppoly1</B></TT> và <B><TT>*ppoly2</TT></B> đều có kiểu là 
+<TT><B>CPolygon*</B></TT> và vì vậy chúng ta chỉ có thể tham chiếu đến các thành 
+viên mà <TT><B>CRectangle</B></TT> và <TT><B>CTriangle</B></TT> được thừa kế từ 
+<TT><B>CPolygon</B></TT>. Vì nguyên nhân đó chúng ta không thể gọi đến thành 
+viên <B><TT>area()</TT> </B>khi dùng <TT><B>*ppoly1</B></TT> và 
+<TT><B>*ppoly2</B></TT>.
+<P>Để các con trỏ đó có thể truy xuất đến <TT><B>area()</B></TT> như là một 
+thành viên hợp lệ, cần phải khai báo thành viên này trong lớp cơ sở chứ không 
+chỉ trong các lớp thừa kế.
+<H2>Các thành viên ảo</H2>Nếu muốn khai báo một phần tử trong một lớp mà chúng 
+ta muốn định nghĩa lại nó trong các lớp thừa kế thì chúng ta phải đặt trước nó 
+từ khoá <TT><B>virtual</B></TT> để việc sử dụng con trỏ tới các đối tượng thuộc 
+lớp này là thích hợp.
+<P>Hãy xem ví dụ sau:
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// các thành viên ảo</I>
+#include &lt;iostream.h&gt;
+
+class CPolygon {
+  protected:
+    int width, height;
+  public:
+    void set_values (int a, int b)
+      { width=a; height=b; }
+    virtual int area (void)
+      { return (0); }
+  };
+
+class CRectangle: public CPolygon {
+  public:
+    int area (void)
+      { return (width * height); }
+  };
+
+class CTriangle: public CPolygon {
+  public:
+    int area (void)
+      { return (width * height / 2); }
+  };
+
+int main () {
+  CRectangle rect;
+  CTriangle trgl;
+  CPolygon poly;
+  CPolygon * ppoly1 = &amp;rect;
+  CPolygon * ppoly2 = &amp;trgl;
+  CPolygon * ppoly3 = &amp;poly;
+  ppoly1-&gt;set_values (4,5);
+  ppoly2-&gt;set_values (4,5);
+  ppoly3-&gt;set_values (4,5);
+  cout &lt;&lt; ppoly1-&gt;area() &lt;&lt; endl;
+  cout &lt;&lt; ppoly2-&gt;area() &lt;&lt; endl;
+  cout &lt;&lt; ppoly3-&gt;area() &lt;&lt; endl;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>20<BR>10<BR>0</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Bây giờ cả ba lớp (<TT><B>CPolygon</B></TT>, <TT><B>CRectangle</B></TT> và 
+<TT><B>CTriangle</B></TT>) đều có cùng các thành viên: <TT><B>width</B></TT>, 
+<TT><B>height</B></TT>, <TT><B>set_values()</B></TT> và <TT><B>area()</B></TT>.
+<P><TT><B>area()</B></TT> được định nghĩa là <TT><B>virtual</B></TT> vì nó sẽ 
+được định nghĩa lại trong các lớp thừa kế. Bạn có thể kiểm tra lại rằng nếu bạn 
+bỏ từ khoá đó và thực hiện chương trình thì kết quả sẽ là <TT><B>0</B></TT> cho 
+cả 3 đa giác thay vì <TT><B>20,10,0</B></TT>.&nbsp;Nguyên nhân là do thay vì gọi 
+hàm <TT><B>area()</B></TT> tương ứng với mỗi đối tượng 
+(<TT><B>CRectangle::area()</B></TT>, <TT><B>CTriangle::area()</B></TT> và 
+<B><TT>CPolygon::area()</TT></B>), <TT><B>CPolygon::area()</B></TT> sẽ được gọi 
+cho tất cả thông qua một con trỏ tới <TT><B>CPolygon</B></TT>. 
+<H2>Trừu tượng hoá lớp cơ sở</H2>Các lớp trừu trượng là một cái gì đó rất giống 
+với lớp lớp <TT><B>CPolygon</B></TT> trong ví dụ trước của chúng ta. Sự khác 
+biệt duy nhất là trong ví dụ đó chúng ta đã định nghĩa hàm 
+<TT><B>area()</B></TT> cho các đối tượng thuộc lớp <TT><B>CPolygon</B></TT> 
+(giống như đối tượng&nbsp; <TT><B>poly</B></TT>), trong khi ở trong một lớp trừu 
+tượng cơ sở chúng ta có thể bỏ qua việc định nghĩa hàm này bằng cách thêm 
+<B><TT>=0</TT></B>(bằng không) vào phần khai báo hàm. 
+<P>Lớp <TT><B>CPolygon</B></TT> có thể được định nghĩa như sau:</P>
+<BLOCKQUOTE><TT><PRE><I>// abstract class CPoligon</I>
+class CPolygon {
+  protected:
+    int width, height;
+  public:
+    void set_values (int a, int b)
+      { width=a; height=b; }
+    virtual int area (void) =0;
+  };</PRE></TT></BLOCKQUOTE>Hãy chú ý&nbsp; cách chúng ta thêm 
+<TT><B>=0</B></TT> vào <TT><B>virtual int area (void)</B></TT> thay vì định 
+nghĩa đầy đủ cho hàm. Kiểu hàm này có tên là là <I>pure virtual function 
+</I>(hàm ảo thuần tuý) và tất cả các lớp chứa bất kì một hàm ảo thuần tuý nào 
+đều được coi là lớp trừu tượng cơ sở.
+<P>Sự khác biệt lớn của một lớp trừu tượng cơ sở là không thể tạo được các đối 
+tượng thuộc lớp. Nhưng chúng ta có thể tạo các con trỏ trỏ đến chúng. Vì vậy một 
+khai báo như sau: 
+<BLOCKQUOTE>
+  <P><TT><FONT color=red>CPolygon poly;</FONT></TT></P></BLOCKQUOTE>sẽ là không 
+hợp lệ cho lớp trừu tượng cơ sở được khai báo ở trên. Tuy nhiên con trỏ: 
+<BLOCKQUOTE>
+  <P><TT>CPolygon * ppoly1;<BR>CPolygon * ppoly2</TT></P></BLOCKQUOTE>là hoàn toàn 
+hợp lệ. Có điều này vì hàm trừu tượng thuần tuý mà nó có không được định nghĩa 
+và không thể toạ được một đối tượng nếu như chưa định nghĩa tất cả các thành 
+viên của nó. Tuy nhiên một con trỏ trỏ tới một đối tượng thuộc lớp thừa kế mà 
+hàm này đã được định nghĩa là hoàn toàn hợp lệ. 
+<P>Dưới đây chúng ta có một ví dụ đầy đủ:</P>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// các thành viên ảo.</I>
+#include &lt;iostream.h&gt;
+
+class CPolygon {
+  protected:
+    int width, height;
+  public:
+    void set_values (int a, int b)
+      { width=a; height=b; }
+    virtual int area (void) =0;
+  };
+
+class CRectangle: public CPolygon {
+  public:
+    int area (void)
+      { return (width * height); }
+  };
+
+class CTriangle: public CPolygon {
+  public:
+    int area (void)
+      { return (width * height / 2); }
+  };
+
+int main () {
+  CRectangle rect;
+  CTriangle trgl;
+  CPolygon * ppoly1 = &amp;rect;
+  CPolygon * ppoly2 = &amp;trgl;
+  ppoly1-&gt;set_values (4,5);
+  ppoly2-&gt;set_values (4,5);
+  cout &lt;&lt; ppoly1-&gt;area() &lt;&lt; endl;
+  cout &lt;&lt; ppoly2-&gt;area() &lt;&lt; endl;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>20<BR>10</B></TT></TD></TR></TBODY></TABLE></CENTER><BR>Nếu 
+bạn xem lại chương trình bạn sẽ thấy rằng chúng ta tham chiếu đến các đối tượng 
+thuộc các lớp khác nhau nhưng chỉ sử dụng một kiểu con trỏ duy nhất. Điều này là 
+cực kì hữu dụng, bây giờ chúng ta có thể tạo một hàm thành viên của 
+<TT><B>CPolygon</B></TT> có khả năng in ra màn hình kết quả của hàm 
+<TT><B>area()</B></TT> mà không phụ thuộc vào lớp được thừa kế là lớp nào.<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// ejemplo miembros virtuales</I>
+#include &lt;iostream.h&gt;
+
+class CPolygon {
+  protected:
+    int width, height;
+  public:
+    void set_values (int a, int b)
+      { width=a; height=b; }
+    virtual int area (void) =0;
+    void printarea (void)
+      { cout &lt;&lt; this-&gt;area() &lt;&lt; endl; }
+  };
+
+class CRectangle: public CPolygon {
+  public:
+    int area (void)
+      { return (width * height); }
+  };
+
+class CTriangle: public CPolygon {
+  public:
+    int area (void)
+      { return (width * height / 2); }
+  };
+
+int main () {
+  CRectangle rect;
+  CTriangle trgl;
+  CPolygon * ppoly1 = &amp;rect;
+  CPolygon * ppoly2 = &amp;trgl;
+  ppoly1-&gt;set_values (4,5);
+  ppoly2-&gt;set_values (4,5);
+  ppoly1-&gt;printarea();
+  ppoly2-&gt;printarea();
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>20<BR>10</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Hãy nhớ rằng <TT><B>this</B></TT> biểu diễn một con trỏ trỏ đến đối tượng 
+đang được thực hiện.
+<P>Các lớp trừu tượng và các thành viên ảo cung cấp cho C++ tính năng đa hình 
+khiến cho việc lập trình hướng đối tượng trở thành một công cụ hữu dụng. Tất 
+nhiên chúng ta đã thấy cách đơn giản nhất để sử dụng những tính năng này, nhưng 
+hãy tưởng tượng nếu những tính năng này được áp dụng cho các mảng các đối tượng 
+hay các đối tượng được cấp phát thông qua bộ nhớ động.</P>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><A 
+      href="bai4-3.htm"><IMG 
+      align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR><B>4-3. Quan hệ giữa các lớp</B></A></TD>
+    <TD align=middle width="10%"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></TD>
+    <TD align=left width="45%"><IMG align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26><A 
+      href="bai5-1.htm">Bài 
+      sau:<BR><B>5-1. Templates.</B></A></TD></TR></TBODY></TABLE></BODY></HTML>

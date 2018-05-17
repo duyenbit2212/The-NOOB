@@ -1,0 +1,330 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai5_3.htm -->
+<HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 5</TITLE>
+<META content=en-au http-equiv=Content-Language>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE fprolloverstyle>A:hover {
+	COLOR: #ff0000
+}
+</STYLE>
+<LINK 
+href="Dien dan tin hoc - IT Forum VN - Tutorial Room - Lp trình - C++ can bn - Bài 5_files/mycss.css" 
+rel=stylesheet type=text/css></HEAD>
+<BODY bgColor=#fffff0 leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<TABLE border=1 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff size=2>[</FONT><FONT size=2><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn Đàn Tin 
+      Học</A></FONT><FONT color=#0000ff size=2>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 5.1</B></P>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P><FONT size=5><B>Exception handling</B></FONT></P></TD></TR>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD bgColor=#bfffbf><IMG align=left height=45 
+      src="icoansi.gif" 
+      width=36> Exception handling là một tính năng mới được giới thiệu bởi 
+      chuẩn ANSI-C++. Nếu bạn sử dụng một trình biên dịch C++ không tương thích 
+      với chuẩn ANSI C++ thì bạn không thể sử dụng tính năng 
+  này.<BR></TD></TR></TBODY></TABLE>
+<P>Trong suốt quá trình phát triển một chương trình, có thể có một số trường hợp 
+mà một số đoạn mã chạy sai do truy xuất đến những tài nguyên không tồn tại hay 
+vượt ra ngoài khoảng mong muốn...
+<P>Những loại tình huống bất thường này được nằm trong cái được gọi là 
+exceptions và C++ đã vừa tích hợp ba toán tử mới để xử lý những tình huống này: 
+<B>try</B>, <B>throw</B> và <B>catch</B>.
+<P>Dạng thức sử dụng như sau: 
+<BLOCKQUOTE><TT><PRE><B>try {</B>
+  // đoạn mã cần thử
+  <B>throw </B>exception<B>;
+}
+catch (</B>type &nbsp;exception<B>)
+{</B>
+  // đoạn được thực hiện trong trường hợp có lỗi
+<B>}</B></PRE></TT></BLOCKQUOTE>Nguyên tắc hoạt động:<BR>- Đoạn mã nằm trong 
+khối <TT><B>try</B></TT> được thực hiện một cách bình thường. Trong trường hợp 
+có lỗi xảy ra, đoạn mã này phải sử dụng từ khoá <TT><B>throw</B></TT> và một 
+tham số để báo lỗi. Kiểu tham số này mô tả chi tiết hoá lỗi và có thể là bất kì 
+kiểu hợp lệ nào.<BR>- Nếu có lỗi xảy ra, nếu lệnh <TT><B>throw</B></TT> đã được 
+thực hiện bên trong khối <B><TT>try</TT></B>, khối <TT><B>catch</B></TT> sẽ được 
+thực hiện và nhận tham số được truyền bởi <TT><B>throw</B></TT>. 
+<P>Ví dụ:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// exceptions</I>
+#include &lt;iostream.h&gt;
+
+int main () {
+  char myarray[10];
+  try
+  {
+    for (int n=0; n&lt;=10; n++)
+    {
+      if (n&gt;9) throw "Out of range";
+      myarray[n]='z';
+    }
+  }
+  catch (char * str)
+  {
+    cout &lt;&lt; "Exception: " &lt;&lt; str &lt;&lt; endl;
+  }
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>Exception: Out of 
+      range</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Trong ví dụ này, nếu bên trong vòng lặp mà <TT><B>n</B></TT> lớn hơn 
+<TT>9</TT> thì một lỗi sẽ được thông báo vì&nbsp; <TT><B>myarray[n]</B></TT> 
+trong trường hợp đó có thể trỏ đến địa chỉ ô nhớ không tin cậy. Khi 
+<TT><B>throw</B></TT> được thực hiện, khối <TT><B>try</B></TT> ngay lập tức kết 
+thúc và mọi đối tượng được tạo bên trong khối <TT><B>try</B></TT> bị phá huỷ. 
+Sau đó, quyền điều khiển được chuyển cho khối <TT><B>catch</B></TT> tương ứng 
+(chỉ được thực hiện trong những tình huống như thế này). Cuối cùng chương trình 
+tiếp tục ngay sau khối, trong trường hợp này: <TT><B>return 0;</B></TT>.
+<P>Cú pháp được sử dụng bởi <TT><B>throw</B></TT> tương tự với 
+<TT><B>return</B></TT>: Chỉ có một tham số và không cần đặt nó nằm trong cặp 
+ngoặc đơn.
+<P>Khối <TT><B>catch</B></TT> phải nằm ngay sau khối <TT><B>try</B></TT> mà 
+không được có đoạn mã nào nằm giữa chúng. Tham số mà <TT><B>catch</B></TT> chấp 
+nhận có thể là bất kì kiểu dữ liệu hợp lệ nào. Hơn nữa, <TT><B>catch</B></TT> có 
+thể được quá tải để có thể chấp nhận nhiều kiểu dữ liệu khác nhau. Trong trường 
+hợp này khối <TT><B>catch</B></TT> được thực hiện là khối phù hợp với kiểu của 
+tham số được gửi đến bởi <B><TT>throw</TT></B>:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// exceptions: multiple catch blocks</I>
+#include &lt;iostream.h&gt;
+
+int main () {
+  try
+  {
+    char * mystring;
+    mystring = new char [10];
+    if (mystring == NULL) throw "Allocation failure";
+    for (int n=0; n&lt;=100; n++)
+    {
+      if (n&gt;9) throw n;
+      mystring[n]='z';
+    }
+  }
+  catch (int i)
+  {
+    cout &lt;&lt; "Exception: ";
+    cout &lt;&lt; "index " &lt;&lt; i &lt;&lt; " is out of range" &lt;&lt; endl;
+  }
+  catch (char * str)
+  {
+    cout &lt;&lt; "Exception: " &lt;&lt; str &lt;&lt; endl;
+  }
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>Exception: index 10 is 
+      out of range</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Ở đây có thể có hai trường hợp xảy ra: 
+<OL>
+  <LI>Khối dữ liệu 10 kí tự không thể được cấp phát (gần như là chẳng bao giờ 
+  xảy ra nhưng không có nghĩa là không thể): lỗi này sẽ bị chặn bởi <TT><B>catch 
+  (to char * str)</B></TT>.<BR>
+  <LI>Chỉ số cực đại của <TT><B>mystring</B></TT> đã bị vượt quá: lỗi này sẽ bị 
+  chặn bởi <TT><B>catch (int i)</B></TT>, since parameter is an integer number. 
+  </LI></OL>
+<P>Chúng ta có thể định nghĩa một khối <TT><B>catch</B></TT> để chặn tất cả các 
+exceptions mà không phụ thuộc vào kiểu được dùng để gọi <TT><B>throw</B></TT>. 
+Để làm việc này chúng ta phải viết dấu ba chấm thay vì kiểu và tên số tham số: 
+<BLOCKQUOTE><TT><PRE>try {
+  <I>// code here</I>
+}
+catch (...) {
+  cout &lt;&lt; "Exception occurred";
+}</PRE></TT></BLOCKQUOTE>
+<P>Còn có thể lồng các khối <TT><B>try-catch</B></TT> vào các khối 
+<TT><B>try</B></TT> khác. Trong trường hợp này, một khối <TT><B>catch</B></TT> 
+bên trong có thể chuyển tiếp exception nhận được cho khối bên ngoài, để làm việc 
+này chúng ta sử dụng biểu thức&nbsp; <TT><B>throw;</B></TT> không có tham số. Ví 
+dụ: 
+<BLOCKQUOTE><TT><PRE>try {
+  try {
+      <I>// code here</I>
+  }
+  catch (int n) {
+      throw;
+  }
+}
+catch (...) {
+  cout &lt;&lt; "Exception occurred";
+}</PRE></TT></BLOCKQUOTE>
+<H2>Exception không bị chặn</H2>Nếu một exception không bị chặn bởi bất kì lệnh 
+<TT><B>catch</B></TT> nào vì không có lệnh nào có kiểu phù hợp, hàm đặc biệt 
+<TT><B>terminate</B></TT> sẽ được gọi.
+<P>Hàm này đã được định nghĩa sẵn để chấm dứt chương trình ngay lập tức và hiển 
+thịc thông báo lỗi "Abnormal termination". Dạng thức của nó như sau: 
+<BLOCKQUOTE>
+  <P><TT><B>void terminate();</B></TT> </P></BLOCKQUOTE>
+<H2>Những exceptions chuẩn</H2>Một số hàm thuộc thư viện C++ chuẩn gửi các 
+exceptions mà chúng ta có thể chặn nếu chúng ta sử dụng một khối 
+<B><TT>try</TT></B>. Những exceptions này được gửi đi với kiểu tham số là một 
+lớp thừa kế từ <B><TT>std::exception</TT></B>. Lớp này (<TT>std::exception</TT>) 
+được định nghĩa trong file header C++ chuẩn <TT><B>&lt;exception&gt;</B></TT> và 
+được dùng làm mẫu cho hệ thống phân cấp các exception chuẩn:<BR>
+<BLOCKQUOTE>
+  <TABLE cellPadding=0 cellSpacing=0>
+    <TBODY>
+    <TR>
+      <TD><TT>exception</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea2.gif" 
+        width=16><TT>bad_alloc</TT></TD>
+      <TD><TT>(gửi bởi <B>new</B>)</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea2.gif" 
+        width=16><TT>bad_cast</TT></TD>
+      <TD><TT>(gửi bởi <B>dynamic_cast</B> khi thất bại với một kiểu tham 
+        chiếu)</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea2.gif" 
+        width=16><TT>bad_exception</TT></TD>
+      <TD><TT>(được gửi khi một exception không phù hợp với lệnh <B>catch 
+        </B>nào)</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea2.gif" 
+        width=16><TT>bad_typeid</TT></TD>
+      <TD><TT>(gửi bởi <B>typeid</B>)</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea2.gif" 
+        width=16><TT>logic_error</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea1.gif" 
+        width=16><IMG align=left height=16 
+        src="16linea2.gif" 
+        width=16><TT>domain_error</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea1.gif" 
+        width=16><IMG align=left height=16 
+        src="16linea2.gif" 
+        width=16><TT>invalid_argument</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea1.gif" 
+        width=16><IMG align=left height=16 
+        src="16linea2.gif" 
+        width=16><TT>length_error</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea1.gif" 
+        width=16><IMG align=left height=16 
+        src="16linea3.gif" 
+        width=16><TT>out_of_range</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea2.gif" 
+        width=16><TT>runtime_error</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea1.gif" 
+        width=16><IMG align=left height=16 
+        src="16linea2.gif" 
+        width=16><TT>overflow_error</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea1.gif" 
+        width=16><IMG align=left height=16 
+        src="16linea2.gif" 
+        width=16><TT>range_error</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea1.gif" 
+        width=16><IMG align=left height=16 
+        src="16linea3.gif" 
+        width=16><TT>underflow_error</TT></TD></TR>
+    <TR>
+      <TD><IMG align=left height=16 
+        src="16linea3.gif" 
+        width=16><TT>ios_base::failure</TT></TD>
+      <TD><TT>(gửi bởi 
+<B>ios::clear</B>)</TT></TD></TR></TBODY></TABLE></BLOCKQUOTE>Bởi vì đây là một 
+hệ thống phân lớp có thứ bậc, nếu bạn sử dụng một khối <TT><B>catch</B></TT> để 
+chặn bất kì một exception nào nằm trong hệ thông này bằng cách sử dụng tham số 
+biến (thêm một dấu &amp; vào phía trước tên của tham số) bạn sẽ chặn được tất cả 
+các exception thừa kế (luật thừa kế trong C++)
+<P>Ví dụ dưới đây chặn một exception có kiểu <B><TT>bad_typeid </TT></B>(được 
+thừa kế từ <TT><B>exception</B></TT>), lỗi này được tạo ra khi muốn biết kiểu 
+của một con trỏ null.<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// Những exception chuẩn</I>
+
+#include &lt;iostream.h&gt;
+#include &lt;exception&gt;
+#include &lt;typeinfo&gt;
+
+class A {virtual f() {}; };
+
+int main () {
+  try {
+    A * a = NULL;
+    typeid (*a);
+  }
+  catch (std::exception&amp; e)
+  {
+    cout &lt;&lt; "Exception: " &lt;&lt; e.what();
+  }
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>Exception: Attempted 
+      typeid of NULL pointer</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Bạn có thể sử dụng các lớp của hệ thống phân cấp các exception chuẩn này báo 
+những lỗi của mình hoặc thừa kế những lớp mới từ chúng. </P>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff colSpan=3><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><A 
+      href="bai4-4.htm"><IMG 
+      align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR><B>4-4. Cac thanh vien ao.Da hinh</B></A></TD>
+    <TD align=middle width="10%"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></TD>
+    <TD align=left width="45%"><IMG align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26><A 
+      href="bai5-2.htm">Bài 
+      sau:<BR><B>5-2.Namespaces</B></A></TD></TR></TBODY></TABLE></BODY></HTML>

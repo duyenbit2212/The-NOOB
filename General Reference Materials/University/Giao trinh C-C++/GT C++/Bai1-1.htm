@@ -1,0 +1,221 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai1_1.htm -->
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word"><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 1</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="MSHTML 5.00.3315.2870" name=GENERATOR><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Nguyen Minh Thang</o:Author>
+  <o:LastAuthor>Nguyen Minh Thang</o:LastAuthor>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>6</o:TotalTime>
+  <o:Created>2001-03-11T08:29:00Z</o:Created>
+  <o:LastSaved>2001-03-11T08:35:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>616</o:Words>
+  <o:Characters>3515</o:Characters>
+  <o:Company>DHBK Ha Noi</o:Company>
+  <o:Lines>29</o:Lines>
+  <o:Paragraphs>7</o:Paragraphs>
+  <o:CharactersWithSpaces>4316</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<STYLE>P.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; mso-fareast-font-family: "Times New Roman"
+}
+PRE {
+	FONT-FAMILY: "Courier New"; FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; mso-fareast-font-family: "Courier New"
+}
+TT {
+	mso-fareast-font-family: "Courier New"; mso-ascii-font-family: "Courier New"; mso-hansi-font-family: "Courier New"; mso-bidi-font-family: "Courier New"
+}
+DIV.Section1 {
+	page: Section1
+}
+</STYLE>
+<LINK 
+href="mycss.css" 
+rel=stylesheet type=text/css></HEAD>
+<BODY lang=EN-US leftMargin=0 style="tab-interval: 36.0pt" topMargin=0>
+<SCRIPT 
+src="Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 1_files/404.htm" 
+laguage="JavaScript"></SCRIPT>
+
+<DIV class=Section1>
+<TABLE border=1 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      homepage</A><FONT color=#0000ff>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal 
+style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><FONT 
+face="Times New Roman">Bài 1.1</FONT></B></P>
+<P class=MsoNormal 
+style="BORDER-BOTTOM-STYLE: solid; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 18pt"><FONT face="Times New Roman">Cấu trúc của một chương 
+trình C++</FONT></SPAN></B></P>
+<P class=MsoNormal 
+style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman">&nbsp;</FONT></P>
+<P class=MsoNormal 
+style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman">Có lẽ một trong những cách tốt nhất để bắt đầu học một 
+ngôn ngữ lập trình là bằng một chương trình. Vậy đây là chương trình đầu tiên 
+của chúng ta :</FONT></P>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="mso-cellspacing: 3.7pt; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND-ATTACHMENT: scroll; BACKGROUND-COLOR: #ffffbf; BACKGROUND-POSITION: 0% 50%; BACKGROUND-REPEAT: repeat; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt" 
+    vAlign=top width="47%"><PRE><I><FONT face="Courier New">// my first program in C++</FONT></I></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">cout &lt;&lt; "Hello World!";</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND-ATTACHMENT: scroll; BACKGROUND-COLOR: silver; BACKGROUND-POSITION: 0% 50%; BACKGROUND-REPEAT: repeat; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Courier New">Hello 
+World!</FONT></SPAN></B></TT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal 
+style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman">Chương trình trên đây là chương trình đầu tiên mà hầu hết 
+những người học nghề lập trình viết đầu tiên và kết quả của nó là viết câu 
+"Hello, World" lên màn hình. Đây là một trong những chương trình đơn giản nhất 
+có thể viết bằng C++ nhưng nó đã bao gồm những phần cơ bản mà mọi chương trình 
+C++ có. Hãy cùng xem xét từng dòng một :</FONT></P>
+<P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+face="Times New Roman">// my first program in C++</FONT></SPAN></B></TT> </P>
+<P class=MsoNormal><FONT face="Times New Roman">Đây là dòng chú thích. Tất cả 
+các dòng bắt đầu bằng hai dấu sổ (//) được coi là chút thích mà chúng không có 
+bất kì một ảnh hưởng nào đến hoạt động của chương trình. Chúng có thể được các 
+lập trình viên dùng để giải thích hay bình phẩm bên trong mã nguồn của chương 
+trình. Trong trường hợp này, dòng chú thích là một giải thích ngắn gọn những gì 
+mà chương trình chúng ta làm.</FONT></P>
+<P><FONT face="Times New Roman"><TT><B><SPAN style="FONT-SIZE: 10pt">#include 
+&lt;iostream.h&gt;</SPAN></B></TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR></SPAN></B>Các 
+câu bắt đầu bằng dấu (#) được dùng cho preprocessor (ai dịch hộ tôi từ này với). 
+Chúng không phải là những dòng mã thực hiện nhưng được dùng để báo hiệu cho 
+trình dịch. Ở đây câu lệnh <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">#include &lt;iostream.h&gt; 
+</SPAN></B></TT>báo cho trình dịch biết cần phải "include" thư viện <B>iostream. 
+</B>Đây là một thư viện vào ra cơ bản trong C++ và nó phải được "include" vì nó 
+sẽ được dùng trong chương trình. Đây là cách cổ điển để sử dụng thư viện 
+<B>iostream</B></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman"><TT><B><SPAN 
+style="FONT-SIZE: 10pt">int main ()</SPAN></B></TT><BR>Dòng này tương ứng với 
+phần bắt đầu khai báo hàm <B>main. </B>Hàm <B>main</B> là điểm mà tất cả các 
+chương trình C++ bắt đầu thực hiện. Nó không phụ thuộc vào vị trí của hàm này (ở 
+đầu, cuối hay ở giữa của mã nguồn) mà nội dung của nó luôn được thực hiện đầu 
+tiên khi chương trình bắt đầu. Thêm vào đó, do nguyên nhân nói trên, mọi chương 
+trình C++ đều phải tồn tại một hàm <B>main.</B> </FONT></P>
+<P class=MsoNormal 
+style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman">Theo sau <B>main&nbsp;</B> là một cặp ngoặc đơn bởi vì nó 
+là một hàm. Trong C++, tất cả các hàm mà sau đó là một cặp ngoặc đơn () thì có 
+nghĩa là nó có thể có hoặc không có tham số (không bắt buộc). Nội dung của hàm 
+main tiếp ngay sau phần khai báo chính thức được bao trong các ngoặc nhọn ( <B>{ 
+} </B>) như trong ví dụ của chúng ta&nbsp;</FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman"><TT><B><SPAN 
+style="FONT-SIZE: 10pt">cout &lt;&lt; "Hello World";</SPAN></B></TT><BR>Dòng 
+lệnh này làm việc quan trọng nhất của chương trình. <B>cout </B>là một dòng 
+(stream) output chuẩn trong C++ được định nghĩa trong thư viện <B>iostream</B> 
+và những gì mà dòng lệnh này làm là gửi chuỗi kí tự <TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">"Hello World"</SPAN></TT> ra 
+màn hình.</FONT> </P>
+<P><FONT face="Times New Roman">Chú ý rằng dòng này kết thúc bằng dấu chấm phẩy 
+( ; ). Kí tự này được dùng để kết thúc một lệnh và bắt buộc phải có sau mỗi lệnh 
+trong chương trình C++ của bạn (một trong những lỗi phổ biến nhất của những lập 
+trình viên C++ là quên mất dấu chấm phẩy).</FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman"><TT><B><SPAN 
+style="FONT-SIZE: 10pt">return 0;</SPAN></B></TT><BR>Lệnh <B>return</B> kết thúc 
+hàm main và trả về mã đi sau nó, trong trường hợp này là 0. Đây là một kết thúc 
+bình thường của một chương trình không có một lỗi nào trong quá trình thực hiện. 
+Như bạn sẽ thấy trong các ví dụ tiếp theo, đây là một cách phổ biến nhất để kết 
+thúc một chương trình C++.</FONT> </P>
+<P><FONT face="Times New Roman">Chương trình được cấu trúc thành những dòng khác 
+nhau để nó trở nên dễ đọc hơn nhưng hoàn toàn không phải bắt buộc phải làm vậy. 
+Ví dụ, thay vì viết</FONT> </P><PRE style="MARGIN: 0cm 36pt 0pt"><FONT face="Courier New">int main ()</FONT></PRE><PRE style="MARGIN: 0cm 36pt 0pt"><FONT face="Courier New">{</FONT></PRE><PRE style="MARGIN: 0cm 36pt 0pt"><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">cout &lt;&lt; " Hello World ";</FONT></PRE><PRE style="MARGIN: 0cm 36pt 0pt"><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">return 0;</FONT></PRE><PRE style="MARGIN: 0cm 36pt 0pt"><FONT face="Courier New">}</FONT></PRE>
+<P class=MsoNormal><FONT face="Times New Roman">ta có thể viết</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><SPAN 
+style="FONT-SIZE: 10pt"><FONT face="Courier New">int main () { cout &lt;&lt; " 
+Hello World "; return 0; }</FONT></SPAN></TT> </P>
+<P class=MsoNormal><FONT face="Times New Roman">cũng cho một kết quả chính xác 
+như nhau.</FONT> </P>
+<P><FONT face="Times New Roman">Trong C++, các dòng lệnh được phân cách bằng dấu 
+chấm phẩy ( ;). Việc chia chương trình thành các dòng chỉ nhằm để cho nó dễ đọc 
+hơn mà thôi.</FONT> </P>
+<H2><FONT face="Times New Roman">Các chú thích.</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Các chú thích được các lập trình 
+viên sử dụng để ghi chú hay mô tả trong các phần của chương trình. Trong C++ có 
+hai cách để chú thích&nbsp;</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">// Chú thích theo 
+dòng</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>/* Chú 
+thích theo khối */</TT></SPAN> </FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Chú thích theo dòng bắt đầu từ 
+cặp dấu xổ (//) cho đến cuối dòng. Chú thích theo khối&nbsp; bắt đầu bằng 
+<TT><B><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">/* 
+</SPAN></B></TT>và kết thúc bằng <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">*/</SPAN></B></TT> và có thể 
+bao gồm nhiều dòng. Chúng ta sẽ thêm các chú thích cho chương trình :</FONT> 
+</P>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="mso-cellspacing: 3.7pt; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND-ATTACHMENT: scroll; BACKGROUND-COLOR: #ffffbf; BACKGROUND-POSITION: 0% 50%; BACKGROUND-REPEAT: repeat; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt" 
+    vAlign=top width="41%"><PRE><I><FONT face="Courier New">/* my second program in C++<o:p></o:p></FONT></I></PRE><PRE><I><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp;&nbsp; </FONT></SPAN><FONT face="Courier New">with more comments */</FONT></I></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">cout &lt;&lt; "Hello World! ";<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><I>// says Hello World!</I></FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">cout &lt;&lt; "I'm a C++ program"; <I>// says I'm a C++ program</I></FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND-ATTACHMENT: scroll; BACKGROUND-COLOR: silver; BACKGROUND-POSITION: 0% 50%; BACKGROUND-REPEAT: repeat; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt" 
+    vAlign=top width="56%">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Courier New">Hello World! I'm a C++ 
+      program</FONT></SPAN></B></TT></P></TD></TR></TBODY></TABLE>
+<P style="BORDER-BOTTOM-STYLE: solid"><FONT face="Times New Roman">Nếu bạn viết 
+các chú thích trong chương trình mà không sử dụng các dấu //, /* hay */, trình 
+dịch sẽ coi chúng như là các lệnh C++ và sẽ hiển thị các 
+lỗi.<o:p></o:p></FONT></P></DIV><U1:P></U1:P>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD vAlign=center width="45%">
+      <P align=right><FONT face="Times New Roman"><IMG align=right border=0 
+      height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR></FONT></P></TD>
+    <TD vAlign=center width="10%">
+      <P align=center><FONT face="Times New Roman"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></FONT></P></TD>
+    <TD vAlign=center width="45%">
+      <P align=left><A 
+      href="bai1-2.htm"><FONT 
+      face="Times New Roman"><IMG align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26> Bài tiếp theo:<BR><B>1-2. Các biến, kiểu dữ liệu, các 
+      hằng.</B></FONT></A></P></TD></TR></TBODY></TABLE><!--/cuatut--></BODY></HTML>

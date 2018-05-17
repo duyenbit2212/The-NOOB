@@ -1,0 +1,221 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai3_4.htm -->
+<HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 3</TITLE>
+<META content=en-us http-equiv=Content-Language>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE type=text/css>BODY {
+	FONT-FAMILY: Times New Roman, Times
+}
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      Homepage</A><FONT color=#0000ff>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 3.4</B></P>
+<SCRIPT laguage="JavaScript">function open() {return false;}</SCRIPT>
+
+<P><FONT size=5><B>Bộ nhớ động</B></FONT></P>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<P>Cho đến nay, trong các chương trình của chúng ta, tất cả những phần bộ nhớ 
+chúng ta có thể sử dụng là các biến các mảng và các đối tượng khác mà chúng ta 
+đã khai báo. Kích cỡ của chúng là cố định và không thể thay đổi trong thời gian 
+chương trình chạy. Nhưng nếu chúng ta cần một lượng bộ nhớ mà kích cỡ của nó chỉ 
+có thể được xác định khi chương trình chạy, ví dụ như trong trường hợp chúng ta 
+nhận thông tin từ người dùng để xác định lượng bộ nhớ cần thiết. 
+<P>Giải pháp ở đây chính là <I>bộ nhớ động</I>, C++ đã tích hợp hai toán tử 
+<I>new</I> và&nbsp; <I>delete </I>để thực hiện việc này</P>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD bgColor=#bfffbf><IMG align=left height=45 
+      src="icoc-cpp.gif" 
+      width=71> Hai toán tử <I><B>new</B></I> và <B><I>delete</I></B> chỉ có 
+      trong C++. Ở phần sau của bài chúng ta sẽ biết những thao tác tương đương 
+      với các toán tử này trong C.</TD></TR></TBODY></TABLE>
+<P><B>Toán tử <I>new</I> và <I>new[ ]</I></B><BR>Để có thể có được bộ nhớ động 
+chúng ta có thể dùng toán tử <B>new</B>. Theo sau toán tử này là tên kiểu dữ 
+liệu và có thể là số phần tử cần thiết được đặt trong cặp ngoặc vuông. Nó trả về 
+một con trỏ trỏ tới đầu của khối nhớ vừa được cấp phát. Dạng thức của toán tử 
+này như sau: 
+<BLOCKQUOTE>
+  <P><TT><I>pointer</I><B> = new </B><I>type</I></TT></P></BLOCKQUOTE>hoặc 
+<BLOCKQUOTE><TT><I>pointer</I><B> = new </B><I>type</I><B> 
+  [</B><I>elements</I><B>]</B></TT> </BLOCKQUOTE>Biểu thức đầu tien được dùng để 
+cấp phát bộ nhớ chứa một phần tử có kiểu <I>type</I>. Lệnh thứ hai được dùng để 
+cấp phát một khối nhớ (một mảng) gồm các phần tử kiểu <I>type</I>.<BR>Ví dụ: 
+<BLOCKQUOTE>
+  <P><TT>int * bobby;<BR>bobby = new int [5]; </TT></P></BLOCKQUOTE>trong trường 
+hợp này, hệ điều hành dành chỗ cho 5 phần tử kiểu <TT><B>int</B></TT> trong bộ 
+nhớ và trả về một con trỏ trỏ đến đầu của khối nhớ. Vì vậy lúc này&nbsp; 
+<TT><B>bobby</B></TT> trỏ đến một khối nhớ hợp lệ gồm 5 phần tử 
+<TT><B>int</B></TT>. 
+<BLOCKQUOTE>
+  <P><IMG height=89 
+  src="imgdyna1.gif" 
+  width=283> </P></BLOCKQUOTE>Bạn có thể hỏi tôi là có gì khác nhau giữa việc khai 
+báo một mảng với việc cấp phát bộ nhớ cho một con trỏ như chúng ta vừa làm. Điều 
+quan trọng nhất là <I><U>kích thước</U></I> của một mảng phải là một hằng, điều 
+này giới hạn kích thước của mảng đến kích thước mà chúng ta chọn khi thiết kế 
+chương trình trong khi đó cấp phát bộ nhớ động cho phép cấp phát bộ nhớ trong 
+quá trình chạy với kích thước bất kì.
+<P>Bộ nhớ động nói chung được quản lí bởi hệ điều hành và trong các môi trường 
+đa nhiệm có thể chạy một lúc vài chương trình có một khả năng có thể xảy ra là 
+hết bộ nhớ để cấp phát. Nếu điều này xảy ra và hệ điều hành không thể cấp phát 
+bộ nhớ như chúng ta yêu cầu với toán tử <TT><B>new</B></TT>, một con trỏ null 
+(zero) sẽ được trả về. Vì vậy các bạn nên kiểm tra xem con trỏ trả về bởi toán 
+tử <TT><B>new</B></TT> có bằng null hay không: 
+<BLOCKQUOTE>
+  <P><TT>int * bobby;<BR>bobby = new int [5];<BR>if (bobby == NULL) {<BR>&nbsp; 
+  <I>// error assigning memory. Take measures.</I><BR>&nbsp; };</TT> 
+</P></BLOCKQUOTE>
+<P><B>Toán tử <I>delete</I>.</B><BR>Vì bộ nhớ động chỉ cần thiết trong một 
+khoảng thời gian nhất định, khi nó không cần dùng đến nữa thì nó sẽ được giải 
+phóng để có thể cấp phát cho các nhu cầu khác trong tương lai. Để thực hiện việc 
+này ta dùng toán tử <TT><B>delete</B></TT>, dạng thức của nó như sau: 
+<BLOCKQUOTE>
+  <P><TT><B>delete </B><I>pointer</I><B>;</B></TT> </P></BLOCKQUOTE>hoặc 
+<BLOCKQUOTE><TT><B>delete [] </B><I>pointer</I><B>;</B></TT> </BLOCKQUOTE>Biểu 
+thức đầu tiên nên được dùng để giải phóng bộ nhớ được cấp phát cho một phần tử 
+và lệnh thứ hai dùng để giải phóng một khối nhớ gồm nhiều phần tử (mảng). Trong 
+hầu hết các trình dịch cả hai biểu thức là tương đương mặc dù chúng là rõ ràng 
+là hai toán tử khác nhau.
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// rememb-o-matic</I>
+#include &lt;iostream.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main ()
+{
+  char input [100];
+  int i,n;
+  long * l, total = 0;
+  cout &lt;&lt; "How many numbers do you want to type in? ";
+  cin.getline (input,100); i=atoi (input);
+  l= new long[i];
+  if (l == NULL) exit (1);
+  for (n=0; n&lt;i; n++)
+  {
+    cout &lt;&lt; "Enter number: ";
+    cin.getline (input,100); l[n]=atol (input);
+  }
+  cout &lt;&lt; "You have entered: ";
+  for (n=0; n&lt;i; n++)
+    cout &lt;&lt; l[n] &lt;&lt; ", ";
+  delete[] l;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>How many numbers do you 
+      want to type in? </B>5<BR><B>Enter number : </B>75<BR><B>Enter number : 
+      </B>436<BR><B>Enter number : </B>1067<BR><B>Enter number : 
+      </B>8<BR><B>Enter number : </B>32<BR><B>You have entered: 75, 436, 1067, 
+      8, 32,<BR></B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P><TT><B>NULL</B></TT> là một hằng số được định nghĩa trong thư viện C++ dùng 
+để biểu thị con trỏ null. Trong trường hợp hằng số này chưa định nghĩa bạn có 
+thể tự định nghĩa nó: 
+<BLOCKQUOTE>
+  <P><TT>#define NULL 0</TT></P></BLOCKQUOTE>Dùng 0 hay <TT>NULL</TT> khi kiểm tra 
+con trỏ là như nhau nhưng việc dùng <TT>NULL</TT> với con trỏ được sử dụng rất 
+rộng rãi và điều này được khuyến khích để giúp cho chương trình dễ đọc hơn. 
+<H2>Bộ nhớ động trong ANSI-C</H2>Toán tử <I>new</I> và <I>delete</I> là độc 
+quyền C++ và chúng không có trong ngôn ngữ C. Trong ngôn ngữ C, để có thể sử 
+dụng bộ nhớ động chúng ta phải sử dụng thư viện <TT><B>stdlib.h</B></TT>. Chúng 
+ta sẽ xem xét cách này vì nó cũng hợp lệ trong C++ và nó vẫn còn được sử dụng 
+trong một số chương trình. 
+<P><B>Hàm <I>malloc</I></B><BR>Đây là một hàm tổng quát để cấp phát bộ nhớ động 
+cho con trỏ. Cấu trúc của nó như sau: 
+<BLOCKQUOTE>
+  <P><TT><B>void * malloc (size_t 
+</B><I>nbytes</I><B>);</B></TT></P></BLOCKQUOTE>trong đó <TT><I>nbytes</I></TT> 
+là số byte chúng ta muốn gán cho con trỏ. Hàm này trả về một con trỏ kiểu 
+<TT>void*</TT>, vì vậy chúng ta phải chuyển đổi kiểu sang kiểu của con trỏ đích, 
+ví dụ: 
+<BLOCKQUOTE>
+  <P><TT>char * ronny;<BR>ronny = (char *) malloc (10);</TT></P></BLOCKQUOTE>Đoạn 
+mã này cấp phát cho con trỏ <TT>ronny</TT> một khối nhớ 10 byte. Khi chúng ta 
+muốn cấp phát một khối dữ liệu có kiểu khác char (lớn hơn 1 byte) chúng ta phải 
+nhân số phần tử mong muốn với kích thước của chúng. Thật may mắn là chúng ta có 
+toán tử <I><TT>sizeof</TT></I>, toán tử này trả về kích thước của một kiểu dữ 
+liệu cụ thể. 
+<BLOCKQUOTE>
+  <P><TT>int * bobby;<BR>bobby = (int *) malloc (5 * 
+sizeof(int));</TT></P></BLOCKQUOTE>Đoạn mã này cấp phát cho <TT>bobby</TT> một 
+khối nhớ gồm 5 số nguyên kiểu <I>int</I>, kích cỡ của kiểu dữ liệu này có thể 
+bằng 2, 4 hay hơn tùy thuộc vào hệ thống mà chương trình được dịch. 
+<P><B>Hàm <I>calloc</I>.</B><BR><TT><I>calloc</I></TT> hoạt động rất giống với 
+<TT>malloc</TT>, sự khác nhau chủ yếu là khai báo mẫu của nó: 
+<BLOCKQUOTE>
+  <P><TT><B>void * calloc (size_t </B><I>nelements</I><B>, size_t 
+  </B><I>size</I><B>);</B></TT></P></BLOCKQUOTE>nó sử dụng hai tham số thay vì 
+một. Hai tham số này được nhân với nhau để có được kích thước tổng cộng của khối 
+nhớ cần cấp phát. Thông thường tham số đầu tiên (<TT><I>nelements</I></TT>) là 
+số phần tử và tham số thức hai (<TT><I>size</I></TT>) là kích thước của mỗi phần 
+tử. Ví dụ, chúng ta có thể định nghĩa <TT>bobby</TT> với <TT><I>calloc</I></TT> 
+như sau: 
+<BLOCKQUOTE>
+  <P><TT>int * bobby;<BR>bobby = (int *) calloc (5, 
+sizeof(int));</TT></P></BLOCKQUOTE>Một điểm khác nhau nữa giữa 
+<TT><B>malloc</B></TT> và <TT><B>calloc</B></TT> là <TT><B>calloc</B></TT> khởi 
+tạo tất cả các phần tử của nó về 0. 
+<P><B>Hàm <I>realloc</I>.</B><BR>Nó thay đổi kích thước của khối nhớ đã được cấp 
+phát cho một con trỏ. 
+<BLOCKQUOTE>
+  <P><TT><B>void * realloc (void * </B><I>pointer</I><B>, size_t 
+  </B><I>size</I><B>);</B></TT></P></BLOCKQUOTE>tham số <TT><I>pointer</I></TT> 
+nhận vào một con trỏ đã được cấp phát bộ nhớ hay một con trỏ null, và 
+<I><TT>size</TT></I> chỉ định kích thước của khối nhớ mới. Hàm này sẽ cấp phát 
+<TT><I>size</I></TT> byte bộ nhớ cho con trỏ. Nó có thể phải thay đổi vị vị trí 
+của khối nhớ để có thể đủ chỗ cho kích thước mới của khối nhớ, trong trường hợp 
+này nội dung hiện thời của khối nhớ được copy tới vị trí mới để đảm bảo dữ liệu 
+không bị mất. Con trỏ mới trỏ tới khối nhớ được hàm trả về. Nếu không thể thay 
+đổi kích thước của khối nhớ thì hàm sẽ trả về một con trỏ null nhưng tham số 
+<I><TT>pointer</TT> </I>và nội dung của nó sẽ không bị thay đổi.
+<P><B>Hàm <I>free</I>.</B><BR>Hàm này giải phóng một khối nhớ động đã được cấp 
+phát bởi <TT><B><I>malloc</I></B></TT>, <TT><B><I>calloc</I></B></TT> hoặc 
+<TT><B><I>realloc</I></B></TT>. 
+<BLOCKQUOTE>
+  <P><TT><B>void free (void * </B><I>pointer</I><B>);</B></TT> </P></BLOCKQUOTE>
+<P>Hàm này chỉ được dùng để giải phóng bộ nhớ được cấp phát bởi các hàm 
+<TT><B><I>malloc</I></B></TT>, <TT><B><I>calloc</I></B></TT> and 
+<TT><B><I>realloc</I></B></TT>. 
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><A 
+      href="bai3-3.htm"><IMG 
+      align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR><B>3-3. Con trỏ </B></A></TD>
+    <TD align=middle width="10%">
+      <P align=center><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></P></TD>
+    <TD align=left width="45%"><A 
+      href="bai3-5.htm"><IMG 
+      align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26>Bài sau:<BR><B>3-5. Các cấu 
+trúc</B></A></TD></TR></TBODY></TABLE></P></BODY></HTML>

@@ -1,0 +1,243 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai5_2.htm -->
+<HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 5</TITLE>
+<META content=en-au http-equiv=Content-Language>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE fprolloverstyle>A:hover {
+	COLOR: #ff0000
+}
+</STYLE>
+<LINK 
+href="Dien dan tin hoc - IT Forum VN - Tutorial Room - Lp trình - C++ can bn - Bài 5-2_files/mycss.css" 
+rel=stylesheet type=text/css></HEAD>
+<BODY bgColor=#fffff0 leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<TABLE border=1 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff size=2>[</FONT><FONT size=2><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn Đàn Tin 
+      Học</A></FONT><FONT color=#0000ff size=2>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 5.1</B></P>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P><FONT size=5><B>Namespaces</B></FONT></P></TD></TR>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<P>Namespaces cho phép chúng ta gộp một nhóm các lớp, các đối tượng toàn cục và 
+các hàm dưới một cái tên. Nói một cách cụ thể hơn, chúng dùng để chia phạm vi 
+toàn cụ thành những phạm vi nhỏ hơn với tên gọi <I>namespaces</I>. 
+<P>Khuông mẫu để sử dụng <I>namespaces</I> là: 
+<BLOCKQUOTE>
+  <P><TT><B>namespace </B><I>identifier</I><BR><B>{</B><BR>&nbsp; 
+  <I>namespace-body</I><BR><B>}</B></TT></P></BLOCKQUOTE>Trong đó 
+<TT><I>identifier</I></TT> là bất kì một tên hợp lệ nào và 
+<TT><I>namespace-body</I></TT> là một tập hợp những lớp, đối tượng và hàm được 
+gộp trong <I>namespace</I>. Ví dụ: 
+<BLOCKQUOTE><TT><PRE>namespace general
+{
+  int a, b;
+}</PRE></TT></BLOCKQUOTE>Trong trường hợp này, <TT><B>a</B></TT> và 
+<TT><B>b</B></TT> là những biến bình thường được tích hợp bên trong 
+<I>namespace</I> <B>general</B>. Để có thể truy xuất vào các biến này từ bên 
+ngoài namespace chúng ta phải sử dụng toán tử <TT><B>::</B></TT>. Ví dụ, để truy 
+xuất vào các biến đó chúng ta viết: 
+<BLOCKQUOTE>
+  <P><TT>general::a<BR>general::b</TT></P></BLOCKQUOTE>
+<P><I>Namespace </I>đặc biệt hữu dụng trong trường hợp có thể có một đối tượng 
+toàn cục hoặc một hàm có cùng tên với một cái khác, gây ra lỗi định nghĩa lại. 
+Ví dụ:</P>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// namespaces</I>
+#include &lt;iostream.h&gt;
+
+namespace first
+{
+  int var = 5;
+}
+
+namespace second
+{
+  double var = 3.1416;
+}
+
+int main () {
+  cout &lt;&lt; first::var &lt;&lt; endl;
+  cout &lt;&lt; second::var &lt;&lt; endl;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>5<BR>3.1416</B></TT></TD></TR></TBODY></TABLE></CENTER>Trong 
+ví dụ này có hai biến toàn cục cùng có tên <B><TT>var</TT></B>, một được định 
+nghĩa trong <I>namespace</I> <TT><B>first</B></TT> và cái còn lại nằm trong 
+<TT><B>second</B></TT>. Chương trình vẫn chạy ngon, cám ơn <I>namespaces</I>. 
+<H2>using namespace</H2>Chỉ thị <TT><B>using</B></TT> theo sau là 
+<TT><B>namespace</B></TT> dùng để kết hợp mức truy xuất hiện thời với một 
+<I>namespace</I> cụ thể để các đối tượng và hàm thuộc <I>namespace</I> có thể 
+được truy xuất trực tiếp như thể chúng được khai báo toàn cục. Cách sử dụng như 
+sau: 
+<BLOCKQUOTE>
+  <P><TT><B>using namespace </B><I>identifier</I><B>;</B></TT></P></BLOCKQUOTE>Ví 
+dụ:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// using namespace example</I>
+#include &lt;iostream.h&gt;
+
+namespace first
+{
+  int var = 5;
+}
+
+namespace second
+{
+  double var = 3.1416;
+}
+
+int main () {
+  using namespace second;
+  cout &lt;&lt; var &lt;&lt; endl;
+  cout &lt;&lt; (var*2) &lt;&lt; endl;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+    width="50%"><TT><B>3.1416<BR>6.2832</B></TT></TD></TR></TBODY></TABLE></CENTER>Trong 
+trường hợp này chúng ta có thể sử dụng <TT><B>var</B></TT> mà không phải đặt 
+trước nó bất kì toán tử phạm vi nào.
+<P>Bạn phải để ý một điều rằng câu lệnh <TT><B>using namespace</B></TT> chỉ có 
+tác dụng trong khối lệnh mà nó được khai báo hoặc trong toàn bộ chương trình nếu 
+nó được dùng trong phạm vi toàn cục. Ví dụ, nếu chúng ta định đầu tiên sử dụng 
+một đối tượng thuộc một <I>namespace</I> và sau đó sử dụng một đối tượng thuộc 
+một <I>namespace</I> khác chúng ta có thể làm như sau:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// using namespace example</I>
+#include &lt;iostream.h&gt;
+
+namespace first
+{
+  int var = 5;
+}
+
+namespace second
+{
+  double var = 3.1416;
+}
+
+int main () {
+  {
+    using namespace first;
+    cout &lt;&lt; var &lt;&lt; endl;
+  }
+  {
+    using namespace second;
+    cout &lt;&lt; var &lt;&lt; endl;
+  }
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+  width="50%"><TT><B>5<BR>3.1416</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<H2>Định nghĩa bí danh</H2>Chúng ta cũng có thể định nghĩa những tên thay thế 
+cho các <I>namespaces</I> đã được khai báo. Cách thức để làm việc này như sau: 
+<BLOCKQUOTE>
+  <P><TT><B>namespace</B> <I>new_name</I> <B>=</B> <I>current_name</I> 
+  <B>;</B></TT></P></BLOCKQUOTE>
+<H2><I>Namespace</I> std</H2>Một trong những ví dụ tốt nhất mà chúng ta có thể 
+tìm thấy về <I>namespaces</I> chính là bản thân thư viện chuẩn của C++. Theo 
+chuẩn ANSI C++, tất cả định nghĩa của các lớp, đối tượng và hàm của thư viện 
+chuẩn đều được định nghĩa trong <I>namespace</I> <TT><B>std</B></TT>.
+<P>Bạn có thể thấy rằng chúng ta đã bỏ qua luật này trong suốt tutorial này. Tôi 
+đã quyết định làm vậy vì luật này cũng mới như chuẩn ANSI (1997) và nhiều trình 
+biên dịch cũ không tương thích với nó.
+<P>Hầu hết các trình biên dịch, thậm chí cả những cái tuân theo chuẩn ANSI, cho 
+phép sử dụng các file header truyền thống (như là <TT><B>iostream.h</B></TT>, 
+<B><TT>stdlib.h</TT></B>), những cái mà chúng ta trong suốt tutorial này. Tuy 
+nhiên, chuẩn ANSI đã hoàn toàn thiết kế lại những thư viện này để tận dụng lợi 
+thế của tính năng templates và để tuân theo luật phải khai báo tất cả các hàm và 
+biến trong namespace <TT><B>std</B></TT>.
+<P>Chuẩn ANSI đã chỉ định những tên mới cho những file "header" này, cơ bản là 
+dùng cùng tên với các file của chuẩn C++ nhưng không có phần mở rộng 
+<TT><B>.h</B></TT>. Ví dụ, <TT><B>iostream.h</B></TT> trở thành 
+<TT><B>iostream</B></TT>.
+<P>Nếu chúng ta sử dụng các file include của chuẩn ANSI-C++ chúng ta phải luôn 
+nhớ rằng tất cả các hàm, lớp và đối tượng sẽ được khai báo trong 
+<TT><B>std</B></TT>. Ví dụ:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// ANSI-C++ compliant hello world</I>
+#include &lt;iostream&gt;
+
+int main () {
+  std::cout &lt;&lt; "Hello world in ANSI-C++\n";
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>Hello world in 
+      ANSI-C++</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Mặc dù vậy chúng ta nên sử dụng <TT><B>using namespace</B></TT> để khỏi phải 
+viết toán tử <TT><B>::</B></TT> khi tam chiếu đến các đối tượng chuẩn:<BR>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// ANSI-C++ compliant hello world (II)</I>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main () {
+  cout &lt;&lt; "Hello world in ANSI-C++\n";
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>Hello world in 
+      ANSI-C++</B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Tên của các file C cũng có một số thay đổi. Bạn có thể tìm thêm thông tin về 
+tên mới của các file header chuẩn trong tài liệu <A 
+href="http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/hfiles.htm">Các 
+file header chuẩn</A>.<BR><BR>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff colSpan=3><IMG border=0 height=2 
+      src="/head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><A 
+      href="bai5-1.htm"><IMG 
+      align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR><B>5-1.</B><B> Templates</B></A></TD>
+    <TD align=middle width="10%"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></TD>
+    <TD align=left width="45%"><A 
+      href="bai5-3.htm"><IMG 
+      align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26>Bài sau:<BR><B>5-3. Exception 
+handling.</B></A></TD></TR></TBODY></TABLE></P></BODY></HTML>

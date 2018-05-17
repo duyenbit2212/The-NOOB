@@ -1,0 +1,515 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai3_1.htm -->
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:v = 
+"urn:schemas-microsoft-com:vml" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word"><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 3</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator><LINK 
+href="./Bai3_1_files/editdata.mso" rel=Edit-Time-Data><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Thang</o:Author>
+  <o:LastAuthor>Thang</o:LastAuthor>
+  <o:Revision>16</o:Revision>
+  <o:TotalTime>11</o:TotalTime>
+  <o:Created>2001-04-06T23:08:00Z</o:Created>
+  <o:LastSaved>2001-04-11T14:26:00Z</o:LastSaved>
+  <o:Pages>7</o:Pages>
+  <o:Words>1339</o:Words>
+  <o:Characters>7636</o:Characters>
+  <o:Company>DHBK</o:Company>
+  <o:Lines>63</o:Lines>
+  <o:Paragraphs>15</o:Paragraphs>
+  <o:CharactersWithSpaces>9377</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+ </w:WordDocument>
+</xml><![endif]-->
+<STYLE>P.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+P {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN-LEFT: 0in; MARGIN-RIGHT: 0in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto
+}
+PRE {
+	FONT-FAMILY: "Courier New"; FONT-SIZE: 10pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Courier New"; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt
+}
+TT {
+	mso-fareast-font-family: "Courier New"; mso-ascii-font-family: "Courier New"; mso-hansi-font-family: "Courier New"; mso-bidi-font-family: "Courier New"
+}
+DIV.Section1 {
+	page: Section1
+}
+</STYLE>
+<!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<META content=en-us http-equiv=Content-Language>
+<STYLE type=text/css>BODY {
+	FONT-FAMILY: Times New Roman, Times
+}
+</STYLE>
+</HEAD>
+<BODY lang=EN-US link=blue style="tab-interval: .5in" vLink=blue>
+<SCRIPT language=JavaScript>function open() {return false;}</SCRIPT>
+
+<DIV class=Section1>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      homepage</A><FONT color=#0000ff>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 3.1</B></P>
+<DIV 
+style="BORDER-BOTTOM: windowtext 3pt solid; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in">
+<H2 
+style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in; mso-border-bottom-alt: solid windowtext 3.0pt; mso-padding-alt: 0in 0in 0in 0in">Mảng</H2></DIV>
+<P>Mảng là một dãy các phần tử có cùng kiểu được đặt liên tiếp trong bộ nhớ và 
+có thể truy xuất đến từng phần tử bằng cách thêm một chỉ số vào sau tên của 
+mảng.</P>
+<P>Điều này có nghĩa là, ví dụ, chúng ta có thể lưu 5 giá trị kiểu <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int</SPAN></B></TT> mà không 
+cần phải khai báo 5 biến khác nhau.Ví dụ, một mảng chứa 5 giá trị nguyên kiểu 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int</SPAN></B></TT> có tên 
+là <I>billy</I> có thể được biểu diễn như sau: </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><IMG 
+height=56 id=_x0000_i1025 
+src="mgarra1.gif" 
+width=442></P>
+<P class=MsoNormal>trong đó mỗi một ô trống biểu diễn một phần tử của mảng, 
+trong trường hợp này là các giá trị nguyên kiểu <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int</SPAN></B></TT>. Chúng 
+được đánh số từ <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">0</SPAN></B></TT> đến 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">4</SPAN></B></TT> vì phần tử 
+đầu tiên của mảng luôn là <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">0</SPAN></B></TT> bất kể độ 
+dài của nó là bao nhiêu. </P>
+<P class=MsoNormal> </P>
+<P class=MsoNormal>Như bất kì biến nào khác, một mảng phải được khai báo trước 
+khi có thể sử dụng. Một khai báo điển hình cho một mảng trong C++ như sau: </P>
+<P class=MsoNormal> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">type 
+name</SPAN></I></TT><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt"> 
+[<I>elements</I>];</SPAN></TT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">&nbsp;</P>
+<P class=MsoNormal>trong đó <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">type</SPAN></I></TT> là một 
+kiểu dữ liệu hợp lệ (<B>int</B>, <B>float</B>...), <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">name</SPAN></I></TT> là một 
+tên biến hợp lệ và trường <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">elements</SPAN></I></TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt"> </SPAN></I>chỉ định mảng đó 
+sẽ chứa bao nhiêu phần tử </P>
+<P class=MsoNormal> </P>
+<P class=MsoNormal>Vì vậy, để khai báo <I>billy</I> như đã trình bày ở trên 
+chúng ta chỉ cần một dòng đơn giản như sau: </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"> 
+</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int billy [5];</SPAN></TT> 
+&nbsp; </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"> 
+</P>
+<TABLE border=0 cellPadding=0 
+style="mso-padding-alt: 0in 0in 0in 0in; mso-cellspacing: 1.5pt">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #bfbfff; PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <P class=MsoNormal>Chú ý: Trường <I>elements</I>&nbsp; bên trong cặp ngoặc 
+      <TT><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">[]</SPAN></TT> phải là 
+      một giá trị hằng khi khai báo một mảng, vì mảng là một khối nhớ tĩnh có 
+      kích cỡ xác định và trình biên dịch phải có khả năng xác định xem cần bao 
+      nhiêu bộ nhớ để cấp phát cho mảng trước khi các lệnh có thể được thực 
+      hiện.</P></TD></TR></TBODY></TABLE>
+<H2>Khởi tạo một mảng.</H2>
+<P class=MsoNormal>Khi khai báo một mảng với tầm hoạt động địa phương (trong một 
+hàm), theo mặc định nó sẽ không được khởi tạo, vì vậy nội dung của nó là không 
+xác định cho đến khi chúng ra lưu các giá trị lên đó.</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal>Nếu chúng ta khai báo một mảng toàn cục (bên ngoài tất cả các 
+hàm) nó sẽ được khởi tạo và tất cả các phần tử được đặt bằng 0. Vì vậy nếu chúng 
+ta khai báo mảng toàn cục:</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">&nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int billy 
+[5];</SPAN></TT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal>mọi phần tử của <I>billy</I> sẽ được khởi tạo là <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">0</SPAN></B></TT>:&nbsp;</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><IMG 
+border=0 height=35 id=_x0000_i1034 
+src="imgarra4.gif" 
+width=442></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>Nhưng thêm vào đó, khi chúng ta khai báo một mảng, chúng ta 
+có thể gán các giá trị khởi tạo cho từng phần tử của nó. Ví dụ:</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int billy [5] = { 16, 2, 77, 
+40, 12071 };</SPAN></B></TT> &nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal>lệnh trên sẽ khai báo một mảng như sau:</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><IMG 
+border=0 height=35 id=_x0000_i1036 
+src="mgarra3.gif" 
+width=442></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>Số phần tử trong mảng mà chúng ta khởi tạo với cặp ngoặc nhọn 
+<TT><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">{ }</SPAN></TT> 
+phải bằng số phần tử của mảng đã được khai báo với cặp ngoặc vuông <TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">[ ]</SPAN></TT>. Bởi vì điều 
+này có thể được coi là một sự lặp lại không cần thiết nên C++ cho phép để trống 
+giữa cặp ngoặc vuông, kích thước của mảng được xác định bằng số giá trị giữa cặp 
+ngoặc nhọn.</P>
+<H2>Truy xuất đến các phần tử của mảng.</H2>
+<P>Ở bất kì điểm nào của chương trình trong tầm hoạt động của mảng, chúng ta có 
+thể truy xuất từng phần tử của mảng để đọc hay chỉnh sửa như là đối với một biến 
+bình thường. Cấu trúc của nó như sau:</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">name</SPAN></I></TT><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">[<I>index</I>]</SPAN></TT> 
+</P>
+<P class=MsoNormal>Như ở trong ví dụ trước ta có mảng <I>billy</I> gồm 5 phần tử 
+có kiểu <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int</SPAN></B></TT>, chúng 
+ta có thể truy xuất đến từng phần tử của mảng như sau: </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><IMG height=37 
+id=_x0000_i1028 
+src="mgarra2.gif" 
+width=442></P>
+<P class=MsoNormal>Ví dụ, để lưu giá trị 75 vào phần tử thứ ba của <I>billy</I> 
+ta viết như sau: </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">billy[2] = 
+75;</SPAN></B></TT></P>
+<P class=MsoNormal>và, ví dụ, để gán giá trị của phần tử thứ 3 của billy cho 
+biến <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a</SPAN></B></TT>, chúng ta 
+viết: </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a = 
+billy[2];</SPAN></B></TT></P>
+<P class=MsoNormal>Vì vậy, xét về mọi phương diện, biểu thức <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">billy[2]</SPAN></B></TT> 
+giống như bất kì một biến kiểu <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int</SPAN></B></TT>. </P>
+<P>Chú ý rằng phần tử thứ ba của <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">billy</SPAN></B></TT> là 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">billy[2]</SPAN></B></TT>, vì 
+mảng bắt đầu từ chỉ số 0. Vì vậy, phần tử cuối cùng sẽ là <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">billy[4]</SPAN></B></TT>. Vì 
+vậy nếu chúng ta viết <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">billy[5]</SPAN></B></TT>, 
+chúng ta sẽ truy xuất đến phần tử thứ 6 của mảng và vượt quá giới hạn của mảng. 
+</P>
+<P>Trong C++, việc vượt quá giới hạn chỉ số của mảng là hoàn toàn hợp lệ, tuy 
+nhiên nó có thể gây ra những vấn đề thực sự khó phát hiện bởi vì chúng không tạo 
+ra những lỗi trong quá trình dịch nhưng chúng có thể tạo ra những kết quả không 
+mong muốn trong quá trình thực hiện. Nguyên nhân của việc này sẽ được nói đến kĩ 
+hơn khi chúng ta bắt đầu sử dụng con trỏ. </P>
+<P>Cần phải nhấn mạnh rằng chúng ta sử dụng cặp ngoặc vuông cho hai tác vụ: đầu 
+tiên là đặt kích thước cho mảng khi khai báo chúng và thứ hai, để chỉ định chỉ 
+số cho một phần tử cụ thể của mảng khi xem xét đến nó.&nbsp; </P><PRE style="MARGIN: 0in 0.5in 0pt">int billy[5];<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><I><SPAN style="COLOR: green">// khai báo một mảng mới.</SPAN></I></PRE><PRE style="MARGIN: 0in 0.5in 0pt">billy[2] = 75;<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><I><SPAN style="COLOR: green">// truy xuất đến một phần tử của mảng.</SPAN></I></PRE>
+<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Một 
+vài thao tác hợp lệ khác với mảng: </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">billy[0] = 
+a;</SPAN></TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR><TT>billy[a] 
+= 75;</TT><BR><TT>b = billy [a+2];</TT><BR><TT>billy[billy[a]] = billy[2] + 
+5;</TT></SPAN></P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="WIDTH: 100%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I>// ví dụ về mảng</I></PRE><PRE>#include &lt;iostream.h&gt;</PRE><PRE><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></PRE><PRE>int billy [] = {16, 2, 77, 40, 12071};</PRE><PRE>int n, result=0;</PRE><PRE><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></PRE><PRE>int main ()</PRE><PRE>{</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>for ( n=0 ; n&lt;5 ; n++ )</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>{</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>result += billy[n];</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>}</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; result;</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</PRE><PRE>}</PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal 
+      style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">12206</SPAN></B></TT></P></TD></TR></TBODY></TABLE></DIV>
+<H2 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Mảng 
+nhiều chiều.</H2>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Mảng 
+nhiều chiều có thể được coi như mảng của mảng, ví dụ, một mảng hai chiều có thể 
+được tưởng tược như là một bảng hai chiều gồm các phần tử có kiểu dữ liệu cụ thể 
+và giống nhau. </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><IMG 
+height=88 id=_x0000_i1029 
+src="mgarra5.gif" 
+width=500></P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">jimmy</SPAN></TT> biểu diễn 
+một mảng hai chiều kích thước 3x5 có kiểu <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int</SPAN></B></TT>. Cách 
+khai báo mảng này như sau: </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int jimmy 
+[3][5];</SPAN></TT></P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">và, 
+ví dụ, cách để truy xuất đến phần tử thứ hai theo chiều dọc và thứ tư theo chiều 
+ngang trong một biểu thức như sau: </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">jimmy[1][3]</SPAN></B></TT><BR><IMG 
+height=115 id=_x0000_i1030 
+src="mgarra6.gif" 
+width=500><BR>(hãy nhớ rằng chỉ số của mảng luôn bắt đầu từ <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">0</SPAN></B></TT>).</P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Mảng 
+nhiều chiều không bị giới hạn bởi hai chỉ số (hai chiều), Chúng có thể chứa bao 
+nhiều chỉ số tùy thích mặc dù ít khí cần phải dùng đến mảng lớn hơn 3 chiều. Hãy 
+thử xem xét lượng bộ nhớ mà một mảng có nhiều chỉ số cần đến. Ví dụ: </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">char century 
+[100][365][24][60][60];</SPAN></TT></P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">gán 
+một giá trị <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">char</SPAN></B></TT> cho mỗi 
+giây trong một thế kỉ, phải cần đến hơn 3 tỷ giá trị <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">chars</SPAN></B></TT>! Chúng 
+ta sẽ phải cần khoảng 3GB RAM để khai báo nó. </P>
+<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Mảng 
+nhiều chiều thực ra là một khái niệm trừu tượng vì chúng ta có thể có kết quả 
+tương tự với mảng một chiều bằng một thao tác đơn giản giữa các chỉ số của nó: 
+</P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int jimmy 
+[3][5];</SPAN></B></TT>&nbsp;&nbsp; tương đương với<BR><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int jimmy 
+[15];</SPAN></B></TT>&nbsp;&nbsp; (3 * 5 = 15)</P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Dưới 
+đây là hai ví dụ với cùng một kết quả như nhau, một sử dụng mảng hai chiều và 
+một sử dụng mảng một chiều: </P>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="WIDTH: 100%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I>// multidimensional array</I></PRE><PRE>#include &lt;iostream.h&gt;</PRE><PRE><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></PRE><PRE>#define WIDTH 5</PRE><PRE>#define HEIGHT 3</PRE><PRE><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></PRE><PRE>int jimmy [HEIGHT][WIDTH];</PRE><PRE>int n,m;</PRE><PRE><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></PRE><PRE>int main ()</PRE><PRE>{</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>for (n=0;n&lt;HEIGHT;n++)</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>for (m=0;m&lt;WIDTH;m++)</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>{</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>jimmy[n][m]=(n+1)*(m+1);</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>}</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</PRE><PRE>}</PRE></TD>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I>// pseudo-multidimensional array</I></PRE><PRE>#include &lt;iostream.h&gt;</PRE><PRE><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></PRE><PRE>#define WIDTH 5</PRE><PRE>#define HEIGHT 3</PRE><PRE><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></PRE><PRE>int jimmy [HEIGHT * WIDTH];</PRE><PRE>int n,m;</PRE><PRE><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></PRE><PRE>int main ()</PRE><PRE>{</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>for (n=0;n&lt;HEIGHT;n++)</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>for (m=0;m&lt;WIDTH;m++)</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>{</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>jimmy[n * WIDTH + m]=(n+1)*(m+1);</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>}</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</PRE><PRE>}</PRE></TD></TR></TBODY></TABLE>
+<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">không 
+một chương trình nào viết gì ra màn hình nhưng cả hai đều gán giá trị vào khối 
+nhớ có tên <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">jimmy</SPAN></B></TT> theo 
+cách sau: </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><IMG 
+height=88 id=_x0000_i1031 
+src="imgarra7.gif" 
+width=500></P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Chúng 
+ta đã định nghĩa hằng (<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">#define</SPAN></B></TT>) để 
+đơn giản hóa những chỉnh sửa sau này của chương trình, ví dụ, trong trường hợp 
+chúng ta quyết định tăng kích thước của mảng&nbsp;với chiều cao là 4 thay vì là 
+3, chúng ta chỉ cần thay đổi dòng: </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">#define HEIGHT 
+3</SPAN></TT></P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">thành 
+</P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">#define HEIGHT 
+4</SPAN></TT></P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">và 
+không phải có thêm sự thay đổi nào nữa đối với chương trình. </P>
+<H2 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Dùng 
+mảng làm tham số.</H2>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Vào 
+một lúc nào đó có thể chúng ta cần phải truyền một mảng tới một hàm như là một 
+tham số. Trong C++, việc truyền theo tham số giá trị một khối nhớ là không hợp 
+lệ, ngay cả khi nó được tổ chức thành một mảng. Tuy nhiên chúng ta lại được phép 
+truyền địa chỉ của nó, việc này cũng tạo ra kết quả thực tế giống thao tác ở 
+trên nhưng lại nhanh hơn nhiều và hiệu quả hơn. </P>
+<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Để 
+có thể nhận mảng là tham số thì điều duy nhất chúng ta phải làm khi khai báo hàm 
+là chỉ định trong phần tham số kiểu dữ liệu cơ bản của mảng, tên mảng và cặp 
+ngoặc vuông trống. Ví dụ, hàm sau: </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">void procedure (int 
+arg[])</SPAN></TT></P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">nhận 
+vào một tham số có kiểu "mảng của <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">char</SPAN></B></TT>" và có 
+tên <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">arg</SPAN></B></TT>. Để 
+truyền tham số cho hàm này một mảng được khai báo: </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int myarray 
+[40];</SPAN></TT></P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">chỉ 
+cần gọi hàm như sau: </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">procedure 
+(myarray);</SPAN></TT></P>
+<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Dưới 
+đây là một ví dụ cụ thể</P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="WIDTH: 100%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I>// arrays as parameters</I></PRE><PRE>#include &lt;iostream.h&gt;</PRE><PRE><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></PRE><PRE>void printarray (int arg[], int length) {</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>for (int n=0; n&lt;length; n++)</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; arg[n] &lt;&lt; " ";</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "\n";</PRE><PRE>}</PRE><PRE><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></PRE><PRE>int main ()</PRE><PRE>{</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>int firstarray[] = {5, 10, 15};</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>int secondarray[] = {2, 4, 6, 8, 10};</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>printarray (firstarray,3);</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>printarray (secondarray,5);</PRE><PRE><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</PRE><PRE>}</PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal 
+      style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">5 10 
+      15</SPAN></B></TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR><TT>2 
+      4 6 8 10</TT></SPAN></B></P></TD></TR></TBODY></TABLE></DIV>
+<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Như 
+bạn có thể thấy, tham số đầu tiên (<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int arg[]</SPAN></B></TT>) 
+chấp nhận mọi mảng có kiểu cơ bản là <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int</SPAN></B></TT>, bất kể 
+độ dài của nó là bao nhiêu, vì vậy cần thiết phải có tham số thứ hai để báo cho 
+hàm này biết độ dài của mảng mà chúng ta truyền cho nó. </P>
+<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Trong 
+phần khai báo hàm chúng ta cũng có thể dùng tham số là các mảng nhiều chiều. Cấu 
+trúc của mảng 3 chiều như sau: </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">base_type</SPAN></I></TT><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">[][</SPAN></B></TT><TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">depth</SPAN></I></TT><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">][</SPAN></B></TT><TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">depth</SPAN></I></TT><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">]</SPAN></B></TT></P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">ví 
+dụ, một hàm với tham số là mảng nhiều chiều có thể như sau: </P>
+<P 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">void procedure (int 
+myarray[][3][4])</SPAN></TT></P>
+<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">chú 
+ý rằng cặp ngoặc vuông đầu tiên để trống nhưng các cặp ngoặc sau thì không. Bạn 
+luôn luôn phải làm vậy vì trình biên dịch C++ phải có khả năng xác định độ lớn 
+của các chiều thêm vào của mảng. </P>
+<DIV 
+style="BORDER-BOTTOM: windowtext 3pt solid; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in">
+<P 
+style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; mso-border-bottom-alt: solid windowtext 3.0pt; mso-padding-alt: 0in 0in 0in 0in">Mảng, 
+cả một chiều và nhiều chiều, khi truyền cho hàm như là một tham số thường là 
+nguyên nhân gây lỗi cho những lập trình viên thiếu kinh nghiệm. Các bạn nên đọc 
+bài <B>3.3. Con trỏ</B> để có thể hiểu rõ hơn mảng hoạt động như thế 
+nào.</P></DIV></DIV>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><A 
+      href="bai2-3.htm"><IMG 
+      align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR><B>2-3. Hàm (II)</B></A></TD>
+    <TD align=middle width="10%">
+      <P align=center><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></P></TD>
+    <TD align=left width="45%"><A 
+      href="bai3-2.htm"><IMG 
+      align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26>Bài sau:<BR><B>3-2. Xâu kí 
+tự</B></A></TD></TR></TBODY></TABLE></BODY></HTML>

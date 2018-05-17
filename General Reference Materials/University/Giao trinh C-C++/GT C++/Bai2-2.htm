@@ -1,0 +1,435 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai2_2.htm -->
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:v = 
+"urn:schemas-microsoft-com:vml" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word"><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 2</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="MSHTML 5.00.3315.2870" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator><LINK 
+href="./Bai2_2_files/filelist.xml" rel=File-List><LINK 
+href="./Bai2_2_files/editdata.mso" rel=Edit-Time-Data><!--[if !mso]>
+<STYLE>v\:* {
+	BEHAVIOR: url(#default#VML)
+}
+o\:* {
+	BEHAVIOR: url(#default#VML)
+}
+w\:* {
+	BEHAVIOR: url(#default#VML)
+}
+.shape {
+	BEHAVIOR: url(#default#VML)
+}
+</STYLE>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Thang</o:Author>
+  <o:LastAuthor>Thang</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:Created>2001-04-01T08:48:00Z</o:Created>
+  <o:LastSaved>2001-04-01T08:48:00Z</o:LastSaved>
+  <o:Pages>4</o:Pages>
+  <o:Words>943</o:Words>
+  <o:Characters>5376</o:Characters>
+  <o:Company>DHBK</o:Company>
+  <o:Lines>44</o:Lines>
+  <o:Paragraphs>10</o:Paragraphs>
+  <o:CharactersWithSpaces>6602</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<STYLE>P.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; mso-fareast-font-family: "Times New Roman"
+}
+PRE {
+	FONT-FAMILY: "Courier New"; FONT-SIZE: 10pt; MARGIN: 0in 0in 0pt; mso-fareast-font-family: "Courier New"
+}
+TT {
+	mso-fareast-font-family: "Courier New"; mso-ascii-font-family: "Courier New"; mso-hansi-font-family: "Courier New"; mso-bidi-font-family: "Courier New"
+}
+DIV.Section1 {
+	page: Section1
+}
+</STYLE>
+<!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<META content=en-us http-equiv=Content-Language>
+<STYLE type=text/css>BODY {
+	FONT-FAMILY: Times New Roman, Times
+}
+</STYLE>
+<!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--></HEAD>
+<BODY lang=EN-US link=blue style="tab-interval: .5in" vLink=blue>
+<SCRIPT language=JavaScript>function open() {return false;}</SCRIPT>
+
+<DIV class=Section1>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      homepage</A><FONT color=#0000ff>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 2.2</B></P>
+<DIV 
+style="BORDER-BOTTOM: windowtext 3pt solid; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in">
+<H2 
+style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in; mso-border-bottom-alt: solid windowtext 3.0pt; mso-padding-alt: 0in 0in 0in 0in">Hàm 
+(I)</H2></DIV>
+<P>Hàm là một khối lệnh được thực hiện khi nó được gọi từ một điểm khác của 
+chương trình. Dạng thức của nó như sau: </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">type 
+name</SPAN></I></B></TT><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt"> ( <I>argument1</I>, 
+<I>argument2</I>, ...) <I>statement</I></SPAN></B></TT></P>
+<P class=MsoNormal>trong đó:<BR><TT><B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">type</SPAN></I></B></TT> là 
+kiểu dữ liệu được trả về của hàm<BR><TT><B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">name</SPAN></I></B></TT> là 
+tên gọi của hàm.<BR><TT><B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">arguments</SPAN></I></B></TT> 
+là các tham số (có nhiều bao nhiêu cũng được tuỳ theo nhu cầu). Một tham số bao 
+gồm tên kiểu dữ liệu sau đó là tên của tham số giống như khi khai báo biến (ví 
+dụ <TT><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int 
+x</SPAN></TT>) và đóng vai trò bên trong hàm như bất kì biến nào khác. Chúng 
+dùng để truyền tham số cho hàm khi nó được gọi. Các tham số khác nhau được ngăn 
+cách bởi các <I><U>dấu phẩy</U></I>.<BR><TT><B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I></B></TT> 
+là thân của hàm. Nó có thể là một lệnh đơn hay một khối lệnh. </P>
+<P>Dưới đây là ví dụ đầu tiên về hàm:</P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="WIDTH: 100%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I><FONT face="Courier New">// function example</FONT></I></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">int addition (int a, int b)</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>int r;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>r=a+b;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return (r);</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>int z;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>z = addition (5,3);</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "The result is " &lt;&lt; z;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Courier New">The result is 
+8</FONT></SPAN></B></TT></P></TD></TR></TBODY></TABLE></DIV>
+<P>Để có thể hiểu được đoạn mã này, trước hết hãy nhớ lại những điều đã nói ở 
+bài đầu tiên: một chương trình C++ luôn bắt đầu thực hiện từ hàm <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">main</SPAN></B></TT>. Vì vậy 
+chúng ta bắt đầu từ đây.</P>
+<P>Chúng ta có thể thấy hàm <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">main</SPAN></B></TT> bắt đầu 
+bằng việc khai báo biến z kiểu <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int</SPAN></B></TT>. Ngay 
+sau đó là một lời gọi tới hàm <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">addition</SPAN></B></TT>. 
+Nếu để ý chúng ta sẽ thấy sự tương tự giữa cấu trúc của lời gọi hàm với khai báo 
+của hàm: </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><IMG height=64 
+id=_x0000_i1025 
+src="imgfunc1.gif" 
+width=231></P>
+<P class=MsoNormal>Các tham số có vai trò thật rõ ràng. Bên trong hàm 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">main</SPAN></B></TT> chúng 
+ta gọi hàm <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">addition</SPAN></B></TT> và 
+truyền hai giá trị: <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">5</SPAN></B></TT> và 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">3</SPAN></B></TT> tương ứng 
+với hai tham số <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int a</SPAN></B></TT> và 
+<TT><B><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int 
+b</SPAN></B></TT> được khai báo cho hàm <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">addition</SPAN></B></TT>. 
+</P>
+<P>Vào thời điểm hàm được gọi từ <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">main</SPAN></B></TT>, quyền 
+điều khiển được chuyển sang cho hàm <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">addition</SPAN></B></TT>. 
+Giá trị của c hai tham số (<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">5</SPAN></B></TT> và 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">3</SPAN></B></TT>) được copy 
+sang hai biến cục bộ <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int a</SPAN></B></TT> và 
+<TT><B><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">int 
+b</SPAN></B></TT> bên trong hàm. </P>
+<P>Dòng lệnh sau: </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">return 
+(r);</SPAN></B></TT></P>
+<P class=MsoNormal>kết thúc hàm <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">addition</SPAN></B></TT>, và 
+trả lại quyền điều khiển cho hàm nào đã gọi nó (<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">main</SPAN></B></TT>) và 
+tiếp tục chương trình ở cái điểm mà nó bị ngắt bởi lời gọi đến <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">addition</SPAN></B></TT>. 
+Nhưng thêm vào đó, giá trị được dùng với lệnh <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">return</SPAN></B></TT> 
+(<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">r</SPAN></B></TT>) chính là 
+giá trị được trả về của hàm.\ </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><IMG height=64 
+id=_x0000_i1026 
+src="imgfunc2.gif" 
+width=231></P>
+<P class=MsoNormal>Giá trị trả về bởi một hàm chính là giá trị của hàm khi nó 
+được tính toán. Vì vậy biến <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">z</SPAN></B></TT> sẽ có có 
+giá trị được trả về bởi <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">addition (5, 
+3)</SPAN></B></TT>, đó là <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">8</SPAN></B></TT>.&nbsp; 
+</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<TABLE border=0 cellPadding=0 
+style="WIDTH: 100%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 1.5pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #bfbfff; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt">
+      <P class=MsoNormal><!--[if gte vml 1]><v:shapetype id=_x0000_t75 coordsize 
+      = "21600,21600" o:preferrelative = "t" filled = "f" stroked = "f" path = 
+      "m@4@5l@4@11@9@11@9@5xe" o:spt = "75"><v:stroke joinstyle = 
+      "miter"></v:stroke><v:formulas><v:f eqn = 
+      "if lineDrawn pixelLineWidth 0 "></v:f><v:f eqn = "sum @0 1 0 "></v:f><v:f 
+      eqn = "sum 0 0 @1 "></v:f><v:f eqn = "prod @2 1 2 "></v:f><v:f eqn = 
+      "prod @3 21600 pixelWidth "></v:f><v:f eqn = 
+      "prod @3 21600 pixelHeight "></v:f><v:f eqn = "sum @0 0 1 "></v:f><v:f eqn 
+      = "prod @6 1 2 "></v:f><v:f eqn = "prod @7 21600 pixelWidth "></v:f><v:f 
+      eqn = "sum @8 21600 0 "></v:f><v:f eqn = 
+      "prod @7 21600 pixelHeight "></v:f><v:f eqn = 
+      "sum @10 21600 0 "></v:f></v:formulas><v:path o:extrusionok = "f" 
+      gradientshapeok = "t" o:connecttype = "rect"></v:path><o:lock v:ext="edit" 
+      aspectratio = "t"></o:lock></v:shapetype><v:shape id=_x0000_s1026 
+      style="FLOAT: right; HEIGHT: 217.5pt; MARGIN-LEFT: 273pt; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 312.75pt; Z-INDEX: 1; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+      type = "#_x0000_t75" coordsize = "21600,21600" alt = "" o:allowoverlap = 
+      "f"><v:imagedata src = "imgvars1.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:1;left:364px;top:0px;width:417px;height:290px'><img width=417
+height=290 src=imgvars1.gif align=right v:shapes="_x0000_s1026"></span><![endif]><B>Phạm 
+      vi hoạt động của các biến&nbsp; [nhắc lại]</B> </P>
+      <P>Bạn cần nhớ rằng phạm vi hoạt động của các biến khai báo trong một hàm 
+      hay bất kì một khối lệnh nào khác chỉ là hàm đó hay khối lệnh đó và không 
+      thể sử dụng bên ngoài chúng. Ví dụ, trong chương trình ví dụ trên, bạn 
+      không thể sử dụng trực tiếp các biến <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">a</SPAN></B></TT>, 
+      <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">b</SPAN></B></TT> hay 
+      <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">r</SPAN></B></TT> 
+      trong hàm <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">main</SPAN></B></TT> 
+      vì chúng là các biến cục bộ của hàm <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">addition</SPAN></B></TT>. 
+      Thêm vào đó bạn cũng không thể sử dụng biến <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">z</SPAN></B></TT> trực 
+      tiếp bên trong hàm <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">addition</SPAN></B></TT> 
+      vì nó làm biến cục bộ của hàm <TT><B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">main</SPAN></B></TT>. 
+      </P>
+      <P>Tuy nhiên bạn có thể khai báo các biến toàn cục để có thể sử dụng chúng 
+      ở bất kì đâu, bên trong hay bên ngoài bất kì hàm nào. Để làm việc này bạn 
+      cần khai báo chúng bên ngoài mọi hàm hay các khối lệnh, có nghĩa là ngay 
+      trong thân chương trình.</P></TD></TR></TBODY></TABLE>
+<P>Đây là một ví dụ khác về hàm:</P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="WIDTH: 100%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I><FONT face="Courier New">// function example</FONT></I></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">int subtraction (int a, int b)</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>int r;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>r=a-b;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return (r);</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>int x=5, y=3, z;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>z = subtraction (7,2);</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "The first result is " &lt;&lt; z &lt;&lt; '\n';</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "The second result is " &lt;&lt; subtraction (7,2) &lt;&lt; '\n';</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "The third result is " &lt;&lt; subtraction (x,y) &lt;&lt; '\n';</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>z= 4 + subtraction (x,y);</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "The fourth result is " &lt;&lt; z &lt;&lt; '\n';</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><FONT face="Courier New"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt">The first result is 5</SPAN></B></TT><B><SPAN 
+      style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>The 
+      second result is 5</TT><BR><TT>The third result is 2</TT><BR><TT>The 
+      fourth result is 6</TT></SPAN></B></FONT></P></TD></TR></TBODY></TABLE></DIV>
+<P>Trong trường hợp này chúng ta tạo ra hàm <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">subtraction</SPAN></B></TT>. 
+Chức năng của hàm này là lấy hiệu của hai tham số rồi trả về kết quả. </P>
+<P>Tuy nhiên, nếu phân tích hàm <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">main</SPAN></B></TT> các bạn 
+sẽ thấy chương trình đã vài lần gọi đến hàm <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">subtraction</SPAN></B></TT>. 
+Tôi đã sử dụng vài cách gọi khác nhau để các bạn thấy các cách khác nhau mà một 
+hàm có thể được gọi.</P>
+<P>Để có hiểu cặn kẽ ví dụ này bạn cần nhớ rằng một lời gọi đến một hàm có thể 
+hoàn toàn được thay thế bởi giá trị của nó. Ví dụ trong lệnh gọi hàm đầu tiên : 
+</P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">z = subtraction 
+(7,2);</SPAN></B></TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR><TT>cout 
+&lt;&lt; "The first result is " &lt;&lt; z;</TT></SPAN></B></P>
+<P class=MsoNormal>Nếu chúng ta thay lời gọi hàm bằng giá trị của nó (đó là 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">5</SPAN></B></TT>), chúng ta 
+sẽ có: </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">z = 
+5;</SPAN></B></TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR><TT>cout 
+&lt;&lt; "The first result is " &lt;&lt; z;</TT></SPAN></B></P>
+<P>Tương tự như vậy </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cout &lt;&lt; "The second 
+result is " &lt;&lt; subtraction (7,2);</SPAN></B></TT> </P>
+<P class=MsoNormal>cũng cho kết quả giống như hai dòng lệnh trên nhưng trong 
+trường hợp này chúng ta gọi hàm <TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">subtraction</SPAN></TT> trực 
+tiếp như là một tham số của <TT><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cout</SPAN></TT>. Chúng ta 
+cũng có thể viết: </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cout &lt;&lt; "The second 
+result is " &lt;&lt; 5;</SPAN></B></TT></P>
+<P>vì <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">5</SPAN></B></TT> là kết quả 
+của <TT><B><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">subtraction 
+(7,2)</SPAN></B></TT>.</P>
+<P>Còn với lệnh </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">cout &lt;&lt; "The third 
+result is " &lt;&lt; subtraction (x,y);</SPAN></B></TT></P>
+<P class=MsoNormal>Điều mới mẻ duy nhất ở đây là các tham số của <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">subtraction</SPAN></B></TT> 
+là các biến thay vì các hằng. Điều này là hoàn toàn hợp lệ. Trong trường hợp này 
+giá trị được truyền cho hàm <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">subtraction</SPAN></B></TT> 
+là <I><U>giá trị</U></I> của <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">x</SPAN></B></TT> and 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">y</SPAN></B></TT>. </P>
+<P>Trường hợp thứ tư cũng hoàn toàn tương tự. Thay vì viết </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">z = 4 + subtraction 
+(x,y);</SPAN></B></TT></P>
+<P class=MsoNormal>chúng ta có thể viết: </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">z = subtraction (x,y) + 
+4;</SPAN></B></TT></P>
+<P class=MsoNormal>cũng hoàn toàn cho kết quả tương đương. Chú ý rằng dấu chấm 
+phẩy được đặt ở cuối biểu thức chứ không cần thiết phải đặt ngay sau lời gọi 
+hàm. </P>
+<H2>Các hàm không kiểu. Cách sử dụng <I>void</I>.</H2>
+<P class=MsoNormal>Nếu bạn còn nhớ cú pháp của một lời khai báo hàm: </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">type 
+name</SPAN></I></B></TT><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt"> ( <I>argument1</I>, 
+<I>argument2</I> ...) <I>statement</I></SPAN></B></TT></P>
+<P class=MsoNormal>bạn sẽ thấy rõ ràng rằng nó bắt đầu với một tên kiểu, đó là 
+kiểu dữ liệu sẽ được hàm trả về bởi lệnh <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">return</SPAN></B></TT>. 
+Nhưng nếu chúng ta không muốn trả về giá trị nào thì sao ?</P>
+<P>Hãy tưởng tượng rằng chúng ta muốn tạo ra một hàm chỉ để hiển thị một thông 
+báo lên màn hình. Nó không cần trả về một giá trị nào cả, hơn nữa cũng không cần 
+nhận tham số nào hết. Vì vậy người ta đã nghĩ ra kiểu dữ liệu <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">void</SPAN></B></TT> trong 
+ngôn ngữ C. Hãy xem xét chương trình sau: </P>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="WIDTH: 100%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I><FONT face="Courier New">// void function example</FONT></I></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">void dummyfunction (void)</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "I'm a function!";</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE><PRE><FONT face="Courier New"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>dummyfunction ();</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Courier New">I'm a 
+function!</FONT></SPAN></B></TT></P></TD></TR></TBODY></TABLE>
+<P>Từ khoá <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">void</SPAN></B></TT> trong 
+phần danh sách tham số có nghĩa là hàm này không nhận một tham số nào. Tuy nhiên 
+trong C++ không cần thiết phải sử dụng <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">void</SPAN></B></TT> để làm 
+điều này. Bạn chỉ đơn giản sử dụng cặp ngoặc đơn ( ) là xong.</P>
+<P>Bởi vì hàm của chúng ta không có một tham số nào, vì vậy lời gọi hàm 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">dummyfunction</SPAN></B></TT> 
+sẽ là : </P>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">dummyfunction 
+();</SPAN></B></TT></P>
+<DIV 
+style="BORDER-BOTTOM: windowtext 3pt solid; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in">
+<P 
+style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in; mso-border-bottom-alt: solid windowtext 3.0pt; mso-padding-alt: 0in 0in 0in 0in">Hai 
+dấu ngoặc đơn là cần thiết để cho trình dịch hiểu đó là một lời gọi hàm chứ 
+không phải là một tên biến hay bất kì dấu hiệu nào khác.</P></DIV>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 
+style="WIDTH: 100%; mso-padding-alt: 0in 0in 0in 0in; mso-cellspacing: 1.5pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in; WIDTH: 45%" 
+    width="45%">
+      <P align=right class=MsoNormal style="TEXT-ALIGN: right"><A 
+      href="bai2-1.htm"></A><!--[if gte vml 1]><v:shape 
+      id=_x0000_s1027 
+      style="FLOAT: right; HEIGHT: 19.5pt; MARGIN-LEFT: -20.25pt; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 19.5pt; Z-INDEX: 2; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+      type = "#_x0000_t75" href = "bai2_1.htm" coordsize = "21600,21600" alt = 
+      "" o:button = "t" o:allowoverlap = "f"><v:imagedata src = 
+      "butnback.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:2;left:-27px;top:0px;width:26px;height:26px'><a
+href="bai2_1.htm"><img border=0 width=26 height=26 src=butnback.gif
+align=right v:shapes="_x0000_s1027"></a></span><![endif]><A 
+      href="bai2-1.htm">Bài 
+      trước:<BR><B>2-1. Các cấu trúc điều khiển.</B></A></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in; WIDTH: 10%" 
+    width="10%">
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><A 
+      href="index.htm"><SPAN 
+      style="TEXT-DECORATION: none; text-underline: none"><IMG border=0 
+      height=26 id=_x0000_i1027 
+      src="butnindx.gif" 
+      width=26></SPAN><BR>Mục lục</A></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; PADDING-TOP: 0in; WIDTH: 45%" 
+    width="45%">
+      <P class=MsoNormal><A 
+      href="bai2-3.htm"></A><!--[if gte vml 1]><v:shape 
+      id=_x0000_s1028 
+      style="FLOAT: left; HEIGHT: 19.5pt; MARGIN-LEFT: 0px; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 19.5pt; Z-INDEX: 3; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+      type = "#_x0000_t75" href = "bai2_3.htm" coordsize = "21600,21600" alt = 
+      "" o:button = "t" o:allowoverlap = "f"><v:imagedata src = 
+      "butnnext.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:3;left:0px;top:0px;width:26px;height:26px'><a href="bai2_3.htm"><img
+border=0 width=26 height=26 src=butnnext.gif align=left v:shapes="_x0000_s1028"></a></span><![endif]><A 
+      href="bai2-3.htm">Bài 
+      sau:<BR><B>2-3. Hàm 
+(II).</B></A></P></TD></TR></TBODY></TABLE></DIV></DIV></BODY></HTML>

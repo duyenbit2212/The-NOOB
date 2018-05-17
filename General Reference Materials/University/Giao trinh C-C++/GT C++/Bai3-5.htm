@@ -1,0 +1,338 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai3_5.htm -->
+<HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 3</TITLE>
+<META content=en-us http-equiv=Content-Language>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE type=text/css>BODY {
+	FONT-FAMILY: Times New Roman, Times
+}
+</STYLE>
+</HEAD>
+<BODY>
+<SCRIPT laguage="JavaScript">function open() {return false;}</SCRIPT>
+
+<TABLE border=0 borderColor=#111111 cellPadding=0 cellSpacing=0 id=AutoNumber1 
+style="BORDER-COLLAPSE: collapse" width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      Homepage</A><FONT color=#0000ff>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 3.5</B></P>
+<H2 style="BORDER-BOTTOM-STYLE: solid">Các cấu trúc</H2>
+<H2>Các cấu trúc dữ liệu.</H2>Một cấu trúc dữ liệu là một tập hợp của những kiểu 
+dữ liệu khác nhau được gộp lại với một cái tên duy nhất. Dạng thức của nó như 
+sau: 
+<BLOCKQUOTE><TT><PRE><B>struct </B><I>model_name </I><B>{</B>
+  <I>type1 element1</I><B>;</B>
+  <I>type2 element2</I><B>;</B>
+  <I>type3 element3</I><B>;
+  .
+  .
+}</B> <I>object_name</I><B>;</B></PRE></TT></BLOCKQUOTE>trong đó 
+<TT><I>model_name</I></TT> là tên của mẫu kiểu dữ liệu và tham số tùy chọn 
+<TT><I>object_name</I></TT> một tên hợp lệ cho đối tượng. Bên trong cặp ngoặc 
+nhọn là tên các phần tử của cấu trúc và kiểu của chúng.
+<P>Nếu định nghĩa của cấu trúc bao gồm tham số <TT><I>model_name</I></TT> (tuỳ 
+chọn), tham số này trở thành một tên kiểu hợp lệ tương đương với cấu trúc. Ví 
+dụ: 
+<BLOCKQUOTE><TT><PRE>struct products {
+  char name [30];
+  float price;
+} ;
+
+products apple;
+products orange, melon;</PRE></TT></BLOCKQUOTE>Chúng ta đã định nghĩa cấu trúc 
+<TT><B>products</B></TT> với hai trường: <TT><B>name</B></TT> và 
+<TT><B>price</B></TT>, mỗi trường có một kiểu khác nhau. Chúng ta cũng đã sử 
+dụng tên của kiểu cấu trúc (<TT><B>products</B></TT>) để khai báo ba đối tượng 
+có kiểu đó : <TT><B>apple</B></TT>, <TT><B>orange</B></TT> và 
+<TT><B>melon</B></TT>. 
+<P>Sau khi được khai báo, <TT><B>products</B></TT> trở thành một tên kiểu hợp lệ 
+giống các kiểu cơ bản như <I>int</I>, <I>char</I> hay <I>short</I>.</P>
+<P>Trường tuỳ chọn <TT><I>object_name</I></TT> có thể nằm ở cuối của phần khai 
+báo cấu trúc dùng để khai báo trực tiếp đối tượng có kiểu cấu trúc. Ví dụ, để 
+khai báo các đối tượng <TT><B>apple</B></TT>, <TT><B>orange</B></TT> và 
+<TT><B>melon</B></TT> như đã làm ở phần trước chúng ta cũng có thể làm theo cách 
+sau:</P>
+<BLOCKQUOTE><TT><PRE>struct products {
+  char name [30];
+  float price;
+} apple, orange, melon;</PRE></TT></BLOCKQUOTE>Hơn nữa, trong trường hợp này 
+tham số <TT><I>model_name</I></TT> trở thành tuỳ chọn. Mặc dù nếu 
+<TT><I>model_name</I></TT> không được sử dụng thì chúng ta sẽ không thể khai báo 
+thêm các đối tượng có kiểu mẫu này.
+<P>Một điều quan trọng là cần phân biệt rõ ràng đâu là <B>kiểu mẫu</B> cấu trúc, 
+đâu là <B>đối tượng </B>cấu trúc. Nếu dùng các thuật ngữ chúng ta đã sử dụng với 
+các biến, kiểu mẫu là tên kiểu dữ liệu còn đối tượng là các biến.</P>
+<P>Sau khi đã khai báo ba đối tượng có kiểu là một mẫu cấu trúc xác định 
+(<TT><B>apple</B></TT>, <TT><B>orange</B></TT> and <TT><B>melon</B></TT>) chúng 
+ta có thể thao tác với các trường tạo nên chúng. Để làm việc này chúng ta sử 
+dụng một dấu chấm (<TT>.</TT>) chèn ở giữa tên đối tượng và tên trường. Ví dụ, 
+chúng ta có thể thao tác với bất kì phần tử nào của cấu trúc như là đối với các 
+biến chuẩn : 
+<BLOCKQUOTE>
+  <P><TT><FONT 
+  color=blue>apple.name<BR>apple.price<BR>orange.name<BR>orange.price<BR>melon.name<BR>melon.price</FONT></TT></P></BLOCKQUOTE>mỗi 
+trường có kiểu dữ liệu tương ứng: <TT><B>apple.name</B></TT>, 
+<TT><B>orange.name</B></TT> và <TT><B>melon.name</B></TT> có kiểu 
+<TT><B>char[30]</B></TT>, và <TT><B>apple.price</B></TT>, 
+<TT><B>orange.price</B></TT> và <TT><B>melon.price</B></TT> có kiểu 
+<TT><B>float</B></TT>. 
+<P>Chúng ta tạm biệt apples, oranges và melons để đến với một ví dụ về các bộ 
+phim:
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// example about structures</I>
+#include &lt;iostream.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct movies_t {
+  char title [50];
+  int year;
+} mine, yours;
+
+void printmovie (movies_t movie);
+
+int main ()
+{
+  char buffer [50];
+
+  strcpy (mine.title, "2001 A Space Odyssey");
+  mine.year = 1968;
+
+  cout &lt;&lt; "Enter title: ";
+  cin.getline (yours.title,50);
+  cout &lt;&lt; "Enter year: ";
+  cin.getline (buffer,50);
+  yours.year = atoi (buffer);
+
+  cout &lt;&lt; "My favourite movie is:\n ";
+  printmovie (mine);
+  cout &lt;&lt; "And yours:\n ";
+  printmovie (yours);
+  return 0;
+}
+
+void printmovie (movies_t movie)
+{
+  cout &lt;&lt; movie.title;
+  cout &lt;&lt; " (" &lt;&lt; movie.year &lt;&lt; ")\n";
+}
+
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>Enter title:</B> 
+      Alien<BR><B>Enter year:</B> 1979<BR>&nbsp;<BR><B>My favourite movie 
+      is:<BR>&nbsp;2001 A Space Odyssey (1968)<BR>And yours:<BR>&nbsp;Alien 
+      (1979)<BR></B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Ví dụ này cho chúng ta thấy cách sử dụng các phần tử của một cấu trúc và bản 
+thân cấu trúc như là các biến thông thường. Ví dụ, <TT><B>yours.year</B></TT> là 
+một biến hợp lệ có kiểu <B><TT>int</TT></B> cũng như <TT><B>mine.title</B></TT> 
+là một mảng hợp lệ với 50 phần tử kiểu <I>chars</I>. 
+<P>Chú ý rằng cả <TT><B>mine</B></TT> and <TT><B>yours</B></TT> đều được coi là 
+các biến hợp lệ kiểu <TT><B>movie_t</B></TT> khi được truyền cho hàm 
+<TT><B>printmovie()</B></TT>.Hơn nữa một lợi thế quan trọng của cấu trúc là 
+chúng ta có thể xét các phần tử của chúng một cách riêng biệt hoặc toàn bộ cấu 
+trúc như là một khối. 
+<P>Các cấu trúc được sử dụng rất nhiều để xây dựng cơ sở dữ liệu đặc biệt nếu 
+chúng ta xét đến khả năng xây dựng các mảng của chúng.
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// array of structures</I>
+#include &lt;iostream.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define N_MOVIES 5
+
+struct movies_t {
+  char title [50];
+  int year;
+} films [N_MOVIES];
+
+void printmovie (movies_t movie);
+
+int main ()
+{
+  char buffer [50];
+  int n;
+  for (n=0; n&lt;N_MOVIES; n++)
+  {
+    cout &lt;&lt; "Enter title: ";
+    cin.getline (films[n].title,50);
+    cout &lt;&lt; "Enter year: ";
+    cin.getline (buffer,50);
+    films[n].year = atoi (buffer);
+  }
+  cout &lt;&lt; "\nYou have entered these movies:\n";
+  for (n=0; n&lt;N_MOVIES; n++)
+    printmovie (films[n]);
+  return 0;
+}
+
+void printmovie (movies_t movie)
+{
+  cout &lt;&lt; movie.title;
+  cout &lt;&lt; " (" &lt;&lt; movie.year &lt;&lt; ")\n";
+}
+
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>Enter title:</B> 
+      Alien<BR><B>Enter year:</B> 1979<BR><B>Enter title:</B> Blade 
+      Runner<BR><B>Enter year:</B> 1982<BR><B>Enter title:</B> 
+      Matrix<BR><B>Enter year:</B> 1999<BR><B>Enter title:</B> Rear 
+      Window<BR><B>Enter year:</B> 1954<BR><B>Enter title:</B> Taxi 
+      Driver<BR><B>Enter year:</B> 1975<BR>&nbsp;<BR><B>You have entered these 
+      movies:<BR>Alien (1979)<BR>Blade Runner (1982)<BR>Matrix (1999)<BR>Rear 
+      Window (1954)<BR>Taxi Driver 
+(1975)<BR></B></TT></TD></TR></TBODY></TABLE></CENTER>
+<H2>Con trỏ trỏ đến cấu trúc</H2>Như bất kì các kiểu dữ liệu nào khác, các cấu 
+trúc có thể được trỏ đến bởi con trỏ. Quy tắc hoàn toàn giống như đối với bất kì 
+kiểu dữ liệu cơ bản nào: 
+<BLOCKQUOTE><TT><PRE>struct movies_t {
+  char title [50];
+  int year;
+};
+
+movies_t amovie;
+movies_t * pmovie;</PRE></TT></BLOCKQUOTE>Ở đây <TT><B>amovie</B></TT> là một 
+đối tượng có kiểu <TT><B>movies_t</B></TT> và <TT><B>pmovie</B></TT> là một con 
+trỏ trỏ tới đối tượng <TT><B>movies_t</B></TT>. OK, bây giờ chúng ta sẽ đến với 
+một ví dụ khác, nó sẽ giới thiệu một toán tử mới:&nbsp;
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// pointers to structures</I>
+#include &lt;iostream.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct movies_t {
+  char title [50];
+  int year;
+};
+
+
+int main ()
+{
+  char buffer[50];
+
+  movies_t amovie;
+  movies_t * pmovie;
+  pmovie = &amp; amovie;
+
+  cout &lt;&lt; "Enter title: ";
+  cin.getline (pmovie-&gt;title,50);
+  cout &lt;&lt; "Enter year: ";
+  cin.getline (buffer,50);
+  pmovie-&gt;year = atoi (buffer);
+
+  cout &lt;&lt; "\nYou have entered:\n";
+  cout &lt;&lt; pmovie-&gt;title;
+  cout &lt;&lt; " (" &lt;&lt; pmovie-&gt;year &lt;&lt; ")\n";
+
+  return 0;
+}
+
+
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><TT><B>Enter title:</B> 
+      Matrix<BR><B>Enter year:</B> 1999<BR>&nbsp;<BR><B>You have 
+      entered:<BR>Matrix (1999)<BR></B></TT></TD></TR></TBODY></TABLE></CENTER>
+<P>Đoạn mã trên giới thiệu một điều quan trọng: toán tử <TT><B>-&gt;</B></TT>. 
+Đây là một toán tử tham chiếu chỉ dùng để trỏ tới các cấu trúc và các lớp 
+(class). Nó cho phép chúng ta không phải dùng ngoặc mỗi khi tham chiếu đến một 
+phần tử của cấu trúc. Trong ví dụ này chúng ta sử dụng: 
+<BLOCKQUOTE>
+  <P><TT>movies-&gt;title</TT></P></BLOCKQUOTE>nó có thể được dịch thành: 
+<BLOCKQUOTE>
+  <P><TT>(*movies).title</TT></P></BLOCKQUOTE>cả hai biểu thức 
+<TT><B>movies-&gt;title</B></TT> và <TT><B>(*movies).title</B></TT> đều hợp lệ 
+và chúng đều dùng để tham chiếu đến phần tử <TT><B>title</B></TT> của cấu trúc 
+<U>được trỏ bởi</U> <TT><B>movies</B></TT>. Bạn cần phân biệt rõ ràng với: 
+<BLOCKQUOTE>
+  <P><TT>*movies.title</TT></P></BLOCKQUOTE>nó tương đương với 
+<BLOCKQUOTE>
+  <P><TT>*(movies.title)</TT></P></BLOCKQUOTE>lệnh này dùng để tính toán giá trị 
+được trỏ bởi phần tử <TT><B>title</B></TT> của cấu trúc <TT><B>movies</B></TT>, 
+trong trường hợp này (title không phải là một con trỏ) nó chẳng có ý nghĩa gì 
+nhiều. Bản dưới đây tổng kết tất cả các kết hợp có thể được giữa con trỏ và cấu 
+trúc: <BR>
+<BLOCKQUOTE>
+  <TABLE border=1 cellPadding=2>
+    <TBODY>
+    <TR>
+      <TD bgColor=silver><B>Biểu thức</B></TD>
+      <TD bgColor=silver><B>Mô tả</B></TD>
+      <TD bgColor=silver><B>Tương đương với</B></TD></TR>
+    <TR>
+      <TD><TT><B>movies.title</B></TT></TD>
+      <TD>Phần tử <TT><B>title</B></TT> của cấu trúc <TT><B>movies</B></TT></TD>
+      <TD><TT>&nbsp;</TT></TD></TR>
+    <TR>
+      <TD><TT><B>movies-&gt;title</B></TT></TD>
+      <TD>Phần tử <B><TT>title</TT> </B>của cấu trúc được trỏ bởi 
+        <TT><B>movies</B></TT></TD>
+      <TD><TT>(*movies).title</TT></TD></TR>
+    <TR>
+      <TD><TT><B>*movies.title</B></TT></TD>
+      <TD>Giá trị được trỏ bởi phần tử <TT><B>title</B></TT> của cấu trúc 
+        <B><TT>movies</TT></B></TD>
+      <TD><TT>*(movies.title)</TT></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<H2>Các cấu trúc lồng nhau</H2>Các cấu trúc có thể được đặt lồng nhau vì vậy một 
+phần tử hợp lệ của một cấu trúc có thể là một cấu trúc khác. 
+<BLOCKQUOTE><TT><PRE>struct movies_t {
+  char title [50];
+  int year;
+}
+
+struct friends_t {
+  char name [50];
+  char email [50];
+  movies_t favourite_movie;
+  } charlie, maria;
+
+friends_t * pfriends = &amp;charlie;
+</PRE></TT></BLOCKQUOTE>Vì vậy, sau phần khai báo trên chúng ta có thể sử dụng 
+các biểu thức sau: 
+<BLOCKQUOTE>
+  <P><TT>charlie.name<BR>maria.favourite_movie.title<BR>charlie.favourite_movie.year<BR>pfriends-&gt;favourite_movie.year<BR></TT></P></BLOCKQUOTE>(trong 
+đó hai biểu thức cuối cùng là tương đương). 
+<P>Các khái niệm cơ bản về cấu trúc được đề cập đến trong phần này là hoàn toàn 
+giống với ngôn ngữ C, tuy nhiên trong C++, cấu trúc đã được mở rộng thêm các 
+chức năng của một lớp với tính chất đặc trưng là tất cả các phần tử của nó đều 
+là công cộng (public). Bạn sẽ có thêm các thông tin chi tiết trong phần&nbsp; <A 
+href="http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai4_1.htm">4.1, 
+Lớp</A>.</P>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><A 
+      href="bai3-4.htm"><IMG 
+      align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR><B>3-4. Bộ nhớ động</B></A></TD>
+    <TD align=middle width="10%"><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></TD>
+    <TD align=left width="45%"><A 
+      href="bai3-6.htm"><IMG 
+      align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26>Bài sau:<BR><B>3-6. Các</B><B> kiểu dữ liệu tự định 
+    nghĩa</B></A></TD></TR></TBODY></TABLE></BODY></HTML>

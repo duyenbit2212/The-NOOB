@@ -1,0 +1,464 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai3_3.htm -->
+<HTML><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 3</TITLE>
+<META content=en-us http-equiv=Content-Language>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE type=text/css>BODY {
+	FONT-FAMILY: Times New Roman, Times
+}
+</STYLE>
+</HEAD>
+<BODY>
+<SCRIPT laguage="JavaScript">function open() {return false;}</SCRIPT>
+
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      homepage</A><FONT color=#0000ff>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B>Bài 3.3</B></P>
+<H2>Con trỏ</H2>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<P>Chúng ta đã biết các biến chính là các ô nhớ mà chúng ta có thể truy xuất 
+dưới các tên. Các biến này được lưu trữ tại những chỗ cụ thể trong bộ nhớ. Đối 
+với chương trình của chúng ta, bộ nhớ máy tính chỉ là một dãy gồm các ô nhớ 1 
+byte, mỗi ô có một địa chỉ xác định.
+<P>Một sự mô hình tốt đối với bộ nhớ máy tính chính là một phố trong một thành 
+phố. Trên một phố tất cả các ngôi nhà đều được đánh số tuần tự với một cái tên 
+duy nhất nên nếu chúng ta nói đến số 27 phố Trần Hưng Đạo thì chúng ta có thể 
+tìm được nơi đó mà không lầm lẫn vì chỉ có một ngôi nhà với số như vậy.</P>
+<P>Cũng với cách tổ chức tương tự như việc đánh số các ngôi nhà, hệ điều hành tổ 
+chức bộ nhớ thành những số đơn nhất, tuần tự, nên nếu chúng ta nói đến vị trí 
+1776 trong bộ nhớ chúng ta biết chính xác ô nhớ đó vì chỉ có một vị trí với địa 
+chỉ như vậy. 
+<H2>Toán tử lấy địa chỉ (<TT>&amp;</TT>).</H2>Vào thời điểm mà chúng ta khai báo 
+một biến thì nó phải được lưu trữ trong một vị trí cụ thể trong bộ nhớ. Nói 
+chung chúng ta không quyết định nơi nào biến đó được đặt - thật may mắn rằng 
+điều đó đã được làm tự động bởi trình biên dịch và hệ điều hành, nhưng một khi 
+hệ điều hành đã gán một địa chỉ cho biến thì chúng ta có thể muốn biết biến đó 
+được lưu trữ ở đâu. 
+<P>Điều này có thể được thực hiện bằng cách đặt trước tên biến một dấu và 
+(<TT>&amp;</TT>), có nghĩa là "<B><I>địa chỉ của</I></B>". Ví dụ: 
+<BLOCKQUOTE>
+  <P><TT>ted = &amp;andy;</TT></P></BLOCKQUOTE>sẽ gán cho biến <TT><B>ted</B></TT> 
+địa chỉ của biến <TT><B>andy</B></TT>, vì khi đặt trước tên biến 
+<B><TT>andy</TT></B> dấu và (<TT>&amp;</TT>) chúng ta không còn nói đến nội dung 
+của biến đó mà chỉ nói đến địa chỉ của nó trong bộ nhớ. 
+<P>Giả sử rằng biến <TT><B>andy</B></TT> được đặt ở ô nhớ có địa chỉ 
+<TT><B>1776</B></TT> và chúng ta viết như sau: 
+<BLOCKQUOTE>
+  <P><TT>andy = 25;<BR>fred = andy;<BR>ted = &amp;andy;</TT></P></BLOCKQUOTE>kết 
+quả sẽ giống như trong sơ đồ dưới đây: 
+<BLOCKQUOTE>
+  <P><IMG height=136 
+  src="imgpoin1.gif" 
+  width=404> </P></BLOCKQUOTE>Chúng ta đã gán cho <TT><B>fred</B></TT> nội dung 
+của biến <TT><B>andy</B></TT> như chúng ta đã làm rất lần nhiều khác trong những 
+phần trước nhưng với biến <TT><B>ted</B></TT> chúng ta đã gán <I><U>địa chỉ 
+</U></I>mà hệ điều hành lưu giá trị của biến <TT><B>andy</B></TT>, chúng ta vừa 
+giả sử nó là <B><TT>1776</TT></B>. 
+<P>Những biến lưu trữ địa chỉ của một biến khác (như <TT><B>ted</B></TT> ở trong 
+ví dụ trước) được gọi là <B>con trỏ</B>. Trong C++ con trỏ có rất nhiều ưu điểm 
+và chúng được sử dụng rất thường xuyên, Tiếp theo chúng ta sẽ thấy các biến kiểu 
+này được khai báo như thế nào. 
+<H2>Toán tử tham chiếu (<TT>*</TT>)</H2>Bằng cách sử dụng con trỏ chúng ta có 
+thể truy xuất trực tiếp đến giá trị được lưu trữ trong biến được trỏ bởi nó bằng 
+cách đặ trước tên biến con trỏ một dấu sao (<TT>*</TT>) - ở đây có thể được dịch 
+là "<B>giá trị được trỏ bởi</B>". Vì vậy, nếu chúng ta viết: 
+<BLOCKQUOTE>
+  <P><TT>beth = *ted;</TT></P></BLOCKQUOTE>(chúng ta có thể đọc nó là: "beth bằng 
+<U>giá trị được trỏ bởi</U> ted" <TT><B>beth</B></TT> sẽ mang giá trị 
+<TT><B>25</B></TT>, vì <TT><B>ted</B></TT> bằng <B><TT>1776</TT></B> và giá trị 
+trỏ bởi <TT><B>1776</B></TT> là <TT><B>25</B></TT>. 
+<BLOCKQUOTE>
+  <P><IMG height=197 
+  src="imgpoin2.gif" 
+  width=479></P></BLOCKQUOTE>Bạn phải phân biệt được rằng <TT><B>ted</B></TT> có 
+giá trị <TT><B>1776</B></TT>, nhưng <TT><B>*ted</B></TT> (với một dấu sao đằng 
+trước) trỏ tới giá trị được lưu trữ trong địa chỉ <TT><B>1776</B></TT>, đó là 
+<TT><B>25</B></TT>. Hãy chú ý sự khác biệt giữa việc có hay không có dấu sao 
+tham chiếu. 
+<BLOCKQUOTE><TT><PRE><B>beth = ted;</B>   <FONT color=green><I>// beth bằng ted ( 1776 )</I></FONT>
+<B>beth = *ted;</B>  <FONT color=green><I>// beth bằng <B>giá trị được trỏ bởi</B>( 25 )</I></FONT></PRE></TT></BLOCKQUOTE>
+<TABLE cellPadding=5>
+  <TBODY>
+  <TR>
+    <TD bgColor=#bfbfff><B>Toán tử lấy địa chỉ (<TT>&amp;</TT>)</B><BR>Nó được 
+      dùng như là một tiền tố của biến và có thể được dịch là "<B>địa chỉ 
+      của</B>", vì vậy <TT>&amp;variable1</TT> có thể được đọc là "địa chỉ của 
+      <I><TT>variable1</TT>".</I> 
+      <P><B>Toán tử tham chiếu (<TT>*</TT>)</B><BR>Nó chỉ ra rằng cái cần được 
+      tính toán là nội dung được trỏ bởi biểu thức được coi như là một địa chỉ. 
+      Nó có thể được dịch là "<B>giá trị được trỏ 
+      bởi</B>"..<BR><TT>*mypointer</TT> được đọc là <I>"giá trị được trỏ bởi 
+      <TT>mypointer</TT>"</I>.</P></TD></TR></TBODY></TABLE>
+<P>Vào lúc này, với những ví dụ đã viết ở trên 
+<BLOCKQUOTE>
+  <P><TT>andy = 25;<BR>ted = &amp;andy;</TT></P></BLOCKQUOTE>bạn có thể dễ dàng 
+nhận ra tất cả các biểu thức sau là đúng: 
+<BLOCKQUOTE><PRE><TT><FONT color=blue>andy == 25
+&amp;andy == 1776
+ted == 1776
+*ted == 25</FONT></TT></PRE></BLOCKQUOTE>
+<H2>Khai báo biến kiểu con trỏ</H2>Vì con trỏ có khả năng tham chiếu trực tiếp 
+đến giá trị mà chúng trỏ tới nên cần thiết phải chỉ rõ kiểu dữ liệu nào mà một 
+biến con trỏ trỏ tới khai báo nó. Vì vậy, khai báo của một biến con trỏ sẽ có 
+mẫu sau: 
+<BLOCKQUOTE>
+  <P><TT><B><I>type * pointer_name</I>;</B></TT></P></BLOCKQUOTE>trong đó 
+<TT><B><I>type</I></B></TT> là kiểu dữ liệu được trỏ tới, <U>không phải</U> là 
+kiểu của bản thân con trỏ. Ví dụ: 
+<BLOCKQUOTE>
+  <P><TT>int * number;<BR>char * character;<BR>float * 
+greatnumber;</TT></P></BLOCKQUOTE>đó là ba khai báo của con trỏ. Mỗi biến đầu 
+trỏ tới một kiểu dữ liệu khác nhau nhưng cả ba đều là con trỏ và chúng đều chiếm 
+một lượng bộ nhớ như nhau (kích thước của một biến con trỏ tùy thuộc vào hệ điều 
+hành). nhưng dữ liệu mà chúng trỏ tới không chiếm lượng bộ nhớ như nhau, một 
+kiểu <TT><B>int</B></TT>, một kiểu <TT><B>char</B></TT> và cái còn lại kiểu 
+<TT><B>float</B></TT>. 
+<P>Tôi phải nhấn mạnh lại rằng dấu sao (<TT>*</TT>) mà chúng ta đặt khi khai báo 
+một con trỏ chỉ có nghĩa rằng: đó là một con trỏ và hoàn toàn không liên quan 
+đến toán tử tham chiếu mà chúng ta đã xem xét trước đó. Đó đơn giản chỉ là hai 
+tác vụ khác nhau được biểu diễn bởi cùng một dấu.</P>
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// my first pointer</I>
+#include &lt;iostream.h&gt;
+
+int main ()
+{
+  int value1 = 5, value2 = 15;
+  int * mypointer;
+
+  mypointer = &amp;value1;
+  *mypointer = 10;
+  mypointer = &amp;value2;
+  *mypointer = 20;
+  cout &lt;&lt; "value1==" &lt;&lt; value1 &lt;&lt; "/ value2==" &lt;&lt; value2;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><B><TT>value1==10 / 
+      value2==20</TT></B></TD></TR></TBODY></TABLE></CENTER>Chú ý rằng giá trị của 
+<TT><B>value1</B></TT> và <TT><B>value2</B></TT> được thay đổi một cách gián 
+tiếp. Đầu tiên chúng ta gán cho <TT><B>mypointer</B></TT> địa chỉ của 
+<TT><B>value1</B></TT> dùng toán tử lấy địa chỉ (<TT>&amp;</TT>) và sau đó chúng 
+ta gán <TT><B>10</B></TT> cho giá trị được trỏ bởi <TT><B>mypointer</B></TT>, đó 
+là giá trị được trỏ bởi <B><TT>value1</TT></B> vì vậy chúng ta đã sửa biến 
+<TT><B>value1</B></TT> một cách gián tiếp 
+<P>Để bạn có thể thấy rằng một con trỏ có thể mang một vài giá trị trong cùng 
+một chương trình chúng ta sẽ lặp lại quá trình với <TT><B>value2</B></TT> và với 
+cùng một con trỏ. 
+<P>Đây là một ví dụ phức tạp hơn một chút: 
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// more pointers</I>
+#include &lt;iostream.h&gt;
+
+int main ()
+{
+  int value1 = 5, value2 = 15;
+  int *p1, *p2;
+
+  p1 = &amp;value1;     <I>// p1 = địa chỉ của value1</I>
+  p2 = &amp;value2;     <I>// p2 = địa chỉ của value2</I>
+  *p1 = 10;         <I>// giá trị trỏ bởi p1 = 10</I>
+  *p2 = *p1;        <I>// giá trị trỏ bởi p2 = giá trị trỏ bởi p1</I>
+  p1 = p2;          <I>// p1 = p2 (phép gán con trỏ)</I>
+  *p1 = 20;         <I>// giá trị trỏ bởi p1 = 20</I>
+  
+  cout &lt;&lt; "value1==" &lt;&lt; value1 &lt;&lt; "/ value2==" &lt;&lt; value2;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><B><TT>value1==10 / 
+      value2==20</TT></B></TD></TR></TBODY></TABLE>
+<P>Một dòng có thể gây sự chú ý của bạn là: 
+<BLOCKQUOTE>
+  <P><TT>int *p1, *p2;</TT></P></BLOCKQUOTE>dòng này khai báo hai con trỏ bằng 
+cách đặt dấu sao (<TT>*</TT>) trước mỗi con trỏ. Nguyên nhân là kiểu dữ liệu 
+khai báo cho cả dòng là <TT><B>int</B></TT> và vì theo thứ tự từ phải sang trái, 
+dấu sao được tính trước tên kiểu. Chúng ta đã nói đến điều này trong bài <A 
+href="http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai1_3.htm">1.3: 
+Các toán tử</A>. 
+<H2>Con trỏ và mảng.</H2>Trong thực tế, tên của một mảng tương đương với địa chỉ 
+phần tử đầu tiên của nó, giống như một con trỏ tương đương với địa chỉ của phần 
+tử đầu tiên mà nó trỏ tới, vì vậy thực tế chúng hoàn toàn như nhau. Ví dụ, cho 
+hai khai báo sau: 
+<BLOCKQUOTE>
+  <P><TT>int numbers [20];<BR>int * p; </TT></P></BLOCKQUOTE>lệnh sau sẽ hợp lệ: 
+<BLOCKQUOTE>
+  <P><TT>p = numbers;</TT> </P></BLOCKQUOTE>Ở đây <TT><B>p</B></TT> và 
+<TT><B>numbers</B></TT> là tương đương và chúng có cũng thuộc tính, sự khác biệt 
+duy nhất là chúng ta có thể gán một giá trị khác cho con trỏ <TT><B>p</B></TT> 
+trong khi <TT><B>numbers</B></TT> luôn trỏ đến phần tử đầu tiên trong số 20 phần 
+tử kiểu <TT>int</TT> mà nó được định nghĩa với. Vì vậy, không giống như 
+<B><TT>p</TT></B> - đó là một biến con trỏ bình thường, <TT><B>numbers</B></TT> 
+là một con trỏ hằng. Lệnh gán sau đây là không hợp lệ: 
+<BLOCKQUOTE>
+  <P><TT><FONT color=red>numbers = p; </FONT></TT></P></BLOCKQUOTE>bởi vì 
+<TT><B>numbers</B></TT> là một mảng (con trỏ hằng) và không có giá trị nào có 
+thể được gán cho các hằng. 
+<P>Vì con trỏ cũng có mọi tính chất của một biến nên tất cả các biểu thức có con 
+trỏ trong ví dụ dưới đây là hoàn toàn hợp lệ:
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// more pointers</I>
+#include &lt;iostream.h&gt;
+
+int main ()
+{
+  int numbers[5];
+  int * p;
+  p = numbers;  *p = 10;
+  p++;  *p = 20;
+  p = &amp;numbers[2];  *p = 30;
+  p = numbers + 3;  *p = 40;
+  p = numbers;  *(p+4) = 50;
+  for (int n=0; n&lt;5; n++)
+    cout &lt;&lt; numbers[n] &lt;&lt; ", ";
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><B><TT>10, 20, 30, 40, 
+      50,</TT></B></TD></TR></TBODY></TABLE></CENTER>
+<P>Trong bài "mảng" chúng ta đã dùng dấu ngoặc vuông để chỉ ra phần tử của mảng 
+mà chúng ta muốn trỏ đến. Cặp ngoặc vuông này được coi như là toán tử offset và 
+ý nghĩa của chúng không đổi khi được dùng với biến con trỏ. Ví dụ, hai biểu thức 
+sau đây: 
+<BLOCKQUOTE><TT><PRE>a[5] = 0;       <I><FONT color=green>// a [offset of 5] = 0</FONT></I>
+*(a+5) = 0;     <I><FONT color=green>// pointed by (a+5) = 0</FONT></I></PRE></TT></BLOCKQUOTE>là 
+hoàn toàn tương đương và hợp lệ bất kể <TT><B>a</B></TT> là mảng hay là một con 
+trỏ.
+<H2>Khởi tạo con trỏ</H2>Khi khai báo con trỏ có thể chúng ta sẽ muốn chỉ định 
+rõ ràng chúng sẽ trỏ tới biến nào,&nbsp; 
+<BLOCKQUOTE>
+  <P><TT>int number;<BR>int *tommy = &amp;number; </TT></P></BLOCKQUOTE>là tương 
+đương với: 
+<BLOCKQUOTE>
+  <P><TT>int number;<BR>int *tommy;<BR>tommy = &amp;number; 
+</TT></P></BLOCKQUOTE>Trong một phép gán con trỏ chúng ta phải luôn luôn gán địa 
+chỉ mà nó trỏ tới chứ không phải là giá trị mà nó trỏ tới. Bạn cần phải nhớ rằng 
+khi khai báo một biến con trỏ, dấu sao (<TT>*</TT>) được dùng để chỉ ra nó là 
+một con trỏ, và hoàn toàn khác với toán tử tham chiếu. Đó là hai toán tử khác 
+nhau mặc dù chúng được viết với cùng một dấu. Vì vậy, các câu lệnh sau là không 
+hợp lệ: 
+<BLOCKQUOTE>
+  <P><TT><FONT color=red>int number;<BR>int *tommy;<BR>*tommy = &amp;number; 
+  </FONT></TT></P></BLOCKQUOTE>
+<P>Như đối với mảng, trình biên dịch cho phép chúng ta khởi tạo giá trị mà con 
+trỏ trỏ tới bằng giá trị hằng vào thời điểm khai báo biến con trỏ: 
+<BLOCKQUOTE>
+  <P><TT>char * terry = "hello";</TT> </P></BLOCKQUOTE>trong trường hợp này một 
+khối nhớ tĩnh được dành để chứa <TT>"hello"</TT> và một con trỏ trỏ tới kí tự 
+đầu tiên của khối nhớ này (đó là kí tự h') được gán cho <TT><B>terry</B></TT>. 
+Nếu <TT>"hello"</TT> được lưu tại địa chỉ 1702, lệnh khai báo trên có thể được 
+hình dung như thế này: 
+<BLOCKQUOTE>
+  <P><IMG height=127 
+  src="imgpoin3.gif" 
+  width=359> </P></BLOCKQUOTE>cần phải nhắc lại rằng <TT><B>terry</B></TT> mang 
+giá trị <TT><B>1702</B></TT> chứ không phải là <TT><B>'h'</B></TT> hay 
+<B><TT>"hello"</TT></B>. 
+<P>Biến con trỏ <TT><B>terry</B></TT> trỏ tới một xâu kí tự và nó có thể được sử 
+dụng như là đối với một mảng (hãy nhớ rằng một mảng chỉ đơn thuần là một con trỏ 
+hằng). Ví dụ, nếu chúng ta muốn thay kí tự <TT><B>'o'</B></TT> bằng một dấu chấm 
+than, chúng ta có thể thực hiện việc đó bằng hai cách: 
+<BLOCKQUOTE>
+  <P><TT>terry[4] = '!';<BR>*(terry+4) = '!'; </TT></P></BLOCKQUOTE>hãy nhớ rằng 
+viết <TT><B>terry[4]</B></TT> là hoàn toàn giống với viết 
+<B><TT>*(terry+4)</TT></B> mặc dù biểu thức thông dụng nhất là cái đầu tiên. Với 
+một trong hai lệnh trên xâu do <TT><B>terry</B></TT> trỏ đến sẽ có giá trị như 
+sau: 
+<BLOCKQUOTE>
+  <P><IMG height=104 
+  src="imgpoin4.gif" 
+  width=342> </P></BLOCKQUOTE>
+<H2>Các phép tính số học với pointer</H2>Việc thực hiện các phép tính số học với 
+con trỏ hơi khác so với các kiểu dữ liệu số nguyên khác. Trước hết, chỉ phép 
+cộng và trừ là được phép dùng. Nhưng cả cộng và trừ đều cho kết quả phụ thuộc 
+vào <I><U>kích thước</U></I> của kiểu dữ liệu mà biến con trỏ trỏ tới.
+<P>Chúng ta thấy có nhiều kiểu dữ liệu khác nhau tồn tại và chúng có thể chiếm 
+chỗ nhiều hơn hoặc ít hơn các kiểu dữ liệu khác. Ví dụ, trong các kiểu số 
+nguyên, <I>char</I> chiếm 1 byte, <I>short</I> chiếm 2 byte và <I>long</I> chiếm 
+4 byte.
+<P>Giả sử chúng ta có 3 con trỏ sau: 
+<BLOCKQUOTE>
+  <P><TT>char *mychar;<BR>short *myshort;<BR>long *mylong; 
+</TT></P></BLOCKQUOTE>và chúng lần lượt trỏ tới ô nhớ <TT><B>1000</B></TT>, 
+<TT><B>2000</B></TT> and <B><TT>3000</TT></B>.
+<P>Nếu chúng ta viết 
+<BLOCKQUOTE>
+  <P><TT>mychar++;<BR>myshort++;<BR>mylong++; 
+</TT></P></BLOCKQUOTE><TT>mychar</TT> - như bạn mong đợi - sẽ mang giá trị 
+<TT>1001</TT>. Tuy nhiên <TT>myshort</TT> sẽ mang giá trị <TT>2002</TT> và 
+<TT>mylong</TT> mang giá trị <TT>3004</TT>. Nguyên nhân là khi cộng thêm 1 vào 
+một con trỏ thì nó sẽ trỏ tới phần tử tiếp theo có cùng kiểu mà nó đã được định 
+nghĩa, vì vậy kích thước tính bằng byte của kiểu dữ liệu nó trỏ tới sẽ được cộng 
+thêm vào biến con trỏ. 
+<BLOCKQUOTE>
+  <P><IMG height=232 
+  src="imgpoin5.gif" 
+  width=371> </P></BLOCKQUOTE>Điều này đúng với cả hai phép toán cộng và trừ đối 
+với con trỏ. Chúng ta cũng hoàn toàn thu được kết quả như trên nếu viết: 
+<BLOCKQUOTE>
+  <P><TT>mychar = mychar + 1;<BR>myshort = myshort + 1;<BR>mylong = mylong + 1; 
+  </TT></P></BLOCKQUOTE>Cần phải cảnh báo bạn rằng cả hai toán tử tăng 
+(<TT>++</TT>) và giảm (<TT>--</TT>) đều có quyền ưu tiên lớn hơn toán tử tham 
+chiếu (<TT>*</TT>), vì vậy biểu thức sau đây có thể dẫn tới kết quả sai: 
+<BLOCKQUOTE>
+  <P><TT>*p++;<BR>*p++ = *q++;</TT></P></BLOCKQUOTE>Lệnh đầu tiên tương đương với 
+<TT>*(p++)</TT> điều mà nó thực hiện là tăng <TT><B>p</B></TT> (địa chỉ ô nhớ mà 
+nó trỏ tới chứ không phải là giá trị trỏ tới).
+<P>Lệnh thứ hai, cả hai toán tử tăng (<TT>++</TT>) đều được thực hiện sau khi 
+giá trị của <TT>*q</TT> được gán cho <TT>*p</TT> và sau đó cả q và p đều tăng 
+lên 1. Lệnh này tương đương với:</P>
+<BLOCKQUOTE><TT>*p = *q;<BR>p++;<BR>q++;</TT> </BLOCKQUOTE>Như đã nói trong các 
+bài trước, tôi khuyên các bạn nên dùng các cặp ngoặc đơn để tránh những kết quả 
+không mong muốn. 
+<H2>Con trỏ trỏ tới con trỏ</H2>C++ cho phép sử dụng các con trỏ trỏ tới các con 
+trỏ khác giống như là trỏ tới dữ liệu. Để làm việc đó chúng ta chỉ cần thêm một 
+dấu sao (<TT>*</TT>) cho mỗi mức tham chiếu. 
+<BLOCKQUOTE>
+  <P><TT>char a;<BR>char * b;<BR>char ** c;<BR>a = 'z';<BR>b = &amp;a;<BR>c = 
+  &amp;b;</TT></P></BLOCKQUOTE>giả sử rằng a,b,c được lưu ở các ô nhớ 
+<TT><B>7230</B></TT>, <TT><B>8092</B></TT> and <TT><B>10502</B></TT>, ta có thể 
+mô tả đoạn mã trên như sau: 
+<BLOCKQUOTE>
+  <P><IMG height=83 
+  src="imgpoin6.gif" 
+  width=278></P></BLOCKQUOTE>Điểm mới trong ví dụ này là biến <TT><B>c</B></TT>, 
+chúng ta có thể nói về nó theo 3 cách khác nhau, mỗi cách sẽ tương ứng với một 
+giá trị khác nhau: 
+<BLOCKQUOTE>
+  <P><TT><FONT color=blue><B>c</B> là một biến có kiểu (char **) mang giá trị 
+  8092<BR><B>*c</B> là một biến có kiểu (char*) mang giá trị 7230<BR><B>**c</B> 
+  là một biến có kiểu (char) mang giá trị 'z'</FONT></TT></P></BLOCKQUOTE>
+<H2>Con trỏ không kiểu</H2>Con trỏ không kiểu là một loại con trỏ đặc biệt. Nó 
+có thể trỏ tới bất kì loại dữ liệu nào, từ giá trị nguyên hoặc thực cho tới một 
+xâu kí tự. Hạn chế duy nhất của nó là dữ liệu được trỏ tới không thể được tham 
+chiếu tới một cách trực tiếp (chúng ta không thể dùng toán tử tham chiếu * với 
+chúng) vì độ dài của nó là không xác định và vì vậy chúng ta phải dùng đến toán 
+tử chuyển kiểu dữ liệu hay phép gán để chuyển con trỏ không kiểu thành một con 
+trỏ trỏ tới một loại dữ liệu cụ thể.
+<P>Một trong những tiện ích của nó là cho phép truyền tham số cho hàm mà không 
+cần chỉ rõ kiểu
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// integer increaser</I>
+#include &lt;iostream.h&gt;
+
+void increase (void* data, int type)
+{
+  switch (type)
+  {
+    case sizeof(char) : (*((char*)data))++; break;
+    case sizeof(short): (*((short*)data))++; break;
+    case sizeof(long) : (*((long*)data))++; break;
+  }
+}
+
+int main ()
+{
+  char a = 5;
+  short b = 9;
+  long c = 12;
+  increase (&amp;a,sizeof(a));
+  increase (&amp;b,sizeof(b));
+  increase (&amp;c,sizeof(c));
+  cout &lt;&lt; (int) a &lt;&lt; ", " &lt;&lt; b &lt;&lt; ", " &lt;&lt; c;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top width="50%"><B><TT>6, 10, 
+  13</TT></B></TD></TR></TBODY></TABLE></CENTER><TT><B>sizeof</B></TT> là một toán 
+tử của ngôn ngữ C++, nó trả về một giá trị hằng là kích thước tính bằng byte của 
+tham số truyền cho nó, ví dụ <TT><B>sizeof(char)</B></TT> bằng <B><TT>1</TT></B> 
+vì kích thước của <TT><B>char</B></TT> là 1 byte.
+<H2>Con trỏ hàm</H2>C++ cho phép thao tác với các con trỏ hàm. Tiện ích tuyệt 
+vời này cho phép truyền một hàm như là một tham số đến một hàm khác. Để có thể 
+khai báo một con trỏ trỏ tới một hàm chúng ta phải khai báo nó như là khai báo 
+mẫu của một hàm nhưng phải bao trong một cặp ngoặc đơn <TT>()</TT> tên của hàm 
+và chèn dấu sao (<TT>*</TT>) đằng trước.&nbsp;
+<CENTER>
+<TABLE cellPadding=5 cellSpacing=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffbf vAlign=top width="50%"><TT><PRE><I>// pointer to functions</I>
+#include &lt;iostream.h&gt;
+
+int addition (int a, int b)
+{ return (a+b); }
+
+int subtraction (int a, int b)
+{ return (a-b); }
+
+int (*minus)(int,int) = subtraction;
+
+int operation (int x, int y, int (*functocall)(int,int))
+{
+  int g;
+  g = (*functocall)(x,y);
+  return (g);
+}
+
+int main ()
+{
+  int m,n;
+  m = operation (7, 5, &amp;addition);
+  n = operation (20, m, minus);
+  cout &lt;&lt;n;
+  return 0;
+}
+</PRE></TT></TD>
+    <TD bgColor=silver vAlign=top 
+width="50%"><B><TT>8</TT></B></TD></TR></TBODY></TABLE></CENTER>Trong ví dụ này, 
+<TT><B>minus</B></TT> là một con trỏ toàn cục trỏ tới một hàm có hai tham số 
+kiểu <TT><B>int</B></TT>, con trỏ này được gám để trỏ tới hàm 
+<TT><B>subtraction</B></TT>, tất cả đều trên một dòng: 
+<BLOCKQUOTE>
+  <P><TT>int (* minus)(int,int) = subtraction;</TT> </P></BLOCKQUOTE>
+<TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#0000ff><IMG border=0 height=2 
+      src="head0.gif" 
+      width=2></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=right width="45%"><A 
+      href="bai3-2.htm"><IMG 
+      align=right border=0 height=26 
+      src="butnback.gif" 
+      width=26>Bài trước:<BR><B>3-2. Xâu kí tự</B></A></TD>
+    <TD align=middle width="10%">
+      <P align=center><A 
+      href="index.htm"><IMG 
+      border=0 height=26 
+      src="butnindx.gif" 
+      width=26><BR>Mục lục</A></P></TD>
+    <TD align=left width="45%"><A 
+      href="bai3-4.htm"><IMG 
+      align=left border=0 height=26 
+      src="butnnext.gif" 
+      width=26>Bài sau:<BR><B>3-4. Bộ nhớ 
+động</B></A></TD></TR></TBODY></TABLE></BODY></HTML>

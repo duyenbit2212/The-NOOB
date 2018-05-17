@@ -1,0 +1,628 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.diendantinhoc.net/tute/laptrinh/c/cpp-nmthang/bai2_1.htm -->
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:v = 
+"urn:schemas-microsoft-com:vml" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word"><HEAD><TITLE>Dien dan tin hoc - IT Forum VN - Tutorial Room - Lập trình - C++ căn bản - Bài 2</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="MSHTML 5.00.3315.2870" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator><LINK 
+href="bai2_1_files/filelist.xml" rel=File-List><LINK 
+href="./Bai2.1_files/editdata.mso" rel=Edit-Time-Data><!--[if !mso]>
+<STYLE>v\:* {
+	BEHAVIOR: url(#default#VML)
+}
+o\:* {
+	BEHAVIOR: url(#default#VML)
+}
+w\:* {
+	BEHAVIOR: url(#default#VML)
+}
+.shape {
+	BEHAVIOR: url(#default#VML)
+}
+</STYLE>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Thang</o:Author>
+  <o:LastAuthor>Thang</o:LastAuthor>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2001-03-26T13:45:00Z</o:Created>
+  <o:LastSaved>2001-03-27T14:02:00Z</o:LastSaved>
+  <o:Pages>7</o:Pages>
+  <o:Words>1491</o:Words>
+  <o:Characters>8502</o:Characters>
+  <o:Company>DHBK</o:Company>
+  <o:Lines>70</o:Lines>
+  <o:Paragraphs>17</o:Paragraphs>
+  <o:CharactersWithSpaces>10441</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+ </w:WordDocument>
+</xml><![endif]-->
+<STYLE>P.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; MARGIN-LEFT: 0cm; MARGIN-RIGHT: 0cm; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto
+}
+PRE {
+	FONT-FAMILY: "Courier New"; FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Courier New"; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt
+}
+TT {
+	mso-fareast-font-family: "Courier New"; mso-ascii-font-family: "Courier New"; mso-hansi-font-family: "Courier New"; mso-bidi-font-family: "Courier New"
+}
+DIV.Section1 {
+	page: Section1
+}
+</STYLE>
+<!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<META content=en-us http-equiv=Content-Language><LINK 
+href="mycss.css" 
+rel=stylesheet type=text/css><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--></HEAD>
+<BODY lang=EN-US link=blue style="tab-interval: 36.0pt" vLink=blue>
+<SCRIPT 
+src="404.htm" 
+laguage="JavaScript"></SCRIPT>
+
+<DIV class=Section1>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc99 width="100%">
+      <P align=center><FONT color=#0000ff>[</FONT><A 
+      href="http://www.diendantinhoc.net/" target=_top>Diễn đàn tin học 
+      homepage</A><FONT color=#0000ff>] [<A 
+      href="http://www.diendantinhoc.net/tute/" target=_top>Tutorial 
+      Room</A>]</FONT></P></TD></TR></TBODY></TABLE>
+<P><B><FONT face="Times New Roman">Bài 2.1</FONT></B></P>
+<DIV 
+style="BORDER-BOTTOM: windowtext 3pt solid; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm">
+<P 
+style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; mso-border-bottom-alt: solid windowtext 3.0pt; mso-padding-alt: 0cm 0cm 0cm 0cm"><B><SPAN 
+style="FONT-SIZE: 18pt"><FONT face="Times New Roman">Các cấu trúc điều 
+khiển.</FONT></SPAN></B></P></DIV>
+<P><FONT face="Times New Roman">Một chương trình thường không chỉ bao gồm các 
+lệnh tuần tự nối tiếp nhau. Trong quá trình chạy nó có thể rẽ nhánh hay lặp lại 
+một đoạn mã nào đó. Để làm điều này chúng ta sử dụng các cấu trúc điều 
+khiển.</FONT> </P>
+<P><FONT face="Times New Roman">Cùng với việc giới thiệu các cấu trúc điều khiển 
+chúng ta cũng sẽ phải biết tới một khái niệm mới: <B>khối lệnh</B>, đó là một 
+nhóm các lệnh được ngăn cách bởi dấu chấm phẩy&nbsp; (;) nhưng được gộp trong 
+một khối giới hạn bởi một cặp ngoặc nhọn: <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">{</SPAN></B></TT> và 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">}</SPAN></B></TT>.</FONT></P>
+<P><FONT face="Times New Roman">Hầu hết các cấu trúc điều khiển mà chúng ta sẽ 
+xem xét trong chương này cho phép sử dụng một lệnh đơn hay một khối lệnh làm 
+tham số, tuỳ thuộc vào chúng ta có đặt nó trong cặp ngoặc nhọn hay 
+không.</FONT></P>
+<H2><FONT face="Times New Roman">Cấu trúc điều kiện: <I>if</I>&nbsp; và 
+<I>else</I></FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Cấu trúc này được dùng khi một 
+lệnh hay một khối lệnh chỉ được thực hiện khi một điều kiện nào đó thoả mãn. 
+Dạng của nó như sau:</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman"><TT><B><SPAN style="FONT-SIZE: 10pt">if 
+(</SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">) </SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I></TT></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">trong đó <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I></TT> là 
+biểu thức sẽ được tính toán. Nếu điều kiện đó là <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">true</SPAN></B></TT>, 
+<TT><B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I></B></TT> 
+được thực hiện. Nếu không <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I></TT> bị 
+bỏ qua (không thực hiện) và chương trình tiếp tục thực hiện lệnh tiếp sau cấu 
+trúc điều kiện.</FONT> </P>
+<P><FONT face="Times New Roman">Ví dụ, đoạn mã sau đây sẽ viết <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">x is 100</SPAN></B></TT> chỉ 
+khi biến&nbsp; <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">x</SPAN></B></TT> chứa giá 
+trị 100:</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">if (x == 
+100)</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>&nbsp; 
+cout &lt;&lt; "x is 100";</TT></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Nếu chúng ta muốn có hơn một 
+lệnh được thực hiện trong trường hợp <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I></TT> là 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">true</SPAN></B></TT> chúng 
+ta có thể chỉ định một <I>khối lệnh </I>bằng cách sử dụng một cặp ngoặc nhọn 
+<TT><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">{ 
+}</SPAN></TT>:</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">if (x == 
+100)</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>&nbsp;{</TT><BR><TT>&nbsp; 
+cout &lt;&lt; "x is ";</TT><BR><TT>&nbsp; cout &lt;&lt; 
+x;</TT><BR><TT>&nbsp;}</TT></SPAN></FONT></P>
+<P><FONT face="Times New Roman">Chúng ta cũng có thể chỉ định điều gì sẽ xảy ra 
+nếu điều kiện không được thoả mãn bằng cách sửu dụng từ khoá <I>else</I>. Nó 
+được sử dụng cùng với <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">if</SPAN></B></TT> như 
+sau:</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman"><TT><B><SPAN style="FONT-SIZE: 10pt">if 
+(</SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">) </SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement1</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt"> else </SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement2</SPAN></I></TT></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Ví dụ:</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">if (x == 
+100)</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>&nbsp; 
+cout &lt;&lt; "x is 100";</TT><BR><TT>else</TT><BR><TT>&nbsp; cout &lt;&lt; "x 
+is not 100";</TT></SPAN></FONT></P>
+<P><FONT face="Times New Roman">Cấu trúc <I>if</I> + <I>else</I> có thể được móc 
+nối để kiểm tra nhiều giá trị. Ví dụ sau đây sẽ kiểm tra xem giá trị chứa trong 
+biến <B>x</B> là dương, âm hay bằng không.</FONT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><SPAN style="FONT-SIZE: 10pt">if (x &gt; 
+0)</SPAN></TT><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>&nbsp; 
+cout &lt;&lt; "x is positive";</TT><BR><TT>else if (x &lt; 0)</TT><BR><TT>&nbsp; 
+cout &lt;&lt; "x is negative";</TT><BR><TT>else</TT><BR><TT>&nbsp; cout &lt;&lt; 
+"x is 0";</TT></SPAN> </FONT></P>
+<H2><FONT face="Times New Roman">Các cấu trúc lặp</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Mục đích của các vòng lặp là lặp 
+lại một thao tác với một số lần nhất định hoặc trong khi một điều kiện nào đó 
+còn thoả mãn.</FONT> </P>
+<P class=MsoNormal><B><FONT face="Times New Roman">Vòng lặp <I>while</I> 
+.</FONT></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Dạng 
+của nó như sau:</FONT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 72pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><B><SPAN style="FONT-SIZE: 10pt">while 
+(</SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">expression</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">) </SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I></TT></FONT> 
+</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">và 
+chức năng của nó đơn giản chỉ là lặp lại <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I></TT> 
+khi điều kiện <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">expression</SPAN></I></TT> 
+còn thoả mãn.</FONT> </P>
+<P style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Ví dụ, chúng ta sẽ 
+viết một chương trình đếm ngược sử dụng vào lặp <I>while</I>:</FONT></P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="MARGIN-LEFT: 36pt; WIDTH: 90%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="90%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I><FONT face="Courier New">// custom countdown using while</FONT></I></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>int n;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "Enter the starting number &gt; ";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cin &gt;&gt; n;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>while (n&gt;0) {</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; n &lt;&lt; ", ";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>--n;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>}</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "FIRE!";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><FONT face="Courier New"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt">Enter the starting number &gt; </SPAN></B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">8</SPAN></TT><SPAN 
+      style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT><B>8, 
+      7, 6, 5, 4, 3, 2, 1, 
+FIRE!</B></TT></SPAN></FONT></P></TD></TR></TBODY></TABLE></DIV>
+<P style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Khi chương trình chạy 
+người sử dụng được yêu cầu nhập vào một số để đếm ngược. Sau đó, khi vòng lặp 
+<TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">while</SPAN></I></TT> bắt 
+đầu nếu số mà người dùng nhập vào thoả mãn điều kiện điều kiện <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">n&gt;0</SPAN></B></TT> khối 
+lệnh sẽ được thực hiện một số lần không xác định chừng nào điều kiện 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">(n&gt;0)</SPAN></B></TT> còn 
+được thoả mãn.</FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 36pt 0pt"><FONT 
+face="Times New Roman">Chúng ta cần phải nhớ rằng vòng lặp phải kết thúc ở một 
+điểm nào đó, vì vậy bên trong vòng lặp chúng ta phải cung cấp một phương thức 
+nào đó để buộc <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I></TT> 
+trở thành sai nếu không thì nó sẽ lặp lại mãi mãi. Trong ví dụ trên vòng lặp 
+phải có lệnh <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">--n;</SPAN></B></TT> để làm 
+cho <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I></TT> 
+trở thành sai sau một số lần lặp.</FONT></P>
+<P class=MsoNormal><B><FONT face="Times New Roman">Vòng lặp 
+<I>do-while</I>&nbsp;</FONT></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Dạng 
+thức:</FONT></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 72pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><B><SPAN style="FONT-SIZE: 10pt">do 
+</SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt"> while (</SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">);</SPAN></B></TT></FONT> 
+</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Chức 
+năng của nó là hoàn toàn giống vòng lặp <I>while</I> chỉ trừ có một điều là điều 
+kiện điều khiển vòng lặp được tính toán <I><U>sau khi</U></I> <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I></TT> 
+được thực hiện, vì vậy <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I></TT> sẽ 
+được thực hiện ít nhất một lần ngay cả khi <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I></TT> 
+không bao giờ được thoả mãn. Ví dụ, chương trình dưới đây sẽ viết ra bất kì số 
+nào mà bạn nhập vào cho đến khi bạn nhập số 0.</FONT></P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="MARGIN-LEFT: 36pt; WIDTH: 90%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="90%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I><FONT face="Courier New">// number echoer</FONT></I></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">unsigned long n;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>do {</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; "Enter number (0 to end): ";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cin &gt;&gt; n;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; "You entered: " &lt;&lt; n &lt;&lt; "\n";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>} while (n != 0);</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><FONT face="Courier New"><TT><B><SPAN 
+      style="FONT-SIZE: 10pt">Enter number (0 to end): </SPAN></B><SPAN 
+      style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">12345</SPAN></TT><SPAN 
+      style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT><B>You 
+      entered: 12345</B></TT><BR><TT><B>Enter number (0 to end): 
+      </B>160277</TT><BR><TT><B>You entered: 160277</B></TT><BR><TT><B>Enter 
+      number (0 to end): </B>0</TT><BR><TT><B>You entered: 
+      0</B></TT></SPAN></FONT></P></TD></TR></TBODY></TABLE></DIV>
+<P style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Vòng lặp 
+<I>do-while</I> thường được dùng khi điều kiện để kết thúc vòng lặp nằm trong 
+vòng lặp, như trong ví dụ trên, số mà người dùng nhập vào là điều kiện kiểm tra 
+để kết thúc vòng lặp. Nếu bạn không nhập số 0 trong ví dụ trên thì vòng lặp sẽ 
+không bao giờ chấm dứt.</FONT></P>
+<P class=MsoNormal><B><FONT face="Times New Roman">Vòng lặp <I>for</I> 
+.</FONT></B> </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Dạng 
+thức:</FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 72pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><B><SPAN style="FONT-SIZE: 10pt">for 
+(</SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">initialization</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">; </SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">; </SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">increase</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">) </SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">;</SPAN></TT></FONT> </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">và 
+chức năng chính của nó là lặp lại <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I></TT> 
+chừng nào <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I></TT> 
+còn mang giá trị đúng, như trong vòng lặp <I>while</I>. Nhưng thêm vào đó, 
+<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">for</SPAN></B></TT> cung cấp 
+chỗ dành cho lệnh khởi tạo và lệnh tăng. Vì vậy vòng lặp này được thiết kế đặc 
+biệt lặp lại một hành động với một số lần xác định.</FONT> </P>
+<P style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Cách thức hoạt động 
+của nó như sau:</FONT> </P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT face="Times New Roman">1, 
+<TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">initialization</SPAN></I></TT> 
+được thực hiện. Nói chung nó đặt một giá khí ban đầu cho biến điều khiển. Lệnh 
+này được thực hiện <I><U>chỉ một lần</U></I>.<BR>2, <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">condition</SPAN></I></TT> 
+được kiểm tra, nếu nó là đúng vòng lặp tiếp tục còn nếu không vòng lặp kết thúc 
+và <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I></TT> 
+được bỏ qua.<BR>3, <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">statement</SPAN></I></TT> 
+được thực hiện. Nó có thể là một lệnh đơn hoặc là một khối lệnh được bao trong 
+một cặp ngoặc nhọn.<BR>4, Cuối cùng, <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">increase</SPAN></I></TT> 
+được thực hiện để tăng biến điều khiển và vòng lặp quay trở lại bước 
+2.</FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Sau 
+đây là một ví dụ đếm ngược sử dụng vòng <I>for</I>.&nbsp;</FONT></P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="MARGIN-LEFT: 36pt; WIDTH: 90%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="90%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I><FONT face="Courier New">// countdown using a for loop</FONT></I></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>for (int n=10; n&gt;0; n--) {</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; n &lt;&lt; ", ";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>}</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "FIRE!";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Courier New">10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 
+      FIRE!</FONT></SPAN></B></TT></P></TD></TR></TBODY></TABLE></DIV>
+<P style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Phần khởi tạo và lệnh 
+tăng không bắt buộc phải có. Chúng có thể được bỏ qua nhưng vẫn phải có dấu chấm 
+phẩy ngăn cách giữa các phần. Vì vậy, chúng ta có thể viết <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">for 
+(;n&lt;10;)</SPAN></B></TT> hoặc <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">for 
+(;n&lt;10;n++)</SPAN></B></TT>.</FONT></P>
+<P style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman">Bằng cách sử dụng dấu phẩy, chúng ta có thể dùng nhiều 
+lệnh trong bất kì trường nào trong vòng <I>for</I>, như là trong phần khởi tạo. 
+Ví dụ chúng ta có thể khởi tạo một lúc nhiều biến trong vòng lặp:</FONT> </P><PRE style="MARGIN: 0cm 72pt 0pt"><FONT face="Times New Roman">for ( n=0, i=100 ; n!=i ; n++, i-- )</FONT></PRE><PRE style="MARGIN: 0cm 72pt 0pt"><FONT face="Times New Roman">{</FONT></PRE><PRE style="MARGIN: 0cm 72pt 0pt"><FONT face="Times New Roman"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN><I><SPAN style="COLOR: green">// cái gì ở đây cũng được...</SPAN></I></FONT></PRE><PRE style="MARGIN: 0cm 72pt 0pt"><FONT face="Times New Roman">}</FONT></PRE>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman">Vòng lặp này sẽ thực hiện 50 lần nếu như n và i không bị 
+thay đổi trong thân vòng lặp:</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 72pt; MARGIN-RIGHT: 72pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><IMG height=59 id=_x0000_i1025 
+src="imgloop1.gif" 
+width=413></FONT></P>
+<H2><FONT face="Times New Roman">Các lệnh rẽ nhánh và lệnh nhảy</FONT></H2>
+<P class=MsoNormal><B><FONT face="Times New Roman">Lệnh 
+<I>break</I>.</FONT></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Sử 
+dụng <I>break</I> chúng ta có thể thoát khỏi vòng lặp ngay cả khi điều kiện để 
+nó kết thúc chưa được thoả mãn. Lệnh này có thể được dùng để kết thúc một&nbsp; 
+vòng lặp không xác định hay buộc nó phải kết thúc giữa chừng thay vì kết thúc 
+một cách bình thường. Ví dụ, chúng ta sẽ dừng việc đếm ngược trước khi nó kết 
+thúc:</FONT> </P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="MARGIN-LEFT: 36pt; WIDTH: 90%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="90%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I><FONT face="Courier New">// break loop example</FONT></I></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>int n;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>for (n=10; n&gt;0; n--) {</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; n &lt;&lt; ", ";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>if (n==3)</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>{</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; "countdown aborted!";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>break;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>}</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>}</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Courier New">10, 9, 8, 7, 6, 5, 4, countdown 
+      aborted!</FONT></SPAN></B></TT></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal><B><FONT face="Times New Roman">Lệnh 
+<I>continue</I>.</FONT></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Lệnh 
+<I>continue</I> làm cho chương trình bỏ qua phần còn lại của vòng lặp và nhảy 
+sang lần lặp tiếp theo. Ví dụ chúng ta sẽ bỏ qua số 5 trong phần đếm 
+ngược:</FONT></P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="MARGIN-LEFT: 36pt; WIDTH: 90%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="90%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I><FONT face="Courier New">// break loop example</FONT></I></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">for (int n=10; n&gt;0; n--) {</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>if (n==5) continue;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; n &lt;&lt; ", ";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>}</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "FIRE!";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Courier New">10, 9, 8, 7, 6, 4, 3, 2, 1, 
+      FIRE!</FONT></SPAN></B></TT></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal><B><FONT face="Times New Roman">Lệnh 
+<I>goto</I>.</FONT></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Lệnh 
+này cho phép nhảy vô điều kiện tới bất kì điểm nào trong chương trình. Nói chung 
+bạn nên tránh dùng nó trong chương trình C++. Tuy nhiên chúng ta vẫn có một ví 
+dụ dùng lệnh <B>goto</B> để đếm ngược:</FONT> </P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="MARGIN-LEFT: 36pt; WIDTH: 90%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="90%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><I><FONT face="Courier New">// goto loop example</FONT></I></PRE><PRE><FONT face="Courier New">#include &lt;iostream.h&gt;</FONT></PRE><PRE><FONT face="Courier New">int main ()</FONT></PRE><PRE><FONT face="Courier New">{</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">int n=10;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>loop: ;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; n &lt;&lt; ", ";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>n--;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>if (n&gt;0) goto loop;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "FIRE!";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>return 0;</FONT></PRE><PRE><FONT face="Courier New">}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: silver; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%">
+      <P class=MsoNormal><TT><B><SPAN style="FONT-SIZE: 10pt"><FONT 
+      face="Courier New">10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 
+      FIRE!</FONT></SPAN></B></TT></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal><B><FONT face="Times New Roman">Hàm 
+<I>exit.</I></FONT></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT face="Times New Roman">Mục 
+đích của exit&nbsp; là kết thúc chương trình và trả về một mã xác định. Dạng 
+thức của nó như sau</FONT> </P>
+<P style="MARGIN-LEFT: 72pt; MARGIN-RIGHT: 36pt"><FONT 
+face="Times New Roman"><TT><B><SPAN style="FONT-SIZE: 10pt">void exit (int 
+</SPAN></B><I><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">exit 
+code</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">);</SPAN></B></TT></FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><FONT 
+face="Times New Roman"><TT><I><SPAN style="FONT-SIZE: 10pt">exit 
+code</SPAN></I></TT> được dùng bởi một số hệ điều hành hoặc có thể được dùng bởi 
+các chương trình gọi. Theo quy ước, mã trả về 0 có nghĩa là chương trình kết 
+thúc bình thường còn các giá trị khác 0 có nghĩa là có lỗi.</FONT></P>
+<H2><FONT face="Times New Roman">Cấu trúc lựa chọn: <I>switch</I>.</FONT></H2>
+<P class=MsoNormal><FONT face="Times New Roman">Cú pháp của lệnh <I>switch</I> 
+hơi đặc biệt một chút. Mục đích của nó là kiểm tra một vài giá trị hằng cho một 
+biểu thức, tương tự với những gì chúng ta làm ở đầu bài này khi liên kết một vài 
+lệnh <I>if </I>và <I>else if</I> với nhau. Dạng thức của nó như sau:</FONT> </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT 
+face="Times New Roman"><TT><B><SPAN style="FONT-SIZE: 10pt">switch 
+(</SPAN></B><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">expression</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">) {</SPAN></B></TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR><TT>&nbsp; 
+case </TT></SPAN></B><TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">constant1</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">:</SPAN></B></TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR></SPAN></B><TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">&nbsp;&nbsp;&nbsp; block of 
+instructions 1</SPAN></I></TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR><TT>&nbsp;&nbsp;&nbsp; 
+break;</TT><BR><TT>&nbsp; case </TT></SPAN></B><TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">constant2</SPAN></I><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">:</SPAN></B></TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR></SPAN></B><TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">&nbsp;&nbsp;&nbsp; block of 
+instructions 2</SPAN></I></TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'"><BR><TT>&nbsp;&nbsp;&nbsp; 
+break;</TT><BR><TT>&nbsp; .</TT><BR><TT>&nbsp; .</TT><BR><TT>&nbsp; 
+.</TT><BR><TT>&nbsp; default:</TT><BR></SPAN></B><TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">&nbsp;&nbsp;&nbsp; default 
+block of instructions</SPAN></I></TT><B><SPAN 
+style="FONT-SIZE: 10pt; mso-fareast-font-family: Courier New"><BR><TT>&nbsp; 
+}</TT></SPAN></B></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman">Nó hoạt động theo cách sau: 
+<B>switch</B> tính biểu thức và kiểm tra xem nó có bằng <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">constant1</SPAN></I></TT> 
+hay không, nếu đúng thì nó thực hiện <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">block of instructions 
+1</SPAN></I></TT> cho đến khi tìm thấy từ khoá <B>break</B>, sau đó nhảy đến 
+phần cuối của cấu trúc lựa chọn <I>switch</I>.<BR>Còn nếu không, switch sẽ kiểm 
+tra xem biểu thức có bằng <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">constant2</SPAN></I></TT> 
+hay không. Nếu đúng nó sẽ thực hiện <TT><I><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">block of instructions 
+2</SPAN></I></TT> cho đến khi tìm thấy từ khoá <B>break</B>.<BR>Cuối cùng, nếu 
+giá trị biểu thức không bằng bất kì hằng nào được chỉ định ở trên (bạn có thể 
+chỉ định bao nhiêu câu lệnh <B>case</B> tuỳ thích), chương trình sẽ thực hiện 
+các lệnh trong phần <B>default:</B> nếu nó tồn tại vì phần này không bắt buộc 
+phải có.</FONT> </P>
+<P><FONT face="Times New Roman">Hai đoạn mã sau là tương đương:</FONT></P>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=5 
+style="WIDTH: 90%; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 3.7pt" 
+width="90%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    width="50%">
+      <P align=center style="TEXT-ALIGN: center"><B><I><U><FONT 
+      face="Times New Roman">ví dụ switch</FONT></U></I></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    width="50%">
+      <P align=center style="TEXT-ALIGN: center"><B><FONT 
+      face="Times New Roman"><I><U>if-else</U></I><U> tương 
+      đương</U></FONT></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><FONT face="Courier New">switch (x) {</FONT></PRE><PRE><SPAN style="mso-spacerun: yes"><FONT face="Courier New">&nbsp; </FONT></SPAN><FONT face="Courier New">case 1:</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; "x is 1";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>break;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>case 2:</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; "x is 2";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>break;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>default:</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; "value of x unknown";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>}</FONT></PRE></TD>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt; WIDTH: 50%" 
+    vAlign=top width="50%"><PRE><FONT face="Courier New">if (x == 1) {</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "x is 1";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>}</FONT></PRE><PRE><FONT face="Courier New">else if (x == 2) {</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "x is 2";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>}</FONT></PRE><PRE><FONT face="Courier New">else {</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>cout &lt;&lt; "value of x unknown";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>}</FONT></PRE></TD></TR></TBODY></TABLE></DIV>
+<P><FONT face="Times New Roman">Tôi đã nói ở trên rằng cấu trúc của lệnh 
+<B><I>switch</I></B> hơi đặc biệt. Chú ý sự tồn tại của lệnh <B>break</B> ở cuối 
+mỗi khối lệnh. Điều này là cần thiết vì nếu không thì sau khi thực hiện 
+<TT><I><SPAN style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">block of 
+instructions 1</SPAN></I></TT> chương trình sẽ không nhảy đến cuối của lệnh 
+switch mà sẽ thực hiện các khối lệnh tiếp theo cho đến khi nó tìm thấy lệnh 
+<B>break</B> đầu tiên. Điều này khiến cho việc đặt cặp ngoặc nhọn <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">{ }</SPAN></B></TT> trong 
+mỗi trường hợp là không cần thiết và có thể được dùng khi bạn muốn thực hiện một 
+khối lệnh cho nhiều trường hợp khác nhau, ví dụ:</FONT></P>
+<TABLE border=0 cellPadding=0 
+style="MARGIN-LEFT: 36pt; mso-padding-alt: 3.75pt 3.75pt 3.75pt 3.75pt; mso-cellspacing: 1.5pt">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ffffbf; PADDING-BOTTOM: 3.75pt; PADDING-LEFT: 3.75pt; PADDING-RIGHT: 3.75pt; PADDING-TOP: 3.75pt"><PRE><FONT face="Courier New">switch (x) {</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>case 1:</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>case 2:</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>case 3:</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; "x is 1, 2 or 3";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>break;</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>default:</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>cout &lt;&lt; "x is not 1, 2 nor 3";</FONT></PRE><PRE><FONT face="Courier New"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>}</FONT></PRE></TD></TR></TBODY></TABLE>
+<P class=MsoNormal><FONT face="Times New Roman">Chú ý rằng lệnh <TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">switch</SPAN></B></TT> chỉ 
+có thể được dùng để so sánh một biểu thức với các <I><U>hằng</U></I>. Vì vậy 
+chúng ta không thể đặt các biến (<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">case (n*2):</SPAN></B></TT>) 
+hay các khoảng (<TT><B><SPAN 
+style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">case 
+(1..3):</SPAN></B></TT>) vì chúng không phải là các hằng hợp lệ.</FONT> </P>
+<DIV 
+style="BORDER-BOTTOM: windowtext 3pt solid; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm">
+<P 
+style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; mso-border-bottom-alt: solid windowtext 3.0pt; mso-padding-alt: 0cm 0cm 0cm 0cm"><FONT 
+face="Times New Roman">Nếu bạn cần kiểm tra các khoảng hay nhiều giá trị không 
+phải là hằng số hãy kết hợp các lệnh <B>if</B> và <B>else 
+if</B>.</FONT></P></DIV>
+<DIV align=center>
+<TABLE border=0 cellPadding=0 
+style="WIDTH: 100%; mso-padding-alt: 0cm 0cm 0cm 0cm; mso-cellspacing: 1.5pt" 
+width="100%">
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; WIDTH: 45%" 
+    width="45%">
+      <P align=right class=MsoNormal style="TEXT-ALIGN: right"><FONT 
+      face="Times New Roman"><A 
+      href="bai1-4.htm"></A><!--[if gte vml 1]><v:shapetype 
+      id=_x0000_t75 coordsize = "21600,21600" o:preferrelative = "t" filled = 
+      "f" stroked = "f" path = "m@4@5l@4@11@9@11@9@5xe" o:spt = "75"><v:stroke 
+      joinstyle = "miter"></v:stroke><v:formulas><v:f eqn = 
+      "if lineDrawn pixelLineWidth 0 "></v:f><v:f eqn = "sum @0 1 0 "></v:f><v:f 
+      eqn = "sum 0 0 @1 "></v:f><v:f eqn = "prod @2 1 2 "></v:f><v:f eqn = 
+      "prod @3 21600 pixelWidth "></v:f><v:f eqn = 
+      "prod @3 21600 pixelHeight "></v:f><v:f eqn = "sum @0 0 1 "></v:f><v:f eqn 
+      = "prod @6 1 2 "></v:f><v:f eqn = "prod @7 21600 pixelWidth "></v:f><v:f 
+      eqn = "sum @8 21600 0 "></v:f><v:f eqn = 
+      "prod @7 21600 pixelHeight "></v:f><v:f eqn = 
+      "sum @10 21600 0 "></v:f></v:formulas><v:path o:extrusionok = "f" 
+      gradientshapeok = "t" o:connecttype = "rect"></v:path><o:lock v:ext="edit" 
+      aspectratio = "t"></o:lock></v:shapetype><v:shape id=_x0000_s1026 
+      style="FLOAT: right; HEIGHT: 19.5pt; MARGIN-LEFT: -20.25pt; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 19.5pt; Z-INDEX: 1; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+      type = "#_x0000_t75" href = "bai1-4.htm" coordsize = "21600,21600" alt = 
+      "" o:button = "t" o:allowoverlap = "f"><v:imagedata src = 
+      "butnback.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:1;left:-27px;top:0px;width:26px;height:26px'><a
+href="bai1-4.htm"><img border=0 width=26 height=26 src=butnback.gif
+align=right v:shapes="_x0000_s1026"></a></span><![endif]><A 
+      href="bai1-4.htm">Bài 
+      trước<BR><B>1-4. Giao tiếp với console.</B></A></FONT></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; WIDTH: 10%" 
+    width="10%">
+      <P align=center class=MsoNormal style="TEXT-ALIGN: center"><A 
+      href="index.htm"><FONT 
+      face="Times New Roman"><SPAN 
+      style="TEXT-DECORATION: none; text-underline: none"><IMG border=0 
+      height=26 id=_x0000_i1026 
+      src="butnindx.gif" 
+      width=26></SPAN><BR>Mục lục</FONT></A></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 0cm; PADDING-LEFT: 0cm; PADDING-RIGHT: 0cm; PADDING-TOP: 0cm; WIDTH: 45%" 
+    width="45%">
+      <P class=MsoNormal><FONT face="Times New Roman"><A 
+      href="bai2-2.htm"></A><!--[if gte vml 1]><v:shape 
+      id=_x0000_s1027 
+      style="FLOAT: left; HEIGHT: 19.5pt; MARGIN-LEFT: 0px; MARGIN-TOP: 0px; POSITION: absolute; WIDTH: 19.5pt; Z-INDEX: 2; mso-wrap-distance-left: 0; mso-wrap-distance-top: 0; mso-wrap-distance-right: 0; mso-wrap-distance-bottom: 0; mso-position-horizontal-relative: text; mso-position-vertical-relative: line" 
+      type = "#_x0000_t75" href = "bai2-2.htm" coordsize = "21600,21600" alt = 
+      "" o:button = "t" o:allowoverlap = "f"><v:imagedata src = 
+      "butnnext.gif"></v:imagedata></v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:2;left:0px;top:0px;width:26px;height:26px'><a href="bai2-2.htm"><img
+border=0 width=26 height=26 src=butnnext.gif align=left v:shapes="_x0000_s1027"></a></span><![endif]><A 
+      href="bai2-2.htm">Bài 
+      sau<BR><B>2-2. 
+Hàm.</B></A></FONT></P></TD></TR></TBODY></TABLE></DIV></DIV></BODY></HTML>
