@@ -11,7 +11,7 @@ int main(){
 	ld n = rand() % 5 + 2;             //Random so luong phan tu cua a ; 2 <= n <= 7
 
 	FOR(i,0,n){
-		a.push_back( rand() % 10000 + 1); //Random phan tu thu a[i]; 1 <= a[i] <= 10001
+		a.push_back( rand() % 10000 + 1); //Random phan tu thu a[i]; 1 <= a[i] <= 10000
 	}
 	
 	cout << a.size() << " " << n << endl; // a.size() tra ve kich thuoc cua mang a
