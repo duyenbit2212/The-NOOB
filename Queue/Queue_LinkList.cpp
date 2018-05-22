@@ -18,7 +18,7 @@ typedef struct queue{
 struct queue q;
 
 // Khoi tao 1 queue rong
-void Create(struct queue* q)
+void Creat(struct queue* q)
 {
 	q->front = q->rear = NULL;
 }
