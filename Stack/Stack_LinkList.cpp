@@ -66,8 +66,7 @@ int top(Stack &S)
 		return S.top->data;
 }
 //Demo
-int main()
-{
+int main(){
 	int n, x;
 	cin >> n;
 	while (n)
@@ -81,6 +80,5 @@ int main()
 		Pop(S, x);
 		cout << x << " ";
 	}
-	system("pause");
 	return 0;
 }

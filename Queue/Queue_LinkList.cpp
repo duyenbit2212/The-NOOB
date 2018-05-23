@@ -65,8 +65,7 @@ int Pop(struct queue* q, elementtype &x)
 }
 
 //Demo
-int main()
-{
+int main(){
 	int n, x;
 	cin >> n;
 	while (n)
@@ -80,6 +79,5 @@ int main()
 		Pop(&q, x);
 		cout << x << " ";
 	}
-	system("pause");
 	return 0;
 }
