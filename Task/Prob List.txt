@@ -1,4 +1,8 @@
+16/7
 http://codeforces.com/problemset/problem/499/B
 http://codeforces.com/problemset/problem/90/B
+mapping.png // Unsolved
+
+17/7
 https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1282
-mapping.png
+https://vn.spoj.com/problems/MDIGITS2/

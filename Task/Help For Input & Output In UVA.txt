@@ -1,0 +1,6 @@
+while (scanf("%d %d %d %d %d %d",&p,&q,&r,&s,&t,&u)!=EOF) // Nhap Vao Cac So Theo Dung Thu Tu Input cho
+{
+	double Answer;
+	printf("%.4lf\n", Answer); // Answer La Bien Ket Qua
+}
+    	
