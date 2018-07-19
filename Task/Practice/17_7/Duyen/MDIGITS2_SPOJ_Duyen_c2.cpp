@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
- 
+
 using namespace std;
 
 
 int main() {
 	string a, b;
     cin >> b;
-    for(int i=1; i<100000;i++) {
+    for(int i=1; i<= 100000;i++) { // " <="
         int x =  i;
         string t = "";
         while (x != 0) {
