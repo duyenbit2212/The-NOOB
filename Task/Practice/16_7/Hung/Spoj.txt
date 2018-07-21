@@ -1,2 +1,0 @@
-
-Em không tìm được cách để nạp biến số vào kiểu chuỗi rồi cộng vô chuỗi gốc trong dòng for.
