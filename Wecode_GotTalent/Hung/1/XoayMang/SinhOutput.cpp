@@ -29,7 +29,7 @@ int main()
         string nh = "input" + to_string(t) + ".txt";
         string xu = "output" + to_string(t) + ".txt";
         i.open (nh, ios::in | ios::app | ios::binary);
-        o.open (xu, ios::in | ios::app | ios::binary);
+        o.open (xu, ios::out | ios::app | ios::binary);
         GenOutput(i, o);
         i.close();
         o.close();
