@@ -6,9 +6,10 @@ typedef long ld;
 	for (auto i = a; i != b; i++)
 #define fi first
 #define se second
+const ll Lim0 = 100;
 const ll Lim1 = 100000;
 const ll Lim2 = 1e18;
-map <ll,ll> M;
+map <ll,set<ll>> M;
 
 ll Rand(ll l, ll r){
 	ll tmp = 1LL*rand()*rand()*rand()*rand();
@@ -16,15 +17,17 @@ ll Rand(ll l, ll r){
 }
 
 void Gen(fstream &in,fstream &f,ld t){
-	ll a,ll b;
+	ll a,b;
 	ll Lim = (t <= 10) ? Lim1: Lim2;
+	if (t < 4) Lim = Lim0;
 	do {
 		a = Rand(2,Lim);
 		b = a + Rand(0,Lim - a);
 	}
-	while (M.find({a,b}) != M.end());
-	M.insert({a,b});
+	while (M[a].find(b) != M[a].end());
+	M[a].insert(b);
 	in << a << " " << b;
+	f << ll(sqrt(b)) - ll(sqrt(a-1));
 	      
 }
 
