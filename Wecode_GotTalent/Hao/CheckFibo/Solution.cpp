@@ -6,24 +6,25 @@ typedef unsigned long long ll;
 #define fi first
 #define se second
 
+ll Fib[100],n;
+
+void Cal(int i){
+	Fib[i] = Fib[i - 1] + Fib[i-2];
+	if (Fib[i] == n){
+		cout << "Yes\n" << i;
+		return;
+	}
+	if (Fib[i] > n){
+		cout << "No"; 
+		return;
+	}	
+	Cal(i + 1);
+}
+
 int main(){
-	ll n;
-	cin >> n;
-	ll Fib[100];
+	cin >> n;   
 	Fib[0] = 0;
 	Fib[1] = 1;
-	int i = 2;
-	while(1){
-		Fib[i] = Fib[i - 1] + Fib[i-2];
-		if (Fib[i] == n){
-			cout << "Yes " << i;
-			return 0;
-		}
-		if (Fib[i] > n){
-			cout << "No"; 
-			return 0;
-		}
-		++i;
-	}              	
+	Cal(2);	
 	return 0;
 }

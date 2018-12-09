@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include <cmath>
 using namespace std;
 
 long long Sqrt(long long &n, long long i){//50% so diem
@@ -12,25 +11,37 @@ long long Sqrt(long long &n, long long i){//50% so diem
 	return Sqrt(n,i + 1);
 }
 
-long long SQRT(long long &n, long long l, long long r){
+long long res = 0;
+void SQRT(long long &n,long long l, long long r){
 	long long m = (l + r) >> 1, tmp = m * m;
-	if (l >= r){
-		return l;
+	if (tmp < 0 || m >= 1e9) //Xu Li Tran So
+		tmp = n + 1;
+	if (l > r) {
+		if (tmp < n)
+			res = m;
+		return;
 	}
-	if (tmp > n)
-		return SQRT(n,l,m - 1);
-	return SQRT(n,m + 1,r);
+	if (tmp == n){
+		res = m;
+		return;
+	}
+	if (tmp < n){
+		res = m;
+		SQRT(n,m + 1,r);
+		return;
+	}
+	SQRT(n,l,m - 1);
 }
-
 
 int main(){
 	long long a,b;
-	long long c,d;
 	cin >> a >> b;
-	c = a; d = b;
-	a--;
-	a = SQRT(a,1,a);
-	b = SQRT(b,1,b);
+	--a;         
+	SQRT(a,1,a);
+	a = res;
+	res = 0;
+	SQRT(b,1,b);
+	b = res;
 	cout << b - a;
 	return 0;
 }
