@@ -1,0 +1,64 @@
+<p><strong>Lựa đậu </strong></p>
+
+<p>Sắp tới Noel rồi v&agrave; trường UIT c&oacute; tổ chức một buổi quẫy DJ. Nam rất muốn đi dự buổi quẫy n&agrave;y để c&oacute; cơ hội gặp gỡ c&aacute;c bạn nữ để mau tho&aacute;t ế. Khổ nỗi, nh&agrave; Nam c&oacute; một mụ d&igrave; ghẻ rất rảnh v&agrave; độc &aacute;c, b&agrave; ấy t&igrave;m mọi c&aacute;ch để để ngăn Nam v&igrave; bả rảnh m&agrave;. Bắt chước theo mụ d&igrave; ghẻ của truyện Tấm C&aacute;m, v&agrave;o ng&agrave;y buổi DJ được tổ chức, b&agrave; ấy bắt Nam ngồi lựa đậu rồi mới cho đi. Nhưng đ&atilde; r&uacute;t kinh nghiệm từ truyện, để tr&aacute;nh &ocirc;ng Bụt hiện ra gọi chim sẻ tới nhặt hộ, c&aacute;c hạt đậu n&agrave;y được đ&aacute;nh số từ 1 tới n. Nam phải lựa số đậu n&agrave;y th&agrave;nh hai đống kh&aacute;c rỗng sau cho Gọi S1 l&agrave; tổng của c&aacute;c số tr&ecirc;n hạt đậu của đống được lựa ra, S2 l&agrave; tổng của c&aacute;c số tr&ecirc;n hạt đậu của đống đậu&nbsp;c&ograve;n lại sau khi lựa.</p>
+
+<p style="text-align:center"><span class="math-tex">\(UCLN(S1,S2) &gt;= 1\)</span></p>
+
+<p>Ở đ&acirc;y: UCLN l&agrave; ước chung lớn nhất, được định ngh&iacute;a như sau Trong to&aacute;n học, nếu số nguy&ecirc;n a chia hết cho số nguy&ecirc;n b th&igrave; số b được gọi l&agrave; ước của số nguy&ecirc;n a, a được gọi l&agrave; bội của b. Số nguy&ecirc;n dương b lớn nhất l&agrave; ước của cả hai số nguy&ecirc;n a, b được gọi l&agrave; ước số chung lớn nhất (ƯCLN) của a v&agrave; b (Theo wikipedia). Để kh&ocirc;ng bị trễ, số đậu được lựa ra phải l&agrave; <strong>&iacute;t nhất</strong>.</p>
+
+<p>Bạn h&atilde;y viết chương tr&igrave;nh gi&uacute;p Nam nh&eacute;</p>
+
+<p><strong>Input </strong></p>
+
+<p>Một d&ograve;ng duy nhất chứa một số nguy&ecirc;n dương n (1 &lt;= n &lt;= 10<sup>12</sup>) l&agrave; số đậu m&agrave; Nam phải nhặt với c&aacute;c hạt đậu được đ&aacute;nh số từ 1 tới n</p>
+
+<p><strong>Output </strong></p>
+
+<p>D&ograve;ng đầu ti&ecirc;n ghi ra &ldquo;Yes&rdquo; nếu Nam đi quẫy được v&agrave; ngược lại &ldquo;No&rdquo; nếu Nam kh&ocirc;ng lựa được đậu thỏa m&atilde;n đề b&agrave;i v&agrave; kh&ocirc;ng đi được buổi quẫy DJ</p>
+
+<p>D&ograve;ng thứ hai chỉ c&oacute; khi d&ograve;ng đầu ti&ecirc;n in ra &ldquo;Yes&rdquo;, ghi ra 2 số nguy&ecirc;n với số đầu ti&ecirc;n l&agrave; số đậu m&agrave; Nam phải lựa ra v&agrave; theo sau đ&oacute; lần lượt l&agrave; số tr&ecirc;n hạt đậu m&agrave; khi được lựa ra ch&uacute;ng sẽ th&agrave;nh hai đống th&otilde;a m&atilde;n điều kiện đề b&agrave;i. C&aacute;c số tr&ecirc;n d&ograve;ng n&agrave;y được c&aacute;ch nhau 1 dấu c&aacute;ch</p>
+
+<p><strong>V&iacute; Dụ </strong></p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td><strong>Input</strong></td>
+		</tr>
+		<tr>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td><strong>Output</strong></td>
+		</tr>
+		<tr>
+			<td>No</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td><strong>Input</strong></td>
+		</tr>
+		<tr>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td><strong>Output</strong></td>
+		</tr>
+		<tr>
+			<td>Yes<br />
+			1 2</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><strong>Giải Th&iacute;ch</strong></p>
+
+<p>Ở v&iacute; dụ thứ nhất, chỉ với 2 hạt đậu th&igrave; kh&ocirc;ng thể lựa ra được 2 đống th&otilde;a m&atilde;n điều kiện đề b&agrave;i v&igrave; UCLN (1,2) = 1</p>
+
+<p>Ở v&iacute; dụ thứ hai th&igrave; ta c&oacute; 3 hạt được đ&aacute;nh dấu lần lượt l&agrave; 1,2,3. Lựa hạt đậu được đ&aacute;nh dấu l&agrave; 2 ra th&igrave; ta sẽ c&oacute; đống thứ nhất c&oacute; tổng l&agrave; 2, đống thứ 2 c&oacute; tổng l&agrave; 1 + 3 = 4 v&agrave; UCLN(2,4) = 2 &gt;=&nbsp; 1</p>
