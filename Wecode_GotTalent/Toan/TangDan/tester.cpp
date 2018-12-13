@@ -59,6 +59,4 @@ int main(int argc, char const *argv[])
     }
     return 0;
 	/* If user's output is correct, return 0, otherwise return 1       */
-	/* e.g.: Here the problem is: read n numbers and print their sum:  */
- 
 }
