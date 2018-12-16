@@ -23,11 +23,12 @@ int main(int argc, char const *argv[])
     s.resize(n + 2,0);
     FOR(i,1,n + 1){
     	test_in >> a[i];
+    	s[i] = a[i];
     }
     user_out >> m;
     if (m > n + 1) 
     	return 1;
-    FOR(it,0,m){
+    /*FOR(it,0,m){
     	ld t,i;
     	ll x;
     	user_out >> t >> i >> x;
@@ -52,6 +53,23 @@ int main(int argc, char const *argv[])
     	FOR(i,1,k + 1){
     		s[i] %= x;
     	}	
+    }    */
+    FOR(it,0,m){
+    	ld t,i;
+    	ll x;
+    	user_out >> t >> i >> x;
+    	if (i > n || x > 1e6 || x < 0)
+    		return 1;
+    	if (t == 1){
+    		FOR(j,1,i + 1){
+    			s[j] += x;
+    		}
+    		continue;
+    	}
+    	if (x == 0) return 1;
+    	FOR(j,1,i + 1){
+    		s[j] %= x;
+    	}
     }
     FOR(i,2,n + 1){
     	if (s[i] <= s[i - 1]) 
