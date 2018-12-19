@@ -1,0 +1,122 @@
+<p><strong>Fractals</strong></p>
+
+<p>Một ph&acirc;n dạng&nbsp;(c&ograve;n được biết đến l&agrave; fractal) l&agrave; một vật thể h&igrave;nh học&nbsp;thường c&oacute; h&igrave;nh dạng gấp kh&uacute;c tr&ecirc;n mọi tỷ lệ ph&oacute;ng đại, v&agrave; c&oacute; thể được t&aacute;ch ra th&agrave;nh từng phần: mỗi phần tr&ocirc;ng giống như h&igrave;nh tổng thể, nhưng ở tỷ lệ ph&oacute;ng đại nhỏ hơn. Như vậy ph&acirc;n dạng c&oacute; v&ocirc; tận c&aacute;c c&aacute;c chi tiết, c&aacute;c chi tiết n&agrave;y c&oacute; thể c&oacute; cấu tr&uacute;c tự đồng dạng ở c&aacute;c tỷ lệ ph&oacute;ng đại kh&aacute;c nhau. Nhiều trường hợp, c&oacute; thể tạo ra ph&acirc;n dạng bằng việc lặp lại một mẫu to&aacute;n học, theo ph&eacute;p hồi quy. Từ&nbsp;fractal&nbsp;được n&oacute;i đến lần đầu v&agrave;o năm 1975&nbsp;bởi Benoit Mandrelbrot, lấy từ tiếng Latin,&nbsp;fractus&nbsp;nghĩa l&agrave; &quot;đứt g&atilde;y&quot;. Trước đ&oacute;, c&aacute;c cấu tr&uacute;c n&agrave;y (v&iacute; dụ B&ocirc;ng tuyết Koch)&nbsp;được gọi l&agrave;&nbsp;&quot;đường cong quỷ&quot;. (Wikipedia)</p>
+
+<p>H&igrave;nh học Ph&acirc;n dạng c&oacute; thể gi&uacute;p thiết kế c&aacute;c h&igrave;nh ảnh đẹp tr&ecirc;n&nbsp;m&aacute;y t&iacute;nh một c&aacute;ch đơn giản v&agrave; trực quan. Đ&acirc;y l&agrave; một trong những lĩnh vực được nhiều người quan t&acirc;m, nhất l&agrave; đối với những người y&ecirc;u mến nghệ thuật. Cơ sở h&igrave;nh học Fractal cũng đ&atilde; được ứng dụng trong c&ocirc;ng nghệ n&eacute;n ảnh một c&aacute;ch hiệu quả th&ocirc;ng qua c&aacute;c hệ h&agrave;m lặp (IFS), đ&acirc;y l&agrave; một trong những lĩnh vực được c&aacute;c chuy&ecirc;n gia về khoa học m&aacute;y t&iacute;nh đặc biệt quan t&acirc;m.</p>
+
+<p>H&atilde;y vẽ một ph&acirc;n dạng đặc biệt&nbsp;c&oacute;<strong>&nbsp;n </strong>qu&aacute; tr&igrave;nh lặp. Biết rằng ph&acirc;n dạng n&agrave;y c&oacute;&nbsp;chứa 2&nbsp;loại <strong>&quot;d&acirc;y nối&quot; </strong>l&agrave;&nbsp;<code>&#39;|&#39;</code>&nbsp;v&agrave;&nbsp;<code>&#39;_&#39;</code>&nbsp;.</p>
+
+<p>Với n = 1, ta c&oacute; ph&acirc;n dạng sau:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>
+			<pre>
+<code>_
+_|</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>Tuy nhi&ecirc;n, giả sử bạn đ&atilde; vẽ được ph&acirc;n dạng sau n qu&aacute; tr&igrave;nh lặp, gọi l&agrave; f(n).&nbsp;Để vẽ tới ph&acirc;n dạng tiếp theo tức ph&acirc;n dạng&nbsp;thứ n + 1 c&ograve;n gọi l&agrave; f(n+1),&nbsp;ta cần l&agrave;m như sau:</p>
+
+<p>- Lưu &yacute;&nbsp;tất cả c&aacute;c ph&acirc;n dạng đều c&oacute; 2 điểm bi&ecirc;n&nbsp;để c&oacute; thể nối với c&aacute;c ph&acirc;n dạng kh&aacute;c nhờ v&agrave;o c&aacute;c <strong>&quot;d&acirc;y nối&quot;</strong></p>
+
+<p>- Với bước đầu ti&ecirc;n, đặt f(n) v&agrave;o phần tr&ecirc;n <strong>b&ecirc;n tr&aacute;i</strong> của ph&acirc;n dạng tiếp theo</p>
+
+<p>- Đặt f(n) lần lượt&nbsp;xoay <strong>90<sup>o</sup> 180<sup>o</sup> 270<sup>o</sup></strong>&nbsp;ở 3 g&oacute;c c&ograve;n lại - phần <strong>phải tr&ecirc;n, tr&aacute;i dưới</strong> v&agrave; <strong>phải dưới</strong> v&igrave; vậy ta c&oacute; thể nối tất cả c&aacute;c ph&acirc;n đoạn n&agrave;y bằng c&aacute;ch sử dụng 3 &quot;d&acirc;y nối&quot; v&agrave;o c&aacute;c điểm bi&ecirc;n giữa c&aacute;c ph&acirc;n đoạn.</p>
+
+<p>- Lu&ocirc;n lu&ocirc;n c&oacute; c&aacute;ch nối&nbsp;như vậy để tạo th&agrave;nh ph&acirc;n đoạn mới</p>
+
+<p>H&atilde;y nh&igrave;n v&agrave;o v&iacute; dụ n&agrave;y để c&oacute; thể hiểu hơn:</p>
+
+<p>Với n = 1</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>
+			<pre>
+<code> _
+ _|</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>Với n = 2, đặt c&aacute;c ph&acirc;n đoạn như sau v&agrave;o c&aacute;c g&oacute;c</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>
+			<pre>
+<code> _ &nbsp; _&nbsp;
+ _| |_&nbsp;
+ &nbsp; 
+|_| |_|</code>
+</pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Th&ecirc;m cạnh nối v&agrave;o v&agrave; ho&agrave;n chỉnh phần đoạn f(n) với n = 2.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>
+			<pre>
+<code>&nbsp;_ &nbsp; _&nbsp;
+&nbsp;_| |_&nbsp;
+| &nbsp;_ &nbsp;|
+|_| |_|</code>
+</pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>Với n = 3, ta c&oacute; ph&acirc;n đoạn sau:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>
+			<pre>
+<code>&nbsp;_ &nbsp; ___ &nbsp; ___&nbsp;
+&nbsp;_| |_ &nbsp;|_| &nbsp;_|
+| &nbsp;_ &nbsp;| &nbsp;_ &nbsp;|_&nbsp;
+|_| |_| | |___|
+&nbsp;_ &nbsp; _ &nbsp;| &nbsp;___&nbsp;
+| |_| | |_| &nbsp;_|
+|_ &nbsp; _| &nbsp;_ &nbsp;|_&nbsp;
+&nbsp;_| |___| |___|</code>
+</pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>Đề thi gồm 10 tests với số n &lt;= 10.</p>
+
+<p><strong>Input:</strong></p>
+
+<p>Gồm một d&ograve;ng đầu ti&ecirc;n chứa số nguy&ecirc;n dương n&nbsp;</p>
+
+<p><strong>Output:</strong></p>
+
+<p>Chứa ph&acirc;n đoạn thứ n. Cẩn thận với c&aacute;ch sử dụng dấu c&aacute;ch trong output</p>
+
+<p>&nbsp;</p>
