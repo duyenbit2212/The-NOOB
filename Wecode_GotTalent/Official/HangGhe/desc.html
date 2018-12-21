@@ -1,0 +1,85 @@
+<p><strong>Những H&agrave;ng Ghế</strong></p>
+
+<p>Ngày Noel đang đ&ecirc;́n g&acirc;̀n, chủ nhi&ecirc;̣m khoa Khoa Học Máy Tính mu&ocirc;́n&nbsp; nh&acirc;n dịp này t&ocirc;̉ chức cho sinh vi&ecirc;n toàn trường&nbsp;</p>
+
+<p>m&ocirc;̣t bu&ocirc;̉i giao lưu, giải trí đ&ecirc;̉ sinh vi&ecirc;n được cải thi&ecirc;̣n tinh th&acirc;̀n học t&acirc;̣p sau nhi&ecirc;̀u&nbsp;ngày&nbsp;rèn luy&ecirc;̣n v&acirc;́t vả.</p>
+
+<p>Ban chủ nhi&ecirc;̣m cũng mu&ocirc;́n giúp&nbsp;sinh vi&ecirc;n có m&ocirc;̣t tinh th&acirc;̀n thoải mái nh&acirc;́t trước khi bước vào kỳ thi cu&ocirc;́i kỳ sắp tới.</p>
+
+<p>Bu&ocirc;̉i giao lưu được t&ocirc;̉ chức tại một s&acirc;n vận động rất lớn.</p>
+
+<p>Có <strong>n</strong> hàng gh&ecirc;́ trong s&acirc;n v&acirc;̣n đ&ocirc;̣ng.</p>
+
+<p>Chúng ta được bi&ecirc;́t đang&nbsp;có <strong>a<sub>i</sub></strong> người đang ng&ocirc;̀i tr&ecirc;n hàng gh&ecirc;́ thứ <strong>i</strong>.</p>
+
+<p>Có <strong>m</strong> người khác đang di chuy&ecirc;̉n đ&ecirc;́n s&acirc;n v&acirc;̣n đ&ocirc;̣ng và&nbsp;m&ocirc;̃i người trong s&ocirc;́ họ đ&ecirc;̀u có cho mình m&ocirc;̣t ch&ocirc;̃ ng&ocirc;̀i trong <strong>n</strong> hàng gh&ecirc;́ thế nhưng ta kh&ocirc;ng biết được ch&iacute;nh x&aacute;c cụ thể h&agrave;ng ghế n&agrave;o.</p>
+
+<p>Ban chủ nhi&ecirc;̣m mu&ocirc;́n tính số <strong>k</strong> là s&ocirc;́ người t&ocirc;́i đa tr&ecirc;n m&ocirc;̣t hàng&nbsp;gh&ecirc;́ sau khi đã th&ecirc;m <strong>m</strong> người tới s&acirc;n v&acirc;̣n đ&ocirc;̣ng. Giả sử c&aacute;c&nbsp;h&agrave;ng ghế n&agrave;y c&oacute; thể chứa v&ocirc; hạng người</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Y&ecirc;u cầu:</strong> T&iacute;nh số k nhỏ nhất v&agrave; số k lớn nhất c&oacute; thể</p>
+
+<p>Để tiết kiệm dữ liệu, việc sử dụng mảng hay c&aacute;c cấu tr&uacute;c dữ liệu tương tự&nbsp;sẽ bị ban.&nbsp;C&aacute;c k&iacute; tự hoặc chữ sau kh&ocirc;ng được ph&eacute;p c&oacute; trong code:</p>
+
+<p>-&nbsp;<strong>define</strong>,&nbsp;<strong>include</strong>,&nbsp;<strong>class</strong>,&nbsp;<strong>[</strong>,&nbsp;<strong>]</strong>,&nbsp;<strong>calloc</strong>,&nbsp;<strong>malloc</strong>,&nbsp;<strong>new</strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Input</strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp; </strong>Dòng đ&acirc;̀u ti&ecirc;n chứa 2 s&ocirc;́ nguy&ecirc;n n (1 &le; n &le;10<sup>5</sup>) &ndash; là s&ocirc;́ hàng gh&ecirc;́ có trong s&acirc;n v&acirc;̣n đ&ocirc;̣ng,&nbsp;s&ocirc;́ nguy&ecirc;n m (1 &le; m &le; 10<sup>5</sup>) &ndash; là s&ocirc;́ người đang di chuy&ecirc;̉n đ&ecirc;́n c&ocirc;ng vi&ecirc;n.</p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - </strong>Dòng thứ hai chứa n s&ocirc;́ nguy&ecirc;n a<sub>i</sub>&nbsp;(1 &le;&nbsp;a<sub>i</sub>&nbsp;&le;10<sup>5</sup>) &ndash; là s&ocirc;́ người đang ng&ocirc;̀i tr&ecirc;n hàng gh&ecirc;́ thứ i.</p>
+
+<p><strong>Output</strong></p>
+
+<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -&nbsp;</strong>In ra s&ocirc;́ k nhỏ nh&acirc;́t và s&ocirc;́ k lớn nh&acirc;́t có th&ecirc;̉, với k là s&ocirc;́ người t&ocirc;́i đa tr&ecirc;n m&ocirc;̣t hàng gh&ecirc;́ sau khi th&ecirc;m m người đ&ecirc;́n s&acirc;n v&acirc;n đ&ocirc;̣ng.</p>
+
+<p><strong>Ví dụ</strong></p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>Input</td>
+			<td>Output</td>
+		</tr>
+		<tr>
+			<td>
+			<p>3 6</p>
+
+			<p>1 6 5</p>
+			</td>
+			<td>6&nbsp; 12</td>
+		</tr>
+		<tr>
+			<td>
+			<p>3 7</p>
+
+			<p>1 6 5</p>
+			</td>
+			<td>7&nbsp; 13</td>
+		</tr>
+		<tr>
+			<td>
+			<p>10 1000</p>
+
+			<p>100 100 100 100 100 100 100 100 100 100</p>
+			</td>
+			<td>200 1100</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;<strong>Giải th&iacute;ch:</strong></p>
+
+<p>Với v&iacute; dụ thứ nhất, khi 6 người tới ngồi th&igrave; trong trường hợp &iacute;t nhất, d&atilde;y ghế&nbsp;sẽ c&oacute; số người l&agrave; {6, 6, 6}. Trong trường hợp nhiều nhất th&igrave; l&agrave; {1, 12 ,5}</p>
+
+<p>Với v&iacute; dụ thứ hai, trong trường hợp &iacute;t nhất, d&atilde;y ghế sẽ c&oacute; số người l&agrave; {7 ,6, 6}. Trong trường hợp nhiều nhất: {1, 13, 5}</p>
+
+<p>Với v&iacute; dụ thứ ba, trong trường hợp &iacute;t nhất, d&atilde;y ghế sẽ c&oacute; số người l&agrave; {200 ,... ,200}. Trong trường hợp nhiều nhất: {1100 ,100, ... ,100}</p>
+
+<p>&nbsp;</p>
+
+<p><br />
+&nbsp;</p>

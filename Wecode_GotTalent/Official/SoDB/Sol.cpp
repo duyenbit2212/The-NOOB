@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <cmath>
 using namespace std;
 
 long long Sqrt(long long &n, long long i){//50% so diem
@@ -36,12 +37,14 @@ void SQRT(long long &n,long long l, long long r){
 int main(){
 	long long a,b;
 	cin >> a >> b;
-	--a;         
+	/*--a;         
 	SQRT(a,1,a);
-	a = res;
+	a = res;     
 	res = 0;
 	SQRT(b,1,b);
-	b = res;
+	b = res; */
+	a = sqrt(a - 1);
+	b = sqrt(b);
 	cout << b - a;
 	return 0;
 }
