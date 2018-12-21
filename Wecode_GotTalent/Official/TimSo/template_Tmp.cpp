@@ -2,24 +2,14 @@
 define
 include
 class
-for
-while
-goto
 [
 ]
-\*
-/
-%
+calloc
+malloc
+new
 ###End banned keyword*/
 #include <iostream>
 using namespace std;
-
-int multiply(int m, int n){
+                           
 //###INSERT CODE HERE -
-
-}
-
-
-int main (){
-    int m, n; cin >> m >> n;
-}
+                       
