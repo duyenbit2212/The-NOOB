@@ -10,10 +10,11 @@ typedef long ld;
 int main(){
 	ios_base::sync_with_stdio(0);
 	cin.tie(NULL);
+	ld n;
 	cin >> n;
 	if (n == 16){
 		cout << "2\nPIIPIIPIPIIPIPII\nIIPIPIIPIPIIPIIP";
-		return;
+		return 0;
 	}
 	cout << 0;
 	return 0;
