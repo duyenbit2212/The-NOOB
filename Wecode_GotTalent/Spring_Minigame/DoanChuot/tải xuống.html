@@ -1,0 +1,56 @@
+<p><strong>Đoán&nbsp;Chu&ocirc;̣t Vào L&ocirc;̀ng</strong></p>
+
+<p>Cứ m&ocirc;̃i dịp T&ecirc;́t đ&ecirc;́n, Nam lại được mẹ cho đi h&ocirc;̣i xu&acirc;n. Sau khi được mẹ cho chơi thử các trò chơi trong&nbsp; h&ocirc;̣i chợ, Nam đặc bi&ecirc;̣t chú ý đ&ecirc;́n m&ocirc;̣t gian hàng trò chơi có t&ecirc;n &ldquo;Đoán Chu&ocirc;̣t Vào L&ocirc;̀ng&rdquo;. Cách chơi r&acirc;́t đơn giản, các cái l&ocirc;̀ng được <strong>đánh s&ocirc;́</strong> và x&ecirc;́p cạnh nhau thành 1 vòng tròn. Ở vị trí trung t&acirc;m có m&ocirc;̣t con chu&ocirc;̣t được giữ trong l&ocirc;̀ng. Sau khi t&acirc;́t cả người chơi mua vé (tương ứng với s&ocirc;́ đã được đánh ở các l&ocirc;̀ng), người chủ sẽ thả cho con chu&ocirc;̣t chạy vào l&ocirc;̀ng mà nó mu&ocirc;́n. Người chơi giành thắng cu&ocirc;̣c n&ecirc;́u đoán đúng và mua được vé có s&ocirc;́ mà chú chu&ocirc;̣t chạy vào.</p>
+
+<p>Những tưởng là trò chơi chỉ mang tính h&ecirc;n xui may rủi, tuy nhi&ecirc;n &ocirc;ng chủ chia sẻ cho những người chơi ở đ&acirc;y là con chu&ocirc;̣t đã được hu&acirc;́n luy&ecirc;̣n. Và vì h&ocirc;̀i trẻ &ocirc;ng là m&ocirc;̣t người r&acirc;́t y&ecirc;u thích toán học,n&ecirc;n &ocirc;ng đã cho những người chơi m&ocirc;̣t gợi ý đ&ecirc;̉ tìm ra s&ocirc;́ tr&ecirc;n l&ocirc;̀ng mà con chu&ocirc;̣t sẽ chạy vào. Trước khi bán vé, &ocirc;ng chủ sẽ chi&ecirc;́u m&ocirc;̣t dãy s&ocirc;́(thời gian chi&ecirc;́u sẽ tùy vào đ&ocirc;̣ dài ngắn của dãy s&ocirc;́ này), s&ocirc;́ tr&ecirc;n l&ocirc;̀ng mà con chu&ocirc;̣t sẽ chạy vào bằng đúng s&ocirc;́ <strong>cực trị cục b&ocirc;̣</strong> của dãy s&ocirc;́ này. Hãy vi&ecirc;́t m&ocirc;̣t chương trình giúp An tìm ra s&ocirc;́ tr&ecirc;n l&ocirc;̀ng mà con chu&ocirc;̣t chạy vào.</p>
+
+<p>&nbsp;</p>
+
+<p><span style="background-color:white"><strong><span style="color:#222222">Input</span></strong></span></p>
+
+<p><span style="background-color:white"><span style="color:#222222">Dòng đ&acirc;̀u ti&ecirc;n chứa m&ocirc;̣t s&ocirc;́ nguy&ecirc;n n </span><span style="color:#222222">(1&thinsp;&le;&thinsp;<em>n</em>&thinsp;&le;&thinsp;1000) &ndash; s&ocirc;́ ph&acirc;̀n tử của dãy a.</span></span></p>
+
+<p><span style="background-color:white"><span style="color:#222222">Dòng thứ hai chứ n s&ocirc;́ nguy&ecirc;n </span><em><span style="color:#222222">a</span></em><sub><span style="color:#222222">1</span></sub><span style="color:#222222">,&nbsp;<em>a</em><sub>2</sub>, ...,&nbsp;<em>a<sub>n</sub></em>&nbsp;(1&thinsp;&le;&thinsp;<em>a<sub>i</sub></em>&thinsp;&le;&thinsp;1000) &ndash; giá trị của các s&ocirc;́ trong dãy a.</span></span></p>
+
+<p><span style="background-color:white"><strong><span style="color:#222222">Output</span></strong></span></p>
+
+<p><span style="background-color:white"><span style="color:#222222">In s&ocirc;́ tr&ecirc;n l&ocirc;̀ng mà con chu&ocirc;̣t chạy vào.</span></span></p>
+
+<p>&nbsp;</p>
+
+<p><strong><span style="background-color:white"><span style="color:#222222">Ví dụ:</span></span></strong></p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>Input</td>
+			<td>Output</td>
+		</tr>
+		<tr>
+			<td>
+			<p>3</p>
+
+			<p>1 2 3</p>
+			</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>
+			<p>4</p>
+
+			<p>1 5 2 5</p>
+			</td>
+			<td>2</td>
+		</tr>
+	</tbody>
+</table>
+
+<pre>
+<strong><span style="background-color:white">Giải thích th&ecirc;m: </span></strong></pre>
+
+<ul>
+	<li><span style="background-color:white"><span style="color:#212121">Bạn được cung cấp một</span><span style="color:#212121"> dãy </span><span style="color:#212121">&nbsp;a</span><span style="color:#212121">(a<sub>1</sub>&gt;a<sub>n</sub>)</span><span style="color:#212121">. Một phần tử của dãy n&agrave;y l&agrave; một tối thiểu cục bộ n&ecirc;́u n&oacute; ho&agrave;n to&agrave;n nhỏ hơn cả hai s&ocirc;́ li&ecirc;̀n k&ecirc;̀ n&oacute; (nghĩa l&agrave; a<sub>i</sub>&nbsp;&lt;a<sub>i</sub>&nbsp;-1 v&agrave; a<sub>i</sub>&nbsp;&lt;a<sub>i</sub>&nbsp;+ 1). Ngo&agrave;i ra, phần tử c&oacute; thể được gọi l&agrave; tối đa cục bộ n&ecirc;́u&nbsp; n&oacute; ho&agrave;n to&agrave;n lớn hơn c&aacute;c phần tử li&ecirc;̀n k&ecirc;̀ (nghĩa l&agrave; a<sub>i</sub>&gt; a<sub>i</sub>&nbsp;-1 v&agrave; a<sub>i</sub>&gt; a<sub>i</sub>&nbsp;+ 1). Lưu ý, a<sub>1</sub>&nbsp;chỉ có m&ocirc;̣t ph&acirc;̀n tử li&ecirc;̀n k&ecirc;̀ n&ecirc;n nó kh&ocirc;ng phải l&agrave; cực tiểu cục b&ocirc;̣, cũng kh&ocirc;ng phải cực đại cục bộ.</span></span></li>
+	<li><span style="background-color:white"><span style="color:#212121">Một phần tử được gọi l&agrave; cực trị cục bộ n&ecirc;́u n&oacute; l&agrave; cực đại cục bộ hoặc cực tiểu cục bộ.</span></span></li>
+</ul>
+
+<p>&nbsp;</p>
