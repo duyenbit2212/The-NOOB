@@ -1,0 +1,99 @@
+<p><strong>Tr&ograve; chơi tr&ecirc;n d&atilde;y số </strong></p>
+
+<p>X&eacute;t tr&ograve; chơi tr&ecirc;n d&atilde;y số như sau:</p>
+
+<p>Một d&atilde;y số 𝐴 gồm 𝑛 phần tử 𝑎1, 𝑎2, &hellip; , 𝑎𝑛. Ban đầu tất cả c&aacute;c phần tử đều c&oacute; gi&aacute; trị bằng 0 (nghĩa l&agrave; 𝑎𝑖 = 0 với 𝑖 = 1,2, &hellip; , 𝑛). Gọi 𝑊(𝐴) l&agrave; gi&aacute; trị lớn nhất trong d&atilde;y 𝐴. M&aacute;y t&iacute;nh thực hiện 𝑚 thao t&aacute;c:</p>
+
+<p>+ Thao t&aacute;c thứ 𝑖 (𝑖 = 1,2, &hellip; , 𝑚) được m&ocirc; tả bằng ba số nguy&ecirc;n 𝐿𝑖 , 𝑅𝑖 ,𝐷𝑖 (1 &le; 𝐿𝑖 &le; 𝑅𝑖 &le; 𝑛) sẽ tăng c&aacute;c phần tử c&oacute; thứ tự từ 𝐿𝑖 đến 𝑅𝑖 l&ecirc;n 𝐷𝑖 , cụ thể, c&aacute;c phần tử 𝑎𝐿𝑖 , 𝑎𝐿𝑖+1, 𝑎𝐿𝑖+2, &hellip; , 𝑎𝑅𝑖 được tăng l&ecirc;n 𝐷𝑖 đơn vị.</p>
+
+<p>Nhiệm vụ của người chơi l&agrave; loại bỏ đi đ&uacute;ng <strong>một</strong> thao t&aacute;c trong 𝑚 thao t&aacute;c, để từ d&atilde;y số ban đầu sau khi m&aacute;y t&iacute;nh thực hiện 𝑚 &minus; 1 thao t&aacute;c c&ograve;n lại th&igrave; gi&aacute; trị 𝑊(𝐴) c&oacute; gi&aacute; trị nhỏ nhất. V&iacute; dụ:</p>
+
+<p>+ Với 𝑛 = 5 v&agrave; 𝑚 = 2, bảng dưới đ&acirc;y m&ocirc; tả 2 thao t&aacute;c v&agrave; qu&aacute; tr&igrave;nh thực hiện 2 thao t&aacute;c đ&oacute;:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td style="text-align:center">Thao t&aacute;c</td>
+			<td style="text-align:center">𝐿i</td>
+			<td style="text-align:center">Ri</td>
+			<td style="text-align:center">Di</td>
+			<td style="text-align:center">D&atilde;y sau khi thực hiện</td>
+			<td style="text-align:center">W(A)</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">1</td>
+			<td style="text-align:center">1&nbsp;</td>
+			<td style="text-align:center">3</td>
+			<td style="text-align:center">3</td>
+			<td style="text-align:center">(3,3,3,0,0)</td>
+			<td style="text-align:center">3</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">2</td>
+			<td style="text-align:center">2&nbsp;</td>
+			<td style="text-align:center">5&nbsp;</td>
+			<td style="text-align:center">2</td>
+			<td style="text-align:center">(3,5,5,2,2)</td>
+			<td style="text-align:center">5</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Như vậy, sau khi thực hiện 2 thao t&aacute;c th&igrave; gi&aacute; trị 𝑊(𝐴) bằng 5, nhưng nếu loại bỏ đi thao t&aacute;c thứ nhất th&igrave; d&atilde;y 𝐴 = (0,0,2,2,2) n&ecirc;n gi&aacute; trị 𝑊(𝐴) bằng 2, c&ograve;n nếu loại bỏ đi thao t&aacute;c thứ hai th&igrave; d&atilde;y 𝐴 = (3,3,3,0,0) n&ecirc;n gi&aacute; trị 𝑊(𝐴) bằng 3.&nbsp; Do đ&oacute;, cần loại đi thao t&aacute;c thứ nhất.</p>
+
+<p><strong>Y&ecirc;u cầu: </strong></p>
+
+<p>Cho 𝑛 v&agrave; 𝑚 thao t&aacute;c 𝐿𝑖 , 𝑅𝑖 ,𝐷𝑖 tr&ecirc;n d&atilde;y 𝐴, h&atilde;y t&igrave;m c&aacute;ch bỏ đi đ&uacute;ng một thao t&aacute;c để d&atilde;y 𝐴 sau khi thực hiện 𝑚 &minus; 1 thao t&aacute;c c&ograve;n lại, gi&aacute; trị 𝑊(𝐴) c&oacute; gi&aacute; trị nhỏ nhất.</p>
+
+<p><strong>Input:</strong></p>
+
+<p>- D&ograve;ng đầu chứa hai số nguy&ecirc;n 𝑛, 𝑚 ( 𝑛 &le; 10^5 ; 𝑚 &le; 10^5)</p>
+
+<p>- Tiếp theo l&agrave; 𝑚 d&ograve;ng, d&ograve;ng thứ 𝑖 (𝑖 = 1,2, &hellip; , 𝑚) chứa ba số nguy&ecirc;n 𝐿𝑖 , 𝑅𝑖 ,𝐷𝑖 (1 &le; 𝐿𝑖 &le; 𝑅𝑖 &le; 𝑛; 1 &le; 𝐷𝑖 &le; 10^9 ).</p>
+
+<p><strong>Output: </strong></p>
+
+<p>- Gồm một d&ograve;ng chứa một số l&agrave; gi&aacute; 𝑊(𝐴) sau khi thực hiện 𝑚 &minus; 1 thao t&aacute;c được giữ lại.</p>
+
+<p><strong>Lưu &yacute;:</strong></p>
+
+<p>- C&oacute; 25% số lượng test thỏa m&atilde;n điều kiện: 𝑛 &le; 100&nbsp;; 𝑚 &le; 100&nbsp;;</p>
+
+<p>- C&oacute; 25% số lượng test kh&aacute;c thỏa m&atilde;n điều kiện: 𝑛 &le; 10^5 ; 𝑚 &le; 100&nbsp;;</p>
+
+<p>- C&oacute; 25% số lượng test kh&aacute;c thỏa m&atilde;n điều kiện: 𝑛 &le; 100&nbsp;; 𝑚 &le; 10^5&nbsp;;</p>
+
+<p>- C&oacute; 25% số lượng test c&ograve;n lại thỏa m&atilde;n điều kiện: 𝑛 &le; 10^5 ; 𝑚 &le; 10^5.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td><strong>Input</strong></td>
+			<td><strong>Output</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>5 2</p>
+
+			<p>1 3 3</p>
+
+			<p>2 5 2</p>
+			</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>
+			<p>5 3</p>
+
+			<p>1 3 3</p>
+
+			<p>2 5 2</p>
+
+			<p>5 5 8</p>
+			</td>
+			<td>5</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
