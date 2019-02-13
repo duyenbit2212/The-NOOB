@@ -1,12 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <cstdio>
-#include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <cstring>
-#include <string>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 const int   maxn = 1000001;
